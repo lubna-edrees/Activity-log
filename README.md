@@ -1,6 +1,9 @@
 # Activity-log
 daily report of where I am
 
+## Hot Topics
+![](https://i.imgur.com/fRLbiyo.png)
+
 ## sat 2-April-2020
 - `security`.
 - cleaned a `wordpress` website full of malwares.
