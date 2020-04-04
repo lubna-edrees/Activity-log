@@ -2,7 +2,7 @@
 daily report of where I am
 
 ## Hot Topics
-![](https://i.imgur.com/fRLbiyo.png)
+<div style="text-align:center"><img src="https://i.imgur.com/fRLbiyo.png" /></div>
 
 ## sat 2-April-2020
 - `security`.
