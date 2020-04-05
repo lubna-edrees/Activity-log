@@ -9,6 +9,9 @@ daily report of where I am
 - `google auth` to connect to my website.
 - `twitter API` does not provide effecient way to log in with, because it will not give the `user Email` untill they choose that from their twitter account settings before hand.
 - `github actions`.
+- delevered https://hexltd.co to the client.
+- made a 3 videos walking him throw every part of dealing the website and managing orders.
+
 
 ## sat 4-April-2020
 - `security`.
