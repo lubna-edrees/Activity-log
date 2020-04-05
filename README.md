@@ -4,7 +4,12 @@ daily report of where I am
 ## Hot Topics
 <div style="text-align:center"><img src="https://i.imgur.com/fRLbiyo.png" /></div>
 
-## sat 2-April-2020
+## sun 5-April-2020
+- `facebook auth` to connect to my website.
+- `google auth` to connect to my website.
+- `twitter API` does not provide effecient way to log in with, because it will not give the `user Email` untill they choose that from their twitter account settings before hand.
+
+## sat 4-April-2020
 - `security`.
 - cleaned a `wordpress` website full of malwares.
 - dealed with `apatche` server. especially `.htaccess` files.
@@ -12,7 +17,7 @@ daily report of where I am
 - learned `ssh` command shell, and connected it to a website.
 
 
-## fri 1-april-2020
+## fri 3-april-2020
 - `typescript`.
 - learned a bit of `typescript data structers` and `type assertion`.
 - learned a bit about `grunt`.
