@@ -2,7 +2,7 @@
 daily report of where I am
 
 ## Hot Topics
-<div style="text-align:center"><img src="https://i.imgur.com/fRLbiyo.png" /></div>
+<div style="text-align:center"><img src="https://i.imgur.com/UxGxYf7.png" /></div>
 
 ## sun 5-April-2020
 - `facebook auth` to connect to my website.
