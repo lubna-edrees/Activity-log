@@ -8,6 +8,7 @@ daily report of where I am
 - `facebook auth` to connect to my website.
 - `google auth` to connect to my website.
 - `twitter API` does not provide effecient way to log in with, because it will not give the `user Email` untill they choose that from their twitter account settings before hand.
+- `github actions`.
 
 ## sat 4-April-2020
 - `security`.
