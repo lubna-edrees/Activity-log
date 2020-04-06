@@ -12,6 +12,10 @@ daily report of where I am
 ## notes for the record:
 - to grap key from user command in your cli, use `proccess.argv` witch gives you an `array` and your first arg is at index `2`.
 
+## Mon 6-April-2020
+- made a `cli interface` following Traversy media tuorial.
+- read about the best way to `document` your code in javascript.
+
 ## sun 5-April-2020
 - `facebook auth` to connect to my website.
 - `google auth` to connect to my website.
