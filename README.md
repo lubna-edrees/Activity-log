@@ -14,13 +14,16 @@ daily report of where I am
 
 ## notes for the record:
 - to grap key from user command in your cli, use `proccess.argv` witch gives you an `array` and your first arg is at index `2`.
-- useful number formatter (espesially for currency) ``` /**
-             * initializing currency formatter
-             */
-            const formatter = Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'GBP'
-            })```
+- useful number formatter (espesially for currency) 
+            ```javascript
+                        /**
+                         * initializing currency formatter
+                         */
+                        const formatter = Intl.NumberFormat('en-US', {
+                            style: 'currency',
+                            currency: 'GBP'
+                        })
+             ```
 
 ## Mon 6-April-2020
 - made a `cli interface` following Traversy media tuorial.
