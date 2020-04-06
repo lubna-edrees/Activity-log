@@ -17,7 +17,8 @@ daily report of where I am
 - useful number formatter (espesially for currency)
 
 
-            ``` javascript
+           ```javascript
+           
                         /**
                          * initializing currency formatter
                          */
@@ -25,6 +26,7 @@ daily report of where I am
                             style: 'currency',
                             currency: 'GBP'
                         })
+                        
              ```
 
 ## Mon 6-April-2020
