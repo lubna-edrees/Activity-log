@@ -4,6 +4,11 @@ daily report of where I am
 ## Hot Topics
 <div style="text-align:center"><img src="https://i.imgur.com/UxGxYf7.png" /></div>
 
+## packages I dealed with
+- `configStore`: store your configurations in one object easly.
+- `colors`: add colors to the console.
+-
+
 ## sun 5-April-2020
 - `facebook auth` to connect to my website.
 - `google auth` to connect to my website.
