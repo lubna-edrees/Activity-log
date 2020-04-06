@@ -9,6 +9,9 @@ daily report of where I am
 - `colors`: add colors to the console.
 - `inquirer`: interact with users through your cli.
 
+## commands:
+- `npm link`: install the cli that  you are working on it globally on your machine.
+
 ## notes for the record:
 - to grap key from user command in your cli, use `proccess.argv` witch gives you an `array` and your first arg is at index `2`.
 
