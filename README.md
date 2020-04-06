@@ -14,7 +14,9 @@ daily report of where I am
 
 ## notes for the record:
 - to grap key from user command in your cli, use `proccess.argv` witch gives you an `array` and your first arg is at index `2`.
-- useful number formatter (espesially for currency) 
+- useful number formatter (espesially for currency)
+
+
             ```javascript
                         /**
                          * initializing currency formatter
