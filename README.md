@@ -31,7 +31,8 @@ daily report of where I am
 
 ## Mon 6-April-2020
 - made a `cli interface` following Traversy media tuorial.
-- read about the best way to `document` your code in javascript.
+- javascript code documentation.
+- documented `coindex`, a cli for checking crypto currency prices, here: https://github.com/aa947/coindex-cli/tree/documented-coindex
 
 ## sun 5-April-2020
 - `facebook auth` to connect to my website.
