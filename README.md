@@ -17,17 +17,17 @@ daily report of where I am
 - useful number formatter (espesially for currency)
 
 
-           ```javascript
-           
-                        /**
-                         * initializing currency formatter
-                         */
-                        const formatter = Intl.NumberFormat('en-US', {
-                            style: 'currency',
-                            currency: 'GBP'
-                        })
-                        
-             ```
+```javascript
+
+             /**
+              * initializing currency formatter
+              */
+             const formatter = Intl.NumberFormat('en-US', {
+                 style: 'currency',
+                 currency: 'GBP'
+             })
+
+ ```
 
 ## Mon 6-April-2020
 - made a `cli interface` following Traversy media tuorial.
