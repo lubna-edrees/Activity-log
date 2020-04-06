@@ -7,7 +7,7 @@ daily report of where I am
 ## packages I dealed with
 - `configStore`: store your configurations in one object easly.
 - `colors`: add colors to the console.
--
+- `inquirer`: interact with users through your cli.
 
 ## sun 5-April-2020
 - `facebook auth` to connect to my website.
