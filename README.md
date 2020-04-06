@@ -9,6 +9,9 @@ daily report of where I am
 - `colors`: add colors to the console.
 - `inquirer`: interact with users through your cli.
 
+## notes for the record:
+- to grap key from user command in your cli, use `proccess.argv` witch gives you an `array` and your first arg is at index `2`.
+
 ## sun 5-April-2020
 - `facebook auth` to connect to my website.
 - `google auth` to connect to my website.
