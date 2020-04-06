@@ -17,7 +17,7 @@ daily report of where I am
 - useful number formatter (espesially for currency)
 
 
-            ```javascript
+            ``` javascript
                         /**
                          * initializing currency formatter
                          */
