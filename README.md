@@ -28,6 +28,10 @@ daily report of where I am
              })
 
  ```
+ 
+## Tue 7-April-2020 
+- attended an introductory session on how to volunteer with `Code Your Future`.
+- Re-checked my `LinkedIn` account, here: https://www.linkedin.com/in/ahmad-ali-07383164194/
 
 ## Mon 6-April-2020
 - made a `cli interface` following Traversy media tuorial.
