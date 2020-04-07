@@ -29,9 +29,14 @@ daily report of where I am
 
  ```
  
+ - if you use `string.split(/(regex)/)` will split the str keeping the regex match element.
+ 
 ## Tue 7-April-2020 
 - attended an introductory session on how to volunteer with `Code Your Future`.
 - Re-checked my `LinkedIn` account, here: https://www.linkedin.com/in/ahmad-ali-07383164194/
+- attended `Founders And Coders` session today.
+- done a `codewars Kata` :  Replacement, revised: `arr.pop()` and `arr.unshift()` returns the single Elemnt that they worked on, My solutions: https://www.codewars.com/kata/598d89971928a085c000001a/solutions/javascript/me/best_practice 
+- done a `codewars Kata` : Break camelCase, my sloution: https://www.codewars.com/kata/5208f99aee097e6552000148/solutions/javascript/me/best_practice
 
 ## Mon 6-April-2020
 - made a `cli interface` following Traversy media tuorial.
