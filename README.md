@@ -31,6 +31,11 @@ daily report of where I am
  
  - if you use `string.split(/(regex)/)` will split the str keeping the regex match element.
  
+
+## Wed 8-April-2020
+- revised layout for `hexltd.co`, used a lot of `media queries`.
+- check speed for `hexltd.co`, I enabled cach, compressed images, wiped a lot of unnesseray thing, `page loading time` reduced from `25s` to `7.2s`. still high, but it's a big website.
+ 
 ## Tue 7-April-2020 
 - attended an introductory session on how to volunteer with `Code Your Future`.
 - Re-checked my `LinkedIn` account, here: https://www.linkedin.com/in/ahmad-ali-07383164194/
