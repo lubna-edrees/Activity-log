@@ -36,7 +36,8 @@ daily report of where I am
 
 
 ```javascript 
-let viraible_passes_to_regex = new RegExp ( `string contains a ${ var }` , 'gi' );  ```
+let viraible_passes_to_regex = new RegExp ( `string contains a ${ var }` , 'gi' ); 
+```
  
 ## Thur 9-April-2020
 - generated and designed automated emails for `hexltd.co`.
