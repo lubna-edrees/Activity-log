@@ -38,6 +38,13 @@ daily report of where I am
 ```javascript 
 let viraible_passes_to_regex = new RegExp ( `string contains a ${ var }` , 'gi' ); 
 ```
+
+- `Arrays`: - contigous area of memory 
+            - consist of equal-size elment
+            - indexed by contigous integers
+            - constant time to access any element
+            - constant time to add/remove at the end `o(1)`
+            -linear time to add/remove at arbitary location `o(n)`
  
 ## Thur 9-April-2020
 - generated and designed automated emails for `hexltd.co`.
