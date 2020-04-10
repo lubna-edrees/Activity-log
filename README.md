@@ -46,6 +46,11 @@ let viraible_passes_to_regex = new RegExp ( `string contains a ${ var }` , 'gi' 
   - constant time to access any element.
   - constant time to add/remove at the end `o(1)`.
   - linear time to add/remove at arbitary location `o(n)`.
+  
+- `linked-lists`: 
+  - add/remove to the begging is cheap `o(1)`.
+  - if there is no `tail pointer` => add/remove to end is expensive `o(n)`.
+  - if `tail pointer exists` => add to end is cheap `o(1)`, remove from end still `o(n)`.
  
 ## Thur 9-April-2020
 - generated and designed automated emails for `hexltd.co`.
