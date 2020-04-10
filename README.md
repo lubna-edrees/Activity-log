@@ -30,9 +30,9 @@ daily report of where I am
  ```
  
  - if you use `string.split(/(regex)/)` will split the str keeping the regex match element.
+## Fri 10-April-2020
  
- 
-## Thur 8-April-2020
+## Thur 9-April-2020
 - generated and designed automated emails for `hexltd.co`.
 - connected an e-commerce website to `PayPal API` and test it and publish it live.
 - started preparing for connectint e-commerce website to `GoCardless API`.
