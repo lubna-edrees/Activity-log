@@ -2,7 +2,7 @@
 daily report of where I am
 
 ## Hot Topics
-<div style="text-align:center"><img src="https://i.imgur.com/pJTgFCn.png" /></div>
+<div style="text-align:center"><img src="https://i.imgur.com/YvoyA3M.png" /></div>
 
 ## packages I dealed with
 - `configStore`: store your configurations in one object easly.
