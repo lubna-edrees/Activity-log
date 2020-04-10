@@ -33,7 +33,10 @@ daily report of where I am
 ## Fri 10-April-2020
 - 5 katas tpday.
 - use this to pass variables to the regex.
-``` let viraible_passes_to_regex = new RegExp ( `string contains a ${ var }` , 'gi' );  ```
+
+
+```javascript 
+let viraible_passes_to_regex = new RegExp ( `string contains a ${ var }` , 'gi' );  ```
  
 ## Thur 9-April-2020
 - generated and designed automated emails for `hexltd.co`.
