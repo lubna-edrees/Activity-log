@@ -79,13 +79,15 @@ gcd = (a, b) =>{
   }
 
 ```
-- algorithm for making a good a logarith:
+- algorithm for making a good algorithm:
   - always start with a `naiive algorithm` and make it works, normally slow.
   - next find a standard toolbox to help you:
     - greedy algorithm.
     - divide and conqur.
     - dynamic programming.
   - optimize your algorithm.
+  
+- more on algorithms here: https://github.com/aa947/data-structures-and-algorithms/tree/master/algorithm-toolbox
 
  
 ## Fri 10-April-2020
