@@ -58,8 +58,21 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
         return `${ nn[nn.length-1]  }`;
 }
 ```
-- efficent allograthim  to calculate `GCD greatest commom diviser`:
+- calculating `Big-O` costs for the alogarithm above:
+
+``` javascript
+if statment => O(1)
+if statment => O(1)
+create an array of n elemnts => O(n)
+running for loop => O(n)
+operations inside  the for loop => 3 * O(n)
+return statment => O(1)
+__________________
+sum cost = O(1) + O(1) + O(n) +  3 * O(n) * O(n) + O(1) =>  O(n^2) 
+```
+- efficent allograthim  to calculate `GCD greatest commom diviser` :
 ```javascript
+/* cost: a * b operations */
 gcd = (a, b) =>{
   if(b == 0) { return a; }
   if(a == 0) { return b; }
@@ -68,6 +81,7 @@ gcd = (a, b) =>{
   
 }
 ```
+
  
 ## Fri 10-April-2020
 - 5 katas tpday.
