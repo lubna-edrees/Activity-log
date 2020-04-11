@@ -58,10 +58,11 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
         return `${ nn[nn.length-1]  }`;
 }
 ```
-- efficent allograthim  to calculate `GCD greactest commom diviser`:
+- efficent allograthim  to calculate `GCD greatest commom diviser`:
 ```javascript
 gcd = (a, b) =>{
   if(b == 0) { return a; }
+  if(a == 0) { return b; }
   if ( b === a ) { return a; }
   b > a ? gcd( b, a % b ) : gcd( a, b % a ) 
   
