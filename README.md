@@ -88,6 +88,13 @@ gcd = (a, b) =>{
   - optimize your algorithm.
   
 - more on algorithms here: https://github.com/aa947/data-structures-and-algorithms/tree/master/algorithm-toolbox
+- `greedy algorithm`: 
+```
+1- make the first move.
+2- test if it's a safe move or start from the begining
+3- test if that move is optimized or optimize it the most
+4- move to the next step with the same approach.
+```
 
  
 ## Fri 10-April-2020
