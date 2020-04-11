@@ -58,6 +58,15 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
         return `${ nn[nn.length-1]  }`;
 }
 ```
+- efficent allograthim  to calculate `GCD greactest commom diviser`:
+```javascript
+gcd = (a, b) =>{
+  if(b == 0) { return a; }
+  if ( b === a ) { return a; }
+  b > a ? gcd( b, a % b ) : gcd( a, b % a ) 
+  
+}
+```
  
 ## Fri 10-April-2020
 - 5 katas tpday.
