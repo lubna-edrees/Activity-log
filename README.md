@@ -8,6 +8,7 @@ daily report of where I am
 - `configStore`: store your configurations in one object easly.
 - `colors`: add colors to the console.
 - `inquirer`: interact with users through your cli.
+- `BigNumber.js`: good library to deal with expotential numbers `n + e` as a normal big integers.
 
 ## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
@@ -30,6 +31,11 @@ daily report of where I am
  ```
  
  - if you use `string.split(/(regex)/)` will split the str keeping the regex match element.
+
+## Sat 11-April-2020
+-  `Fibonacci Numbers`: sequence of numbers `0, 1 , n1, n2= n1+1, n3=n2+n1, n4=n3+n2 .....`
+- 
+ 
 ## Fri 10-April-2020
 - 5 katas tpday.
 - use this to pass variables to the regex.
