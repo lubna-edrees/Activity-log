@@ -74,12 +74,10 @@ sum cost = O(1) + O(1) + O(n) +  3 * O(n) * O(n) + O(1) =>  O(n^2)
 ```javascript
 /* cost: a * b operations */
 gcd = (a, b) =>{
-  if(b == 0) { return a; }
-  if(a == 0) { return b; }
-  if ( b === a ) { return a; }
-  b > a ? gcd( b, a % b ) : gcd( a, b % a ) 
-  
-}
+    if(b == 0) { return a; }
+    return gcd( b, a%b ) 
+  }
+
 ```
 - alogarithm for making a good a logarith:
   - always start with a `naiive alogarithm` and make it works, normally slow.
