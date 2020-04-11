@@ -34,7 +34,22 @@ daily report of where I am
 
 ## Sat 11-April-2020
 -  `Fibonacci Numbers`: sequence of numbers `0, 1 , n1, n2= n1+1, n3=n2+n1, n4=n3+n2 .....`
-- 
+- simple alograithm to calculate `Fibonacci Numbers`, only works for small n.
+```javascript
+ function getFibonacci(n) {
+      if( n==0){ return '0' }
+      if( n==1 ){ return '1' }
+      let nn = [];
+      
+      for (let i=0; i<=n; i++ ){
+             if( i==0){ nn.push(0); continue; }
+            if( i==1){ nn.push(1); continue; }
+            else{ nn.push( nn[i-1] + nn[i-2] )}
+           }
+
+        return `${ nn[nn.length-1]  }`;
+}
+```
  
 ## Fri 10-April-2020
 - 5 katas tpday.
