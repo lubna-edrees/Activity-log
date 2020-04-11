@@ -58,7 +58,7 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
         return `${ nn[nn.length-1]  }`;
 }
 ```
-- calculating `Big-O` costs for the alogarithm above:
+- calculating `Big-O` costs for the algorithm above:
 
 ``` javascript
 if statment => O(1)
@@ -70,7 +70,7 @@ return statment => O(1)
 __________________
 sum cost = O(1) + O(1) + O(n) +  3 * O(n) * O(n) + O(1) =>  O(n^2) 
 ```
-- efficent allograthim  to calculate `GCD greatest commom diviser` :
+- efficent algorithm  to calculate `GCD greatest commom diviser` :
 ```javascript
 /* cost: a * b operations */
 gcd = (a, b) =>{
@@ -79,13 +79,13 @@ gcd = (a, b) =>{
   }
 
 ```
-- alogarithm for making a good a logarith:
-  - always start with a `naiive alogarithm` and make it works, normally slow.
+- algorithm for making a good a logarith:
+  - always start with a `naiive algorithm` and make it works, normally slow.
   - next find a standard toolbox to help you:
-    - greedy alogarithm.
+    - greedy algorithm.
     - divide and conqur.
     - dynamic programming.
-  - optimize your alogarithm.
+  - optimize your algorithm.
 
  
 ## Fri 10-April-2020
