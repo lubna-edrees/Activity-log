@@ -93,7 +93,7 @@ gcd = (a, b) =>{
 1- make the first move.
 2- test if it's a safe move or start from the begining
 3- test if that move is optimized or optimize it the most
-4- move to the next step with the same approach.
+4- you get a sub-problem handle it with the same approach.
 ```
 
  
