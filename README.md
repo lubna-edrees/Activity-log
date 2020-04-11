@@ -81,6 +81,12 @@ gcd = (a, b) =>{
   
 }
 ```
+- alogarithm for making a good a logarith:
+  - always start with a `naiive alogorathim` and make it works, normally slow.
+  - next find a standard toolbox to help you:
+    - greedy alogarithm.
+    - divide and conqur.
+    - dynamic programming.
 
  
 ## Fri 10-April-2020
