@@ -17,6 +17,7 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `colors`: add colors to the console.
 - `inquirer`: interact with users through your cli.
 - `BigNumber.js`: good library to deal with expotential numbers `n + e` as a normal big integers.
+- `dg-url`: handy functions to deal with urls.
 
 ## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
@@ -39,6 +40,15 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
  ```
  
  - if you use `string.split(/(regex)/)` will split the str keeping the regex match element.
+ 
+## Sun 12-April-2020
+- implemented `dg.anchor()` witch a function to automatically fill up anchor tag attributes by extracting this data from the url itself.
+- `regular expressions` again, to handle urls:
+
+``` javascript
+let regex = /^(?<start>https|http)?(?<colon_slashes>:\/\/)?(?<three_w>www.)?(?<main>[\w\-\_\:]+)(?<dot_com>\.[\w]+)\/*(?<text1>[\w\-\_\#\?\&\=]*)\/*(?<text2>[\w\-\_\#\?\&\=]*)\/*(?<text3>[\w\-\_\#\?\&\=]*)/;
+
+```
 
 ## Sat 11-April-2020
 -  `Fibonacci Numbers`: sequence of numbers `0, 1 , n1, n2= n1+1, n3=n2+n1, n4=n3+n2 .....`
