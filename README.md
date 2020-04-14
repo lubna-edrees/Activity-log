@@ -40,7 +40,17 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
  ```
  
  - if you use `string.split(/(regex)/)` will split the str keeping the regex match element.
- 
+## Tue 14-Aprill-2020
+- started working for `CodeYourFuture`
+- started by reviewing students coding homeworks.
+- made some changes for `hexltd.co` according to client preferrences.
+
+## Mon 13-April-2020
+- fixed bug in `dg-url`
+- attended `Founders and Coders` session about `DOM manupualtion`
+- Update my `linkedIn` account
+- choosen this photo as my cover:
+![](https://dl.dropbox.com/s/7whlmpqnfmvzacf/You%20Are%20In%20The%20Right%20Place%20%281%29.png?dl=0)
 ## Sun 12-April-2020
 - implemented `dg.anchor()` witch a function to automatically fill up anchor tag attributes by extracting this data from the url itself.
 - `regular expressions` again, to handle urls:
