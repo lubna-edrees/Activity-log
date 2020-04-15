@@ -52,9 +52,14 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 <meta property="og:description" content="#">
 <meta property="og:image" content="#">
 <meta property="og:url" content="#">
-
+<meta name="twitter:card" content="#">
+<meta name="twitter:image" content="#">
+<meta name="author" content="[Author name here]">
 ```
- 
+- code wars api:
+```
+https://www.codewars.com/api/v1/users/ahmad.ali
+```
 ## Tue 14-Aprill-2020
 - started working for `CodeYourFuture`
 - started by reviewing students coding homeworks.
