@@ -18,6 +18,9 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `inquirer`: interact with users through your cli.
 - `BigNumber.js`: good library to deal with expotential numbers `n + e` as a normal big integers.
 - `dg-url`: handy functions to deal with urls.
+- `cheerio.io`: jquery in the server.
+- `axios`: http requests library.
+- `phantom`: http library allows cors.
 
 ## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
@@ -40,6 +43,18 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
  ```
  
  - if you use `string.split(/(regex)/)` will split the str keeping the regex match element.
+## Wed 15-April-2020
+- `cherrio.io` especially `.load()`
+- `cross-origin-resourses` problem.
+- social media tags:
+```html
+<meta property="og:title" content="#">
+<meta property="og:description" content="#">
+<meta property="og:image" content="#">
+<meta property="og:url" content="#">
+
+```
+ 
 ## Tue 14-Aprill-2020
 - started working for `CodeYourFuture`
 - started by reviewing students coding homeworks.
