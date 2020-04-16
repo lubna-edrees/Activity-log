@@ -21,8 +21,9 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `cheerio.io`: jquery in the server.
 - `axios`: http requests library.
 - `phantom`: http library allows cors.
+- `react-chartjs2`: displaying charts easily
 
-## commands:
+.## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
 
 ## notes for the record:
@@ -43,6 +44,12 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
  ```
  
  - if you use `string.split(/(regex)/)` will split the str keeping the regex match element.
+ - when you design your routes, make sure that front end routes differe from back-end routes. especially using `react-node` app.
+ 
+## Thur 16-April-2020
+- performance for https://ahmad-ali.co.uk/ fixed:
+![](https://dl.dropbox.com/s/b7ejapt58wv0epe/chrome_iYqs0WCnpg.png?dl=0)
+
 ## Wed 15-April-2020
 - `cherrio.io` especially `.load()`
 - `cross-origin-resourses` problem.
