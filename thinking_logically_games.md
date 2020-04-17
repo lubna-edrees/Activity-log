@@ -6,11 +6,15 @@ Distribute N black balls among 10 boxes so that every two boxes have different n
 
 http://dm.compsciclub.ru/app/quiz-balls-in-boxes
 
+![](https://i.imgur.com/a9fiYza.png)
+
 ### Activity selection
 
 Select as many non-overlapping segments as possible
 
 http://dm.compsciclub.ru/app/quiz-activity-selection
+
+![](https://i.imgur.com/l8IHseP.png)
 
 ### Touch all segments
 
