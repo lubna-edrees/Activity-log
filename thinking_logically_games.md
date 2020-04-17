@@ -11,3 +11,10 @@ http://dm.compsciclub.ru/app/quiz-balls-in-boxes
 Select as many non-overlapping segments as possible
 
 http://dm.compsciclub.ru/app/quiz-activity-selection
+
+### Touch all segments
+
+Touch the given k segments with minimum number of vertical lines
+
+http://dm.compsciclub.ru/app/quiz-touch-all-segments
+
