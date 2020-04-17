@@ -18,3 +18,5 @@ Touch the given k segments with minimum number of vertical lines
 
 http://dm.compsciclub.ru/app/quiz-touch-all-segments
 
+![](https://i.imgur.com/l7784AB.png)
+
