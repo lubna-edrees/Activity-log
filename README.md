@@ -23,7 +23,7 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `phantom`: http library allows cors.
 - `react-chartjs-2`: displaying charts easily.
 
-.## commands:
+## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
 
 ## notes for the record:
