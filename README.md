@@ -55,6 +55,7 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 ## Fri 17-April-2020
 - algorithms again.
 - `eventEmitters` in node.js.
+- sloved the knapsack problem here: https://github.com/ahmad-ali14/data-structures-and-algorithms/blob/master/algorithm-toolbox/week3/maximum_loot.js
 
 ## Thur 16-April-2020
 - performance for https://ahmad-ali.co.uk/ fixed:
