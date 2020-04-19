@@ -58,6 +58,7 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 ## Sat 18-April-2020
 - added blog functionality to my portfolio. 
 - more active on LinkedIn. 
+- continued with oddin project on how to get hired. 
 
  
  
