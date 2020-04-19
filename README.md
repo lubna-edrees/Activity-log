@@ -50,6 +50,15 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 ```
 const [item1, item2] = input.toString().split(' ').map(Number);
 ```
+
+## sun 19-April-2020
+- cyf class: 'debugging'. 
+
+
+## Sat 18-April-2020
+- added blog functionality to my portfolio. 
+- more active on LinkedIn. 
+
  
  
 ## Fri 17-April-2020
