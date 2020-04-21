@@ -53,6 +53,11 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 
 ## Tue 21-April-2020
 - UI frameworks.
+- bootsrap
+ - class `order`: EX: `.sm-order-first` and `.sm-order-last`.
+ - `.align-items-center` or `align-self-center` : center vertically.
+ - `text-center` or `justify-content-center` : center Horizontally .
+ - 
 ## Mon 20-April-2020
 - webinar: business communication by Refugee council- London.
 - playing with front end simple portfolio.
