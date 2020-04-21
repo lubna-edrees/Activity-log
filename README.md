@@ -54,10 +54,23 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 ## Tue 21-April-2020
 - UI frameworks.
 - bootsrap
+  - div `.col-12 col-sm-6` : 12 on xs, 6 on sm and above.
+  - div `.col`: 12 on all.
+  - div `.col-sm-4`, div `.col-sm`, div `.col-sm-3` : from sm and above, first div 4, last div 3, middle div will take the rest.
+  - item `.d-sm-none d-md-block` :  hide from sm and above, until find another `d` will show from md and above.
   - class `order`: EX: `.sm-order-first` and `.sm-order-last`.
   - center vertically:  `.align-items-center` or `align-self-center` 
   - center Horizontally : `text-center` or `justify-content-center` 
-  - navbar:  `.navbar navbar-dark navbar-expand-sm bg-primary` 
+  - navbar:
+    - nav: `.navbar navbar-dark navbar-expand-sm bg-primary` : dark blue nav, stacked on sm.
+    - nav > ul : `.navbar-nav mr-auto` : left side menu.
+    - nav > ul > li : `.nav-item` :
+    - nav > ul > li: `.active` : highlight current page link.
+    - nav > ul > li > a : `.nav-link`
+    - navbar menu button: `<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-id" >`
+  - push elemnt as much as you cant to the left (margin right): `.mr-auto`.
+  - push elemnt as much as you cant to the right (margin left): `.ml-auto`.
+
  
 ## Mon 20-April-2020
 - webinar: business communication by Refugee council- London.
