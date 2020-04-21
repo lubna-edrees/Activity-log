@@ -47,10 +47,15 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
  - when you design your routes, make sure that front end routes differe from back-end routes. especially when using `react-node` app.
  - tricky chain of functions :  take user input, convert to string, split over ' ', extract numbers from str and assign them to item1 and item2.
  
-```
+```javascript
 const [item1, item2] = input.toString().split(' ').map(Number);
 ```
 
+## Tue 21-April-2020
+- UI frameworks.
+## Mon 20-April-2020
+- webinar: business communication by Refugee council- London.
+- playing with front end simple portfolio.
 ## sun 19-April-2020
 - cyf class: 'debugging'. 
 
