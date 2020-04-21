@@ -54,10 +54,10 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 ## Tue 21-April-2020
 - UI frameworks.
 - bootsrap
- - class `order`: EX: `.sm-order-first` and `.sm-order-last`.
- - center vertically:  `.align-items-center` or `align-self-center` 
- - center Horizontally : `text-center` or `justify-content-center` 
- - navbar:  `.navbar navbar-dark navbar-expand-sm bg-primary` 
+  - class `order`: EX: `.sm-order-first` and `.sm-order-last`.
+  - center vertically:  `.align-items-center` or `align-self-center` 
+  - center Horizontally : `text-center` or `justify-content-center` 
+  - navbar:  `.navbar navbar-dark navbar-expand-sm bg-primary` 
  
 ## Mon 20-April-2020
 - webinar: business communication by Refugee council- London.
