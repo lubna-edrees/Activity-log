@@ -68,6 +68,8 @@ const [item1, item2] = input.toString().split(' ').map(Number);
     - nav > ul > li: `.active` : highlight current page link.
     - nav > ul > li > a : `.nav-link`
     - navbar menu button: `<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-id" >`
+    - menu button > span : `.navbar-toggler-icon`
+    - surround ul menu with div: `<div class="collapse navbar-collapse" id="#menu-id">`
   - push elemnt as much as you cant to the left (margin right): `.mr-auto`.
   - push elemnt as much as you cant to the right (margin left): `.ml-auto`.
 
