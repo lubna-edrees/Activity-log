@@ -72,7 +72,7 @@ const [item1, item2] = input.toString().split(' ').map(Number);
     - surround ul menu with div: `<div class="collapse navbar-collapse" id="#menu-id">`
   - push elemnt as much as you cant to the left (margin right): `.mr-auto`.
   - push elemnt as much as you cant to the right (margin left): `.ml-auto`.
-  - Tv Show : https://loving-benz-169884.netlify.app/
+ 
   
 - make all elements(divs) third of the screen with same height:
 ```css
@@ -92,6 +92,8 @@ const [item1, item2] = input.toString().split(' ').map(Number);
   - add `display:flex` to parent + add `flex:1` to each box => boxes will take same width and height ( EQUAL HEIGHT + WIDTH COLUMNS ).
   - add `display:flex; justify-content: space-between;` to parent + add `width:32%; margin:1%;` to each box =>  EQUAL HEIGHT + WIDTH COLUMNS WITH MARGINS
   - add `flex-wrap: wrap` to the parent, with all previous code => EQUAL HEIGHT COLUMNS WITH MARGINS IN MULTIPLE ROWS
+  
+- Tv Show : https://loving-benz-169884.netlify.app/
 
  
 ## Mon 20-April-2020
