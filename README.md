@@ -72,6 +72,19 @@ const [item1, item2] = input.toString().split(' ').map(Number);
     - surround ul menu with div: `<div class="collapse navbar-collapse" id="#menu-id">`
   - push elemnt as much as you cant to the left (margin right): `.mr-auto`.
   - push elemnt as much as you cant to the right (margin left): `.ml-auto`.
+  
+- make all elements(divs) third of the screen with same height:
+```css
+#wrapper {
+  width: 100%; 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.third{
+  width: 33%; 
+}
+```
 
  
 ## Mon 20-April-2020
