@@ -51,6 +51,18 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 const [item1, item2] = input.toString().split(' ').map(Number);
 ```
 
+## Wed-22-April-2020
+- bootsrap breadcrumbs:
+```html
+ <ol class="col-12 breadcrumb" >
+            <li class="breadcrumb-item"> <a href="index.html" >Home</a> </li>
+             <li class="breadcrumb-item active"> About</li>
+        </ol>
+```
+- `.table-responsive`: should added in a wrapper div, not applied to the table directly.
+- addtional html tags: `dl` `dt` `dd` `blockqoute` `embed` `object`
+- bootsrap images: `.umg-fluid` `.rounded` `.rounded-corners` `.rounded-circle`
+
 ## Tue 21-April-2020
 - UI frameworks.
 - bootsrap
