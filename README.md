@@ -53,9 +53,9 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 ## Thur-23-April-2020
 - Bootstrap javascript:
   - `tabs` and `pills` navigation.
-  - ![](https://i.imgur.com/Z8m15k0.png)
+ ![](https://i.imgur.com/Z8m15k0.png)
   - `accordion` navigation
-  - ![](https://colorlib.com/wp/wp-content/uploads/sites/2/bootstrap-accordions-800x353.jpg)
+  ![](https://i.imgur.com/q2rEcX7.png)
 
 ## Wed-22-April-2020
 - bootsrap breadcrumbs:
