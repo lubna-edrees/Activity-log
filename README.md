@@ -50,12 +50,16 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 ```javascript
 const [item1, item2] = input.toString().split(' ').map(Number);
 ```
+- bootsrap : ` <i class="material-icons">Ahmad Ali</i>`
+
 ## Thur-23-April-2020
 - Bootstrap javascript:
   - `tabs` and `pills` navigation.
  ![](https://i.imgur.com/Z8m15k0.png)
   - `accordion` navigation
   ![](https://i.imgur.com/q2rEcX7.png)
+  - `tooltips` `popover` `modals`
+  - tooltips code: `data-toggle="tooltip" data-html="true" title="string" data-placement="bottom" `
 
 ## Wed-22-April-2020
 - bootsrap breadcrumbs:
