@@ -12,7 +12,7 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 ## Hot Topics
 <div style="text-align:center"><img src=https://i.imgur.com/XlxpQM4.png" /></div>
 
-## packages I dealed with
+## packages Index  ( quick index to packages I dealed with):
 - `configStore`: store your configurations in one object easly.
 - `colors`: add colors to the console.
 - `inquirer`: interact with users through your cli.
@@ -24,6 +24,12 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `react-chartjs-2`: displaying charts easily.
 - `parallelshell` : execute commands in parallel.
 - `onChange` : watch until files changes then triger a command or a task.
+- `rimraf`: quickly clean a folder.
+- `copyfiles`: quickly copy files between folders.
+- `imagemin-cli`: quiqckly minimze images before deploy.
+- `UglifyJS 3`: minimize js before deploy.
+- `htmlmin` : minimze html before deploy.
+- `usemin-cli`: combine those previous three `minimizors` into cli.
 
 ## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
@@ -78,7 +84,7 @@ function doesFileExist(urlToFile) {
     }
 }
 ```
-
+- `task runners` : simplfiy the pre-proccesses of deployment: `grunt` `gulp`.
 ## Thur-23-April-2020
 - Bootstrap javascript:
   - `tabs` and `pills` navigation.
