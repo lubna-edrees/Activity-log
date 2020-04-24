@@ -62,6 +62,21 @@ var sanitizeHTML = function (str) {
 };
 ```
 
+- quickly check existance of a file using vanilla js:
+```javascript
+function doesFileExist(urlToFile) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', urlToFile, false);
+    xhr.send();
+     
+    if (xhr.status == "404") {
+        return false;
+    } else {
+        return true;
+    }
+}
+```
+
 ## Thur-23-April-2020
 - Bootstrap javascript:
   - `tabs` and `pills` navigation.
