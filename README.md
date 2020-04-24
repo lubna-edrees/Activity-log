@@ -64,7 +64,7 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 
 
 ## Sat-25-April-2020:
-- studying algorithms: [](./algorithms.md)
+- studying algorithms: [algorithms stuff](https://github.com/ahmad-ali14/Activity-log/blob/master/algorithms.md)
 
 
 ## Fri-24-April-2020
