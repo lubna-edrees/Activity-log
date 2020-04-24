@@ -62,6 +62,11 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - bootsrap : ` <i class="material-icons">Ahmad Ali</i>`
 - Best resource for Grunt : https://www.coursera.org/learn/bootstrap-4/supplement/SIHkS/exercise-instructions-grunt-part-2
 
+
+## Sat-25-April-2020:
+- studying algorithms: [](./algorithms.md)
+
+
 ## Fri-24-April-2020
 - sanitize third party code before inject it into your website using `innerHTML`
 ```javascript
