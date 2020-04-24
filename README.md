@@ -89,6 +89,7 @@ function doesFileExist(urlToFile) {
 - `grunt`:
 	- `npm i grunt`
 	- touch ` Gruntfile.js`
+	- npm i `grunt-sass` `time-grunt` `jit-grunt`
 	- simple grunt file: 
 ```javascript
 		'use strict';
