@@ -60,6 +60,7 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 const [item1, item2] = input.toString().split(' ').map(Number);
 ```
 - bootsrap : ` <i class="material-icons">Ahmad Ali</i>`
+- Best resource for Grunt : https://www.coursera.org/learn/bootstrap-4/supplement/SIHkS/exercise-instructions-grunt-part-2
 
 ## Fri-24-April-2020
 - sanitize third party code before inject it into your website using `innerHTML`
@@ -89,34 +90,70 @@ function doesFileExist(urlToFile) {
 - `grunt`:
 	- `npm i grunt`
 	- touch ` Gruntfile.js`
-	- npm i `grunt-sass` `time-grunt` `jit-grunt`
-	- simple grunt file: 
+	- npm i `grunt-contrib-less` `time-grunt` `jit-grunt`
+	- npm i `grunt-contrib-watch` `grunt-browser-sync`
+	- simple grunt file for watching and compieling `.less` files: 
 ```javascript
-		'use strict';
+		
+module.exports = function (grunt) {
+    // Time how long tasks take. Can help when optimizing build times
+    require('time-grunt')(grunt);
 
-		module.exports = function (grunt) {
-   		 // Time how long tasks take. Can help when optimizing build times
-		    require('time-grunt')(grunt);
+    // Automatically load required Grunt tasks
+    require('jit-grunt')(grunt);
 
-   		 // Automatically load required Grunt tasks
-   		 require('jit-grunt')(grunt);
+    // Define the configuration for all the tasks
+    grunt.initConfig({
+        less: {
+            css: {
+                files: {
+                    'css/styles.css': 'css/styles.less'
+                }
+            }
+        },
+        watch: {
+            files: 'css/*.less',
+            tasks: ['less']
+        },
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                        'css/*.css',
+                        '*.html',
+                        'js/*.js'
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    server: {
+                        baseDir: "./"
+                    }
+                }
+            }
+        }
+    });
 
-  		  // Define the configuration for all the tasks
- 		   grunt.initConfig({
-  		      sass: {
-  		          dist: {
-   		             files: {
-    		                'css/styles.css': 'css/styles.scss'
-    			            }
-		    		}
-   			     }
-  			  });
+    grunt.registerTask('css', ['less']);
+    grunt.registerTask('default', ['browserSync', 'watch']);
 
-   			 grunt.registerTask('css', ['sass']);
-
-			};
+};
 ```
-
+- Grunt:
+	- at the `cmd`: `grunt less` => All `.less` files compiling into css.
+	- at the `cmd`: `grunt` => watching and compiling automatically
+	- for pre-deploy process we need:
+		-  `grunt-contrib-copy`: copying files to `dist` folder.
+		- ` grunt-contrib-clean`: clean `dist` each time before run `build`
+		-  `grunt-contrib-imagemin` : minimizing images.
+		-  `grunt-contrib-concat` : concat files.
+ 		-  `grunt-contrib-cssmin`: min css.
+ 		- `grunt-contrib-htmlmin` : min html.
+ 		- `grunt-contrib-uglify`: min js.
+ 		- `grunt-filerev`.
+ 		- `grunt-usemin`: use all min files.
+		
+- Best resource for Grunt : https://www.coursera.org/learn/bootstrap-4/supplement/SIHkS/exercise-instructions-grunt-part-2
 
 ## Thur-23-April-2020
 - Bootstrap javascript:
