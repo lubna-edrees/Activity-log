@@ -22,6 +22,8 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `axios`: http requests library.
 - `phantom`: http library allows cors.
 - `react-chartjs-2`: displaying charts easily.
+- `parallelshell` : execute commands in parallel.
+- `onChange` : watch until files changes then triger a command or a task.
 
 ## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
