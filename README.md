@@ -52,6 +52,16 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 ```
 - bootsrap : ` <i class="material-icons">Ahmad Ali</i>`
 
+## Fri-24-April-2020
+- sanitize third party code before inject it into your website using `innerHTML`
+```javascript
+var sanitizeHTML = function (str) {
+	var temp = document.createElement('div');
+	temp.textContent = str;
+	return temp.innerHTML;
+};
+```
+
 ## Thur-23-April-2020
 - Bootstrap javascript:
   - `tabs` and `pills` navigation.
