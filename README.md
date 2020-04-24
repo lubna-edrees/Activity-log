@@ -67,7 +67,6 @@ var sanitizeHTML = function (str) {
   - `tabs` and `pills` navigation.
  ![](https://i.imgur.com/Z8m15k0.png)
   - `accordion` navigation
-  ![](https://i.imgur.com/q2rEcX7.png)
   - `tooltips` `popover` `modals`
   - tooltips code: `data-toggle="tooltip" data-html="true" title="string" data-placement="bottom" `
 
