@@ -30,6 +30,7 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `UglifyJS 3`: minimize js before deploy.
 - `htmlmin` : minimze html before deploy.
 - `usemin-cli`: combine those previous three `minimizors` into cli.
+- `grunt-cli`: cli for grunt.
 
 ## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
@@ -85,6 +86,37 @@ function doesFileExist(urlToFile) {
 }
 ```
 - `task runners` : simplfiy the pre-proccesses of deployment: `grunt` `gulp`.
+- `grunt`:
+	- `npm i grunt`
+	- touch ` Gruntfile.js`
+	- simple grunt file: 
+	```
+	'use strict';
+
+module.exports = function (grunt) {
+    // Time how long tasks take. Can help when optimizing build times
+    require('time-grunt')(grunt);
+
+    // Automatically load required Grunt tasks
+    require('jit-grunt')(grunt);
+
+    // Define the configuration for all the tasks
+    grunt.initConfig({
+        sass: {
+            dist: {
+                files: {
+                    'css/styles.css': 'css/styles.scss'
+                }
+            }
+        }
+    });
+
+    grunt.registerTask('css', ['sass']);
+
+};
+```
+
+
 ## Thur-23-April-2020
 - Bootstrap javascript:
   - `tabs` and `pills` navigation.
