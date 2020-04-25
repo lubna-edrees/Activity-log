@@ -5,8 +5,6 @@
 - “ Algorithms + Data Structures = Programs. ” — Niklaus Wirth
 - “ Algorithms: a common language for nature, human, and computer. ” — Avi Wigderson
 
-<br />
 ![](https://i.imgur.com/IapntqE.png)
 
-<br />
 # union-find
