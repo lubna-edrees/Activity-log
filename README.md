@@ -62,6 +62,17 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - bootsrap : ` <i class="material-icons">Ahmad Ali</i>`
 - Best resource for Grunt : https://www.coursera.org/learn/bootstrap-4/supplement/SIHkS/exercise-instructions-grunt-part-2
 
+## Sun-26-April-2020
+- competeions:
+	- ACM ICPC.
+	- Google code jam.
+	- facebook hacker cup.
+	- TopCoder.
+	- code forces.
+	- code chief
+	- hacker rank.
+	- sphere online judge
+	- CSAcamedy
 
 ## Sat-25-April-2020:
 - studying algorithms: [algorithms stuff](https://github.com/ahmad-ali14/Activity-log/blob/master/algorithms.md)
