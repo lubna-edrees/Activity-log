@@ -31,6 +31,8 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `htmlmin` : minimze html before deploy.
 - `usemin-cli`: combine those previous three `minimizors` into cli.
 - `grunt-cli`: cli for grunt.
+- `react-document-title`: change pages titles dynamically
+- `react-helmet`: manage head meta tags.
 
 ## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
