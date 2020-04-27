@@ -64,6 +64,15 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - bootsrap : ` <i class="material-icons">Ahmad Ali</i>`
 - Best resource for Grunt : https://www.coursera.org/learn/bootstrap-4/supplement/SIHkS/exercise-instructions-grunt-part-2
 
+## Mon-27_April-2020
+-
+```javascript
+window.addEventListener('key-event', (event)=>{
+	event.key == 'arrowLeft' //you can use key name instead of key code.
+
+})
+```
+
 ## Sun-26-April-2020
 - competeions:
 	- ACM ICPC.
