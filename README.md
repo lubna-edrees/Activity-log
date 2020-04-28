@@ -81,6 +81,10 @@ arr3 = arr3.sort((a, b) => {
         return a[1].localeCompare(b[1]); //a and b are both arrays.
     });
 ```
+- generating random number between 0 and max:
+```javascript
+Math.floor(Math.random() * Math.floor(max));
+```
 
 ## Mon-27_April-2020
 - add event listener to the key and use the key name intead of key code. 
