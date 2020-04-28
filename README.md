@@ -64,14 +64,26 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - bootsrap : ` <i class="material-icons">Ahmad Ali</i>`
 - Best resource for Grunt : https://www.coursera.org/learn/bootstrap-4/supplement/SIHkS/exercise-instructions-grunt-part-2
 
+## Tue-28-April-2020
+- more algorithms.
+- get all arguments to a function if you don't know the number of args in advance:
+```javascript
+ let argss= [...arguments]; //args will not work in all cases.
+```
+- looping throgh an object:
+	-  `for (let el in Obj)` will loop over the keys.
+	- ` for (let el of bj)` will loop over the valuse ??
+
 ## Mon-27_April-2020
--
+- add event listener to the key and use the key name intead of key code. 
 ```javascript
 window.addEventListener('key-event', (event)=>{
 	event.key == 'arrowLeft' //you can use key name instead of key code.
 
 })
 ```
+- slider from scratch: https://peaceful-wozniak-036720.netlify.app/
+
 
 ## Sun-26-April-2020
 - competeions:
