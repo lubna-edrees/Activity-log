@@ -85,7 +85,19 @@ arr3 = arr3.sort((a, b) => {
 ```javascript
 Math.floor(Math.random() * Math.floor(max));
 ```
+- prevent users from selecting text => `give the elemnt class of "noselect"`:
+```css
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
 
+```
 ## Mon-27_April-2020
 - add event listener to the key and use the key name intead of key code. 
 ```javascript
