@@ -69,10 +69,18 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - get all arguments to a function if you don't know the number of args in advance:
 ```javascript
  let argss= [...arguments]; //args will not work in all cases.
+ //OR
+ let argss= [].slice.call(arguments);
 ```
 - looping throgh an object:
 	-  `for (let el in Obj)` will loop over the keys.
 	- ` for (let el of bj)` will loop over the valuse ??
+- use `localCompare()` to sort nested structures. example:
+```javascript
+arr3 = arr3.sort((a, b) => {
+        return a[1].localeCompare(b[1]); //a and b are both arrays.
+    });
+```
 
 ## Mon-27_April-2020
 - add event listener to the key and use the key name intead of key code. 
