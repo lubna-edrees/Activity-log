@@ -64,6 +64,9 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - bootsrap : ` <i class="material-icons">Ahmad Ali</i>`
 - Best resource for Grunt : https://www.coursera.org/learn/bootstrap-4/supplement/SIHkS/exercise-instructions-grunt-part-2
 
+## Wed-29-April-2020
+- kata: human readable time: https://www.codewars.com/kata/52685f7382004e774f0001f7/solutions/javascript/me/best_practice
+- kata: valid parenthesis : https://www.codewars.com/kata/52774a314c2333f0a7000688/solutions/javascript/me/best_practice
 ## Tue-28-April-2020
 - more algorithms.
 - get all arguments to a function if you don't know the number of args in advance:
