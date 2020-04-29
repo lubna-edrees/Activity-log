@@ -71,6 +71,22 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - kata: human readable time: https://www.codewars.com/kata/52685f7382004e774f0001f7
 - kata: valid parenthesis : https://www.codewars.com/kata/52774a314c2333f0a7000688
 - kata: moving zeros : https://www.codewars.com/kata/52597aa56021e91c93000cb0/
+- this and that in js, that refering to the main this in a scope, while you are going deeper into a scope `this` will refer to the deeper element, while `that` will refer to the parent:
+```javascript
+function MyConstructor(options) {
+  let that = this;
+
+  this.someprop = options.someprop || 'defaultprop';
+
+  document.addEventListener('click', (event) => {
+    alert(that.someprop);
+  });
+}
+
+new MyConstructor({
+  someprop: "Hello World"
+});
+```
 ## Tue-28-April-2020
 - more algorithms.
 - get all arguments to a function if you don't know the number of args in advance:
