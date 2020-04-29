@@ -65,6 +65,7 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - Best resource for Grunt : https://www.coursera.org/learn/bootstrap-4/supplement/SIHkS/exercise-instructions-grunt-part-2
 - `e == 0` will return `true` if `e = flase` or any other falsey value, `e === 0` strict for 0 only.
 - `input.value` is alaways string, event if its type was number.
+- js functions: `arr.find()` `Number()` `arr.every()` `str.startsWith()` `str.endsWith()`
 
 ## Wed-29-April-2020
 - kata: human readable time: https://www.codewars.com/kata/52685f7382004e774f0001f7
