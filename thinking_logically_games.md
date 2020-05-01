@@ -20,4 +20,10 @@ Touch the given k segments with minimum number of vertical lines
 
 http://dm.compsciclub.ru/app/quiz-touch-all-segments
 
+### Two Adjacent Cells of Opposite Colors
+You are given 20 black and white cells. The leftmost one is white, the rightmost one is black, the colors of all other cells are hidden. You can reveal the color of a cell by clicking on it. Your goal is to find two adjacent cells of different colors by using at most 5 clicks.
+
+http://dm.compsciclub.ru/app/quiz-opposite-colors
+
+
 
