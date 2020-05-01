@@ -1,6 +1,6 @@
-# Algrithms  1 & 2
-university of Princeton : https://www.coursera.org/learn/algorithms-part1/home/welcome
-
+# Algorithms
+- Alogrithms 1&2 - university of Princeton : https://www.coursera.org/learn/algorithms-part1/home/welcome
+- data structures and algorithms : https://www.coursera.org/specializations/data-structures-algorithms
 # intro 
 - Best resource: https://algs4.cs.princeton.edu/home/
 - Resource: https://introcs.cs.princeton.edu/java/home/
