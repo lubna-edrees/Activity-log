@@ -1,3 +1,6 @@
+# Algrithms  1 & 2
+university of Princeton : https://www.coursera.org/learn/algorithms-part1/home/welcome
+
 # intro 
 - Best resource: https://algs4.cs.princeton.edu/home/
 - Resource: https://introcs.cs.princeton.edu/java/home/
