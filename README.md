@@ -87,6 +87,8 @@ new MyConstructor({
   someprop: "Hello World"
 });
 ```
+## Fri-1-May-2020
+- algorhims: https://github.com/ahmad-ali14/data-structures-and-algorithms/tree/master/algorithm-toolbox
 ## Tue-28-April-2020
 - more algorithms.
 - get all arguments to a function if you don't know the number of args in advance:
