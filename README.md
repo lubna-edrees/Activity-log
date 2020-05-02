@@ -67,6 +67,10 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - `input.value` is alaways string, event if its type was number.
 - js functions: `arr.find()` `Number()` `arr.every()` `str.startsWith()` `str.endsWith()`
 
+## Thur-30-April-2020 -> Sat-2-May-2020
+- algorhims: https://github.com/ahmad-ali14/data-structures-and-algorithms/tree/master/algorithm-toolbox
+
+
 ## Wed-29-April-2020
 - kata: human readable time: https://www.codewars.com/kata/52685f7382004e774f0001f7
 - kata: valid parenthesis : https://www.codewars.com/kata/52774a314c2333f0a7000688
@@ -87,8 +91,7 @@ new MyConstructor({
   someprop: "Hello World"
 });
 ```
-## Fri-1-May-2020
-- algorhims: https://github.com/ahmad-ali14/data-structures-and-algorithms/tree/master/algorithm-toolbox
+
 ## Tue-28-April-2020
 - more algorithms.
 - get all arguments to a function if you don't know the number of args in advance:
