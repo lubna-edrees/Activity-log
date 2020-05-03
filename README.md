@@ -33,6 +33,7 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `grunt-cli`: cli for grunt.
 - `react-document-title`: change pages titles dynamically
 - `react-helmet`: manage head meta tags.
+- `ElGrapho`: nice data representaions.
 
 ## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
