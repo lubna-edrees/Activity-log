@@ -69,6 +69,17 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 
 ## Thur-30-April-2020 -> Sat-2-May-2020
 - algorhims: https://github.com/ahmad-ali14/data-structures-and-algorithms/tree/master/algorithm-toolbox
+- find Min and Max elemnt of an Array:
+```javascript
+var numbers = [1, 2, 3, 4];
+Math.max.apply(null, numbers) // 4
+Math.min.apply(null, numbers) // 1
+
+//OR
+
+Math.max(...numbers) // 4
+Math.min(...numbers) // 1
+```
 
 
 ## Wed-29-April-2020
