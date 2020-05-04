@@ -68,7 +68,13 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - `input.value` is alaways string, event if its type was number.
 - js functions: `arr.find()` `Number()` `arr.every()` `str.startsWith()` `str.endsWith()`
 
-## Thur-30-April-2020 -> Sat-2-May-2020
+# Arrays 
+- create an array of length n filled with random numbers less than max: 
+```js 
+Array.from({length: n}, () => Math.floor(Math.random() * max));
+```
+
+## Thur-30-April-2020 -> Sat-5-May-2020
 - algorhims: https://github.com/ahmad-ali14/data-structures-and-algorithms/tree/master/algorithm-toolbox
 - find Min and Max elemnt of an Array:
 ```javascript
