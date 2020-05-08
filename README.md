@@ -68,11 +68,6 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 - `input.value` is alaways string, event if its type was number.
 - js functions: `arr.find()` `Number()` `arr.every()` `str.startsWith()` `str.endsWith()`
 
-# Arrays 
-- create an array of length n filled with random numbers less than max: 
-```js 
-Array.from({length: n}, () => Math.floor(Math.random() * max));
-```
 
 ## Thur-30-April-2020 -> Fir-8-May-2020
 - algorhims: https://github.com/ahmad-ali14/data-structures-and-algorithms/tree/master/algorithm-toolbox
@@ -86,6 +81,18 @@ Math.min.apply(null, numbers) // 1
 
 Math.max(...numbers) // 4
 Math.min(...numbers) // 1
+```
+- create an array of length n filled with random numbers less than max: 
+```js 
+Array.from({length: n}, () => Math.floor(Math.random() * max));
+```
+- retrieve how google caching your website, visit:
+```
+cache:example.com
+```
+- refresh yuor sitemap:
+```
+https://www.google.com/ping?sitemap=`url to your siteMap`
 ```
 - in practice: you start using `quick sort` algorithm, if you find it a bit slow: you stop and chamge to `heap sort`
 
