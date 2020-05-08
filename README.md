@@ -74,7 +74,7 @@ const [item1, item2] = input.toString().split(' ').map(Number);
 Array.from({length: n}, () => Math.floor(Math.random() * max));
 ```
 
-## Thur-30-April-2020 -> Sat-5-May-2020
+## Thur-30-April-2020 -> Fir-8-May-2020
 - algorhims: https://github.com/ahmad-ali14/data-structures-and-algorithms/tree/master/algorithm-toolbox
 - find Min and Max elemnt of an Array:
 ```javascript
@@ -87,7 +87,7 @@ Math.min.apply(null, numbers) // 1
 Math.max(...numbers) // 4
 Math.min(...numbers) // 1
 ```
-
+- in practice: you start using `quick sort` algorithm, if you find it a bit slow: you stop and chamge to `heap sort`
 
 ## Wed-29-April-2020
 - kata: human readable time: https://www.codewars.com/kata/52685f7382004e774f0001f7
