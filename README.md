@@ -34,6 +34,7 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `react-document-title`: change pages titles dynamically
 - `react-helmet`: manage head meta tags.
 - `ElGrapho`: nice data representaions.
+- `NProgress.js`: slim progress bar.
 
 ## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
@@ -100,6 +101,40 @@ https://www.google.com/ping?sitemap=`url to your siteMap`
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent);
 }
+```
+- chain of funtions to hanlde urls:
+```js
+function getExt(url) {
+if (url.includes('?')) { return getExt(url.split('?')[0]); }
+if (url.includes('#')) { return getExt(url.split('#')[0]); }
+
+    //change those functions depends on the situation
+    return url.trim().toLowerCase().split('.').pop();
+}
+```
+- make a new promise:
+```js
+function sleep(ms = 0) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
+//get the result after a second
+sleep(1000).then(data => console.log('data', data));
+```
+- dowonloading a file without user approval **:
+```js
+function downloadFile(url, name) {
+    const elink = document.createElement('a');
+    elink.style.display = 'none';
+    elink.href = url;
+    elink.download = name;
+    document.body.appendChild(elink);
+    elink.click();
+    document.body.removeChild(elink);
+}
+```
+- client side temporary storage:
+```js
+window.x = value;   => window.x;
+window.localStorage.x = value; => window.loacalStorage.x;
 ```
 
 ## Wed-29-April-2020
