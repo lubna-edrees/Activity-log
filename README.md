@@ -10,7 +10,7 @@ but for me, since I've collected those notes and puted them in one place , I can
 for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in your mind, you might find some important notes about it.  
 
 ## Hot Topics
-<div style="text-align:center"><img src=https://i.imgur.com/XlxpQM4.png" /></div>
+<div style="text-align:center"><img src="https://i.imgur.com/Thr2yGv.png" /></div>
 
 ## packages Index  ( quick index to packages I dealed with):
 - `configStore`: store your configurations in one object easly.
