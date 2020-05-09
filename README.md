@@ -35,6 +35,7 @@ for `you` to make profit of this Repo, use `Ctrl + F` and search for what's in y
 - `react-helmet`: manage head meta tags.
 - `ElGrapho`: nice data representaions.
 - `NProgress.js`: slim progress bar.
+- `loader`: js library has a lot of shortcuts.
 
 ## commands:
 - `npm link`: install the cli that  you are working on it globally on your machine.
