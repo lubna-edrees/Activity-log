@@ -87,14 +87,20 @@ Math.min(...numbers) // 1
 Array.from({length: n}, () => Math.floor(Math.random() * max));
 ```
 - retrieve how google caching your website, visit:
-```
+```js
 cache:example.com
 ```
 - refresh yuor sitemap:
-```
+```js
 https://www.google.com/ping?sitemap=`url to your siteMap`
 ```
 - in practice: you start using `quick sort` algorithm, if you find it a bit slow: you stop and chamge to `heap sort`
+- check if your client using mobile or not:
+```js
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent);
+}
+```
 
 ## Wed-29-April-2020
 - kata: human readable time: https://www.codewars.com/kata/52685f7382004e774f0001f7
