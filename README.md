@@ -137,6 +137,13 @@ function downloadFile(url, name) {
 window.x = value;   => window.x;
 window.localStorage.x = value; => window.loacalStorage.x;
 ```
+- swap quickly:
+	```js
+	>>> x =1; y=240;
+	>>> [x,y] = [y,x]
+	>>> x, y
+	240 , 1
+	```
 
 ## Wed-29-April-2020
 - kata: human readable time: https://www.codewars.com/kata/52685f7382004e774f0001f7
