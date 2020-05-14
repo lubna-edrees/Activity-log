@@ -144,6 +144,17 @@ window.localStorage.x = value; => window.loacalStorage.x;
 	>>> x, y
 	240 , 1
 	```
+	
+- make textarea with inly one line and disable multilines:
+	```js
+	<textarea rows="1" value ={ value } > { value } </textare>
+	
+	textarea.onChange = (e) => {
+		let x = e.target.value;
+		// deleting every new line signs from textarea value
+		x.replace(/(\r\n|\n|\r)/gm, "");
+	}
+	```
 
 ## Wed-29-April-2020
 - kata: human readable time: https://www.codewars.com/kata/52685f7382004e774f0001f7
