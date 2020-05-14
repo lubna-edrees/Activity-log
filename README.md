@@ -2,11 +2,38 @@
 
 Reference for code snippets, shortcuts or notes I faced while working.
 
+## Index
+
+- [Div Snippets](#div-snippets)
+  - [Index](#index)
+  - [Hot Topics](#hot-topics)
+  - [commands](#commands)
+  - [APIs](#apis)
+  - [General JS](#general-js)
+  - [Functions](#functions)
+  - [Objects](#objects)
+  - [Arrays](#arrays)
+  - [Strings](#strings)
+  - [Numbers](#numbers)
+  - [DOM](#dom)
+  - [React](#react)
+  - [Bootstrap](#bootstrap)
+  - [CSS](#css)
+  - [Algorithms](#algorithms)
+  - [Meta](#meta)
+  - [CLI](#cli)
+  - [SEO](#seo)
+  - [URLs](#urls)
+  - [Grunt](#grunt)
+  - [codeWars katas](#codewars-katas)
+  - [Projects](#projects)
+  - [General web development](#general-web-development)
+
 ## Hot Topics
 
 <div style="text-align:center; margin:auto; padding:auto;"><img style="margin:auto;" src="https://i.imgur.com/lRrDFLo.png" /></div>
 
-## packages Index
+<h2 id="packages"> packages Index </h2>
 
 - `configStore`: store your configurations in one object easly.
 - `colors`: add colors to the console.
@@ -38,7 +65,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
 
 ## APIs
 
-- code wars api:  https://www.codewars.com/api/v1/users/ahmad.ali 
+- code wars api: <https://www.codewars.com/api/v1/users/ahmad.ali>
 
 ## General JS
 
@@ -116,12 +143,11 @@ arr3 = arr3.sort((a, b) => {
 let viraible_passes_to_regex = new RegExp ( `string contains a ${ var }` , 'gi' );
 ```
 
-
 ## Numbers
 
 - `e == 0` will return `true` if `e = flase` or any other falsey value, `e === 0` strict for 0 only.
 
-* useful number formatter (espesially for currency)
+- useful number formatter (espesially for currency)
 
 ```javascript
 /**
@@ -239,7 +265,7 @@ function doesFileExist(urlToFile) {
 - bootsrap images: `.umg-fluid` `.rounded` `.rounded-corners` `.rounded-circle`
 - Bootstrap javascript:
   - `tabs` and `pills` navigation.
-    ![](https://i.imgur.com/Z8m15k0.png)
+    ![nav pills](https://i.imgur.com/Z8m15k0.png)
   - `accordion` navigation
   - `tooltips` `popover` `modals`
   - tooltips code: `data-toggle="tooltip" data-html="true" title="string" data-placement="bottom"`
@@ -285,7 +311,7 @@ function doesFileExist(urlToFile) {
 
 - in practice: you start using `quick sort` algorithm, if you find it a bit slow: you stop and chamge to `heap sort`
 - studying algorithms: [algorithms stuff](https://github.com/ahmad-ali14/Activity-log/blob/master/algorithms.md)
-- knapsack problem here: https://github.com/ahmad-ali14/data-structures-and-algorithms/blob/master/algorithm-toolbox/week3/maximum_loot.js
+- knapsack problem here: <https://github.com/ahmad-ali14/data-structures-and-algorithms/blob/master/algorithm-toolbox/week3/maximum_loot.js>
 - algorithm for making a good algorithm:
 
   - always start with a `naiive algorithm` and make it works, normally slow.
@@ -295,16 +321,15 @@ function doesFileExist(urlToFile) {
     - dynamic programming.
   - optimize your algorithm.
 
-- more on algorithms here: https://github.com/aa947/data-structures-and-algorithms/tree/master/algorithm-toolbox
+- more on algorithms here: <https://github.com/aa947/data-structures-and-algorithms/tree/master/algorithm-toolbox>
 - `greedy algorithm`:
 
-```
+```js
 1- make the first move.
 2- test if it's a safe move or start from the begining
 3- test if that move is optimized or optimize it the most
 4- you get a sub-problem handle it with the same approach.
 ```
-
 
 ## Meta
 
@@ -367,7 +392,6 @@ https://www.google.com/ping?sitemap=`url to your siteMap`
 <meta name="author" content="[Author name here]" />
 ```
 
-
 ## URLs
 
 - chain of funtions to hanlde urls:
@@ -391,7 +415,6 @@ function getExt(url) {
 ```javascript
 let regex = /^(?<start>https|http)?(?<colon_slashes>:\/\/)?(?<three_w>www.)?(?<main>[\w\-\_\:]+)(?<dot_com>\.[\w]+)\/*(?<text1>[\w\-\_\#\?\&\=]*)\/*(?<text2>[\w\-\_\#\?\&\=]*)\/*(?<text3>[\w\-\_\#\?\&\=]*)/;
 ```
-
 
 ## Grunt
 
@@ -439,25 +462,34 @@ module.exports = function (grunt) {
 };
 ```
 
-- Grunt: - at the `cmd`: `grunt less` => All `.less` files compiling into css. - at the `cmd`: `grunt` => watching and compiling automatically - for pre-deploy process we need: - `grunt-contrib-copy`: copying files to `dist` folder. - `grunt-contrib-clean`: clean `dist` each time before run `build` - `grunt-contrib-imagemin` : minimizing images. - `grunt-contrib-concat` : concat files. - `grunt-contrib-cssmin`: min css. - `grunt-contrib-htmlmin` : min html. - `grunt-contrib-uglify`: min js. - `grunt-filerev`. - `grunt-usemin`: use all min files.
-- Best resource for Grunt : https://www.coursera.org/learn/bootstrap-4/supplement/SIHkS/exercise-instructions-grunt-part-2
+- Grunt:
+  - at the `cmd`: `grunt less` => All `.less` files compiling into css.
+  - at the `cmd`: `grunt` => watching and compiling automatically
+  - for pre-deploy process we need: - `grunt-contrib-copy`: copying files to `dist` folder.
+  - `grunt-contrib-clean`: clean `dist` each time before run `build`
+  - `grunt-contrib-imagemin` : minimizing images. - `grunt-contrib-concat` : concat files. - `grunt-contrib-cssmin`: min css.
+  - `grunt-contrib-htmlmin` : min html.
+  - `grunt-contrib-uglify`: min js.
+  - `grunt-filerev`. - `grunt-usemin`: use all min files.
+- Best resource for Grunt : <https://www.coursera.org/learn/bootstrap-4/supplement/SIHkS/exercise-instructions-grunt-part-2>
 
 ## codeWars katas
 
-- human readable time: https://www.codewars.com/kata/52685f7382004e774f0001f7
-- valid parenthesis : https://www.codewars.com/kata/52774a314c2333f0a7000688
-- moving zeros : https://www.codewars.com/kata/52597aa56021e91c93000cb0/
-- Replacement: https://www.codewars.com/kata/598d89971928a085c000001a/solutions/javascript/me/best_practice
-- Break camelCase: https://www.codewars.com/kata/5208f99aee097e6552000148/solutions/javascript/me/best_practice
+- human readable time: <https://www.codewars.com/kata/52685f7382004e774f0001f7>
+- valid parenthesis : <https://www.codewars.com/kata/52774a314c2333f0a7000688>
+- moving zeros : <https://www.codewars.com/kata/52597aa56021e91c93000cb0/>
+- Replacement: <https://www.codewars.com/kata/598d89971928a085c000001a/solutions/javascript/me/best_practice>
+- Break camelCase: <https://www.codewars.com/kata/5208f99aee097e6552000148/solutions/javascript/me/best_practice>
 
 ## Projects
 
-- slider from scratch: https://peaceful-wozniak-036720.netlify.app/
-- Tv Show : https://loving-benz-169884.netlify.app/
+- slider from scratch: <https://peaceful-wozniak-036720.netlify.app/>
+- Tv Show : <https://loving-benz-169884.netlify.app/>
 
 ## General web development
 
 - competeions:
+
   - ACM ICPC.
   - Google code jam.
   - facebook hacker cup.
@@ -466,5 +498,4 @@ module.exports = function (grunt) {
   - sphere online judge
   - CSAcamedy
 
-- found out about `Getting Hired` course by `theodinproject` here: https://www.theodinproject.com/courses/getting-hired .
-
+- found out about `Getting Hired` course by `theodinproject` here: <https://www.theodinproject.com/courses/getting-hired> .
