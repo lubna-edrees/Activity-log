@@ -8,7 +8,9 @@ Reference for code snippets, shortcuts or notes I faced while working.
 
 - [Div Snippets](#div-snippets)
   - [Index](#index)
+  - [packages Index](#packages-index)
   - [commands](#commands)
+  - [Git](#git)
   - [APIs](#apis)
   - [General JS](#general-js)
   - [Functions](#functions)
@@ -31,7 +33,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
   - [General web development](#general-web-development)
 
 
-<h2 id="packages"> packages Index </h2>
+## packages Index 
 
 - `configStore`: store your configurations in one object easly.
 - `colors`: add colors to the console.
@@ -60,6 +62,17 @@ Reference for code snippets, shortcuts or notes I faced while working.
 ## commands
 
 - `npm link`: install the cli that you are working on it globally on your machine.
+
+## Git
+
+- list all branches : 
+  
+    ```js
+      git branch -a  // list local and remote branches
+      git branch -r  // list remote branches only
+      git show-branch // list branches and their last commit
+
+    ```
 
 ## APIs
 
