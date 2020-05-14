@@ -2,11 +2,12 @@
 
 Reference for code snippets, shortcuts or notes I faced while working.
 
+<div style="text-align:center; margin:auto; padding:auto;"><img style="margin:auto;" src="https://i.imgur.com/lRrDFLo.png" /></div>
+
 ## Index
 
 - [Div Snippets](#div-snippets)
   - [Index](#index)
-  - [Hot Topics](#hot-topics)
   - [commands](#commands)
   - [APIs](#apis)
   - [General JS](#general-js)
@@ -29,9 +30,6 @@ Reference for code snippets, shortcuts or notes I faced while working.
   - [Projects](#projects)
   - [General web development](#general-web-development)
 
-## Hot Topics
-
-<div style="text-align:center; margin:auto; padding:auto;"><img style="margin:auto;" src="https://i.imgur.com/lRrDFLo.png" /></div>
 
 <h2 id="packages"> packages Index </h2>
 
