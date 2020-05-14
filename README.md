@@ -73,6 +73,11 @@ Reference for code snippets, shortcuts or notes I faced while working.
       git show-branch // list branches and their last commit
 
     ```
+- unstage last commit:
+  
+    ```js
+    git reset --soft HEAD~1
+    ```
 
 ## APIs
 
