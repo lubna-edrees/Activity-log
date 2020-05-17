@@ -119,6 +119,10 @@ new MyConstructor({
   someprop: "Hello World",
 });
 ```
+- get a human raedable date:
+```js
+let date = new Date().toLocalString()
+```
 
 - swap quickly:
   `js >>> x =1; y=240; >>> [x,y] = [y,x] >>> x, y 240 , 1`
