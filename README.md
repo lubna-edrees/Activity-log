@@ -29,6 +29,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
   - [URLs](#urls)
   - [Grunt](#grunt)
   - [codeWars katas](#codewars-katas)
+  - [Python](#python)
   - [Projects](#projects)
   - [General web development](#general-web-development)
 
@@ -505,6 +506,13 @@ module.exports = function (grunt) {
 - moving zeros : <https://www.codewars.com/kata/52597aa56021e91c93000cb0/>
 - Replacement: <https://www.codewars.com/kata/598d89971928a085c000001a/solutions/javascript/me/best_practice>
 - Break camelCase: <https://www.codewars.com/kata/5208f99aee097e6552000148/solutions/javascript/me/best_practice>
+
+## python:
+
+- ternary operations:
+    ```py
+    state = "nice" if is_nice else "not nice"
+    ```
 
 ## Projects
 
