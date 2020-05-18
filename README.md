@@ -1,4 +1,4 @@
-# Div Snippets
+# Dev Snippets
 
 Reference for code snippets, shortcuts or notes I faced while working.
 
@@ -6,7 +6,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
 
 ## Index
 
-- [Div Snippets](#div-snippets)
+- [Dev Snippets](#dev-snippets)
   - [Index](#index)
   - [packages Index](#packages-index)
   - [commands](#commands)
@@ -59,6 +59,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
 - `ElGrapho`: nice data representaions.
 - `NProgress.js`: slim progress bar.
 - `loader`: js library has a lot of shortcuts.
+- `react-n18`: clever library to concentrate your text in one single file, then use sortucts to represent that text, so your files will not be full of text
 
 ## commands
 
