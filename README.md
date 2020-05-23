@@ -122,12 +122,18 @@ new MyConstructor({
 });
 ```
 - get a human raedable date:
-```js
-let date = new Date().toLocalString()
-```
+    ```js
+    let date = new Date().toLocalString()
+    ```
 
 - swap quickly:
   `js >>> x =1; y=240; >>> [x,y] = [y,x] >>> x, y 240 , 1`
+  
+- double exclamation points `!!` to get a boolean value from non-boolean:
+    ```js
+      let x = 'abc'; // x is truthy;  !x = false; !!x = true;  
+      let y = null; // y is falsey; !y = true; !!y= false;
+    ```
 
 ## Functions
 
