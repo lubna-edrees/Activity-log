@@ -95,32 +95,32 @@ Reference for code snippets, shortcuts or notes I faced while working.
 - js functions: `arr.find()` `Number()` `arr.every()` `str.startsWith()` `str.endsWith()`
 - make a new promise:
 
-```js
-function sleep(ms = 0) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+    ```js
+    function sleep(ms = 0) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
 
-//get the result after a second
-sleep(1000).then((data) => console.log("data", data));
-```
+    //get the result after a second
+    sleep(1000).then((data) => console.log("data", data));
+    ```
 
 - this and that in js, that refering to the main this in a scope, while you are going deeper into a scope `this` will refer to the deeper element, while `that` will refer to the parent:
 
-```javascript
-function MyConstructor(options) {
-  let that = this;
+    ```javascript
+    function MyConstructor(options) {
+      let that = this;
 
-  this.someprop = options.someprop || "defaultprop";
+      this.someprop = options.someprop || "defaultprop";
 
-  document.addEventListener("click", (event) => {
-    alert(that.someprop);
-  });
-}
+      document.addEventListener("click", (event) => {
+        alert(that.someprop);
+      });
+    }
 
-new MyConstructor({
-  someprop: "Hello World",
-});
-```
+    new MyConstructor({
+      someprop: "Hello World",
+    });
+    ```
 - get a human raedable date:
     ```js
     let date = new Date().toLocalString()
@@ -139,11 +139,11 @@ new MyConstructor({
 
 - get all arguments to a function if you don't know the number of args in advance:
 
-```javascript
-let argss = [...arguments]; //args will not work in all cases.
-//OR
-let argss = [].slice.call(arguments);
-```
+    ```javascript
+    let argss = [...arguments]; //args will not work in all cases.
+    //OR
+    let argss = [].slice.call(arguments);
+    ```
 
 ## Objects
 
@@ -153,17 +153,17 @@ let argss = [].slice.call(arguments);
 
 - create an array of length n filled with random numbers less than max:
 
-```js
-Array.from({ length: n }, () => Math.floor(Math.random() * max));
-```
+    ```js
+    Array.from({ length: n }, () => Math.floor(Math.random() * max));
+    ```
 
 - use `localCompare()` to sort nested structures. example:
 
-```javascript
-arr3 = arr3.sort((a, b) => {
-  return a[1].localeCompare(b[1]); //a and b are both arrays.
-});
-```
+    ```javascript
+    arr3 = arr3.sort((a, b) => {
+      return a[1].localeCompare(b[1]); //a and b are both arrays.
+    });
+    ```
 
 - `arr.pop()` and `arr.unshift()` returns the single Elemnt that they worked on.
 
@@ -172,9 +172,9 @@ arr3 = arr3.sort((a, b) => {
 - if you use `string.split(/(regex)/)` will split the str keeping the regex match element.
 - use this to pass variables to the regex.
 
-```javascript
-let viraible_passes_to_regex = new RegExp ( `string contains a ${ var }` , 'gi' );
-```
+    ```javascript
+    let viraible_passes_to_regex = new RegExp ( `string contains a ${ var }` , 'gi' );
+    ```
 
 ## Numbers
 
@@ -182,81 +182,81 @@ let viraible_passes_to_regex = new RegExp ( `string contains a ${ var }` , 'gi' 
 
 - useful number formatter (espesially for currency)
 
-```javascript
-/**
- * initializing currency formatter
- */
-const formatter = Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "GBP",
-});
-```
+    ```javascript
+    /**
+     * initializing currency formatter
+     */
+    const formatter = Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "GBP",
+    });
+    ```
 
 - find Min and Max elemnt of an Array:
 
-```javascript
-var numbers = [1, 2, 3, 4];
-Math.max.apply(null, numbers); // 4
-Math.min.apply(null, numbers); // 1
+    ```javascript
+    var numbers = [1, 2, 3, 4];
+    Math.max.apply(null, numbers); // 4
+    Math.min.apply(null, numbers); // 1
 
-//OR
+    //OR
 
-Math.max(...numbers); // 4
-Math.min(...numbers); // 1
-```
+    Math.max(...numbers); // 4
+    Math.min(...numbers); // 1
+    ```
 
 - generating random number between 0 and max:
 
-```javascript
-Math.floor(Math.random() * Math.floor(max));
-```
+    ```javascript
+    Math.floor(Math.random() * Math.floor(max));
+    ```
 
 ## DOM
 
 - `input.value` is alaways string, event if its type was number.
 - client side temporary storage:
 
-```js
-window.x = value;   => window.x;
-window.localStorage.x = value; => window.loacalStorage.x;
-```
+    ```js
+    window.x = value;   => window.x;
+    window.localStorage.x = value; => window.loacalStorage.x;
+    ```
 
 - add event listener to the key and use the key name intead of key code.
 
-```javascript
-window.addEventListener("key-event", (event) => {
-  event.key == "arrowLeft"; //you can use key name instead of key code.
-});
-```
+    ```javascript
+    window.addEventListener("key-event", (event) => {
+      event.key == "arrowLeft"; //you can use key name instead of key code.
+    });
+    ```
 
 - make textarea with inly one line and disable multilines:
   `js <textarea rows="1" value ={ value } > { value } </textare> textarea.onChange = (e) => { let x = e.target.value; // deleting every new line signs from textarea value x.replace(/(\r\n|\n|\r)/gm, ""); }`
 
 - sanitize third party code before inject it into your website using `innerHTML`
 
-```javascript
-var sanitizeHTML = function (str) {
-  var temp = document.createElement("div");
-  temp.textContent = str;
-  return temp.innerHTML;
-};
-```
+    ```javascript
+    var sanitizeHTML = function (str) {
+      var temp = document.createElement("div");
+      temp.textContent = str;
+      return temp.innerHTML;
+    };
+    ```
 
 - quickly check existance of a file using vanilla js:
 
-```javascript
-function doesFileExist(urlToFile) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("HEAD", urlToFile, false);
-  xhr.send();
+    ```javascript
+    function doesFileExist(urlToFile) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("HEAD", urlToFile, false);
+      xhr.send();
 
-  if (xhr.status == "404") {
-    return false;
-  } else {
-    return true;
-  }
-}
-```
+      if (xhr.status == "404") {
+        return false;
+      } else {
+        return true;
+      }
+    }
+    ```
 
 ## React
 
@@ -311,31 +311,31 @@ function doesFileExist(urlToFile) {
 
 - prevent users from selecting text => `give the elemnt class of "noselect"`:
 
-```css
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
-}
-```
+    ```css
+    .noselect {
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version, currently
+                                      supported by Chrome, Opera and Firefox */
+    }
+    ```
 
 - make all elements(divs) third of the screen with same height:
 
-```css
-#wrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
+    ```css
+    #wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-.third {
-  width: 33%;
-}
-```
+    .third {
+      width: 33%;
+    }
+    ```
 
 - flexbox: boxes = inner divs, parrent = parrent div.
 
@@ -361,143 +361,143 @@ function doesFileExist(urlToFile) {
 - more on algorithms here: <https://github.com/aa947/data-structures-and-algorithms/tree/master/algorithm-toolbox>
 - `greedy algorithm`:
 
-```js
-1- make the first move.
-2- test if it's a safe move or start from the begining
-3- test if that move is optimized or optimize it the most
-4- you get a sub-problem handle it with the same approach.
-```
+    ```js
+    1- make the first move.
+    2- test if it's a safe move or start from the begining
+    3- test if that move is optimized or optimize it the most
+    4- you get a sub-problem handle it with the same approach.
+    ```
 
 ## Meta
 
 - check if your client using mobile or not:
 
-```js
-function isMobile() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    window.navigator.userAgent
-  );
-}
-```
+    ```js
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        window.navigator.userAgent
+      );
+    }
+    ```
 
 - dowonloading a file without user approval \*\*:
 
-```js
-function downloadFile(url, name) {
-  const elink = document.createElement("a");
-  elink.style.display = "none";
-  elink.href = url;
-  elink.download = name;
-  document.body.appendChild(elink);
-  elink.click();
-  document.body.removeChild(elink);
-}
-```
+    ```js
+    function downloadFile(url, name) {
+      const elink = document.createElement("a");
+      elink.style.display = "none";
+      elink.href = url;
+      elink.download = name;
+      document.body.appendChild(elink);
+      elink.click();
+      document.body.removeChild(elink);
+    }
+    ```
 
 ## CLI
 
 - to grap key from user command in your cli, use `proccess.argv` witch gives you an `array` and your first arg is at index `2`.
 - tricky chain of functions : take user input, convert to string, split over ' ', extract numbers from str and assign them to item1 and item2.
 
-```javascript
-const [item1, item2] = input.toString().split(" ").map(Number);
-```
+    ```javascript
+    const [item1, item2] = input.toString().split(" ").map(Number);
+    ```
 
 ## SEO
 
 - retrieve how google caching your website, visit:
 
-```js
-cache: example.com;
-```
+    ```js
+    cache: example.com;
+    ```
 
 - refresh yuor sitemap:
 
-```js
-https://www.google.com/ping?sitemap=`url to your siteMap`
-```
+    ```js
+    https://www.google.com/ping?sitemap=`url to your siteMap`
+    ```
 
 - social media tags:
 
-```html
-<meta property="og:title" content="#" />
-<meta property="og:description" content="#" />
-<meta property="og:image" content="#" />
-<meta property="og:url" content="#" />
-<meta name="twitter:card" content="#" />
-<meta name="twitter:image" content="#" />
-<meta name="author" content="[Author name here]" />
-```
+    ```html
+    <meta property="og:title" content="#" />
+    <meta property="og:description" content="#" />
+    <meta property="og:image" content="#" />
+    <meta property="og:url" content="#" />
+    <meta name="twitter:card" content="#" />
+    <meta name="twitter:image" content="#" />
+    <meta name="author" content="[Author name here]" />
+    ```
 
 ## URLs
 
 - chain of funtions to hanlde urls:
 
-```js
-function getExt(url) {
-  if (url.includes("?")) {
-    return getExt(url.split("?")[0]);
-  }
-  if (url.includes("#")) {
-    return getExt(url.split("#")[0]);
-  }
+    ```js
+    function getExt(url) {
+      if (url.includes("?")) {
+        return getExt(url.split("?")[0]);
+      }
+      if (url.includes("#")) {
+        return getExt(url.split("#")[0]);
+      }
 
-  //change those functions depends on the situation
-  return url.trim().toLowerCase().split(".").pop();
-}
-```
+      //change those functions depends on the situation
+      return url.trim().toLowerCase().split(".").pop();
+    }
+    ```
 
 - `regular expressions` again, to handle urls:
 
-```javascript
-let regex = /^(?<start>https|http)?(?<colon_slashes>:\/\/)?(?<three_w>www.)?(?<main>[\w\-\_\:]+)(?<dot_com>\.[\w]+)\/*(?<text1>[\w\-\_\#\?\&\=]*)\/*(?<text2>[\w\-\_\#\?\&\=]*)\/*(?<text3>[\w\-\_\#\?\&\=]*)/;
-```
+    ```javascript
+    let regex = /^(?<start>https|http)?(?<colon_slashes>:\/\/)?(?<three_w>www.)?(?<main>[\w\-\_\:]+)(?<dot_com>\.[\w]+)\/*(?<text1>[\w\-\_\#\?\&\=]*)\/*(?<text2>[\w\-\_\#\?\&\=]*)\/*(?<text3>[\w\-\_\#\?\&\=]*)/;
+    ```
 
 ## Grunt
 
 - `task runners` : simplfiy the pre-proccesses of deployment: `grunt` `gulp`.
 - `grunt`: - `npm i grunt` - touch `Gruntfile.js` - npm i `grunt-contrib-less` `time-grunt` `jit-grunt` - npm i `grunt-contrib-watch` `grunt-browser-sync` - simple grunt file for watching and compieling `.less` files:
 
-```javascript
-module.exports = function (grunt) {
-  // Time how long tasks take. Can help when optimizing build times
-  require("time-grunt")(grunt);
+      ```javascript
+      module.exports = function (grunt) {
+        // Time how long tasks take. Can help when optimizing build times
+        require("time-grunt")(grunt);
 
-  // Automatically load required Grunt tasks
-  require("jit-grunt")(grunt);
+        // Automatically load required Grunt tasks
+        require("jit-grunt")(grunt);
 
-  // Define the configuration for all the tasks
-  grunt.initConfig({
-    less: {
-      css: {
-        files: {
-          "css/styles.css": "css/styles.less",
-        },
-      },
-    },
-    watch: {
-      files: "css/*.less",
-      tasks: ["less"],
-    },
-    browserSync: {
-      dev: {
-        bsFiles: {
-          src: ["css/*.css", "*.html", "js/*.js"],
-        },
-        options: {
-          watchTask: true,
-          server: {
-            baseDir: "./",
+        // Define the configuration for all the tasks
+        grunt.initConfig({
+          less: {
+            css: {
+              files: {
+                "css/styles.css": "css/styles.less",
+              },
+            },
           },
-        },
-      },
-    },
-  });
+          watch: {
+            files: "css/*.less",
+            tasks: ["less"],
+          },
+          browserSync: {
+            dev: {
+              bsFiles: {
+                src: ["css/*.css", "*.html", "js/*.js"],
+              },
+              options: {
+                watchTask: true,
+                server: {
+                  baseDir: "./",
+                },
+              },
+            },
+          },
+        });
 
-  grunt.registerTask("css", ["less"]);
-  grunt.registerTask("default", ["browserSync", "watch"]);
-};
-```
+        grunt.registerTask("css", ["less"]);
+        grunt.registerTask("default", ["browserSync", "watch"]);
+      };
+      ```
 
 - Grunt:
   - at the `cmd`: `grunt less` => All `.less` files compiling into css.
