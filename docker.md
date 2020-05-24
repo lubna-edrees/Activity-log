@@ -41,6 +41,6 @@
    ```
    - create a volume and grap the files into your local machine
 
-   ```docker container run -d -p 8080:80 -v /${pwd}://usr/share/nginx/html --name nginxwebsite nginx```
+   ``` docker container run -d -p 8080:80 -v /${pwd}://usr/share/nginx/html --name nginxwebsite nginx ```
    >> make sure to use extra `/` before your 2 paths as `/${pwd}` and `//usr/share/nginx/hhtml` on windows. 
 
