@@ -26,6 +26,10 @@
 - ` docker container run -d -p 3306:3306 --name <my_name> --env MYSQL_ROOT_PASSWORD=<pass> mysql` : create mysql container with `env` variables which is `password`.
 - `docker container rm <contaier_name | container_id> -f`: remove a running container.
 - `docker container exec -it mynginx bash`: open the container file system interactively into bash command line
+- create a volume and grap the files into your local machine
+
+   ```docker container run -d -p 8080:80 -v /${pwd}://usr/share/nginx/html --name nginxwebsite nginx```
+   >> make sure to use extra `/` before your 2 paths as `/${pwd}` and `//usr/share/nginx/hhtml` on windows. 
 
 ## Edit contianer files
 - Edit files of `nginx` container on the fly
@@ -35,4 +39,8 @@
     > ls
     > cd usr/share/nginx
    ```
+   - create a volume and grap the files into your local machine
+
+   ```docker container run -d -p 8080:80 -v /${pwd}://usr/share/nginx/html --name nginxwebsite nginx```
+   >> make sure to use extra `/` before your 2 paths as `/${pwd}` and `//usr/share/nginx/hhtml` on windows. 
 
