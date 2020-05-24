@@ -29,6 +29,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
   - [URLs](#urls)
   - [Grunt](#grunt)
   - [codeWars katas](#codewars-katas)
+  - [Windows](https://github.com/ahmad-ali14/Activity-log/blob/master/windows.md)
   - [Python](#python)
   - [Projects](#projects)
   - [General web development](#general-web-development)
