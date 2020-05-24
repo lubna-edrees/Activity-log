@@ -29,7 +29,13 @@
 - create a volume and grap the files into your local machine
 
    ```docker container run -d -p 8080:80 -v /${pwd}://usr/share/nginx/html --name nginxwebsite nginx```
-   >> make sure to use extra `/` before your 2 paths as `/${pwd}` and `//usr/share/nginx/hhtml` on windows. 
+   > make sure to use extra `/` before your 2 paths as `/${pwd}` and `//usr/share/nginx/hhtml` on windows.
+
+- push the current container to docker hub:
+
+   ```bash
+       docker push <username>/<repo_name>
+   ```
 
 ## Edit contianer files
 - Edit files of `nginx` container on the fly
