@@ -24,7 +24,11 @@
 - `docker ps`: list all running containers.
 - ` docker container run -d -p 3306:3306 --name <my_name> --env MYSQL_ROOT_PASSWORD=<pass> mysql` : create mysql container with `env` variables which is `password`.
 - `docker container rm <contaier_name | container_id> -f`: remove a running container.
-- 
+- `docker container exec -it mynginx bash`: open the container file system interactively into bash command line
+
+## Edit contianer files
+- Edit files of `nginx` container on the fly
+
    ```bash
     > docker container exec -it mynginx bash
     > ls
