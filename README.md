@@ -28,6 +28,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
   - [SEO](#seo)
   - [URLs](#urls)
   - [Grunt](#grunt)
+  - [Docker](https://github.com/ahmad-ali14/Activity-log/blob/master/docker.md)
   - [codeWars katas](#codewars-katas)
   - [Windows](https://github.com/ahmad-ali14/Activity-log/blob/master/windows.md)
   - [Python](#python)
