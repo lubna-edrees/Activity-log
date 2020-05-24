@@ -1,4 +1,5 @@
 # Docker
+- Resource: [Brad Traversy Help](https://gist.github.com/bradtraversy/89fad226dc058a41b596d586022a9bd3)
 
 ## General
 - if your using `docker virtualbox` make sure you open virtualbox and the machine is working while you are using the `cmd`
