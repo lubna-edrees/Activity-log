@@ -7,11 +7,11 @@
   2. use that class before the css rules you want to apply for this component only as: `.component-name p{ //css rules }`
 - handle 404 route: add this code as the last `Route` in the `switch` statement:
       
-      ```js 
-      <Route path="*" component={NotFound} /> 
-      //OR
-       <Route  component={NotFound} /> 
-      ```
+    ```js 
+    <Route path="*" component={NotFound} /> 
+    //OR
+     <Route  component={NotFound} /> 
+    ```
 
 ## component that will simplify your routes:
 
