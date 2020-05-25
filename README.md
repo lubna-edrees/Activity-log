@@ -7,10 +7,11 @@ Reference for code snippets, shortcuts or notes I faced while working.
 ## Index
 
 - [Dev Snippets](#dev-snippets)
-  - [Index](#index)
-  - [packages Index](https://github.com/ahmad-ali14/Activity-log/blob/master/packages.md)
-  - [commands](#commands)
-  - [Git](https://github.com/ahmad-ali14/Activity-log/blob/master/git.md)
+
+  ### [Index](#index)
+  ### [packages Index](https://github.com/ahmad-ali14/Activity-log/blob/master/packages.md)
+  ### [commands](#commands)
+  ### [Git](https://github.com/ahmad-ali14/Activity-log/blob/master/git.md)
   - [Bash](https://github.com/ahmad-ali14/Activity-log/blob/master/bash.md)
   - [APIs](#apis)
   - [General JS](#general-js)
