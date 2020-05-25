@@ -8,31 +8,38 @@ Reference for code snippets, shortcuts or notes I faced while working.
 
 - [Dev Snippets](#dev-snippets)
 
-  ### [Index](#index)
-  ### [packages Index](https://github.com/ahmad-ali14/Activity-log/blob/master/packages.md)
-  ### [commands](#commands)
-  ### [Git](https://github.com/ahmad-ali14/Activity-log/blob/master/git.md)
-  - [Bash](https://github.com/ahmad-ali14/Activity-log/blob/master/bash.md)
   - [APIs](#apis)
+  - [Algorithms](#algorithms)
+  - [Bash](https://github.com/ahmad-ali14/Activity-log/blob/master/bash.md)
+  - [CLI](#cli)
+  - [codeWars katas](#codewars-katas)
+  - [CSS](https://github.com/ahmad-ali14/Activity-log/blob/master/css.md)
+  - [Docker](https://github.com/ahmad-ali14/Activity-log/blob/master/docker.md)
+  - [DOM](https://github.com/ahmad-ali14/Activity-log/blob/master/dom.md)
+  
+  
+  - [packages Index](https://github.com/ahmad-ali14/Activity-log/blob/master/packages.md)
+  - [commands](#commands)
+  - [Git](https://github.com/ahmad-ali14/Activity-log/blob/master/git.md)
+  
   - [General JS](#general-js)
   - [Functions](#functions)
   - [Objects](#objects)
   - [Arrays](#arrays)
   - [Strings](#strings)
   - [Numbers](#numbers)
-  - [DOM](https://github.com/ahmad-ali14/Activity-log/blob/master/dom.md)
+  
   - [React](https://github.com/ahmad-ali14/Activity-log/blob/master/react.md)
   - [Bootstrap](#bootstrap)
-  - [CSS](https://github.com/ahmad-ali14/Activity-log/blob/master/css.md)
-  - [Algorithms](#algorithms)
+  
   - [Meta](#meta)
   - [MongoDB](https://github.com/ahmad-ali14/Activity-log/blob/master/mongo.md)
-  - [CLI](#cli)
+  
   - [SEO](#seo)
   - [URLs](#urls)
   - [Grunt](#grunt)
-  - [Docker](https://github.com/ahmad-ali14/Activity-log/blob/master/docker.md)
-  - [codeWars katas](#codewars-katas)
+  
+ 
   - [Windows](https://github.com/ahmad-ali14/Activity-log/blob/master/windows.md)
   - [Python](#python)
   - [Projects](#projects)
