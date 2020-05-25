@@ -5,7 +5,13 @@
 - to apply a css file to one component only:
   1. wrap you component into `<div className="Component-Name">`.
   2. use that class before the css rules you want to apply for this component only as: `.component-name p{ //css rules }`
-
+- handle 404 route: add this code as the last `Route` in the `switch` statement:
+      
+      ```js 
+      <Route path="*" component={NotFound} /> 
+      //OR
+       <Route  component={NotFound} /> 
+      ```
 
 ## component that will simplify your routes:
 
