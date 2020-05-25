@@ -20,7 +20,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
   - [Strings](#strings)
   - [Numbers](#numbers)
   - [DOM](https://github.com/ahmad-ali14/Activity-log/blob/master/dom.md)
-  - [React](#react)
+  - [React](https://github.com/ahmad-ali14/Activity-log/blob/master/react.md)
   - [Bootstrap](#bootstrap)
   - [CSS](#css)
   - [Algorithms](#algorithms)
@@ -171,13 +171,6 @@ Reference for code snippets, shortcuts or notes I faced while working.
     ```
 
 
-## React
-
-- when you design your routes, make sure that front end routes differe from back-end routes. especially when using `react-node` app.
-- to apply a css file to one component only:
-  1. wrap you component into `<div className="Component-Name">`.
-  2. use that class before the css rules you want to apply for this component only as: `.component-name p{ //css rules }`
-- 
 
 ## Bootstrap
 
