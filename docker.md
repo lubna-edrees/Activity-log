@@ -56,5 +56,13 @@
    ```bash
    docker container run -d -p 8080:80 -v /${pwd}://usr/share/nginx/html --name nginxwebsite nginx 
    ```
-   >> make sure to use extra `/` before your 2 paths as `/${pwd}` and `//usr/share/nginx/hhtml` on windows. 
+   > make sure to use extra `/` before your 2 paths as `/${pwd}` and `//usr/share/nginx/hhtml` on windows. 
+   
+   ## Docker-machine
+   - commands:
+      ```js
+      > docker-machine ls // list all machines
+      > docker-machine start default // starts the default machine
+      > docker-machine stop default //stops the default machine
+      ```
 
