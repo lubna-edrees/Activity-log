@@ -9,7 +9,7 @@
       
     ```js 
     <Route path="*" component={NotFound} /> 
-    //OR
+    {/* OR */}
      <Route  component={NotFound} /> 
     ```
 
