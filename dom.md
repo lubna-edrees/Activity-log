@@ -44,13 +44,14 @@
       }
     }
     ```
-  - control scrolling:
     
+- control scrolling:
+
     ```js
     window.scrollTo(x, y); // x,y are the window cordinates.
-   
+
     /* Using options: */
 
     window.scrollTo({ top: x, left: y, behavior: 'smooth' });
     ```
-    
+
