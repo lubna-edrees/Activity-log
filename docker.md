@@ -1,4 +1,10 @@
 # Docker
+- alawys start by this command to start the defaul machine
+
+   ```bash
+   docker-machine start default
+   ```
+   
 - Resource: [Brad Traversy Help](https://gist.github.com/bradtraversy/89fad226dc058a41b596d586022a9bd3)
 
 ## General
