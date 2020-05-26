@@ -16,7 +16,9 @@ Reference for code snippets, shortcuts or notes I faced while working.
   - [CSS](https://github.com/ahmad-ali14/Activity-log/blob/master/css.md)
   - [Docker](https://github.com/ahmad-ali14/Activity-log/blob/master/docker.md)
   - [DOM](https://github.com/ahmad-ali14/Activity-log/blob/master/dom.md)
-  
+  - [General web development](#general-web-development)
+
+
   
   - [packages Index](https://github.com/ahmad-ali14/Activity-log/blob/master/packages.md)
   - [commands](#commands)
@@ -43,8 +45,6 @@ Reference for code snippets, shortcuts or notes I faced while working.
   - [Windows](https://github.com/ahmad-ali14/Activity-log/blob/master/windows.md)
   - [Python](#python)
   - [Projects](#projects)
-  - [General web development](#general-web-development)
-
 
 
 ## commands
