@@ -5,10 +5,10 @@ Reference for code snippets, shortcuts or notes I faced while working.
 <div style="text-align:center; margin:auto; padding:auto;"><img style="margin:auto;" src="https://i.imgur.com/lRrDFLo.png" /></div>
 
 ## Index
-
-- [Dev Snippets](#dev-snippets)
-
-  - [APIs](#apis)
+ 
+|                                                            |                                                                      |
+|------------------------------------------------------------|----------------------------------------------------------------------|
+|  - [APIs](#apis)                                           |  - [Windows](https://github.com/ahmad-ali14/Activity-log/blob/master/windows.md)
   - [Algorithms](#algorithms)
   - [Bash](https://github.com/ahmad-ali14/Activity-log/blob/master/bash.md)
   - [CLI](#cli)
@@ -42,7 +42,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
   - [Grunt](#grunt)
   
  
-  - [Windows](https://github.com/ahmad-ali14/Activity-log/blob/master/windows.md)
+ 
   - [Python](#python)
   - [Projects](#projects)
 
