@@ -4,3 +4,6 @@
   1. `ctrl + alt + del` 
   2. go to `service` tab
   3. search for `Redis` and start the service.
+
+## resources
+- https://redis.io/documentation
