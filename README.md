@@ -12,11 +12,17 @@ Reference for code snippets, shortcuts or notes I faced while working.
 | [Algorithms](#algorithms) |
 | [Bash](https://github.com/ahmad-ali14/Activity-log/blob/master/bash.md) |
 | [CLI](#cli) |
+|   |
+|   |
+|   |
+|   | [Redis](https://github.com/ahmad-ali14/Activity-log/blob/master/redis.md)
+|   |
+|[General web development](#general-web-development)   |
   - [codeWars katas](#codewars-katas)
   - [CSS](https://github.com/ahmad-ali14/Activity-log/blob/master/css.md)
   - [Docker](https://github.com/ahmad-ali14/Activity-log/blob/master/docker.md)
   - [DOM](https://github.com/ahmad-ali14/Activity-log/blob/master/dom.md)
-  - [General web development](#general-web-development)
+  - 
 
 
   
