@@ -427,3 +427,11 @@ Reference for code snippets, shortcuts or notes I faced while working.
   - CSAcamedy
 
 - found out about `Getting Hired` course by `theodinproject` here: <https://www.theodinproject.com/courses/getting-hired> .
+
+## choose your browser
+
+- here is how my memory respond to close only one chrome window with 3 tabs and less than 10 extentions working, all these extetions choosed wisely so they are all light weight.
+- this has realsed almost 20% of the RAM memory.
+- I now use opera browser.
+
+![](https://i.imgur.com/XUbSPc3.png)
