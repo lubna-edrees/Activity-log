@@ -15,3 +15,25 @@
   > x.getDate() // 26 // day of the month
   
   ```
+  
+- display the distance between a date and the moment
+    
+    ```js
+      const calculateDuration = (num) => {
+      let durationDate = new Date(num);
+      var epoch = new Date('1970-01-01 00:00:00-0600');
+      var diff_years = durationDate.getYear() - epoch.getYear();
+      var diff_month = durationDate.getMonth() - epoch.getMonth();
+      var diff_days = durationDate.getDate() - epoch.getDate();
+
+      let yy = diff_years ? diff_years + ' years ' : '';
+      let mm = diff_month ? diff_month + ' months ' : '';
+      let dd = diff_days ? diff_days + ' days ' : '';
+
+      return `${yy} ${mm} ${dd}`
+    }
+    
+    /*
+    * if num = "208426207" => calculateDuration is `2 days`.
+    */
+    ```
