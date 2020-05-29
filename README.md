@@ -13,7 +13,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
 | [Bash](https://github.com/ahmad-ali14/Activity-log/blob/master/bash.md) |
 | [CLI](#cli) |
 |   |
-|   |
+|  [Date and Time](https://github.com/ahmad-ali14/Activity-log/blob/master/dateTime.md) |
 |   |
 |   | [Redis](https://github.com/ahmad-ali14/Activity-log/blob/master/redis.md)
 |   |
