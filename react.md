@@ -36,3 +36,24 @@ const SimpleRoute({ component: Component, ...rest }) => (
 
 export default SimpleRoute
 ```
+
+## component will recieve props 
+
+- check if we are still on the same component `OR` ifwe are coming from another component:
+  ```js
+   componentWillReceiveProps = newProps => {
+    if (newProps.location !== this.props.location) {
+      console.log('here should we gos')
+    }
+    
+    /*
+    * typical props.location at the first mount of the copmonent, where the props.location == newprops.location 
+    */
+    
+    this.props.window =  {pathname: "/page", search: "", hash: "", state: undefined, key: "yooxfy"}
+    
+    /*
+    * if the component re-rendered in the same page, the { this.props.window.key } will change so they are no longer equal.
+    */
+
+  ```
