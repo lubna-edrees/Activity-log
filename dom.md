@@ -66,12 +66,12 @@
     // you can never extract the path from window.history
     ```
     
- - extract the page url:
+ - extract the url that you are coming from:
     
     ```js
-    let x = document.referrer // "https://github.com/ahmad-ali14/Activity-log/blob/master/dom.md"
+    let x = document.referrer // "https://www.google.com/"
     
-    // this will never work for dynamic pages or single page applications.
+    // you were in google page and they refer you to here
     ```
     
  - window location:
