@@ -53,7 +53,8 @@ export default SimpleRoute
     this.props.window =  {pathname: "/page", search: "", hash: "", state: undefined, key: "yooxfy"}
     
     /*
-    * if the component re-rendered in the same page, the { this.props.window.key } will change so they are no longer equal.
+    * if the component re-rendered in the same page, the { this.props.window.key } will change,
+    *  so they are no longer equal.
     */
 
   ```
