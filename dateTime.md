@@ -9,5 +9,9 @@
   > x.getMonth() //4
   > const month = x.toLocaleString('default', { month: 'long' }); // May
   > let duration = ( new Date() ).getTime() - x.getTime(); //208426207 // distance between 2 dates
+  > duration.toLocaleString() // "208,426,207"
+  > duration.toString() //"208426207"
+  > x.getDay() // 2 // second day on the week Tuesday
+  > x.getDate() // 26 // day of the month
   
   ```
