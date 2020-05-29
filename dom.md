@@ -78,9 +78,12 @@
     
     ```js
     // typical window.location object
-    Location =  {href: "https://www.w3schools.com/js/js_window_location.asp", 
-    ancestorOrigins: DOMStringList, 
-    origin: "https://www.w3schools.com", protocol: "https:",
-    host: "www.w3schools.com", …}
+    Location =  { 
+        href: "https://www.w3schools.com/js/js_window_location.asp", 
+        ancestorOrigins: DOMStringList, 
+        origin: "https://www.w3schools.com", protocol: "https:",
+        host: "www.w3schools.com", 
+        pathname: "/js/js_window_location.asp"
+    }
     ```
 
