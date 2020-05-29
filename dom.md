@@ -54,4 +54,23 @@
 
     window.scrollTo({ top: x, left: y, behavior: 'smooth' });
     ```
+    
+ - browser hsitory:
+
+    ```js
+    let x = window.history // Array of the nubmer of pages in the window history
+    // you can go back and forth between pages
+    x.goBack()
+    x.foreward()
+
+    // you can never extract the path from window.history
+    ```
+    
+ - extract the page url:
+    
+    ```js
+    let x = document.referrer // "https://github.com/ahmad-ali14/Activity-log/blob/master/dom.md"
+    
+    // this will never work for dynamic pages or single page applications.
+    ```
 
