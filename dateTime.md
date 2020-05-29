@@ -40,16 +40,20 @@
     
  - usinu day.js:
   
-  ```js
-   // duration from now
-   > dayjs(date).fromNow() // 2 years ago
-   > dayjs(date).fromNow(true) // 2 years
-   > dayjs(date).fromNow() // 2 days ago // time from now up to ${date}
-   
-   // duration between 2 dates 
-   > dayjs(date1).from(date2) // 2 years ago
-   > daysjs(date1).from(date2, true) // 2 years
-   
-   //format date
-    > dayjs(date).format('DD MMMM YYYY') // 20 May 2020
-  ```
+    ```js
+     // duration from now
+     > dayjs(date).fromNow() // 2 years ago
+     > dayjs(date).fromNow(true) // 2 years
+     > dayjs(date).fromNow() // 2 days ago // time from now up to ${date}
+
+     // duration between 2 dates 
+     > dayjs(date1).from(date2) // 2 years ago
+     > daysjs(date1).from(date2, true) // 2 years
+
+     //format date
+      > dayjs(date).format('DD MMMM YYYY') // 20 May 2020
+    ```
+    
+## resources
+
+- https://day.js.org/docs/en/display/display
