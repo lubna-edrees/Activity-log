@@ -21,13 +21,23 @@
   - Software is constantly changing and it is important to develop your software in such a way that changes are easy to respond to.
  
 ## Agile 12 principles:
+core values:
 1. Individuals and interactions over processes and tools.
 2. Working software over comprehensive documentation.
 3. Customer collaboration over contract negotiation.
 4. Responding to change over following a plan.
+
+extended principles:
+
 5. Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
 6. Deliver working software frequently, from a couple of weeks to a couple of months with a preference to the shorter timescale.
 7. Working software is the primary measure of progress.
+8. welcome changing requirements even late in development. Agile processes harness change for the customer's competitive advantage.
+9. continuous attention to technical excellence and good design enhances agility.
+    - Having readable, simple code and more flexible designs will allow changes to be easily implemented.
+    - Having a good design can let you know what components are dependent on each other.
+10. agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
+11. simplicity, the art of maximizing the amount of work not done, is essential. This does not mean that Agile is about delivering less. It means that Agile is about delivering what is essential and reducing unnecessary work.
 
 ## good ways to make your software product more change friendly
 1. Frequent client communication. 
@@ -35,6 +45,17 @@
 3. Continuously reviewing and improving your project. 
 4. Updated, prioritized list of features.
 5. Development team that is open to change.
+
+##  practices follow the concept of simplicity from the Agile Manifesto
+1. minimal code that satisfies the desired functionality.
+2. essential documentation over elaborate documentation.
+
+those are NOT following the simplicity:
+1. no comments at all in the code.
+2.  only developing essential features : he team should develop features not based on their own criteria of what is important, but what is going to satisfy the client.
+
+
+
 
 
 ## resources
