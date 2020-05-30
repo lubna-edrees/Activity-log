@@ -3,15 +3,20 @@
 - hacking: getting the things work without propper pre-planning.
 - software development is all about iterations, if you succeed or failed this week does not mean that the things will be the same next week. so we need to be adaptable.
 
+## quotes
+- General George S. Patton once said, tell people where to go, but not how to get there, and you'll be amazed by the results.
+- Henrik Kniberg, an Agile trainer and author, said: “The important thing is not your process. The important thing is your process for improving your process.”
+
 ##  Agile Manifesto
 - team of developers gathered to come up with better ways to manage the process of producing great software.
-- They established four core value statements about what is most important in software development. To further expand on the core values, the Alliance also agreed on 12 supporting principles.
+- They established foGeneral George S. Patton once said, tell people where to go, but not how to get there, and you'll be amazed by the results.ur core value statements about what is most important in software development. To further expand on the core values, the Alliance also agreed on 12 supporting principles.
 
-### 4 core values of Agile:
-  - Individuals and interactions over processes and tools.
-  - Working software over comprehensive documentation.
-  - Customer collaboration over contract negotiation.
-  - Responding to change over following a plan.
+  ### 4 core values of Agile:
+
+  1. Individuals and interactions over processes and tools.
+  2. Working software over comprehensive documentation.
+  3. Customer collaboration over contract negotiation.
+  4. Responding to change over following a plan.
   
 - from these 4 core vluaes we can say:
   - Your developers and clients will be more productive and effective in a collaborative relationship.
@@ -31,7 +36,14 @@
     - Having a good design can let you know what components are dependent on each other.
 6. agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
 7. simplicity, the art of maximizing the amount of work not done, is essential. This does not mean that Agile is about delivering less. It means that Agile is about delivering what is essential and reducing unnecessary work.
-8. 
+8. build projects around motivated individuals. Give them the environment and support that they need, and trust them to get the job done.
+9. the best architectures, requirements, and designs emerge from self-organizing teams
+10. client-developer communication, business people and developers must work together daily throughout the project.
+11. the most efficient and effective method for conveying information to and within a development team is face-to-face conversation.
+12. reviewing what's been done, at regular intervals, the team reflects on how to become more effective, then tunes and adjusts it's behavior accordingly.
+
+
+
 ## good ways to make your software product more change friendly
 1. Frequent client communication. 
 2. Neat, commented source code. 
@@ -54,6 +66,6 @@ those are NOT following the simplicity:
 ## resources
 - [what is exactly a product manager](https://www.mindtheproduct.com/what-exactly-is-a-product-manager/)
 - [Tedx: the first secret of design](https://www.ted.com/talks/tony_fadell_the_first_secret_of_design_is_noticing)
-- [Tedx: how to manage for collective creativity](https://www.ted.com/talks/linda_hill_how_to_manage_for_collective_creativity
+- [Tedx: how to manage for collective creativity](https://www.ted.com/talks/linda_hill_how_to_manage_for_collective_creativity)
 - [survey result comparng software engenniring methodologies](http://www.ambysoft.com/surveys/success2013.html)
 - [Agile manifesto website](https://agilemanifesto.org/)
