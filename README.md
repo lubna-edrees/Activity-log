@@ -21,8 +21,8 @@ Reference for code snippets, shortcuts or notes I faced while working.
 |  [Functions](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/functions.md)   |  [Strings](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/strings.md)  |
 |        [Git](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/git.md)         |     [URLs](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/urls.md)     |
 |      [Grunt](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/grunt.md)       |  [Windows](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/windows.md)  |
-|  [JavaScript](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/generalJs.md)  |                                                                                          |
 |                      [General web development](#general-web-development)                      |                                                                                          |
+|  [JavaScript](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/generalJs.md)  |                                                                                          |
 
 ## Algorithms
 
