@@ -6,48 +6,23 @@ Reference for code snippets, shortcuts or notes I faced while working.
 
 ## Dev snippets
 
-|                                         A-M                                          |                                      M-Z                                      |
-| :----------------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
-|                                    [APIs](#apis)                                     | [Windows](https://github.com/ahmad-ali14/Activity-log/blob/master/windows.md) |
-|                              [Algorithms](#algorithms)                               |
-|       [Bash](https://github.com/ahmad-ali14/Activity-log/blob/master/bash.md)        |
-|                                     [CLI](#cli)                                      |
-|                                                                                      |
-| [Date and Time](https://github.com/ahmad-ali14/Activity-log/blob/master/dateTime.md) |
-|                                                                                      |
-|                                                                                      |   [Redis](https://github.com/ahmad-ali14/Activity-log/blob/master/redis.md)   |
-|                                                                                      |
-|                 [General web development](#general-web-development)                  |
-
-- [codeWars katas](#codewars-katas)
-- [CSS](https://github.com/ahmad-ali14/Activity-log/blob/master/css.md)
-- [Docker](https://github.com/ahmad-ali14/Activity-log/blob/master/docker.md)
-- [DOM](https://github.com/ahmad-ali14/Activity-log/blob/master/dom.md)
--
-
-* [packages Index](https://github.com/ahmad-ali14/Activity-log/blob/master/packages.md)
-* [commands](#commands)
-* [Git](https://github.com/ahmad-ali14/Activity-log/blob/master/git.md)
-
-* [General JS](#general-js)
-* [Functions](#functions)
-* [Objects](#objects)
-* [Arrays](#arrays)
-* [Strings](#strings)
-* [Numbers](#numbers)
-
-* [React](https://github.com/ahmad-ali14/Activity-log/blob/master/react.md)
-* [Bootstrap](#bootstrap)
-
-* [Meta](#meta)
-* [MongoDB](https://github.com/ahmad-ali14/Activity-log/blob/master/mongo.md)
-
-* [SEO](#seo)
-* [URLs](#urls)
-* [Grunt](#grunt)
-
-- [Python](#python)
-- [Projects](#projects)
+|                                              A-G                                              |                                           H-Z                                            |
+| :-------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: |
+|     [APIs](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/API-list.md)      |  [Meta tags](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/meta.md)   |
+|     [Arrays](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/arrays.md)      |   [MongoDB](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/mongo.md)   |
+|       [Bash](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/bash.md)        |  [Numbers](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/numbers.md)  |
+|  [Bootstrap](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/bootstrap.md)   |  [Objects](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/objects.md)  |
+|        [CLI](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/cli.md)         | [Packages](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/packages.md) |
+|   [Commands](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/commands.md)    | [Projects](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/projects.md) |
+|        [CSS](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/css.md)         |   [Python](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/python.md)   |
+| [Date and Time](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/dateTime.md) |    [React](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/react.md)    |
+|     [Docker](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/docker.md)      |    [Redis](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/redis.md)    |
+|        [DOM](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/dom.md)         |      [SEO](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/seo.md)      |
+|  [Functions](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/functions.md)   |  [Strings](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/strings.md)  |
+|        [Git](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/git.md)         |     [URLs](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/urls.md)     |
+|      [Grunt](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/grunt.md)       |  [Windows](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/windows.md)  |
+|  [JavaScript](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/generalJs.md)  |                                                                                          |
+|                      [General web development](#general-web-development)                      |                                                                                          |
 
 ## Algorithms
 
