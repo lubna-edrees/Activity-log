@@ -1,11 +1,17 @@
 # Agile process
 - Working software is a key aspect of Agile.
-- hacking: getting the things work without propper pre-planning.
 - software development is all about iterations, if you succeed or failed this week does not mean that the things will be the same next week. so we need to be adaptable.
 
 ## quotes
 - General George S. Patton once said, tell people where to go, but not how to get there, and you'll be amazed by the results.
 - Henrik Kniberg, an Agile trainer and author, said: “The important thing is not your process. The important thing is your process for improving your process.”
+- Alan Lakein, author og famous  books on personal time management. He says, "Planning is bringing the future into the present so you can do something about it now."
+
+## terminology
+- `verified product`:  means that the product was "done right" and meets the standards laid out by the development team.
+- `validated product`:  meets the needs of the client. We say that a validated product is the "right product".
+- `hacking`: getting the things work without propper pre-planning.
+- `Ad hoc` development: coding from your mind without a specific plan.
 
 ##  Agile Manifesto
 - team of developers gathered to come up with better ways to manage the process of producing great software.
@@ -58,6 +64,14 @@
 those are NOT following the simplicity:
 1. no comments at all in the code.
 2.  only developing essential features : he team should develop features not based on their own criteria of what is important, but what is going to satisfy the client.
+
+## problems will be solved through monitoring
+1. Adapting to changing product requirements.
+2. Meeting project plan deadlines.
+
+those are NOT solved by monitoring:
+1. Avoiding having to fire his least productive developer:  monitoring should not be seen as a way to assess the career progress. Keep it light.
+2. Working without interruptions from the client: monitoring should not be a substitute for good communication with your client.
 
 
 
