@@ -87,6 +87,26 @@
     }
     ```
     
+ - `respondWith()` 
+    
+    The respondWith() method of FetchEvent prevents the browser's default fetch handling, and allows you to provide a promise for a Response yourself.
+     ```js
+        addEventListener('fetch', event => {
+      // Prevent the default, and handle the request ourselves.
+      event.respondWith(async function() {
+        // Try to get the response from a cache.
+        const cachedResponse = await caches.match(event.request);
+        // Return it if we found one.
+        if (cachedResponse) return cachedResponse;
+        // If we didn't find a match in the cache, use the network.
+        return fetch(event.request);
+      }());
+    });
+
+ ```
+    
  ## Resources
  - [Add to homescreen button form mobiles and new chrome desktop](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen)
+ 
+
 
