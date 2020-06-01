@@ -105,6 +105,25 @@
 
     ```
     
+ ### window.localStorage
+- save data into 'localStorage' object.
+- saved data will be available on the client side, will stay if the tab closed or the session ended.
+- no Expiary date.
+- can be cleared only by javascript or clearing browser data for this website.
+- more: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+    
+### window.sessionStorage
+- save data into `sessionStorage` objec.
+- if the tab closed or session ended the data will be deleted .
+- at most 5MB
+- more: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+    
+### window.IndexedDB
+- clinet side SQL-like temporary storage.
+- allows you to save a significant amount of data, including files/blobs
+- 
+- more: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+
  ## Resources
  - [Add to homescreen button form mobiles and new chrome desktop](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen)
  
