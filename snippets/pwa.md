@@ -1,12 +1,91 @@
 # Progressive Web Apps PWA
 
-## What does it take to be installable?
+### Regeister worker life cycle
+- Regester => Install => Activate => fetch
+- you can add event listener to each one of them.
+- caching statc files happens in `install`
+- caching dynamically happens in `fetch`
+
+### Register 
+- inside main html file.
+```html
+  
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker
+            .register('dynamicWorker.js')
+            .then(
+              function(registration) {
+                // Registration was successful
+                console.log(
+                  'ServiceWorker registration successful with scope: ',
+                  registration.scope
+                )
+              },
+              function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err)
+              }
+            )
+            .catch(function(err) {
+              console.log(err)
+            })
+        })
+      } else {
+        console.log('service worker is not supported')
+      }
+    </script>
+```
+
+### install and activate
+- inside `serviceWorker.js`
+```js
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    fetchStuffAndInitDatabases()
+  );
+});
+
+self.addEventListener('activate', function(event) {
+  // You're good to go!
+});
+```
+
+### fetch 
+- inside `serviceWorker.js`
+- listening to any fetch request from the client.
+```js
+// fetch event
+self.addEventListener('fetch', (e) => {
+    console.log('fetching ....................');
+    e.respondWith(
+        fetch(e.request)
+            .then(res => {
+                // copy the reponse
+                const resClone = res.clone();
+                //caching the response dynamically
+                caches.open(currentChacheName).then(cache => {
+                    // puting in the cache
+                    cache.put(e.request, resClone);
+                })
+
+                // preceeding with the response
+                return res;
+            })
+            // if no reponse 
+            .catch((err) => caches.match(e.request).then(res => res)
+            ))
+})
+```
+
+### What does it take to be installable?
   https://web.dev/install-criteria/
   
-## Add a web app manifest
+### Add a web app manifest
 https://web.dev/add-manifest/
 
-## ways to prompt installations for your app
+### ways to prompt installations for your app
 https://web.dev/promote-install/
 
 ## resourses
