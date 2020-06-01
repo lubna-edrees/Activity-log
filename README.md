@@ -15,6 +15,7 @@ Reference for code snippets, shortcuts or notes I faced while working.
 |        [CLI](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/cli.md)         | [Packages](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/packages.md) |
 |   [Commands](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/commands.md)    | [Projects](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/projects.md) |
 |        [CSS](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/css.md)         |   [Python](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/python.md)   |
+|   | [Progressive web applications pwa](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/pwa.md) |
 | [Date and Time](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/dateTime.md) |    [React](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/react.md)    |
 |     [Docker](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/docker.md)      |    [Redis](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/redis.md)    |
 |        [DOM](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/dom.md)         |      [SEO](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/seo.md)      |
