@@ -1,5 +1,11 @@
 # Progressive Web Apps PWA
 
+### start here 
+- https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
+
+### follow this checklist to make sure you have PWA
+- https://web.dev/pwa-checklist/
+
 ### Regeister worker life cycle
 - Regester => Install => Activate => fetch
 - you can add event listener to each one of them.
@@ -79,6 +85,10 @@ self.addEventListener('fetch', (e) => {
 })
 ```
 
+###  getInstalledRelatedApps()
+- checks if your app installed or not.
+- https://web.dev/get-installed-related-apps/
+
 ### BeforeInstallPromptEvent
 - https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent
 
@@ -91,6 +101,11 @@ https://web.dev/add-manifest/
 ### ways to prompt installations for your app
 https://web.dev/promote-install/
 
+## Examples
+- https://web.dev/codelab-make-installable/
+
 ## resourses
 - [google official documentaions](https://web.dev/progressive-web-apps/)
 - [service worker Explained](https://github.com/w3c/ServiceWorker/blob/master/explainer.md)
+- [official react pwa documentation](https://create-react-app.dev/docs/making-a-progressive-web-app/)
+- [service worker Extensive Google docs](https://developers.google.com/web/fundamentals/primers/service-workers)
