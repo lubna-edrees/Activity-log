@@ -79,6 +79,9 @@ self.addEventListener('fetch', (e) => {
 })
 ```
 
+### BeforeInstallPromptEvent
+- https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent
+
 ### What does it take to be installable?
   https://web.dev/install-criteria/
   
@@ -90,3 +93,4 @@ https://web.dev/promote-install/
 
 ## resourses
 - [google official documentaions](https://web.dev/progressive-web-apps/)
+- [service worker Explained](https://github.com/w3c/ServiceWorker/blob/master/explainer.md)
