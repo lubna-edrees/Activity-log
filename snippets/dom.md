@@ -132,6 +132,13 @@ fetchEvent.respondWith(
 ​);
 ```
 
+### Get list of all Dom elements
+
+```js
+var all = document.getElementsByTagName("*");
+
+```
+
  ## Resources
  - [Add to homescreen button form mobiles and new chrome desktop](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen)
  
