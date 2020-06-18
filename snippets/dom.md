@@ -45,7 +45,7 @@
     }
     ```
     
-- control scrolling:
+## control scrolling:
 
     ```js
     window.scrollTo(x, y); // x,y are the window cordinates.
@@ -55,7 +55,7 @@
     window.scrollTo({ top: x, left: y, behavior: 'smooth' });
     ```
     
- - browser hsitory:
+## browser hsitory:
 
     ```js
     let x = window.history // Array of the nubmer of pages in the window history
@@ -74,7 +74,7 @@
     // you were in google page and they refer you to here
     ```
     
- - window location:
+ ## window location:
     
     ```js
     // typical window.location object
@@ -87,7 +87,7 @@
     }
     ```
     
- - `respondWith()` 
+ ## `respondWith()` 
     
     The respondWith() method of FetchEvent prevents the browser's default fetch handling, and allows you to provide a promise for a Response yourself.
      ```js
@@ -105,7 +105,7 @@
 
     ```
     
- ### window.localStorage
+ ## window.localStorage
 - save data into 'localStorage' object.
 - saved data will be available on the client side, will stay if the tab closed or the session ended.
 - no Expiary date.
@@ -114,19 +114,19 @@
 - to retrieve the stringified saved data you need to use `JSON.Parse()`
 - more: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
     
-### window.sessionStorage
+## window.sessionStorage
 - save data into `sessionStorage` objec.
 - if the tab closed or session ended the data will be deleted .
 - at most 5MB
 - more: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
     
-### window.IndexedDB
+## window.IndexedDB
 - clinet side SQL-like temporary storage.
 - allows you to save a significant amount of data, including files/blobs
 - 
 - more: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 
-### FetchEvent.respondWith()
+## FetchEvent.respondWith()
 - more: https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith
 ```js
 fetchEvent.respondWith(
@@ -134,7 +134,7 @@ fetchEvent.respondWith(
 ​);
 ```
 
-### Get list of all Dom elements
+## Get list of all Dom elements
 
 ```js
 var all = document.getElementsByTagName("*");
