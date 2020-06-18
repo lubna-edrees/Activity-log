@@ -110,6 +110,8 @@
 - saved data will be available on the client side, will stay if the tab closed or the session ended.
 - no Expiary date.
 - can be cleared only by javascript or clearing browser data for this website.
+- data can be stored only as strings, so you need to use `JSON.stringify()` before saving. 
+- to retrieve the stringified saved data you need to use `JSON.Parse()`
 - more: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
     
 ### window.sessionStorage
