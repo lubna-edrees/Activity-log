@@ -47,4 +47,4 @@
 
 * `arr.pop()` and `arr.unshift()` returns the single Elemnt that they worked on.
 
-### if you are returning a single element from an array, use `arr.find()` instead of `arr.filter()`
+* if you are returning a single element from an array, use `arr.find()` instead of `arr.filter()`
