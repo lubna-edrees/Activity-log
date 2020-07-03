@@ -7,3 +7,4 @@
 - facts about random year: <http://numbersapi.com/random/year>
 - darksky: <https://darksky.net/forecast/40.7127,-74.0059/us12/en>
 - code wars api: <https://www.codewars.com/api/v1/users/ahmad.ali>
+- git lines of code for each repo: <https://api.codetabs.com/v1/loc?github=:username/:repo>
