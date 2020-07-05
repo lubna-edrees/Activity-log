@@ -75,3 +75,47 @@ export default SimpleRoute
   ```
 
 - passing functions as props should be by reference.
+
+### Hide dom element by click outside of it 
+
+```
+export default class ClickOutsideClass extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      divshow: true
+    };
+  }
+  componentWillMount() {
+    document.addEventListener("mousedown", this.handleClickOutside, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleClickOutside, false);
+  }
+
+  handleClickOutside = e => {
+    if (this.node.contains(e.target)) {
+      return;
+    }
+
+    if (this.state.divshow) {
+      this.setState({ divshow: false });
+    }
+  };
+  render() {
+    return this.state.divshow ? (
+      <div>
+        <div
+          ref={node => (this.node = node)}
+          style={{ backgroundColor: "red", height: "200px" }}
+        >
+          <p>click outside to close me </p>
+        </div>
+      </div>
+    ) : (
+      "Hided"
+    );
+  }
+}
+```
