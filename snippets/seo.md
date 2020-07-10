@@ -1,20 +1,20 @@
 # SEO
 
-- retrieve how google caching your website, visit:
+* retrieve how google caching your website, visit:
 
-  ```js
+  ```javascript
   cache: example.com;
   ```
 
-- refresh yuor sitemap:
+* refresh yuor sitemap:
 
-  ```js
+  ```javascript
   https://www.google.com/ping?sitemap=`url to your siteMap`
   ```
 
-- social media tags:
+* social media tags:
 
-  ```html
+  ```markup
   <meta property="og:title" content="#" />
   <meta property="og:description" content="#" />
   <meta property="og:image" content="#" />
@@ -23,3 +23,4 @@
   <meta name="twitter:image" content="#" />
   <meta name="author" content="[Author name here]" />
   ```
+

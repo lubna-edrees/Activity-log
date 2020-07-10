@@ -1,6 +1,6 @@
 # algoritm toolbox
 
-- the course link is [here](https://www.coursera.org/learn/algorithmic-toolbox/home/welcome)
+* the course link is [here](https://www.coursera.org/learn/algorithmic-toolbox/home/welcome)
 
 ## week1: Programming Challenges
 
@@ -10,50 +10,50 @@
 
 ## week4: Divide-and-Conquer
 
-- braek the problem down into a set of non-overlaping sub-problems.
-- sub-problems have the same type as the original
-- we start solving sub problems in order.
-- after solving all sub-problems we combine the results.
-- since all sub-problems are of the same type, when we solve a sub-problem and iterate the solution `recurresively` to the rest of the problems.
+* braek the problem down into a set of non-overlaping sub-problems.
+* sub-problems have the same type as the original
+* we start solving sub problems in order.
+* after solving all sub-problems we combine the results.
+* since all sub-problems are of the same type, when we solve a sub-problem and iterate the solution `recurresively` to the rest of the problems.
 
 ### Definitions
 
-- key, K: the elemet we are looking for.
-- Array, A: the array we searching in
+* key, K: the elemet we are looking for.
+* Array, A: the array we searching in
 
 ### linear search
 
-- loop through each elemnt of the array, determine if we find the element that we are looking for or not.
-- after each search we face a `sub-array` (the main array execluded the previous element) with the same type of problem.
-- we define the time that alogrithm takes as `recurrence relation` witch is an equation `T`.
-- worst case : element not found, defined by: `T(n) = T(n-1) + c` => `cost = o(n)`.
-- best (base) case: empty array, `T(0) = c`=> `cost = o(1)`.
-- used in serch for the `free elemnts` stored in a `linked-list`.
+* loop through each elemnt of the array, determine if we find the element that we are looking for or not.
+* after each search we face a `sub-array` \(the main array execluded the previous element\) with the same type of problem.
+* we define the time that alogrithm takes as `recurrence relation` witch is an equation `T`.
+* worst case : element not found, defined by: `T(n) = T(n-1) + c` =&gt; `cost = o(n)`.
+* best \(base\) case: empty array, `T(0) = c`=&gt; `cost = o(1)`.
+* used in serch for the `free elemnts` stored in a `linked-list`.
 
 ### Binary search
 
-- dividing problems into halves, also uses recurresion.
-- starts by `sorting` the array.
-- we calculate the middle index `mid` of the sorted array, search for key at that index.
-- if `A[mid] == key` were done. else if: `key > A[mid]` we do another binary search on the top half of the sorted array.
-- else if `key < A[mid]` we do binary search on the first half.
-- if the key is not found. we will return the best index to put our key in this `sorted-array`.
-- worst case: element not found, `T(n) = T(n/2) + c` => `cost = Log2 (n)`
-- base case: empty array, `T(0) = c` => `cost = o(1)`.
+* dividing problems into halves, also uses recurresion.
+* starts by `sorting` the array.
+* we calculate the middle index `mid` of the sorted array, search for key at that index.
+* if `A[mid] == key` were done. else if: `key > A[mid]` we do another binary search on the top half of the sorted array.
+* else if `key < A[mid]` we do binary search on the first half.
+* if the key is not found. we will return the best index to put our key in this `sorted-array`.
+* worst case: element not found, `T(n) = T(n/2) + c` =&gt; `cost = Log2 (n)`
+* base case: empty array, `T(0) = c` =&gt; `cost = o(1)`.
 
 ### Augmented Array
 
-- a sorted array that keep tracks element indexes in the original array before sorting.
+* a sorted array that keep tracks element indexes in the original array before sorting.
 
 ### polynomial multiplication
 
-- usage:
-  - error-correcting code.
-  - large integer multiplication.
-  - generating functions.
-  - convolution in signal processing.
-- input: `n=3, A=(3,2,5), B=(5,1,2)` => output: `C=(15,13,33,9,10)`.
-- input: `n = 2, A = (3, 4) B = (1, 2)` => output: `C=(3, 10, 8)` corrseponding to: `(3x+4) * (1x + 2) = 3x^2 + 10x + 8`.
+* usage:
+  * error-correcting code.
+  * large integer multiplication.
+  * generating functions.
+  * convolution in signal processing.
+* input: `n=3, A=(3,2,5), B=(5,1,2)` =&gt; output: `C=(15,13,33,9,10)`.
+* input: `n = 2, A = (3, 4) B = (1, 2)` =&gt; output: `C=(3, 10, 8)` corrseponding to: `(3x+4) * (1x + 2) = 3x^2 + 10x + 8`.
 
 #### Naiive algorithm for solving polynomial multiplication problem
 
@@ -80,7 +80,7 @@ function MultPoly(A, B, n) {
 }
 ```
 
-- cost (runtime) `o(n^2)`;
+* cost \(runtime\) `o(n^2)`;
 
 ### Naiive divide-and-conquer algorithm for solving polynomial multiplication
 
@@ -135,11 +135,11 @@ function MultPoly2Wrapper(A, B, n){
 }
 ```
 
-- cost `T(n) = 4 * T(n/2) + n*c` => `4 * n * log(n) + n` => n<sup>2</sup>.
+* cost `T(n) = 4 * T(n/2) + n*c` =&gt; `4 * n * log(n) + n` =&gt; n2.
 
 ### Faster divide-and-conquer algorithm for solving polynomial multiplication
 
-```js
+```javascript
 /**
  * Maths Explanation here: https://i.imgur.com/qa0to77.png
 */
@@ -152,21 +152,21 @@ function MultPoly3wrapper(A, B, n){
 }
 ```
 
-- `karatsuba approach`, do 3 multiplications instead of 4.
-- cost `T(n) = 3 * T(n/2) + n*c` => `3 * n * log(n) + c * n` => n<sup>log3</sup> => n<sup>1.58</sup>.
+* `karatsuba approach`, do 3 multiplications instead of 4.
+* cost `T(n) = 3 * T(n/2) + n*c` =&gt; `3 * n * log(n) + c * n` =&gt; nlog3 =&gt; n1.58.
 
 ### Master Theorem
 
-- for calculating cost in divide-and-concouer cost,
-- binary search, problem divided into 2, each cost constant time `c`:`T(n) = T(n/2) +c` => `log n`
-- divide-and-conquer 1, problem divided into 4, each cost linear time `n`: `T(n) = 4 * T(n/2) + n * c` => n<sup>log 4</sup> => n<sup>2</sup>
-- divide-and-conquer 2, problem divided into 3, each cost linear time `n`: `T(n) = 3 * T(n/2) + n * c` => n<sup>log 3</sup> => n<sup>1.58</sup>
-- divide-and-conquer 3, problem divided into 2, each cost linear time `n`: `T(n) = 2 * T(n/2) + n * c` => n<sup>log 2</sup> => n<sup>log(n)</sup> => `o(n log n)`
-- more info [here](<https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)>)
+* for calculating cost in divide-and-concouer cost,
+* binary search, problem divided into 2, each cost constant time `c`:`T(n) = T(n/2) +c` =&gt; `log n`
+* divide-and-conquer 1, problem divided into 4, each cost linear time `n`: `T(n) = 4 * T(n/2) + n * c` =&gt; nlog 4 =&gt; n2
+* divide-and-conquer 2, problem divided into 3, each cost linear time `n`: `T(n) = 3 * T(n/2) + n * c` =&gt; nlog 3 =&gt; n1.58
+* divide-and-conquer 3, problem divided into 2, each cost linear time `n`: `T(n) = 2 * T(n/2) + n * c` =&gt; nlog 2 =&gt; nlog\(n\) =&gt; `o(n log n)`
+* more info \[here\]\([https://en.wikipedia.org/wiki/Master\_theorem\_\(analysis\_of\_algorithms\)](https://en.wikipedia.org/wiki/Master_theorem_%28analysis_of_algorithms%29)\)
 
 then Theorom:
 
-```
+```text
 let T(n) = a * T(n/b) + o(n^d)
     if d > logb ^a   => T(n) = o(n^d)
      if d = logb ^a   => T(n) = o(n^d log n)
@@ -175,9 +175,9 @@ let T(n) = a * T(n/b) + o(n^d)
 
 ### selection sort
 
-- find the minimum element => swap with first => reprat this process.
+* find the minimum element =&gt; swap with first =&gt; reprat this process.
 
-```js
+```javascript
 /**
  * psudeo code here: https://i.imgur.com/IPq72GD.png
  */
@@ -208,14 +208,14 @@ function swap(A, B, C) {
 }
 ```
 
-- cost `o(n^2)`
+* cost `o(n^2)`
 
 ### Merge sort
 
-- split => sort splits => merge splits.
-- merging has its own rules, evaluate the first elemnt from each arrays to be merged, we choose their minimum and put it in the result => repeat.
+* split =&gt; sort splits =&gt; merge splits.
+* merging has its own rules, evaluate the first elemnt from each arrays to be merged, we choose their minimum and put it in the result =&gt; repeat.
 
-```js
+```javascript
 /**
  * psudo code: https://i.imgur.com/rGmTGr4.png
  */
@@ -257,15 +257,15 @@ function merge(B, C) {
 }
 ```
 
-- cost `n * log n`
+* cost `n * log n`
 
 ### counting sort
 
-- the `selection sort` and `merge sort` use `object comparision` to complete the sort.
-- if the array is consesting from `repitive small ints` we can apply `counting sort`
-- count occurences of each element => store counts to each elemnt (n) => fill up the result array by each elemnt reptitve with its corresponding count.
+* the `selection sort` and `merge sort` use `object comparision` to complete the sort.
+* if the array is consesting from `repitive small ints` we can apply `counting sort`
+* count occurences of each element =&gt; store counts to each elemnt \(n\) =&gt; fill up the result array by each elemnt reptitve with its corresponding count.
 
-```js
+```javascript
 /**
  * psuedo code: https://i.imgur.com/Nqb0cCg.png
  * Now, works only for postivie ints.
@@ -307,15 +307,15 @@ function countSort(A) {
 }
 ```
 
-- costs `o( Array.length + counts.length )` => `o(n)`
+* costs `o( Array.length + counts.length )` =&gt; `o(n)`
 
 ### quick sort
 
-- take first elemnt A[0] => rearrange the array so A[0] will be in the middle, all elements less or equal to A[0] will be on the left, all ements greater than A[0] will be on the right.
-- A[0] is in its final positon => we need to sort `[left Array]` and `[right Array]` => repeat.
-- `partion` or `pivot` we choose it, either first or last element or in the middle or any element, however, it's important to skip this element in the `for loop`.
+* take first elemnt A\[0\] =&gt; rearrange the array so A\[0\] will be in the middle, all elements less or equal to A\[0\] will be on the left, all ements greater than A\[0\] will be on the right.
+* A\[0\] is in its final positon =&gt; we need to sort `[left Array]` and `[right Array]` =&gt; repeat.
+* `partion` or `pivot` we choose it, either first or last element or in the middle or any element, however, it's important to skip this element in the `for loop`.
 
-```js
+```javascript
 /**
  * psuedo code: https://i.imgur.com/eczLG6T.png
  */
@@ -335,20 +335,20 @@ const quickSort = (array) => {
 };
 ```
 
-- best animation: <https://www.youtube.com/watch?v=cnzIChso3cc>
-- costs `o(n^2)` at worst: right or lift is empty, `o(n log n)` at average: right and left are nearly equal.
-- select our `pivot` randomly will give us more balanced left, right arrays => costs less, we should skipt it from the loop.
-- quick sort is not so fast on Arrays with `few uniqe elements`: when you have few elemnets that are repeated. costs `o(n^2)`
+* best animation: [https://www.youtube.com/watch?v=cnzIChso3cc](https://www.youtube.com/watch?v=cnzIChso3cc)
+* costs `o(n^2)` at worst: right or lift is empty, `o(n log n)` at average: right and left are nearly equal.
+* select our `pivot` randomly will give us more balanced left, right arrays =&gt; costs less, we should skipt it from the loop.
+* quick sort is not so fast on Arrays with `few uniqe elements`: when you have few elemnets that are repeated. costs `o(n^2)`
 
 ### quick3
 
-- quick sort on array with few unique elements.
-- we partion to get 3 sub-arrays insted of 2: left, middle, right.
-- left: All elements less than `pivot`
-- middle: all elemnts equal to `pivot`
-- lift: all elements greateer than `pivot`
+* quick sort on array with few unique elements.
+* we partion to get 3 sub-arrays insted of 2: left, middle, right.
+* left: All elements less than `pivot`
+* middle: all elemnts equal to `pivot`
+* lift: all elements greateer than `pivot`
 
-```js
+```javascript
 /**
  * psuedo code: https://i.imgur.com/PaMqD6E.png
  */
@@ -372,14 +372,14 @@ const quickSort3 = (array) => {
 
 ### notes about quick sort
 
-- `In-place algorithm` : does not use extra auxilary space on the memory.
-- `elemeiate tail recursion` or `Tail recursion call optimization`: [GeekForGeek article](https://www.geeksforgeeks.org/quicksort-tail-call-optimization-reducing-worst-case-space-log-n/) [psuedo code](https://i.imgur.com/rkJQoOa.png)
-- even if `random pivot` is faster, it makes our program behaves differently on the same dataset, so it's not welcomed.
-- `intro sort`: when choosing the pivot, we select first, last and middle elemnts of the Array, then we compare these `pivots` => choose the `median pivot` as owr pivot.
+* `In-place algorithm` : does not use extra auxilary space on the memory.
+* `elemeiate tail recursion` or `Tail recursion call optimization`: [GeekForGeek article](https://www.geeksforgeeks.org/quicksort-tail-call-optimization-reducing-worst-case-space-log-n/) [psuedo code](https://i.imgur.com/rkJQoOa.png)
+* even if `random pivot` is faster, it makes our program behaves differently on the same dataset, so it's not welcomed.
+* `intro sort`: when choosing the pivot, we select first, last and middle elemnts of the Array, then we compare these `pivots` =&gt; choose the `median pivot` as owr pivot.
 
 ### Intro quickSort
 
-```js
+```javascript
 const IntroquickSort = (array) => {
   if (array.length < 2) return array;
 
@@ -404,7 +404,7 @@ const IntroquickSort = (array) => {
 };
 ```
 
-- costs `o(n log n)` at worst.
+* costs `o(n log n)` at worst.
 
 ## Array sorting algorithms cost summary
 
@@ -414,35 +414,35 @@ const IntroquickSort = (array) => {
 
 ### Greedy change
 
-> psuedo code: <https://i.imgur.com/3KGLxLJ.png>
+> psuedo code: [https://i.imgur.com/3KGLxLJ.png](https://i.imgur.com/3KGLxLJ.png)
 
 ### recursive change
 
-> psuedo code: <https://i.imgur.com/DW0MLfG.png>
+> psuedo code: [https://i.imgur.com/DW0MLfG.png](https://i.imgur.com/DW0MLfG.png)
 
-### dynamic prgramming change (dp change):
+### dynamic prgramming change \(dp change\):
 
-> psuedo code: <https://i.imgur.com/DL7Cpeo.png>
+> psuedo code: [https://i.imgur.com/DL7Cpeo.png](https://i.imgur.com/DL7Cpeo.png)
 
 ### Edit distance
 
-> psuedo code: <https://i.imgur.com/iyCgqR1.png>
+> psuedo code: [https://i.imgur.com/iyCgqR1.png](https://i.imgur.com/iyCgqR1.png)
 
 ### resource
 
-<https://www.dropbox.com/s/qxzh146jd72188d/dynprog.pdf?dl=0>
+[https://www.dropbox.com/s/qxzh146jd72188d/dynprog.pdf?dl=0](https://www.dropbox.com/s/qxzh146jd72188d/dynprog.pdf?dl=0)
 
 ## week 6: dynamic programming 2
 
 ### knapsack with repetions
 
-> psudeo code: <https://i.imgur.com/4hQNath.png>
+> psudeo code: [https://i.imgur.com/4hQNath.png](https://i.imgur.com/4hQNath.png)
+>
+> pdf: [https://www.cc.gatech.edu/~rpeng/CS3510\_F17/Notes/Oct2MoreDP.pdf](https://www.cc.gatech.edu/~rpeng/CS3510_F17/Notes/Oct2MoreDP.pdf)
+>
+> video: [https://www.youtube.com/watch?v=wFP5VHGHFdk&t=866s](https://www.youtube.com/watch?v=wFP5VHGHFdk&t=866s)
 
-> pdf: <https://www.cc.gatech.edu/~rpeng/CS3510_F17/Notes/Oct2MoreDP.pdf>
-
-> video: <https://www.youtube.com/watch?v=wFP5VHGHFdk&t=866s>
-
-```py
+```python
 def unboundedKnapsack(W, n, val, wt):
 
     # dp[i] is going to store maximum
@@ -470,9 +470,9 @@ print(unboundedKnapsack(W, n, val, wt))
 
 ### knapsack with repetition
 
-> psuedo code: <https://i.imgur.com/RDVqYi6.png>
+> psuedo code: [https://i.imgur.com/RDVqYi6.png](https://i.imgur.com/RDVqYi6.png)
 
-```py
+```python
 def knapSack(W , wt , val , n):
 
     # Base Case
@@ -502,12 +502,13 @@ print knapSack(W , wt , val , n)
 
 ### memoization
 
-> psuedo code: <https://i.imgur.com/k2tkdnd.png>
+> psuedo code: [https://i.imgur.com/k2tkdnd.png](https://i.imgur.com/k2tkdnd.png)
 
-- `iterative algorithm`: starts from the smaller problem into the larger ones
-- `recursive algirithm`: starts from the largest problem into the smaller ones.
-- resursive is slower.
+* `iterative algorithm`: starts from the smaller problem into the larger ones
+* `recursive algirithm`: starts from the largest problem into the smaller ones.
+* resursive is slower.
 
 ### placing parentheses
 
-- you take an arithmetic operation and choose where to put parentheses so it will maximize its output
+* you take an arithmetic operation and choose where to put parentheses so it will maximize its output
+

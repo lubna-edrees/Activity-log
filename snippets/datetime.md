@@ -1,8 +1,8 @@
 # Date and Time
 
-- basic Date Time operations
+* basic Date Time operations
 
-  ```js
+  ```javascript
   // you can pass a date or duration (number) or empty to get the time now
   > x = new Date("2020-05-26T12:19:38.430Z")  //Tue May 26 2020 13:19:38 GMT+0100 (British Summer Time)
   > x.getFullYear() // 2020
@@ -13,12 +13,11 @@
   > duration.toString() //"208426207"
   > x.getDay() // 2 // second day on the week Tuesday
   > x.getDate() // 26 // day of the month
-  
   ```
-  
-- display the distance between a date and the moment
-    
-    ```js
+
+* display the distance between a date and the moment
+
+  ```javascript
       const calculateDuration = (num) => {
       let durationDate = new Date(num);
       var epoch = new Date('1970-01-01 00:00:00-0600');
@@ -32,15 +31,15 @@
 
       return `${yy} ${mm} ${dd}`
     }
-    
+
     /*
     * if num = "208426207" => calculateDuration is `2 days`.
     */
-    ```
-    
- - usinu day.js:
-  
-    ```js
+  ```
+
+  * usinu day.js:
+
+    ```javascript
      // duration from now
      > dayjs(date).fromNow() // 2 years ago
      > dayjs(date).fromNow(true) // 2 years
@@ -53,7 +52,8 @@
      //format date
       > dayjs(date).format('DD MMMM YYYY') // 20 May 2020
     ```
-    
+
 ## resources
 
-- https://day.js.org/docs/en/display/display
+* [https://day.js.org/docs/en/display/display](https://day.js.org/docs/en/display/display)
+

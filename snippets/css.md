@@ -1,8 +1,8 @@
 # CSS
 
-- prevent users from selecting text => `give the elemnt class of "noselect"`:
+* prevent users from selecting text =&gt; `give the elemnt class of "noselect"`:
 
-    ```css
+  ```css
     .noselect {
       -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -12,11 +12,11 @@
       user-select: none; /* Non-prefixed version, currently
                                       supported by Chrome, Opera and Firefox */
     }
-    ```
+  ```
 
-- make all elements(divs) third of the screen with same height:
+* make all elements\(divs\) third of the screen with same height:
 
-    ```css
+  ```css
     #wrapper {
       width: 100%;
       display: flex;
@@ -26,21 +26,21 @@
     .third {
       width: 33%;
     }
-    ```
+  ```
 
-- flexbox: boxes = inner divs, parrent = parrent div.
+* flexbox: boxes = inner divs, parrent = parrent div.
+  * add `display:flex` to the parent =&gt; boxes will be same height \( EQUAL HEIGHT COLUMNS \).
+  * add `display:flex` to parent + add `flex:1` to each box =&gt; boxes will take same width and height \( EQUAL HEIGHT + WIDTH COLUMNS \).
+  * add `display:flex; justify-content: space-between;` to parent + add `width:32%; margin:1%;` to each box =&gt; EQUAL HEIGHT + WIDTH COLUMNS WITH MARGINS
+  * add `flex-wrap: wrap` to the parent, with all previous code =&gt; EQUAL HEIGHT COLUMNS WITH MARGINS IN MULTIPLE ROWS
+* for all text thing of those css rules as `mandatory`:
 
-  - add `display:flex` to the parent => boxes will be same height ( EQUAL HEIGHT COLUMNS ).
-  - add `display:flex` to parent + add `flex:1` to each box => boxes will take same width and height ( EQUAL HEIGHT + WIDTH COLUMNS ).
-  - add `display:flex; justify-content: space-between;` to parent + add `width:32%; margin:1%;` to each box => EQUAL HEIGHT + WIDTH COLUMNS WITH MARGINS
-  - add `flex-wrap: wrap` to the parent, with all previous code => EQUAL HEIGHT COLUMNS WITH MARGINS IN MULTIPLE ROWS
-
-- for all text thing of those css rules as `mandatory`:
-    ```css
+  ```css
       .form-header {
       font-weight: 300;
       font-size: 60px;
       line-height: 82px;
       letter-spacing: -0.5px;
       }
-    ```
+  ```
+

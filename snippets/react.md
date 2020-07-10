@@ -2,12 +2,13 @@
 
 ## General
 
-- when you design your routes, make sure that front end routes differe from back-end routes. especially when using `react-node` app.
-- to apply a css file to one component only:
+* when you design your routes, make sure that front end routes differe from back-end routes. especially when using `react-node` app.
+* to apply a css file to one component only:
   1. wrap you component into `<div className="Component-Name">`.
   2. use that class before the css rules you want to apply for this component only as: `.component-name p{ //css rules }`
-- handle 404 route: add this code as the last `Route` in the `switch` statement:
-  ```js
+* handle 404 route: add this code as the last `Route` in the `switch` statement:
+
+  ```javascript
   <Route path="*" component={NotFound} />;
   {
     /* OR */
@@ -17,9 +18,9 @@
 
 ## component that will simplify your routes:
 
-- usage `<SimpleRoute path={path} component={component_to_render} / >`
+* usage `<SimpleRoute path={path} component={component_to_render} / >`
 
-```js
+```javascript
 import React from 'react'
 import { Route } from 'react-router-dom'
 
@@ -41,9 +42,9 @@ export default SimpleRoute
 
 ## component will recieve props
 
-- check if we are still on the same component `OR` ifwe are coming from another component:
+* check if we are still on the same component `OR` ifwe are coming from another component:
 
-  ```js
+  ```javascript
    componentWillReceiveProps = newProps => {
     if (newProps.location !== this.props.location) {
       console.log('here should we gos')
@@ -59,13 +60,11 @@ export default SimpleRoute
     * if the component re-rendered in the same page, the { this.props.window.key } will change,
     *  so they are no longer equal.
     */
-
   ```
 
-- passing functions to the events should be by `reference`, but
-  if we call the function inside the event listener it will be called `imediatley` and not waiting until the event is bieng fired.
+* passing functions to the events should be by `reference`, but if we call the function inside the event listener it will be called `imediatley` and not waiting until the event is bieng fired.
 
-  ```js
+  ```javascript
   <Component onClick={myFunction} />
   // will wait untill you click to fire the function
   <Component onClick={myFunction()} />
@@ -74,11 +73,11 @@ export default SimpleRoute
   // this way we can pass parameters to that handlers
   ```
 
-- passing functions as props should be by reference.
+* passing functions as props should be by reference.
 
-### Hide dom element by click outside of it 
+### Hide dom element by click outside of it
 
-  ```js
+```javascript
     componentWillMount() {
       document.addEventListener("mousedown", this.handleClickOutside, false);
     }
@@ -103,4 +102,5 @@ export default SimpleRoute
           />   ) : (
         "Hided"  );
    }
-  ```
+```
+

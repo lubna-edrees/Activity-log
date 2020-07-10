@@ -1,8 +1,7 @@
 # Numbers
 
-- `e == 0` will return `true` if `e = flase` or any other falsey value, `e === 0` strict for 0 only.
-
-- useful number formatter (espesially for currency)
+* `e == 0` will return `true` if `e = flase` or any other falsey value, `e === 0` strict for 0 only.
+* useful number formatter \(espesially for currency\)
 
   ```javascript
   /**
@@ -14,7 +13,7 @@
   });
   ```
 
-- find Min and Max elemnt of an Array:
+* find Min and Max elemnt of an Array:
 
   ```javascript
   var numbers = [1, 2, 3, 4];
@@ -27,8 +26,9 @@
   Math.min(...numbers); // 1
   ```
 
-- generating random number between 0 and max:
+* generating random number between 0 and max:
 
   ```javascript
   Math.floor(Math.random() * Math.floor(max));
   ```
+

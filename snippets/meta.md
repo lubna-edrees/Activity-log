@@ -1,8 +1,8 @@
 # Meta
 
-- check if your client using mobile or not:
+* check if your client using mobile or not:
 
-  ```js
+  ```javascript
   function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       window.navigator.userAgent
@@ -10,9 +10,9 @@
   }
   ```
 
-- dowonloading a file without user approval \*\*:
+* dowonloading a file without user approval \*\*:
 
-  ```js
+  ```javascript
   function downloadFile(url, name) {
     const elink = document.createElement("a");
     elink.style.display = "none";
@@ -23,3 +23,4 @@
     document.body.removeChild(elink);
   }
   ```
+
