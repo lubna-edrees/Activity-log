@@ -1,4 +1,4 @@
-# Activity Log
+# Ahmad Ali Activity Log
 
 Reference for code snippets, shortcuts or notes I faced while working.
 

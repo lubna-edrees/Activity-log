@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Activity Log](README.md)
+* [Ahmad Ali Activity Log](README.md)
 * [snippets](snippets/README.md)
   * [SEO](snippets/seo.md)
   * [Redis](snippets/redis.md)
