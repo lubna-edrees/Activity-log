@@ -34,15 +34,15 @@
 - localy:
 
   ```javascript
-  git branch -d <branch name> 
+  git branch -d <branch name> //delete branch locally
   ```
 - locally, if the branch did not merged (force) :
   
   ```javascript
-  git branch -D <branch name>
+  git branch -D <branch name> // force delete branch locally
   ```
 - remote: 
   
   ```javascript 
-  git push origin --delete <branch name>
+  git push origin --delete <branch name>  // delete remote branch
   ```
