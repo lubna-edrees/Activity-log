@@ -19,13 +19,15 @@
 
 ## Branches 
 
-### list all branches :
+### list branches :
 
-  ```javascript
-      git branch -a  // list local and remote branches
-      git branch -r  // list remote branches only
-      git show-branch // list branches and their last commit
-  ```
+- list all branches:
+
+    ```javascript
+        git branch -a  // list local and remote branches
+        git branch -r  // list remote branches only
+        git show-branch // list branches and their last commit
+    ```
 
 ### delete branches
 
