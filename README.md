@@ -4,6 +4,8 @@ Reference for code snippets, shortcuts or notes I faced while working.
 
 ## Dev snippets
 
+use the index on the right if you are on Gitbook, this idex regering to the files' sources on Github.
+
 | A-G | H-Z |
 | :---: | :---: |
 | [APIs](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/API-list.md) | [Meta tags](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/meta.md) |
