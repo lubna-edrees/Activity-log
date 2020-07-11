@@ -21,3 +21,11 @@
     git log --oneline --graph // list all coments, line for every commit
   ```
 
+## delete branches
+
+- localy:
+  ``` git branch -d <branch name> ```
+- locally, if the branch did not merged (force) :
+  ``` git branch -D <branch name> ```
+- remote: 
+  ```  git push origin --delete <branch name> ```
