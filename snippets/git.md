@@ -24,8 +24,17 @@
 ## delete branches
 
 - localy:
-  ``` git branch -d <branch name> ```
+
+  ```javascript
+  git branch -d <branch name> 
+  ```
 - locally, if the branch did not merged (force) :
-  ``` git branch -D <branch name> ```
+  
+  ```javascript
+  git branch -D <branch name>
+  ```
 - remote: 
-  ```  git push origin --delete <branch name> ```
+  
+  ```javascript 
+  git push origin --delete <branch name>
+  ```
