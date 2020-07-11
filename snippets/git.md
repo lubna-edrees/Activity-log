@@ -46,3 +46,8 @@
   ```javascript 
   git push origin --delete <branch name>  // delete remote branch
   ```
+- remove all deleted remote branches from list of branches in VS code:
+  
+  ```javascript
+   git fetch --prune //rmove deleted branches from VS list
+   ```
