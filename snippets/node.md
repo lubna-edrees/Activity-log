@@ -3,6 +3,7 @@
 ## notes
 
 * if your request is empty, check if you have body-parser 
+- `res.send()` can't send a number, you should respond with object `{ result: number }`
 
 ## post request with fetch
 
