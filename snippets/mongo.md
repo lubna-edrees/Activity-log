@@ -20,3 +20,6 @@
       }
   ```
 
+## collection functions 
+
+- `collection.find()` alaways need `.toArray()` after it.
