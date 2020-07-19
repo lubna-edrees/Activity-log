@@ -1,8 +1,13 @@
 # Bash cmd
 
-* delete a file:
+### open file in the terminal 
 
-  `rm <file_name>`
+  ``` cat file.js ```
+### delete file
+
+  * delete a file:
+
+    `rm <file_name>`
 
   * delete a directory:
 
