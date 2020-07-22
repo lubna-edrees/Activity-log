@@ -22,6 +22,7 @@ use the index on the right if you are on Gitbook, this idex regering to the file
 | [DOM](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/dom.md) | [SEO](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/seo.md) |
 | [Functions](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/functions.md) | [Strings](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/strings.md) |
 | [Git](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/git.md) | [URLs](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/urls.md) |
+| [GoLang](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/go.md)   |   |
 | [Grunt](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/grunt.md) | [Windows](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/windows.md) |
 | [General web development](./#general-web-development) |  |
 | [JavaScript](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/generalJs.md) |  |
