@@ -5,6 +5,7 @@
 - `go run file.go`
 - `go install` : build all apps into `go/bin`
 - `go build`: build this project inside this folder
+- `go mod init <projectName> ` : create `go.mod` file for you, similar to package.json
 
 ## notes
 - will not run if unused var.
