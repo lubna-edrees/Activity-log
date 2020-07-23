@@ -3,7 +3,8 @@
 - `go version`
 - `go env`: lists all en variables.
 - `go run file.go`
-- `go install`
+- `go install` : build all apps into `go/bin`
+- `go build`: build this project inside this folder
 
 ## notes
 - will not run if unused var.
