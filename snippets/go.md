@@ -22,3 +22,13 @@
 
 ## slices
 - array with no predefined length
+
+## Functions
+- `strconv.Itoa`: convert to string
+
+## Packages
+- `log`: logging to the cosole.
+- `net/http`: create a server
+- `encoding/json`: stringify, destringify json
+- `github.com/gorilla/mux`: lite weight server
+- `strconv`: handle strings
