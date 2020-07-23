@@ -8,6 +8,7 @@
 ## notes
 - will not run if unused var.
 - prettier will remove the unsued imports automatically.
+- if you want to compile with unuseed var, rename it to _
 
 
 ## Math
