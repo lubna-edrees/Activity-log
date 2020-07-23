@@ -142,6 +142,20 @@
 var all = document.getElementsByTagName("*");
 ```
 
+## Make post Request from the browser instead of postman
+  
+  ```js
+    // you don't need the full url, the end point is fine.
+      await fetch('/endpoint', {
+          method: 'POST',
+          Headers: { "Content-Type":"application/json" },
+          body: JSON.stringify({
+                Title: "post0",
+                Post: "first post req from browser"
+                })
+        });
+  ```
+
 ## Resources
 
 * [Add to homescreen button form mobiles and new chrome desktop](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen)
