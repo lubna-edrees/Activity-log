@@ -6,12 +6,13 @@
 - `go install` : build all apps into `go/bin`
 - `go build`: build this project inside this folder
 - `go mod init <projectName> ` : create `go.mod` file for you, similar to package.json
+- `go test -cover ./...` will run all the tests around the project.
 
 ## notes
 - will not run if unused var.
 - prettier will remove the unsued imports automatically.
 - if you want to compile with unuseed var, rename it to _
-
+- `makefile` is similar to npm scripts
 
 ## Math
 - `math.sqrt2` >>> 1.4142135623730951
