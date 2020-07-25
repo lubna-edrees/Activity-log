@@ -13,6 +13,7 @@
 - prettier will remove the unsued imports automatically.
 - if you want to compile with unuseed var, rename it to _
 - `makefile` is similar to npm scripts
+- when importing local package, never start with `/`, alawyas start with the project name.
 
 ## Math
 - `math.sqrt2` >>> 1.4142135623730951
