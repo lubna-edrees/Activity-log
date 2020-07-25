@@ -28,13 +28,20 @@ use the index on the right if you are on Gitbook, this idex regering to the file
 | [JavaScript](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/generalJs.md) |  |
 
 ## Algorithms
+| | |
+| :---: | :---: |
+|[index](https://github.com/ahmad-ali14/Activity-log/blob/master/algorithms/README.md)|
+|[Algorithm](https://github.com/ahmad-ali14/Activity-log/blob/master/algorithms/algorithms.md)| [FCC challenges](https://github.com/ahmad-ali14/Activity-log/blob/master/algorithms/freecodecamp.md) |
+|[Intro](https://github.com/ahmad-ali14/Activity-log/blob/master/algorithms/algorithmsnotes.md) |[Mit 6006](https://github.com/ahmad-ali14/Activity-log/blob/master/algorithms/mit6006.md)|
+|[Data Structures](https://github.com/ahmad-ali14/Activity-log/blob/master/algorithms/datastructures.md)||
+
 
 ## software development
 | A-G | H-Z |
 | :---: | :---: |
-| Agile(https://github.com/ahmad-ali14/Activity-log/blob/master/software_development/agile.md) ||
-|| Requirments(https://github.com/ahmad-ali14/Activity-log/blob/master/software_development/requirments.md)|
-|| Terminology(https://github.com/ahmad-ali14/Activity-log/blob/master/software_development/terminology.md) |
+| [Agile](https://github.com/ahmad-ali14/Activity-log/blob/master/software_development/agile.md) ||
+|| [Requirments](https://github.com/ahmad-ali14/Activity-log/blob/master/software_development/requirments.md)|
+|| [Terminology](https://github.com/ahmad-ali14/Activity-log/blob/master/software_development/terminology.md) |
 
 ## General web development
 
