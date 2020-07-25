@@ -14,6 +14,7 @@
 - if you want to compile with unuseed var, rename it to _
 - `makefile` is similar to npm scripts
 - when importing local package, never start with `/`, alawyas start with the project name.
+- when appending a struct or slice or map with a new item, never pass the added item by reference, alaways exeplicitly pass its value.
 
 ## Math
 - `math.sqrt2` >>> 1.4142135623730951
