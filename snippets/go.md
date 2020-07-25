@@ -44,3 +44,14 @@
 - `encoding/json`: stringify, destringify json
 - `github.com/gorilla/mux`: lite weight server
 - `strconv`: handle strings
+
+
+## web Apps
+- read request body in pure net/http:
+
+	```go
+		router.HandleFunc("/test", func(res http.ResponseWriter, req *http.Request) {
+		d, _ := ioutil.ReadAll(req.Body)
+		log.Printf("data passed is %s", d)
+		})
+	```
