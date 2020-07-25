@@ -23,6 +23,14 @@
 
 ## maps
 - key/value pairs (like objects)
+- use map of maps:
+  ```go
+    var mapOfMaps = make(map[string]map[string]string)
+
+	  mapOfMaps["_key1 "] = map[string]string{"key1": "value1", "key2":"value2"}
+    
+    // { "_key1" : { "key1" : "value1", "key2":"value2" } }
+  ```
 
 ## slices
 - array with no predefined length
