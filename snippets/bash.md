@@ -1,18 +1,12 @@
 # Bash cmd
 
-## open file in the terminal 
-
-  ``` cat file.js ```
+## Handle files
+- ` cat file.js ` : open file in the terminal 
   
 ## delete file
 
-  * delete a file:
-
-    `rm <file_name>`
-
-  * delete a directory:
-
-    `rm -r <directory_name>`
+- `rm <file_name>` :  delete a file
+- `rm -r <directory_name>` : delete a directory
 
 ## File Tree
 
@@ -22,3 +16,4 @@
 ## Curl
 - `curl <url>` : make get to url
 - `curl -v <url>` : make get to the url with the request info
+- ` curl -v -d "<data>" ` : passing data to your request
