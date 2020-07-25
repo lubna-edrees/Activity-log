@@ -2,11 +2,31 @@
 ## commands
 - `go version`
 - `go env`: lists all en variables.
-- `go run file.go`
-- `go install` : build all apps into `go/bin`
-- `go build`: build this project inside this folder
+
+### run
+- `go run file.go` : will compile and build then execute your file
+- `$GOPATH/bin/<file>` : execute file.exe file after `file.go` being compiled.
+
+### compile
+- `go install` : build (compile) all apps into `GOPATH/bin`
+- `go install <dir>/<file>` compile that file into `GOPATH/bin`
+- `go build`: build (compile) this project inside this folder
+
+### init
 - `go mod init <projectName> ` : create `go.mod` file for you, similar to package.json
+
+### test
 - `go test -cover ./...` will run all the tests around the project.
+
+## Definitions
+- `GOROOT`: the folder where goLang is installed
+- `GOPATH`: the folder or workspace that contains all your go code.
+- by default, on widows, `GOPATH =C:/Users/<user>/go `, `GOROOT=C:/Go`
+### `package clause`
+the first line of the package:
+1. `package main` : entry point
+2. `package <packageName>` : package name `should` match the directory they are in, multiple files can form one package.
+
 
 ## notes
 - will not run if unused var.
