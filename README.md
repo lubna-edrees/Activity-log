@@ -30,6 +30,11 @@ use the index on the right if you are on Gitbook, this idex regering to the file
 ## Algorithms
 
 ## software development
+| A-G | H-Z |
+| :---: | :---: |
+| Agile(https://github.com/ahmad-ali14/Activity-log/blob/master/software_development/agile.md) ||
+|| Requirments(https://github.com/ahmad-ali14/Activity-log/blob/master/software_development/requirments.md)|
+|| Terminology(https://github.com/ahmad-ali14/Activity-log/blob/master/software_development/terminology.md) |
 
 ## General web development
 
