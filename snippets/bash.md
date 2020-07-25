@@ -16,4 +16,4 @@
 ## Curl
 - `curl <url>` : make get to url
 - `curl -v <url>` : make get to the url with the request info
-- ` curl -v -d "<data>" ` : passing data to your request
+- ` curl -v -d "<data>" <url> ` : passing data to your request
