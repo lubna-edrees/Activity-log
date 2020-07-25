@@ -22,7 +22,7 @@
 - `GOROOT`: the folder where goLang is installed
 - `GOPATH`: the folder or workspace that contains all your go code.
 - by default, on widows, `GOPATH =C:/Users/<user>/go `, `GOROOT=C:/Go`
-### `package clause`
+### package clause
 the first line of the package:
 1. `package main` : entry point
 2. `package <packageName>` : package name `should` match the directory they are in, multiple files can form one package.
@@ -35,7 +35,7 @@ the first line of the package:
 - `makefile` is similar to npm scripts
 - when importing local package, never start with `/`, alawyas start with the project name.
 - when appending a struct or slice or map with a new item, never pass the added item by reference, alaways exeplicitly pass its value.
-
+- only capitalized functions or Vars are exported from packages.
 ## Math
 - `math.sqrt2` >>> 1.4142135623730951
 - `math.Floor(2.7)`  >>> round down // 2
