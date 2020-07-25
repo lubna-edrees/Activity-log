@@ -37,7 +37,8 @@
 
 ## Functions
 - `strconv.Itoa`: convert to string
-- `fmt.Sprintln(a,b)`: converting to one string a + " " + b  
+- `fmt.Sprintln(a,b)`: converting to one string `a + " " + b  \n`
+- `fmt.Sprint(a,b)` : return one s `a+b`
 
 ## Packages
 - `log`: logging to the cosole.
