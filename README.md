@@ -2,6 +2,9 @@
 
 Reference for code snippets, shortcuts or notes I faced while working.
 
+### Live here: https://docs.ahmad-ali.co.uk/ , Please use the index on the left.
+
+
 ## Dev snippets
 
 use the index on the right if you are on Gitbook, this idex regering to the files' sources on Github.
