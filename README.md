@@ -1,8 +1,8 @@
 # Ahmad Ali Activity Log
 
-Reference for code snippets, shortcuts or notes I faced while working.
+Reference for code snippets, shortcuts or notes I faced while working. Live here: https://docs.ahmad-ali.co.uk/.
 
-### Live here: https://docs.ahmad-ali.co.uk/ , Please use the index on the left.
+### Please use the index on the left.
 
 
 ## Dev snippets
