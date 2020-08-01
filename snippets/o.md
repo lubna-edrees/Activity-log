@@ -114,7 +114,7 @@ you can pass vars to functions in go :
 2. pass by value: 
    1. just pass a normal var, 
 
-3. there is no passing variables by reference. because there are no 2 variables pointing to the same memory address
+3. There is no passing variables by reference. because there are no 2 variables pointing to the same memory address. you can store the value of a specific address in more than one address but you can't have 2 varaibles pointing to the same memory address. 
 
   ```go
 
