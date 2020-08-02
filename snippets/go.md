@@ -143,6 +143,8 @@ you can pass vars to functions in go :
 
 }
   ```
+  
+- stack allocation is cheap, heap allocation is expensive.
 
 ## Packages
 
