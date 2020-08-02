@@ -143,23 +143,73 @@ constructor is invoked.
     ```c++
     calss V3 {
         double x, y, z;  
-        // first constructor
-        V3(double a, b, c){
+        // first constructor: normal.
+        V3(double a, double b, double c){
             x = a;
             y = b;
             z = c;
             return;
         }
 
-        // second constructor
+        // second constructor: initialazation, no parameters.
+        // default constructor
         V3(){
             x=y=z=0.0;
             return;
         }
 
+         // third constructor : with default values, some params are optional
+        V3(double a = 0.0 , double b = 1.0, double c = 2.0){
+            x = a;
+            y = b;
+            z = c;
+            return;
+        }
+
+        // destructor
+        ~V3() { if (length() == 0.0) {
+        cout << “Zero vector!!!”;
+        return;
+        }
+
     }
-    V3 myObj1; // invoke second constructor 
+    V3 myObj1; // invoke second constructor
     V3 *myObj2 = new V3(1.0, 2.0. 3.0); // invokes first constuctor
+     V3 *myObj2 = new V3(1.0, 2.0); // invokes third constuctor
+    ```
+
+## Default constructor
+
+- a constructor method without any params.
+- when you define an array of type `MyClass`:
+    1. the default constructor, the one without parameters, will be invoked when you intialize a new class without specyfying a constructr [3].
+    2. if no default constructor the compiler will provide one for you, but it might not be as you want [3].
+    3. If a non-default constructor is defined, but not a default constructor, C++ compiler will NOT provide a `bare-bones` default constructor, and the array will not defined, get an `Error`.
+
+- Best practice: `Always` Define default constructors.
+
+## copy constructor
+
+- constructor method that take a class as parameter, and return a new class from the same type.
+- the parameter class should be passed by `reference`, so the old class values will be copied to the new class.
+  
+    ```c++
+        class V3 {
+            int x,y,z;
+
+            V3 copyConstrutor ( const V3 &objFromSameClass){
+                V3 v;
+
+                v.x = objFromSameClass.x
+                v.y = objFromSameClass.y
+                v.z = objFromSameClass.z
+
+                return v;
+            }
+
+            // another Example here: https://i.imgur.com/UfiJgY2.png
+        }
+
     ```
 
 ## Destructor
@@ -169,9 +219,66 @@ constructor is invoked.
 - Accepts no parameters.
 - Can be used to perform other tasks before de-allocating
 object [3].
+- must be public.
+
+## operator overloading
+
+- create a special functions to be invoked after some operetors (eg: + - * /) [4].
+
+    ```c++
+        class V3 {
+            private: double x, y, z;
+            public:  
+            // operator + overloading
+            V3 operator+ (const V3 &b) {
+            return V3(x + b.x, y + b.y, z + b.z);
+            }
+
+             // operator * overloading
+            V3 operator* (const double factor) {
+            return V3(x*factor, y*factor, z*factor);
+            }
+        };
+
+        // in main
+        v1 = new V3(1.0,2.0,3.0)
+        v2 = new V3(4.0,5.0,6.0)
+
+        v4 = v1 * v2 // this will execute the function with the operator loading.
+    ```
+
+## Assignment Overloading
+
+- We can re-define the assignment operator for a class/struct
+by defining the member function operator= [4].
+
+## Friend classes and functions 
+
+- A “friend” declaration allows a class to explicitly allow
+specific non-member functions to access its private members.
+- a function can be friend to several classess.
+- a class can be friends with several functions.
+- in the class defenetion I declare:
+
+    ```c++
+    // c++
+    class V3 {
+        // code
+        friend ReturnType FuncName( ...Params ); // this will give the FuncName Access to private properties of the class V3
+
+        // OR
+
+        friend class ClassName; // all functions of className will be friends with V3.
+    }
+
+## static data members
+
+- members of class that will share its value with all objects of the class [4].
+- if this `static data` changed in one object, it will change with all other objects of this class [4].
 
 ## References
 
 - [1] [IITBombayX: CS101.2x, edx 1](https://courses.edx.org/courses/course-v1:IITBombayX+CS101.2x+1T2020/course/)
 - [2] [IITBombayX: CS101.2x, edx 2](https://courses.edx.org/courses/course-v1:IITBombayX+CS101.2x+1T2020/courseware/0bedc4e4756c42a9a704850dc93cffcf/93ff04ed5d1d4b81ad80cece1c2aee68/?child=first)
 - [3] [IITBombayX: CS101.2x, edx 3](https://courses.edx.org/courses/course-v1:IITBombayX+CS101.2x+1T2020/courseware/f516201e2b434dcc8b404bbb1f369514/d09de5b405d74891930fd3ed106cf209/?child=first)
+- [4] [IITBombayX: CS101.2x, edx 4](https://courses.edx.org/courses/course-v1:IITBombayX+CS101.2x+1T2020/courseware/f516201e2b434dcc8b404bbb1f369514/85f26d1555e646bfb6d367910b306671/?child=first)
