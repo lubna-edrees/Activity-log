@@ -1,11 +1,16 @@
 # Object Oriented Programming
 
-## some types of oop to look at:
+## some types of oop to look at
 
 - object oriented modular programming
 - incremental programming
 
-## intro 
+## notes
+
+- applying `encapsulation` will lead to `Abstraction`[2].
+- in c++: class is a `structure` that all its members are private by default [2].
+
+## intro
 
 - structures (classes) is a collection of variables of possibly different types.
 - an object is in instance of the structure, we can call it a structure itself.
@@ -20,7 +25,7 @@
         }
     ```
 
-## Structures and pointers 
+## Structures and pointers
 
 - structures in memory:
 
@@ -34,7 +39,7 @@
     // c++
         struct MyStruct {
                 int x;
-                int y; 
+                int y;
             }
 
         MyStrcut p1; // defining a new object
@@ -67,15 +72,106 @@
             // c++
             struct MyStruct {
                     int x;
-                    int y; 
+                    int y;
                 }
 
-              MyStruct* p1 = new MyStruct  // we are writting to the heap   (dynamically allocating memory for the new struct)
+              MyStruct* p1 = new MyStruct  // we are writting to the heap  
+              // (dynamically allocating memory for the new struct)
 
               // now can dynamically handle p1 contents
     ```
 
+## concepts
+
+- entites: all members of class.
+- abstraction: hide the un-necesary details of the class.
+- entites can be [1]:
+    1. fixed (like methods) `don't change` while the object interacts.
+    2. state (like vars) `change` while the object interacts.
+
+## member functions
+
+- member functions are the methods of a class.
+- member functions are fixed entries [1].
+- calling member functions.
+  
+    ```c++
+        className.classFnc(funcArg)
+        // className is the reciever
+        // claassFunc is the member function
+        // funcArg arguments that are passed to the method
+    ```
+
+- interfaces: simple layer hiding everything (eg. member function with no arguments)
+
+## Access control of members in structures
+
+- Crucial for data hiding or encapsulation [2].
+
+### public
+
+- Member can be accessed from anywhere in program
+
+### private
+
+- Member can be accessed only from member functions of same `structure (class)`.
+- reading and writting can be done only using the class methods `setters and getters`.
+- make sure that these getters and setters are public so they can be accessesd by other parts of the program.
+
+### protected
+
+- strict private.
+
+### Mutator functions
+
+- Member functions that update values of data members that other functions are allowed to update [3].
+
+## Constructor
+
+- Invoked automatically when an object of the class is allocated [3].
+- Convenient way to initialize `data members`.
+- Just like any other member function
+- Accepts optional input parameters
+- Can be used to perform tasks other than initialization too [3].
+- class can have multiple constructors as long as each one
+has a distinct list of parameter types.
+- When allocating an object of the class, the types of
+parameters passed to the constructor determine which
+constructor is invoked.
+- constructors must be public [3].
+
+    ```c++
+    calss V3 {
+        double x, y, z;  
+        // first constructor
+        V3(double a, b, c){
+            x = a;
+            y = b;
+            z = c;
+            return;
+        }
+
+        // second constructor
+        V3(){
+            x=y=z=0.0;
+            return;
+        }
+
+    }
+    V3 myObj1; // invoke second constructor 
+    V3 *myObj2 = new V3(1.0, 2.0. 3.0); // invokes first constuctor
+    ```
+
+## Destructor
+
+- Invoked automatically when an object of the class is de-allocated.
+- Convenient way to do book-keeping/cleaning-up before deallocating object [3].
+- Accepts no parameters.
+- Can be used to perform other tasks before de-allocating
+object [3].
 
 ## References
 
-- https://courses.edx.org/courses/course-v1:IITBombayX+CS101.2x+1T2020/course/
+- [1] [IITBombayX: CS101.2x, edx 1](https://courses.edx.org/courses/course-v1:IITBombayX+CS101.2x+1T2020/course/)
+- [2] [IITBombayX: CS101.2x, edx 2](https://courses.edx.org/courses/course-v1:IITBombayX+CS101.2x+1T2020/courseware/0bedc4e4756c42a9a704850dc93cffcf/93ff04ed5d1d4b81ad80cece1c2aee68/?child=first)
+- [3] [IITBombayX: CS101.2x, edx 3](https://courses.edx.org/courses/course-v1:IITBombayX+CS101.2x+1T2020/courseware/f516201e2b434dcc8b404bbb1f369514/d09de5b405d74891930fd3ed106cf209/?child=first)
