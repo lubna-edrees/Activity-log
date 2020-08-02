@@ -46,7 +46,10 @@ various standard techniques used in programming [2].
 
 a programming language can described as [1]:
 
-1. modular : programs are made up of packages, which are made up of files.
+1. modular :
+   1. programs are made up of packages, which are made up of files.
+   2. program broken into many modules which are independent of each other and interact only through a well-defined interface.
+   3. 
 2. object-oriented
 3. statically-typed
 4. garbage-collected

@@ -9,6 +9,14 @@
 
 - applying `encapsulation` will lead to `Abstraction`[2].
 - in c++: class is a `structure` that all its members are private by default [2].
+- summary about entity access control types in classes:
+
+    | Entity type | Inhereted ? | accessed by class methods ? |   accessed outside the class ?   |
+    | :---------: | :---------: | :-------------------------: | :------------------------------: |
+    |             |             |   eg. setters and getters   | eg. directly as className.entity |
+    |   private   |      -      |              -              |                -                 |
+    |  protected  |      +      |              +              |                -                 |
+    |   public    |      +      |              +              |                +                 |
 
 ## intro
 
@@ -111,16 +119,19 @@
 ### public
 
 - Member can be accessed from anywhere in program
+- can be inhereted.
 
 ### private
 
 - Member can be accessed only from member functions of same `structure (class)`.
 - reading and writting can be done only using the class methods `setters and getters`.
 - make sure that these getters and setters are public so they can be accessesd by other parts of the program.
+- `can not` be inhereted.
 
 ### protected
 
-- strict private.
+- moderate private.
+- can be accessed only in the defintion of the derived classes.
 
 ### Mutator functions
 
@@ -292,6 +303,66 @@ specific non-member functions to access its private members.
     ![copmaring composional way to inhertance way.](https://i.imgur.com/AgpZlVz.png)
 
     copmaring composional way to inhertance way.
+
+- example of Bank accouts heirachy, where you need to use inheretance: <https://i.imgur.com/XiXsPcR.png> [4].
+
+## Access Control in Derived Classes
+
+- the base class is the class that contains the common properties.
+- the derived class is the new class that extends the base one.
+- the propereties types in base class can be: 1.public 2.private 3.protected.
+- the type of derivation (inhertenace) can also be: 1.public 2.private 3.protected.
+- the comination of propert type and inhertenace type can control the accessebilty of the base property in the derived class.
+- From both types, the one with more privacy and less accessbility will be dominated as : `private > protected > public`.
+- summary of the inheretance depending on both types [4]:
+
+    ![summary of iheretance](https://i.imgur.com/gpwmweu.png)
+
+## Methods Inheretance
+
+- methods can be redefined in the derived class.
+- to call the method of the base (super) class after you redefine you can do:
+
+    ```c++
+    class savings : public base {
+        public:
+        int age;
+        long int ATM;
+        void printInfo() {
+            base::printInfo()  
+            // when call savings.printInfo() will execute the both methods from base and savings.
+            cout << "\nPrinting in savings: \n";
+            cout << age << ", " << ATM << endl;
+        }
+    };  
+      ```
+
+- instantianting a new derived class will call both constructors of `the default constructor of the base` then the constructor of the derived class.
+- if the base class doesn't have default construcor (eg. its constructor has arguments) you need to explicitly call the base constructor when constructing the derived class.
+
+## polymorphism
+
+- a derived class can be used as its `shape` or as `base class` because it has all data in the base class.
+- so, we have 2 shapes or forms of the derived class, that's polymorphism.
+- inhereted methods that are redefined in the derived class can be used as its original defention or its second defenition, this is also polymorphism.
+- example here: <https://i.imgur.com/d6Wz17A.png>
+
+## virtual functions
+
+- implements polymorphism in the function calls.
+- functions defined in the base class, but they need to be redefined in the dervied class in order to work.
+- example here: <https://i.imgur.com/DPbIAqe.png>
+
+## Abstract class
+
+- A class that cannot be instantiated directly.
+- instantiation of this class will give compiler error.
+- Implemented as a class that has one or more `pure virtual functions As. virtual void FuncName() = 0;` Which should be overridden by member function definitions of derived class.
+- used when using the base class has no meaningfull meaning.
+- Example (Bank account):
+    1. A person does not have just a bank account.
+    2. It is either a savings bank account or a current bank account
+    3. Instantiating class ‘base’ by itself has no meaningful purpose
 
 ## References
 
