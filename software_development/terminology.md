@@ -33,9 +33,19 @@ some features for programming languages:
 7. trying to access address of memory that is not bieng reserved to this program will give you `segmentaion fault or error`
 8. use of `activation records` in the `stack` to manage all local variables in this program.
 9. all local vars of all functions will be saved or reserved in the stack segment.
-10. 
+
 
     Example: 
 
-    ![](https://i.imgur.com/9Ae1ZXY.png)
+    ![example](https://i.imgur.com/9Ae1ZXY.png)
 
+
+## Dynamic vs Static
+
+- static var: the var defined and has its own value before the program starts executing, therefor it will be placed in the stack when the program starts executing.
+- dynamic: the var is not defined or has no value when the program starts executing, therefor the program will dynamically allocate memory for this var, this var will be placed in the heap.
+
+
+## References
+
+- https://courses.edx.org/courses/course-v1:IITBombayX+CS101.2x+1T2020/course/
