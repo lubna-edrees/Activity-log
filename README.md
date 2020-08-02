@@ -1,9 +1,6 @@
 # Ahmad Ali Activity Log
 
-Reference for code snippets, shortcuts or notes I faced while working. Live here: https://docs.ahmad-ali.co.uk/.
-
-### Please use the index on the left.
-
+Reference for code snippets, shortcuts or notes I faced while working. Live here: <https://docs.ahmad-ali.co.uk/>.
 
 ## Dev snippets
 
@@ -31,6 +28,7 @@ use the index on the right if you are on Gitbook, this idex regering to the file
 |         [JavaScript](/snippets/generalJs.md)          |                                                      |
 
 ## Algorithms
+
 |                                                  |                                               |
 | :----------------------------------------------: | :-------------------------------------------: |
 |          [index](/algorithms/README.md)          |
@@ -38,8 +36,8 @@ use the index on the right if you are on Gitbook, this idex regering to the file
 |     [Intro](/algorithms/algorithmsnotes.md)      |      [Mit 6006](/algorithms/mit6006.md)       |
 | [Data Structures](/algorithms/datastructures.md) |                                               |
 
-
 ## software development
+
 |                   A-G                   |                         H-Z                         |
 | :-------------------------------------: | :-------------------------------------------------: |
 | [Agile](/software_development/agile.md) |                                                     |
@@ -64,5 +62,4 @@ use the index on the right if you are on Gitbook, this idex regering to the file
 * this has realsed almost 20% of the RAM memory.
 * I now use opera browser.
 
-![](https://i.imgur.com/XUbSPc3.png)
-
+![choose your browse](https://i.imgur.com/XUbSPc3.png)

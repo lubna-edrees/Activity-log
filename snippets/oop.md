@@ -252,7 +252,7 @@ object [3].
 - We can re-define the assignment operator for a class/struct
 by defining the member function operator= [4].
 
-## Friend classes and functions 
+## Friend classes and functions
 
 - A “friend” declaration allows a class to explicitly allow
 specific non-member functions to access its private members.
