@@ -11,7 +11,7 @@ use the index on the right if you are on Gitbook, this idex regering to the file
 
 |                                              A-G                                              |                                                     H-Z                                                     |
 | :-------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
-|                                 [APIs](/snippets/API-list.md)                                 |            [Meta tags](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/meta.md)            |
+|                                 [APIs](/snippets/API-list.md)                                 |                                    [Meta tags](/master/snippets/meta.md)                                    |
 |     [Arrays](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/arrays.md)      |            [MongoDB](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/mongo.md)             |
 |       [Bash](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/bash.md)        |           [Numbers](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/numbers.md)            |
 |                                                                                               |             [Node JS](https://github.com/ahmad-ali14/Activity-log/blob/master/snippets/node.md)             |
