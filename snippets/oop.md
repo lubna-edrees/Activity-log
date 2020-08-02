@@ -276,6 +276,23 @@ specific non-member functions to access its private members.
 - members of class that will share its value with all objects of the class [4].
 - if this `static data` changed in one object, it will change with all other objects of this class [4].
 
+## Inheritance
+  
+- when there are some common features between mutliple classes, we can use a base class contains the common properties. then we `extend` each class with its own properties.
+  
+### Compositional Way
+
+- the inhereted class cotains one property of the type `base class`.
+- we need to access our new class, then the base class to get access to its properties.
+
+### Inheritance Way
+
+- the new class extends the previous one, so we can access the propieties of the base class directly as if they were a properties to the extended class.
+
+    ![copmaring composional way to inhertance way.](https://i.imgur.com/AgpZlVz.png)
+
+    copmaring composional way to inhertance way.
+
 ## References
 
 - [1] [IITBombayX: CS101.2x, edx 1](https://courses.edx.org/courses/course-v1:IITBombayX+CS101.2x+1T2020/course/)
