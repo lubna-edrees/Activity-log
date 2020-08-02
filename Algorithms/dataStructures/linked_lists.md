@@ -11,14 +11,17 @@ A Self Referential Structure (we would call it SRS from now) is a special struct
 
   ```c++
     //c++
-    struct name{
-        member 1;
-        
-        //Some other members
-        struct name* pointer;
+    struct book{
+
+     member 1;
+     member 2;
+
+     // Other Members
+     struct book* next;
+
     }
 
-```
+  ```
 
 ## why linked lists ?
 
@@ -29,6 +32,8 @@ A Self Referential Structure (we would call it SRS from now) is a special struct
 - the linked list is an array of structure objects where the structure needs to be self referential and the ith element in the list points to the (i+1)th element through its member pointer and the pointer of the last element of the list would point to NULL. The starting element will be called as the head node [1].
 
     ![defention](https://i.imgur.com/z5uYT9X.png)
+
+
 
 
 ## References
