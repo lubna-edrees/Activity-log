@@ -1,6 +1,11 @@
 # General Javascript Interview questions
 
-### 1. why do you use es6?, what’re your favourite features of es6 ?
+## ///
+
+### 1. why do you use es6?, what’re your favourite features of es6
+
+- JavaScript is a lightweight, interpreted, object-oriented programming language with first-class functions most commonly known as a scripting language for web pages.
+- scripting language, which means that its code is interpreted instead of compiled.
 
 ### 2. what's hoisting?
 
@@ -83,3 +88,37 @@
 ### 31. const func = function(){ //code }
  
 - reference error
+
+### 32. First-class Functions
+
+- JavaScript treats functions as first-class citizens, meaning you can pass functions as parameters to other functions just like you would any other variable.
+
+### 33. JavaScript Is Prototype-based
+
+- it supports classes and has some inheretance features similar to other kangs like c++ ..
+- Prototype-based programming is a style of object-oriented programming in which behavior reuse (known as inheritance) is performed via a process of reusing existing objects via delegations that serve as prototypes.
+
+### 34. JavaScript Event Loops
+
+- event listener listening to an event, when the event is fired it goes to queue of events.
+- the queue gets executed FIFO and sync.
+- every element of the queue gets fully executed with its function before strating executing the second elemnt.
+- if a function contains other function calls, they are all performed prior to processing a new message from the queue. This is called run-to-completion.
+- JavaScript is non-blocking, meaning that when an asynchronous operation is being performed, the program is able to process other things, such as receiving user input, while waiting for the asynchronous operation to complete, not blocking the main execution thread. 
+
+## Design patterns
+
+### 35. Constructor Pattern
+
+- you define a constructor, then you get instances of this constructor.
+- changing some of constructor properties will not change the already created instances, it will only change the instances that will be created after the change to the constructor.
+
+### 36. Prototype pattern
+
+- define a cornstructor with some prototype properties.
+- instantiatipon of this constructor will lead to create a new instance, but the prototypes properties still holded in the constructor.
+- changes to the constructor will be copied to all instnces of this constructor.
+
+
+## references
+- [design patterens](https://www.toptal.com/javascript/comprehensive-guide-javascript-design-patterns)
