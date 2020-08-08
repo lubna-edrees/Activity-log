@@ -1,6 +1,12 @@
 # Table of contents
 
 * [Ahmad Ali Activity Log](README.md)
+* [Advanced](src/advanced/README.md)
+  * [Design Patterns](src/advanced/design_patterns.md)
+  * [OOP](src/advanced/oop.md)
+* [Programming Languages](src/programming-languages/README.md)
+  * [go](src/programming-languages/go.md)
+  * [python](src/programming-languages/python.md)
 * [snippets](snippets/README.md)
   * [SEO](snippets/seo.md)
   * [Redis](snippets/redis.md)
