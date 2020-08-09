@@ -2,47 +2,45 @@
 
 Reference for code snippets, shortcuts or notes I faced while working. Live here: <https://docs.ahmad-ali.co.uk/>.
 
-## Dev snippets
+# Table of contents
 
-use the index on the right if you are on Gitbook, this idex regering to the files' sources on Github.
-
-|                          A-G                          |                         H-Z                          |
-| :---------------------------------------------------: | :--------------------------------------------------: |
-|             [APIs](/snippets/api-list.md)             |            [Meta tags](/snippets/meta.md)            |
-|             [Arrays](/snippets/arrays.md)             |            [MongoDB](/snippets/mongo.md)             |
-|               [Bash](/snippets/bash.md)               |           [Numbers](/snippets/numbers.md)            |
-|                                                       |             [Node JS](/snippets/node.md)             |
-|          [Bootstrap](/snippets/bootstrap.md)          |           [Objects](/snippets/objects.md)            |
-|                [CLI](/snippets/cli.md)                |          [Packages](/snippets/packages.md)           |
-|           [Commands](/snippets/commands.md)           |          [Projects](/snippets/projects.md)           |
-|                [CSS](/snippets/css.md)                |            [Python](/snippets/python.md)             |
-|                                                       | [Progressive web applications pwa](/snippets/pwa.md) |
-|        [Date and Time](/snippets/dateTime.md)         |             [React](/snippets/react.md)              |
-|             [Docker](/snippets/docker.md)             |             [Redis](/snippets/redis.md)              |
-|                [DOM](/snippets/dom.md)                |               [SEO](/snippets/seo.md)                |
-|          [Functions](/snippets/functions.md)          |           [Strings](/snippets/strings.md)            |
-|                [Git](/snippets/git.md)                |              [URLs](/snippets/urls.md)               |
-|               [GoLang](/snippets/go.md)               |                                                      |
-|              [Grunt](/snippets/grunt.md)              |           [Windows](/snippets/windows.md)            |
-| [General web development](./#general-web-development) |                                                      |
-|         [JavaScript](/snippets/generalJs.md)          |                                                      |
-
-## Algorithms
-
-|                                                  |                                               |
-| :----------------------------------------------: | :-------------------------------------------: |
-|          [index](/algorithms/README.md)          |
-|      [Algorithm](/algorithms/algorithms.md)      | [FCC challenges](/algorithms/freecodecamp.md) |
-|     [Intro](/algorithms/algorithmsnotes.md)      |      [Mit 6006](/algorithms/mit6006.md)       |
-| [Data Structures](/algorithms/datastructures.md) |                                               |
-
-## software development
-
-|                   A-G                   |                         H-Z                         |
-| :-------------------------------------: | :-------------------------------------------------: |
-| [Agile](/software_development/agile.md) |                                                     |
-|                                         | [Requirments](/software_development/requirments.md) |
-|                                         | [Terminology](/software_development/terminology.md) |
+* [Ahmad Ali Activity Log](README.md)
+* [Advanced](src/advanced/README.md)
+  * [Design Patterns](src/advanced/design_patterns.md)
+  * [OOP](src/advanced/oop.md)
+* [Algorithms](src/algorithms/README.md)
+* [APIs](src/api/README.md)
+  * [API list](src/api/api-list.md)
+  * [Packages](src/api/packages.md)
+* [DataBases](src/databases/README.d)
+  * [MongoDB](src/databases/mongo.md)
+  * [Redis](src/databases/redis.md)
+* [Data Structures](src/dataStructures/README.md)
+* [Design](src/design/README.md)
+  * [CSS](src/design/css.md)
+* [FrameWorks](src/frameworks/README.md)
+  * [Bootstrap](src/frameworks/bootstrap.md)
+  * [React](src/frameworks/react.md)
+* [Interviews](src/interviews/README.md)
+  * [Javascript General](src/interviews/js_general.md)
+  * [Javascript OOP](src/interviews/js_oop.md)
+* [Javascript](src/javascript/README.md)
+  * [Arrays](src/javascript/arrays.md)
+  * [Date Time](src/javascript/datetime.md)
+  * [Functions](src/javascript/functions.md)
+  * [JS General](src/javascript/generaljs.md)
+  * [Node](src/javascript/node.md)
+  * [Node cli](src/javascript/cli.md)
+  * [Numbers](src/javascript/numbers.md)
+  * [Objects](src/javascript/objects.md)
+  * [Strings](src/javascript/strings.md) 
+* [Software Development](src/software-development/README.md)
+* [Think](src/think/README.md)
+* [Tools](src/tools/README.md)
+* [Web](src/web/README.md)
+* [Programming Languages](src/programming-languages/README.md)
+  * [go](src/programming-languages/go.md)
+  * [python](src/programming-languages/python.md)
 
 ## General web development
 
