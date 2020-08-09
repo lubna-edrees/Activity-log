@@ -1,6 +1,31 @@
 # React
 
-## General
+## Intro
+
+- JSX is a syntax extension to JavaScript that allows React Elements to be written inside JavaScript using HTML tags.
+
+  ```js
+     var element = <h1>Hello World!</h1> //jsx
+     
+     var element = React.createElement( // without jsx
+        'h1',
+        null,
+        'Hello World!'
+      )
+      
+      // render 
+      
+       ReactDOM.render(
+        element,
+        document.getElementById("root")
+      )
+      
+  ```
+  
+  - A React Component is an independent reusable component that outputs a React Element based on its properties and state.
+  - 
+
+## General Notes
 
 * when you design your routes, make sure that front end routes differe from back-end routes. especially when using `react-node` app.
 * to apply a css file to one component only:
