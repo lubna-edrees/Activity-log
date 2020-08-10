@@ -9,7 +9,56 @@
 
 ### 2. what's hoisting?
 
-### 3. shower copying?
+### 3. shallow copying vs deep copying?
+
+- A copy just looks like the old thing, but isn’t. When you change the copy, you expect the original thing to stay the same, whereas the copy changes.
+- deep copy means that all of the values of the new variable are copied and disconnected from the original variable.
+- A shallow copy means that certain (sub-)values are still connected to the original variable.
+   
+   ```js
+      let x = [1,2,3];
+      let y ={ x:1,  z:2 }
+      
+      let n = x; // shallow copy, changing n values will change x values
+      let m = y // shallow copy
+      
+      
+      let c = [];
+      for( i in x ) { c[i] = x[i] }  // deep copy, c now is copmletely disconnected from x.
+      
+      let d = {};
+      for(j in y){ d[j] = y[j] } // deep copy
+      
+      
+      // Also, deep copies
+      
+      // Arrays 
+       let a = [...x];
+       let a = Array.from(x);
+       let a = x.map(el => el);
+       let a = x.slice();
+     
+     // Objects
+      let b = { ...y };
+      let b = Object.assign({}, y);
+ 
+   ```
+- if the object or the array yhat you'r copying contains another `no-permative` types like if they contains nested objects or arrays, those elements will get a shallow copy even if you do a deep copy to the main object
+
+   ```js
+      let x = { a: 1, b: [ 1,2 ], c:{ x:1, y:2 } };
+      
+      let y = { ...x } // shallow copy for x.a and x.b
+      
+      let y = { ...x.b, ...x.c, ...x } // deep copy
+   ```
+- if you don't know how deep your elements are, you can `stringify the element first`, then `parse` it to get deep copy.
+
+   ```js
+      let x = { a: 1, b: [ 1,2 ], c:{ x:1, y:2 } };
+      
+      let y = JSON.parse(JSON.stringify(x)) // deep copy
+   ```
 
 ### 4. async vs sync?
 
