@@ -7,7 +7,15 @@
 - JavaScript is a lightweight, interpreted, object-oriented programming language with first-class functions most commonly known as a scripting language for web pages.
 - scripting language, which means that its code is interpreted instead of compiled.
 
-### 2. what's hoisting?
+### 2. functions declarations vs functions expressions 
+
+   ```js
+      function x (args) { /*code */ } //declaration
+      const x = function (args) { /*code */ } //expression
+   ```
+- function expressions are `not hoisted`, so you `can't` use it before declaration.
+
+### 3. what's hoisting?
 
 - hoisting: mechanism only moves the declaration. The assignments are left in place.
 - if the variable is not declared:
@@ -51,7 +59,57 @@
        console.log(hoist); // Output: hoist
    ```
    
+- whten using strict mode, no hoisting, using variables before their declaration will throw an error:
+   
+   ```js
+      'use strict';
+
+      console.log(hoist); // Output: ReferenceError: hoist is not defined
+      
+      hoist = 'Hoisted'; 
+   ```
+- when using `let` or `const` keyword, the variable is hoisted to the top of the block, using variables before their declaration will throw an error, as if it is a `var in strict mode`:
+
+   ```js
+      console.log(hoist); // Output: ReferenceError: hoist is not defined
+      
+     let  hoist = 'Hoisted'; 
+   ```
+   
+-  constant variable must be both declared and initialised before use.
+- function expressions are `not hoisted`, so you `can't` use it before declaration.
+- while function declaration are `hoisted`.
 - 
+
+### 4. Order of precedence
+
+- Variable assignment over function declaration
+
+   ```js
+      var double = 22;
+
+      function double(num) {
+        return (num*2);
+      }
+
+      console.log(typeof double); // Output: number
+   ```
+   
+   
+- Function declarations over variable declarations
+
+   ```js
+      var double;
+
+      function double(num) {
+        return (num*2);
+      }
+
+      console.log(typeof double); // Output: function
+   ```
+
+- Even if we reversed the position of the declarations, the JavaScript interpreter would still consider the `Order of precedence`.
+
 
 ### 3. shallow copying vs deep copying?
 
@@ -112,6 +170,12 @@
 
 
 ### 7. why "use strict"? 
+
+- when using strict mode we opt into a restricted variant of JavaScript that will not tolerate the usage of variables before they are declared.
+- Running our code in strict mode:
+   1. Eliminates some silent JavaScript errors by changing them to explicit throw errors which will be spit out by the interpreter.
+   2. Fixes mistakes that make it difficult for JavaScript engines to perform optimisations.
+   3. Prohibits some syntax likely to be defined in future versions of JavaScript.
 
 ### 8. global scope vs block scope? 
 
