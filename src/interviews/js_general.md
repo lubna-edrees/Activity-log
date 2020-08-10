@@ -1,21 +1,51 @@
+<!-- markdownlint-disable MD004 MD026 MD009 -->
 # General Javascript Interview questions
 
-## ///
+## Index
 
-### 1. why do you use es6?, what’re your favourite features of es6
+1. [why do you use es6?, what’re your favourite features of es6](#1-why-do-you-use-es6-whatre-your-favourite-features-of-es6)
+2. [functions declarations vs functions expressions](#2-functions-declarations-vs-functions-expressions)
 
-- JavaScript is a lightweight, interpreted, object-oriented programming language with first-class functions most commonly known as a scripting language for web pages.
-- scripting language, which means that its code is interpreted instead of compiled.
+## 1. why do you use es6?, what’re your favourite features of es6
 
-### 2. functions declarations vs functions expressions 
+* JavaScript is a lightweight, interpreted, object-oriented programming language with first-class functions most commonly known as a scripting language for web pages.
+* scripting language, which means that its code is interpreted instead of compiled.
+* ES6 has Object-Oriented Classes.
+* ES6 has Arrow Functions
+* arrow functions don't have `this` so you don't need to rebind.
+* Modules are built into ES6.
+* ES6 has template literal strings.
+* ES6 uses Yarn
+* ES6 let, const over var.
+* ES6 has spread operators.
+* ES6 has Promises
+* ES6 for..in, for..of
+
+## 2. functions declarations vs functions expressions
 
    ```js
       function x (args) { /*code */ } //declaration
       const x = function (args) { /*code */ } //expression
    ```
+
 - function expressions are `not hoisted`, so you `can't` use it before declaration.
 
-### 3. what's hoisting?
+## 3. Class declarations vs class expressions
+
+   ```js
+      class myClass {
+         constructor() { }   // class declaration
+      }
+
+      var myVar =  class myClass {
+         constructor() { }   // class expression
+      }
+
+   ```
+
+- you can't use class (instanciate) a class before its declaration.
+
+## 4. what's hoisting?
 
 - hoisting: mechanism only moves the declaration. The assignments are left in place.
 - if the variable is not declared:
@@ -48,7 +78,7 @@
          */
    ```
    
--  always declare variables regardless of whether they are in a function or global scope. 
+- always declare variables regardless of whether they are in a function or global scope. 
 - if the variable declared down the app, call its value on top will not give referenceError because `its declaration has being hoisted before the execution`, while `its value still undefined` untill you `reach the assigment expression`. then it will gets a value.
 
    ```js
@@ -68,6 +98,7 @@
       
       hoist = 'Hoisted'; 
    ```
+
 - when using `let` or `const` keyword, the variable is hoisted to the top of the block, using variables before their declaration will throw an error, as if it is a `var in strict mode`:
 
    ```js
@@ -76,12 +107,36 @@
      let  hoist = 'Hoisted'; 
    ```
    
--  constant variable must be both declared and initialised before use.
+- constant variable must be both declared and initialised before use.
 - function expressions are `not hoisted`, so you `can't` use it before declaration.
 - while function declaration are `hoisted`.
-- 
+- There's a bit of an argument to be made as to whether Javascript es6 let, const variables and classes are actually hoisted, roughly hoisted or not hoisted. Some argue that they are actually hoisted but uninitialised whilst some argue that they are not hoisted at all.
 
-### 4. Order of precedence
+## 5. class hoisting
+
+- class declarations are hoisted. However, they remain uninitialised until evaluation.
+- class expressions are not hoisted.
+- in both cases, you can't use a class before its declaration.
+
+   ```js
+         var x = new myClass(); // ReferenceError: myClass is not defined
+         // class is hoisted, but uninitialized.
+
+         class myClass {
+         constructor() { }   // class declaration
+         }
+
+
+         var y = new myNewClass(); // TypeError: myNewClass is not a constructor
+         // class is not hoisted.
+
+         var myVar =  class myNewClass {
+            constructor() { }   // class expression
+         }
+
+   ```
+
+## 6. Order of precedence
 
 - Variable assignment over function declaration
 
@@ -94,7 +149,6 @@
 
       console.log(typeof double); // Output: number
    ```
-   
    
 - Function declarations over variable declarations
 
@@ -110,8 +164,7 @@
 
 - Even if we reversed the position of the declarations, the JavaScript interpreter would still consider the `Order of precedence`.
 
-
-### 3. shallow copying vs deep copying?
+## 7. shallow copying vs deep copying?
 
 - A copy just looks like the old thing, but isn’t. When you change the copy, you expect the original thing to stay the same, whereas the copy changes.
 - deep copy means that all of the values of the new variable are copied and disconnected from the original variable.
@@ -145,6 +198,7 @@
       let b = Object.assign({}, y);
  
    ```
+
 - if the object or the array yhat you'r copying contains another `no-permative` types like if they contains nested objects or arrays, those elements will get a shallow copy even if you do a deep copy to the main object
 
    ```js
@@ -154,6 +208,7 @@
       
       let y = { ...x.b, ...x.c, ...x } // deep copy
    ```
+
 - if you don't know how deep your elements are, you can `stringify the element first`, then `parse` it to get deep copy.
 
    ```js
@@ -162,12 +217,11 @@
       let y = JSON.parse(JSON.stringify(x)) // deep copy
    ```
 
-### 4. async vs sync?
+## 8. async vs sync?
 
 ### 5. when do you use promises vs Callbacks?
 
 ### 6. pros and cons of js? 
-
 
 ### 7. why "use strict"? 
 
@@ -203,18 +257,13 @@
 
 ### 20. nan?? 
 
-
 ### 21. primitive types passed to a function by value, others passed by reference. 
 
 ### 22. by value: creating a copy of the original. 
 
-
 ### 23. parseInt? 
 
-
 ### 24. Prompt ?
-
-
 
 ### 25. func.call() vs func.apply()
 
@@ -276,6 +325,38 @@
 - instantiatipon of this constructor will lead to create a new instance, but the prototypes properties still holded in the constructor.
 - changes to the constructor will be copied to all instnces of this constructor.
 
+### 37. arrow funcs vs normal funcs
+
+```js
+      class myclass {
+
+         y(){
+            this; // refers to the function y, not the class.
+         }
+
+
+         that = this;
+         x(){
+            this; // refers to the function x
+            that ;// refers to the class
+         }
+
+         z = () => {
+            this; // refers to fnction z
+         }
+      }
+
+      // OR 
+
+      var n = {
+         x: function(){ console.log(this) }, // n
+         that: this, // window
+         y: function(){ console.log(this, this.that) }, //n , window
+         z: () => console.log(this) // window
+      }
+   ```
 
 ## references
+
 - [design patterens](https://www.toptal.com/javascript/comprehensive-guide-javascript-design-patterns)
+- [hoisting](https://scotch.io/tutorials/understanding-hoisting-in-javascript#:~:text=Hoisting%20is%20a%20JavaScript%20mechanism,scope%20is%20global%20or%20local.)
