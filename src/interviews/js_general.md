@@ -9,6 +9,50 @@
 
 ### 2. what's hoisting?
 
+- hoisting: mechanism only moves the declaration. The assignments are left in place.
+- if the variable is not declared:
+   
+   ```js
+      console.log(type of myVar); // undefined
+      console.log(myVar); // ReferenceError
+   ```
+   
+- all variable and function declarations are hoisted to the top of their scope, efore any code execution.
+- undeclared variables do not exist until code assigning them is executed. Therefore, assigning a value to an undeclared variable implicitly creates it as a global variable when the assignment is executed. This means that, all undeclared variables are global variables.
+   
+   ```js
+         function hoist() {
+            a = 20;
+            var b = 100;
+         }
+
+         hoist();
+
+         console.log(a); // 20
+         // Accessible as a global variable outside hoist() function
+  
+
+         console.log(b);  // ReferenceError
+         /*
+         Since it was declared, it is confined to the hoist() function scope.
+         We can't print it out outside the confines of the hoist() function.
+         Output: ReferenceError: b is not defined
+         */
+   ```
+   
+-  always declare variables regardless of whether they are in a function or global scope. 
+- if the variable declared down the app, call its value on top will not give referenceError because `its declaration has being hoisted before the execution`, while `its value still undefined` untill you `reach the assigment expression`. then it will gets a value.
+
+   ```js
+      console.log(hoist); // Output: undefined
+
+      var hoist = 'hoist';
+      
+       console.log(hoist); // Output: hoist
+   ```
+   
+- 
+
 ### 3. shallow copying vs deep copying?
 
 - A copy just looks like the old thing, but isn’t. When you change the copy, you expect the original thing to stay the same, whereas the copy changes.
