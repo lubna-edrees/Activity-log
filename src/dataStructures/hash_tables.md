@@ -21,7 +21,7 @@
 
   ![has table](https://i.imgur.com/daBQsY5.png)
 
-### Hash Functions
+## Hash Functions
 
 * `univirsal family`:
 

@@ -1,26 +1,4 @@
-
-
-
-
-
-
-
-
-
-## week2: dynamic arrays and amortized analysis
-
-### dynamic arrays
-
-* in java: `ArrayList`, in c++: `Vectors`, in python: `lists`.
-* `Amortized cost`: Cost\(n operations\) / n.
-
-## week3: priority queue and Disjoint sets
-
-
-
-
-
-## week5: Binary search trees
+# Binary search trees
 
 * In problems like:
   * Dictionary Search: Find all words that start with some given string.
@@ -46,7 +24,7 @@
 
     ![linked lists](https://i.imgur.com/z9PFtzF.png)
 
-### search Tree
+## search Tree
 
 * for any Node X in the tree: X’s key is `larger than` the key of `any descendent` of its `left` child, and `smaller than` the key of `any descendant` of its `right` child.
 
@@ -135,7 +113,7 @@
 
      ![deleting example](https://i.imgur.com/1ToOmjn.png)
 
-### AVL trees
+## AVL trees
 
 * to keep our trees `balanced` , \(the hieght of left = hieght of Right\).
 * `hieght of tree`: the maximum depth of any of its children.
@@ -303,7 +281,6 @@
 
 > `predecessor` P of a node N is the node with the largest key smaller than the key of N
 
-### splay tree
+## splay tree
 
 * animation: [https://www.cs.usfca.edu/~galles/visualization/SplayTree.html](https://www.cs.usfca.edu/~galles/visualization/SplayTree.html)
-
