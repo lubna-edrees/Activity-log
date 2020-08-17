@@ -1,6 +1,4 @@
-# algorithms
-
-## Algorithms
+# Algorithms
 
 * Alogrithms 1&2 - university of Princeton : [couresera page](https://www.coursera.org/learn/algorithms-part1/home/welcome) , My notes are in this file.
 * data structures and algorithms : [coursera page](https://www.coursera.org/specializations/data-structures-algorithms) [My notes Repo](https://github.com/ahmad-ali14/data-structures-and-algorithms)
@@ -13,7 +11,7 @@
 * “ Algorithms + Data Structures = Programs. ” — Niklaus Wirth
 * “ Algorithms: a common language for nature, human, and computer. ” — Avi Wigderson
 
-![](https://i.imgur.com/IapntqE.png)
+![intro](https://i.imgur.com/IapntqE.png)
 
 ## General notes
 
@@ -25,137 +23,22 @@
   * `lg N` = `10` - logaritmic
   * `lg* N` = `0-5` - almost const
   * `1` = `fixed number` - const
+* in practice: you start using `quick sort` algorithm, if you find it a bit slow: you stop and chamge to `heap sort`
+* studying algorithms: [algorithms stuff](https://github.com/ahmad-ali14/Activity-log/blob/master/algorithms.md)
+* knapsack problem here: [https://github.com/ahmad-ali14/data-structures-and-algorithms/blob/master/algorithm-toolbox/week3/maximum\_loot.js](https://github.com/ahmad-ali14/data-structures-and-algorithms/blob/master/algorithm-toolbox/week3/maximum_loot.js)
+* algorithm for making a good algorithm:
+  * always start with a `naiive algorithm` and make it works, normally slow.
+  * next find a standard toolbox to help you:
+    * greedy algorithm.
+    * divide and conqur.
+    * dynamic programming.
+  * optimize your algorithm.
+* more on algorithms here: [https://github.com/aa947/data-structures-and-algorithms/tree/master/algorithm-toolbox](https://github.com/aa947/data-structures-and-algorithms/tree/master/algorithm-toolbox)
+* `greedy algorithm`:
 
-## union-find
-
-* Read in number of objects N from standard input.
-
-  ```text
-    -・Repeat:
-            – read in pair of integers from standard input
-            – if they are not yet connected, connect them and print out pair
+  ```javascript
+  1- make the first move.
+  2- test if it's a safe move or start from the begining
+  3- test if that move is optimized or optimize it the most
+  4- you get a sub-problem handle it with the same approach.
   ```
-
-* resource: [https://d3c33hcgiwev3.cloudfront.net/\_b65e7611894ba175de27bd14793f894a\_15UnionFind.pdf?Expires=1587945600&Signature=acCR6aDGXnA7luzAqFrIeDW6riwnUjsEuigduiwEkwFUkL9tvIH5k39Lo1bSy00AP0nC1QBlXexq6fqaGslGLbIbWBOc0jO99mi09BCFV6InmXXlPIIgk90DDf9Vk67O4tEs-jSRma7NSCCohSE6~WCb36UWOGVLQOIq7Amm5DY\_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A](https://d3c33hcgiwev3.cloudfront.net/_b65e7611894ba175de27bd14793f894a_15UnionFind.pdf?Expires=1587945600&Signature=acCR6aDGXnA7luzAqFrIeDW6riwnUjsEuigduiwEkwFUkL9tvIH5k39Lo1bSy00AP0nC1QBlXexq6fqaGslGLbIbWBOc0jO99mi09BCFV6InmXXlPIIgk90DDf9Vk67O4tEs-jSRma7NSCCohSE6~WCb36UWOGVLQOIq7Amm5DY_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
-* EX: `Monte Carlo Simulation` \`
-* general example
-
-  ```java
-  public static void main(String[] args)
-  {
-  int N = StdIn.readInt();
-  UF uf = new UF(N);
-  while (!StdIn.isEmpty())
-  {
-  int p = StdIn.readInt();
-  int q = StdIn.readInt();
-  if (!uf.connected(p, q))
-  {
-  uf.union(p, q);
-  StdOut.println(p + " " + q);
-  }
-  }
-  }
-  ```
-
-### quick-find
-
-* eager approach
-* we follow the ids, until we find same id.
-* 2 elements are connected if they have the same id.
-* find easy, union is slow.
-* cost `N^2`
-* resource: [https://www.coursera.org/learn/algorithms-part1/lecture/EcF3P/quick-find](https://www.coursera.org/learn/algorithms-part1/lecture/EcF3P/quick-find)
-* Example:
-
-  ```java
-  public class QuickFindUF
-  {
-  private int[] id;
-  public QuickFindUF(int N)
-  {
-  id = new int[N];
-  for (int i = 0; i < N; i++)
-  id[i] = i;
-  }
-  public boolean connected(int p, int q)
-  { return id[p] == id[q]; }
-  public void union(int p, int q)
-  {
-  int pid = id[p];
-  int qid = id[q];
-  for (int i = 0; i < id.length; i++)
-  if (id[i] == pid) id[i] = qid;
-  }
-  }
-  ```
-
-### quick-union:
-
-* lazy approach: avoid doing work until we have to.
-* we follow the parent roots until we find a parent points to itself, this will be the parent of all elements in the tree.
-* 2 elements are connectd if they have the same parent root.
-* union is easy, find is slow.
-* cost `N`
-* resource: [https://www.coursera.org/learn/algorithms-part1/lecture/ZgecU/quick-union](https://www.coursera.org/learn/algorithms-part1/lecture/ZgecU/quick-union)
-* Example:
-
-  ```java
-  public class QuickFindUF
-  {
-  private int[] id;
-  public QuickFindUF(int N)
-  {
-  id = new int[N];
-  for (int i = 0; i < N; i++)
-  id[i] = i;
-  }
-  public boolean connected(int p, int q)
-  { return id[p] == id[q]; }
-  public void union(int p, int q)
-  {
-  int pid = id[p];
-  int qid = id[q];
-  for (int i = 0; i < id.length; i++)
-  if (id[i] == pid) id[i] = qid;
-  }
-  }
-  ```
-
-### quick-union Improvments:
-
-#### 1- weighting:
-
-* while implementing, avoid long trees.
-* track the number of objects in each tree, then put the short \(small\) tree under the long tree.
-* cost `lg N` = `log(2) N` Ex: `N=1000 => lg N = 10`, `N=1000000 => lg N = 20`, `N=1000000000 => lg N = 30`. -Example: Modify quick-union `union` function:
-
-  ```java
-  public void union(int p, int q)
-  {
-  int i = root(p);
-  int j = root(q);
-  if (i == j) return;
-  if (sz[i] < sz[j]) { id[i] = j; sz[j] += sz[i]; }
-  else { id[j] = i; sz[i] += sz[j]; }
-  }
-  ```
-
-#### 2-  path-compression:
-
-* while searching, change the pointers of each sub-tree to point directly to the parent root.
-* flatten the tree.
-* Example: Modify quick-union-weighting `root` function:
-
-  ```java
-  private int root(int i)
-  {
-  while (i != id[i])
-  {
-  id[i] = id[id[i]];
-  i = id[i];
-  }
-  return i;
-  }
-  ```
-
