@@ -78,6 +78,7 @@
 
   ```javascript
       git checkout <file name> // through away all un stagged changes
+      git commit --amend // edit a commit’s contents/message
   ```
 
 - stage only part of the changes to one file (stage chunk of a file):
@@ -201,7 +202,7 @@
 1. `git rebase master`
 
     ![git rebase master](https://i.imgur.com/GfbW4CF.png)
-    
+
     the commit C3 still exists somewhere (it has a faded appearance in the tree), and C3' is the "copy" that we rebased onto master.
 
 2. `git rebase bugfix`
@@ -209,6 +210,13 @@
   ![git rebase bugfix](https://i.imgur.com/F9uTUgO.png)
 
   Since master was an ancestor of bugFix, git simply moved the master branch reference forward in history.
+
+- rebase commands:
+
+  ```js
+  git rebase <branch name> // rebase the parrelel branch into the main backbone of changes
+  git rebase -i // interactive rebasing
+  ```
 
 ## git bisect
 
@@ -220,4 +228,5 @@
 
 - [1] [CAMBRIDGE: lecture 6 : version control](https://www.youtube.com/watch?v=2sjqTHE0zok&t=3020s)
 - [2] [learnbranching.js.org](https://learngitbranching.js.org/)
+- [3] [successful git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
   
