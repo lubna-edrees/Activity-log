@@ -70,27 +70,24 @@
 - move, copy, rename files
 
     ```java
-    mv <path1/file> <path2/file> // move file from path1 to path2
-    mv <path/file1> <path/file2> // rename file1 to be file2
-    cp <path1> <path2> // copy file from path to path
-    cat < file1 > file2 // extract file1 content and store it in file2, copy file1 into file 2
-
-
+        mv <path1/file> <path2/file> // move file from path1 to path2
+        mv <path/file1> <path/file2> // rename file1 to be file2
+        cp <path1> <path2> // copy file from path to path
+        cat < file1 > file2 // extract file1 content and store it in file2, copy file1 into file 2
     ```
 
 - edit files 
 
     ```java
-    echo "something" > file // create file and write something in it.
-    symbol ( > file )  // bind the input stream to something, store something in file
-    symbol ( < file)  // bind the output stream to something, extract something from file
-    cat file // print file content to the terminal
-    cat < file // extract the content of file, and handle it as input to cat.
-    cat < file1 > file2 // extract file1 content and store it in file2, copy file1 into file 2
-    cat < file1 >> file2 // extract file1 content and "append" it in file2, append file 2
-    symbol ( | ) // take the output of command to the left, make it input to the right
-    ls -l | tail -n1 // show the last line only of the ls command, ls -l output will be input to tail -n1
-
+        echo "something" > file // create file and write something in it.
+        symbol ( > file )  // bind the input stream to something, store something in file
+        symbol ( < file)  // bind the output stream to something, extract something from file
+        cat file // print file content to the terminal
+        cat < file // extract the content of file, and handle it as input to cat.
+        cat < file1 > file2 // extract file1 content and store it in file2, copy file1 into file 2
+        cat < file1 >> file2 // extract file1 content and "append" it in file2, append file 2
+        symbol ( | ) // take the output of command to the left, make it input to the right
+        ls -l | tail -n1 // show the last line only of the ls command, ls -l output will be input to tail -n1
     ```
 
 ## Curl
