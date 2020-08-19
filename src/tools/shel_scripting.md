@@ -6,8 +6,10 @@
 - intro
 
     ```java
+    file.sh // file extention for shel files.
     $foo = "bar"  // define foo
     echo $foo // print foo value
+    echo "something $foo" // $foo is a variable, this won't work with single quote.
 
     ```
 
