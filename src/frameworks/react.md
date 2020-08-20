@@ -100,7 +100,7 @@ export default SimpleRoute
 
 * passing functions as props should be by reference.
 
-### Hide dom element by click outside of it
+## Hide dom element by click outside of it
 
 ```javascript
     componentWillMount() {
@@ -129,3 +129,23 @@ export default SimpleRoute
    }
 ```
 
+## hook that responds to changes In screen dementions
+
+  ```js
+      import React, { useLayoutEffect, useState } from 'react';
+
+      function useWindowSize() {
+          const [size, setSize] = useState([0, 0]);
+          useLayoutEffect(() => {
+              function updateSize() {
+                  setSize([window.innerWidth, window.innerHeight]);
+              }
+              window.addEventListener('resize', updateSize);
+              updateSize();
+              return () => window.removeEventListener('resize', updateSize);
+          }, []);
+          return size;
+      }
+
+export default useWindowSize;
+  ```
