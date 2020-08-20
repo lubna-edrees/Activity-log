@@ -229,4 +229,3 @@
 - [1] [CAMBRIDGE: lecture 6 : version control](https://www.youtube.com/watch?v=2sjqTHE0zok&t=3020s)
 - [2] [learnbranching.js.org](https://learngitbranching.js.org/)
 - [3] [successful git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
-  
