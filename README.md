@@ -67,6 +67,7 @@ Reference for code snippets, shortcuts or notes I faced while working. Live here
   * [git](src/tools/git.md)
   * [grunt](src/tools/grunt.md)
   * [shell scripting](src/tools/shel_scripting.md)
+  * [vim](src/tools/vim.md)
   * [windows](src/tools/windows.md)
 * [Web](src/web/README.md)
   * [dom](src/web/dom.md)
