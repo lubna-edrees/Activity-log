@@ -2,13 +2,13 @@
 
 ## redux articuture
 
-- store all of our application state into ` one javascript object` called store.
+- store all of our application state into `one javascript object` called store.
 - the store is the single source of truth, and it is accessible by all parts of the ui.
 - redux follows the functional programming principles.
 - the store is immutable, so we need a function to mutate it, this function is the `reducer`.
 - the reducer copies the store and returns a new updated version of this store.
 - the reducer return the new updated store  after applying an action to it.
-- reducers are pure functions, they don't change any state or do any side effects. 
+- reducers are pure functions, they don't change any state or do any side effects.
 
   ```js
     function reducer ( store, action ) {
@@ -19,7 +19,6 @@
   ```
   
   ![redux artictture](https://i.imgur.com/RGzV9u7.png)
-  
   
 ## start with redux
 
@@ -46,13 +45,12 @@
 - action is an object with at least one single property called `type`.
 - payload is an objct contains all the data associated with one action.
 
-
   ```js
     const action = {
       type: "ACTION_TYPE",
       payload : {
         id : 44,
-        description: " ... ", 
+        description: " ... ",
         },
       },
   ```
@@ -66,28 +64,28 @@
     function reducer (state = store.state1, action ) {
       if (action.type === "ACTION_TYPE1") {
         return [ ...state, {
-          id : ++id, 
+          id : ++id,
           description: action.payload.description,
           ....
         } ];
-        
       } else if (action.type === "ACTION_TYPE2") {
         return ...;
       }
-    
     return state; // default
     }
   ```
   
-## 4. set up the store 
+## 4. set up the store
+
+- lastly connecting everything together.
 
   ```js
     import { createStore } from "redux";
     import reducer from "./reducer";
-    
+
     const reducers = combineReducers([reducer]);
-    
+
     const store = createStore(reducers);
-    
-    export default store; 
+
+    export default store;
   ```

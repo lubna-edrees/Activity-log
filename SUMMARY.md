@@ -34,6 +34,7 @@
 * [FrameWorks](src/frameworks/README.md)
   * [Bootstrap](src/frameworks/bootstrap.md)
   * [React](src/frameworks/react.md)
+  * [Redux](src/frameworks/redux.md)
 * [Interviews](src/interviews/README.md)
   * [Javascript General](src/interviews/js_general.md)
   * [Javascript OOP](src/interviews/js_oop.md)

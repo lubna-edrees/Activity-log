@@ -24,27 +24,26 @@
 
   ```js
     const obj = { name: "john" };
-    
+
     obj.name = "Ahmad"; // wrong, we shouldn't do that, we need to creaete a copy first.
-    
+
     // Object.assign()
     const newObj = Object.assign({}, obj, { name: "Ahmad", age: 27 }); // copy obj into newObj, and then update newObj with the new values.
-    
+
     // spread operator
     const newObj = { ...obj } // make a copy
     newObj.name = "Ahmad"; update the copy.
-    
   ```
 
 - spraed operator will make a shallow copy of any nested object, we need to create a new deep copy to apply our changes to the copy only
 
   ```js
     const obj1 = { name: "ahmad", address: { country: "UK", city: "London" } };
-    
+
     const newObj = { ...obj1 } //copy, shallow copy for address.
     newObj.address.city = "Bristol"; // the address of obj will changed as well.
     obj.address.city // Bristol.
-    
+
     // To solve the problem
     const newObj = { ...obj, address: { ...obj.address }};
     newObj.address.city = "Bristol"; // the address of obj will NOT changed becaue we deep copied obj.
