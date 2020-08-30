@@ -85,7 +85,9 @@
     import { createStore } from "redux";
     import reducer from "./reducer";
     
-    const store = createStore([ reducer ]);
+    const reducers = combineReducers([reducer]);
+    
+    const store = createStore(reducers);
     
     export default store; 
   ```
