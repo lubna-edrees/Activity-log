@@ -25,7 +25,8 @@
 - combining two or more functions to produce a new function.
 - Composing functions together is like snapping together a series of pipes for our data to flow through. 
 
-  ```js
+
+  ```javascript
     const func1 =  str => str.trim();
     const func2 = str => str.toLowerCase ();
     const func3 = str => `<div>${str}</div>`;
@@ -41,7 +42,7 @@
 
   ```js
     import { compose, pipe } from "lodash";
-   const func1 =  str => str.trim();
+    const func1 =  str => str.trim();
     const func2 = str => str.toLowerCase ();
     const func3 = str => `<div>${str}</div>`;
     
@@ -64,19 +65,19 @@
   ```js
   const func1 = str => `<div>${str}</div>`;
   const func2 = str => `<span>${str}</span>`;
-  
+
   // we can write them in one function
-  
+
   const func = ( str, htmlEle ) => { return `<${htmlEle}>${str}</${htmlEle}>` }; // 2 args
-  
+
   const func1 = str => func(str, "div"); // 1 argument only, currying
   const func2 = str => func (str, "span"); 
-  
+
   const result = func1("  hello  ");
-  
+
   // OR  
   const func = htmleEle => str => { return `<${htmlEle}>${str}</${htmlEle}>` };
-  
+
   const result = func ( "div" )( " hello  " ); // currying
   ```
   
