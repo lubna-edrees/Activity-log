@@ -77,23 +77,3 @@ Reference for code snippets, shortcuts or notes I faced while working. Live here
   * [pwa](src/web/pwa.md)
   * [seo](src/web/seo.md)
   * [urls](src/web/urls.md)
-
-## General web development
-
-* competeions:
-  * ACM ICPC.
-  * Google code jam.
-  * facebook hacker cup.
-  * TopCoder. - code forces.
-  * code chief - hacker rank.
-  * sphere online judge
-  * CSAcamedy
-* found out about `Getting Hired` course by `theodinproject` here: [https://www.theodinproject.com/courses/getting-hired](https://www.theodinproject.com/courses/getting-hired) .
-
-## choose your browser
-
-* here is how my memory respond to close only one chrome window with 3 tabs and less than 10 extentions working, all these extetions choosed wisely so they are all light weight.
-* this has realsed almost 20% of the RAM memory.
-* I now use opera browser.
-
-![choose your browse](https://i.imgur.com/XUbSPc3.png)
