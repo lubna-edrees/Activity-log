@@ -1,6 +1,9 @@
 # Ahmad Ali Activity Log
 
-Reference for code snippets, shortcuts or notes I faced while working. Live here: <https://docs.ahmad-ali.co.uk/>.
+My presonal Reference to coding, I always code when this website is open in the background.
+and believe me, you can use it too!
+
+Live here: <https://docs.ahmad-ali.co.uk/>.
 
 ## Table of contents
 
@@ -21,6 +24,7 @@ Reference for code snippets, shortcuts or notes I faced while working. Live here
   * [Packages](src/api/packages.md)
 * [DataBases](src/databases/README.d)
   * [MongoDB](src/databases/mongo.md)
+  * [Mongoose](src/databases/Mongoose.md)
   * [Redis](src/databases/redis.md)
 * [Data Structures](src/dataStructures/README.md)
   * [binary trees](src/dataStructures/binary_trees.md)

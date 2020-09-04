@@ -17,6 +17,7 @@
   * [Packages](src/api/packages.md)
 * [DataBases](src/databases/README.d)
   * [MongoDB](src/databases/mongo.md)
+  * [Mongoose](src/databases/Mongoose.md)
   * [Redis](src/databases/redis.md)
 * [Data Structures](src/dataStructures/README.md)
   * [binary trees](src/dataStructures/binary_trees.md)

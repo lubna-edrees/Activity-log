@@ -156,6 +156,31 @@ var all = document.getElementsByTagName("*");
         });
   ```
 
+## Input Event after user `finish typing` instead of `onChange`
+
+  ```js
+    //setup before functions
+    var typingTimer;                //timer identifier
+    var doneTypingInterval = 1000;  //time in ms, 5 second for example
+
+    //on keyup, start the countdown
+    const waitAbitOnKeyUp = (e, i) => {
+        clearTimeout(typingTimer);
+        typingTimer = setTimeout(() => doneTyping(e, i), doneTypingInterval);
+    };
+
+    //on keydown, clear the countdown 
+    const waitAbitOnKeyDown = () => {
+        clearTimeout(typingTimer);
+    };
+
+    //user is "finished typing," do something
+    function doneTyping(e, i) {
+        //do something
+    }
+
+  ```
+
 ## Resources
 
 * [Add to homescreen button form mobiles and new chrome desktop](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen)

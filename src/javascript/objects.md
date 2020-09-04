@@ -49,3 +49,18 @@
     newObj.address.city = "Bristol"; // the address of obj will NOT changed becaue we deep copied obj.
     obj.address.city // London.
   ```
+
+## update object keys
+
+  ```js
+   const changeKey = (obj, old_key, new_key) => {
+        // if the key will change
+        if (old_key !== new_key) {
+            Object.defineProperty(obj, new_key, // add a new property to obj with the obj[new_key] = same value.
+                Object.getOwnPropertyDescriptor(obj, old_key)); // descriptor contains the valeu of the property
+            delete obj[old_key]; // delete old key and its value.
+        }
+
+
+    }
+  ```
