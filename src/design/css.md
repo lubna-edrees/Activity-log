@@ -1,4 +1,11 @@
+<!-- markdownlint-disable MD004 MD026 MD009 MD046 -->
 # CSS
+
+## Notes 
+
+- 1 line layouts article: https://1linelayouts.glitch.me/
+
+## No select
 
 * prevent users from selecting text =&gt; `give the elemnt class of "noselect"`:
 
@@ -14,6 +21,8 @@
     }
   ```
 
+## one Third
+
 * make all elements\(divs\) third of the screen with same height:
 
   ```css
@@ -27,6 +36,8 @@
       width: 33%;
     }
   ```
+
+## Flexbox
 
 * flexbox: boxes = inner divs, parrent = parrent div.
   * add `display:flex` to the parent =&gt; boxes will be same height \( EQUAL HEIGHT COLUMNS \).
@@ -44,3 +55,46 @@
       }
   ```
 
+## super centered
+
+- center everything with no problems, add this class to the parent element.
+
+  ```css
+    .parent{
+      display: grid;
+      place-items: center;
+    }
+  ```
+
+## The Deconstructed Pancake 
+
+- Elements beside each other on desktop, stacked on phone without meia queries
+- `flex: 0 1 <baseWidth>`;
+
+  ```css
+    .parent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .element {
+      flex: 1 1 150px; /*  Stretching: */
+      flex: 0 1 150px; /*  No stretching: */
+      /* choose only one of this 2 rules */
+    }
+  ```
+
+## sidebar width
+
+- determain min and max width of sidebar.
+- will not go down the min.
+- the max is percentage, so it will change with the screen width
+
+  ```css
+    .parent {
+      display: grid;
+      grid-template-columns: minmax(150px, 25%) 1fr; 
+      /* minmax(min sidebar, percentage of width when we are over min width) prerecentage of width for the main view */
+    }
+  ```
