@@ -24,4 +24,6 @@
 * `NProgress.js`: slim progress bar.
 * `loader`: js library has a lot of shortcuts.
 * `react-n18`: clever library to concentrate your text in one single file, then use sortucts to represent that text, so your files will not be full of text
-
+ |package | description |
+| :-: | :-: |
+| react-loading | nice loading svgs |
