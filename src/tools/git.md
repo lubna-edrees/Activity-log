@@ -93,6 +93,19 @@
   ```js
   git show <commit hash> // show deatailed info for that commit
   ```
+  
+# Undo changes
+
+- discard all changes before staging or commiting them
+
+   ```git
+      git reset --hard
+   ```
+- discard changes in one file:
+
+   ```git
+      git checkout -- <file>
+   ```
 
 ## Branches
 
