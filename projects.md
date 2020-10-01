@@ -4,6 +4,7 @@
 * tv Shows: [view live](https://loving-benz-169884.netlify.app/)
 * portfolio: [view live](https://ahmad-ali.co.uk/) -- [code](https://github.com/ahmad-ali14/portfolio)
 * slider from scratch: [view live](https://peaceful-wozniak-036720.netlify.app/) -- [code](https://github.com/ahmad-ali14/Ahmad-Ali)
+* valency number calculator [live and code](https://repl.it/@AhmadAli5/atomEquiavlent)
 
 ## codeWars katas
 
