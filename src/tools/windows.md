@@ -19,3 +19,9 @@
         $env:Path -split ';' // show env path vars, single line for each var
         
     ```
+    
+ ## UEFI and secure boot
+ 
+ - some new computers onlly allow windows to run, through their uefi settings.
+ - secure boot is the feature that prevent other system from runing.
+ - IMPORTANT: if you want in any case to change the boot path, you need to disable secuer boot from: start_computer > F2 > uefi settings.
