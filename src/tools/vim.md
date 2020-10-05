@@ -42,6 +42,59 @@
       :q // quit without saving
       :w // save, don't exit
   ```
+## Vim in VS Code
+
+- you start in Normal mode: 
+
+  ```js
+  /* button */
+  I, i // insert mode, type normally
+  H // top of the Screen
+  L <upper L> // end of Screen
+  M // middle of the Screen
+
+  esc // back to normal mode
+  
+  j // next line
+  k // previous line
+  l <lower L> // right one letter
+  h <lower H> // left one letter
+  
+  w // move one word 
+  e // end of the next word 
+  g > e // move to the previous word
+  f > { char } // move to specific char in the line
+  
+  0 // Moves to the first character of a line
+  ^ // Moves to the first non-blank character of a line
+  $ // Moves to the end of a line
+  g_ // Moves to the non-blank character at the end of a line
+  
+  
+  } // jumps entire paragraphs downwards
+  { // similarly but upwards
+  CTRL-D // let’s you move down half a page
+  CTRL-U // let’s you move up half a page
+
+  
+  /{pattern} // to search forward inside a file
+  ?{pattern} // to search backwards
+  * // searchfor the word under the cursor
+
+  { number } > { pattern } // execute the pattern n times like: 2 > j : moves down 2 lines.
+
+  
+  g > d // to jump to definition of whatever is under your cursor
+  g > f // to jump to a file in an import
+
+
+
+  g > g // to go to the top of the file
+  {line} > g > g // to go to a specific line
+  G // to go to the end of the file
+  % // jump to matching ({[]})
+
+  ```
 
 ## References
 

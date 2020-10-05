@@ -5,7 +5,9 @@
 - Kill process on port 3000
 
    ``` fuser -k -n tcp 3000 ```
-   
+
+  ``` sudo kill -9 `sudo lsof -t -i:3000` ```
+
 - Show most consuming process
      
      ``` top ```
