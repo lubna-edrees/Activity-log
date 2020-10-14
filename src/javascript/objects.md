@@ -64,3 +64,16 @@
 
     }
   ```
+
+## Delete object key
+
+```js
+  //1
+  delete obj.keyName;
+ 
+  //2
+  obj.keyName = undefined;
+
+
+
+```
