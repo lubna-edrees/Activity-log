@@ -73,7 +73,10 @@
  
   //2
   obj.keyName = undefined;
-
-
-
 ```
+
+## check if object
+
+  ```js
+    const isObject = obj => !!obj && typeof obj === 'object';
+  ```

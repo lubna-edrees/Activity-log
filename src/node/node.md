@@ -57,6 +57,6 @@ global object contains functions, vars and objects we can use without requiring 
 2. `process.versions.node`: get current node version.
 3. get environment information and vars.
 4. communicate with the terminal or parent processes through standard input and standard output.
-5. [process.argv](/src/javascript/argv.md): get an array of all arguments passed to this process.
-6. [process.stdout, process.stdin](/src/javascript/stdout.md): regulates interactions between terminal and our program.
+5. [process.argv](/src/node/argv.md): get an array of all arguments passed to this process.
+6. [process.stdout, process.stdin](/src/node/stdout.md): regulates interactions between terminal and our program.
 7. exit the current process. `process.exit()`
