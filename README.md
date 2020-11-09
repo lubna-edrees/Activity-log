@@ -59,7 +59,7 @@ Live here: <https://docs.ahmad-ali.co.uk/>.
   * [Strings](src/javascript/strings.md)
 * [Node js](src/node/README.md)
   * [Node](src/node/node.md)
-  * [Argv][src/node/argv.md]
+  * [Argv](src/node/argv.md)
   * [stdout](src/node/stdout.md) 
 * [Programming Languages](src/programming-languages/README.md)
   * [go](src/programming-languages/go.md)
