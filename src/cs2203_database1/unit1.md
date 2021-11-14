@@ -1,5 +1,31 @@
 # Unit1: Databases and Relational Data Model
 
+- [Unit1: Databases and Relational Data Model](#unit1-databases-and-relational-data-model)
+  - [Reading](#reading)
+  - [Types of information models](#types-of-information-models)
+  - [Career paths with databases](#career-paths-with-databases)
+  - [Chapter 2: Relational data model](#chapter-2-relational-data-model)
+    - [Basic concepts](#basic-concepts)
+      - [1.attributes](#1attributes)
+      - [2. domain](#2-domain)
+      - [3. Tuples](#3-tuples)
+      - [4. relations](#4-relations)
+      - [5. Schemas](#5-schemas)
+      - [6. keys](#6-keys)
+        - [6-1 Candidate keys](#6-1-candidate-keys)
+        - [6-2 primary keys](#6-2-primary-keys)
+        - [6-3 Foreign keys](#6-3-foreign-keys)
+  - [Relational Data Model Constrains](#relational-data-model-constrains)
+    - [Entity integrity constrains](#entity-integrity-constrains)
+    - [Referential integrity constrains](#referential-integrity-constrains)
+      - [**In Case of deleting / Updating a tuple that has a FK, there are 3 possibilities:**](#in-case-of-deleting--updating-a-tuple-that-has-a-fk-there-are-3-possibilities)
+    - [Semantic integrity constrains](#semantic-integrity-constrains)
+      - [domain constrains](#domain-constrains)
+      - [NULL constrains](#null-constrains)
+      - [UNIQUE constrains](#unique-constrains)
+      - [check constrains](#check-constrains)
+  - [Relational Algebra](#relational-algebra)
+
 ## Reading
 
 1. Database Fundamentals, IBM. chapter 1 & 2
@@ -171,8 +197,6 @@
 | 2. intersection      |                | 2. project |
 | 3. difference        |                | 3. join    |
 | 4. cartesian product |                | 4. divide  |
-
-### 1. UNION
 
 | operator              | definition of results                                                              | characteristics                                      |
 | --------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------- |
