@@ -94,3 +94,4 @@ Live here: <https://docs.ahmad-ali.co.uk/>.
     - [urls](src/general/web/urls.md)
 - [CS2203: DATABASES 1](src/cs2203_database1/README.md)
   - [Unit1: Databases and Relational Data Model](src/cs2203_database1/unit1.md)
+  - [Unit 2: Conceptual Data Model](src/../src/cs2203_database1/Unit2.md)
