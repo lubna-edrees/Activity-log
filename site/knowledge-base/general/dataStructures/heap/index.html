@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Heap - My Docs</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Knowledge base <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Books</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../books/" class="dropdown-item">list of recommended books</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cs2203 database1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../cs2203-database1/" class="dropdown-item">Databases 1 CS-2203</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit1/" class="dropdown-item">Unit1: Databases and Relational Data Model</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit2/" class="dropdown-item">Unit 2: Conceptual Data Model</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit3/" class="dropdown-item">Unit 3: Relational Database Design</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">General</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Table of contents</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../advanced/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../advanced/design_patterns/" class="dropdown-item">Design Patterns</a>
+</li>
+            
+<li>
+    <a href="../../advanced/oop/" class="dropdown-item">Object Oriented Programming</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../algorithms/" class="dropdown-item">Data Structures and Algorithms Notes</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/algorithms-on-graphs/" class="dropdown-item">Algorithms on Graphs</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/algorithms/" class="dropdown-item">Algorithms</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/freecodecamp/" class="dropdown-item">Free Code Camp Algorithms section</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/mit6006/" class="dropdown-item">Algorithms Notes</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/quick_find/" class="dropdown-item">quick-find</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/quick_union/" class="dropdown-item">quick-union</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/union_find/" class="dropdown-item">union-find</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Examples</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithm toolbox</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/" class="dropdown-item">algoritm toolbox</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/algorithms_notes/" class="dropdown-item">Algorithms Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Week2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/week2/" class="dropdown-item">week2</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/week2/week2/" class="dropdown-item">week2</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../api/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../api/api-list/" class="dropdown-item">List of Greet APIs</a>
+</li>
+            
+<li>
+    <a href="../../api/packages/" class="dropdown-item">packages Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dataStructures</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../binary_trees/" class="dropdown-item">Binary search trees</a>
+</li>
+            
+<li>
+    <a href="../data_structures/" class="dropdown-item">data structures</a>
+</li>
+            
+<li>
+    <a href="../disjoint_setes/" class="dropdown-item">Disjoint Sets</a>
+</li>
+            
+<li>
+    <a href="../hash_tables/" class="dropdown-item">Hash Tables</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Heap</a>
+</li>
+            
+<li>
+    <a href="../linked_lists/" class="dropdown-item">Linked Lists</a>
+</li>
+            
+<li>
+    <a href="../priority_queue/" class="dropdown-item">priority queue</a>
+</li>
+            
+<li>
+    <a href="../queue/" class="dropdown-item">queue</a>
+</li>
+            
+<li>
+    <a href="../stack/" class="dropdown-item">stack</a>
+</li>
+            
+<li>
+    <a href="../trees/" class="dropdown-item">trees</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Databases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../databases/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../databases/mongo/" class="dropdown-item">MongoDB</a>
+</li>
+            
+<li>
+    <a href="../../databases/mongoose/" class="dropdown-item">Mongoose</a>
+</li>
+            
+<li>
+    <a href="../../databases/redis/" class="dropdown-item">Redis</a>
+</li>
+            
+<li>
+    <a href="../../databases/sequilize/" class="dropdown-item">Sequalize</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Design</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../design/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../design/css/" class="dropdown-item">Css</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frameworks/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/bootstrap/" class="dropdown-item">Bootstrap</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/react/" class="dropdown-item">React</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/redux/" class="dropdown-item">Redux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Interviews</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../interviews/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../interviews/js_general/" class="dropdown-item">Js general</a>
+</li>
+            
+<li>
+    <a href="../../interviews/js_oop/" class="dropdown-item">OOP in JS</a>
+</li>
+            
+<li>
+    <a href="../../interviews/references/" class="dropdown-item">Interview Preperation</a>
+</li>
+            
+<li>
+    <a href="../../interviews/self_introduction/" class="dropdown-item">Self Introduction</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Javascript</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../javascript/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../javascript/arrays/" class="dropdown-item">Arrays</a>
+</li>
+            
+<li>
+    <a href="../../javascript/cli/" class="dropdown-item">CLI</a>
+</li>
+            
+<li>
+    <a href="../../javascript/datetime/" class="dropdown-item">Date and Time</a>
+</li>
+            
+<li>
+    <a href="../../javascript/functions/" class="dropdown-item">Functions</a>
+</li>
+            
+<li>
+    <a href="../../javascript/generaljs/" class="dropdown-item">General JS</a>
+</li>
+            
+<li>
+    <a href="../../javascript/numbers/" class="dropdown-item">Numbers</a>
+</li>
+            
+<li>
+    <a href="../../javascript/objects/" class="dropdown-item">Objects</a>
+</li>
+            
+<li>
+    <a href="../../javascript/strings/" class="dropdown-item">Strings</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Node</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../node/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../node/argv/" class="dropdown-item">Argv</a>
+</li>
+            
+<li>
+    <a href="../../node/node/" class="dropdown-item">Node</a>
+</li>
+            
+<li>
+    <a href="../../node/stdout/" class="dropdown-item">process.stdout, process.stdin</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Programming languages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../programming-languages/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../programming-languages/go/" class="dropdown-item">GoLang Docs</a>
+</li>
+            
+<li>
+    <a href="../../programming-languages/python/" class="dropdown-item">python</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software development</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../software-development/" class="dropdown-item">software\_development</a>
+</li>
+            
+<li>
+    <a href="../../software-development/agile/" class="dropdown-item">Agile process</a>
+</li>
+            
+<li>
+    <a href="../../software-development/requirments/" class="dropdown-item">Requirments</a>
+</li>
+            
+<li>
+    <a href="../../software-development/terminology/" class="dropdown-item">programming terminoloy</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Think</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../think/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../think/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../think/thinking_logically_games/" class="dropdown-item">thinking\_logically\_games</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tools</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../tools/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../tools/bash/" class="dropdown-item">Bash</a>
+</li>
+            
+<li>
+    <a href="../../tools/docker/" class="dropdown-item">Docker</a>
+</li>
+            
+<li>
+    <a href="../../tools/git/" class="dropdown-item">Git</a>
+</li>
+            
+<li>
+    <a href="../../tools/grunt/" class="dropdown-item">Grunt</a>
+</li>
+            
+<li>
+    <a href="../../tools/linux/" class="dropdown-item">linux</a>
+</li>
+            
+<li>
+    <a href="../../tools/shel_scripting/" class="dropdown-item">Shel scripting</a>
+</li>
+            
+<li>
+    <a href="../../tools/vim/" class="dropdown-item">Vim</a>
+</li>
+            
+<li>
+    <a href="../../tools/windows/" class="dropdown-item">Windows</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Web</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../web/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../web/dom/" class="dropdown-item">DOM</a>
+</li>
+            
+<li>
+    <a href="../../web/fonts/" class="dropdown-item">Fonts I like</a>
+</li>
+            
+<li>
+    <a href="../../web/meta/" class="dropdown-item">Meta</a>
+</li>
+            
+<li>
+    <a href="../../web/pwa/" class="dropdown-item">Progressive Web Apps PWA</a>
+</li>
+            
+<li>
+    <a href="../../web/seo/" class="dropdown-item">SEO</a>
+</li>
+            
+<li>
+    <a href="../../web/urls/" class="dropdown-item">URLs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Todo</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../todo/to_learn/" class="dropdown-item">list of things to learn more about them</a>
+</li>
+            
+<li>
+    <a href="../../../todo/to_record/" class="dropdown-item">Things I need to make a videos about</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../projects/projects/" class="dropdown-item">list of live projects:</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../hash_tables/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../linked_lists/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#heap" class="nav-link">Heap</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="heap">Heap</h1>
+<ul>
+<li>heap is a tree with special charechters.</li>
+<li><code>Binary max-heap</code> is a binary tree (each node has zero, one, or two children) where the value of each node is at least the values of its children.</li>
+</ul>
+<h3 id="operations-on-binary-max-heap">operations on binary max-heap</h3>
+<ul>
+<li><code>GetMax</code>: return the root.</li>
+<li><code>Insert</code>: attach a new node to any leaf, this may violate the heap property, so we do <code>siftUp</code>.</li>
+<li><code>siftUp</code>: swap the problematic node with its parent until the property is satisfied. this edge gets closer to the root while sifting up. <code>costs o(tree height)</code>.</li>
+<li><code>ExtractMax</code> : replace the root with any leaf. then we do <code>SiftDown</code> if nessecary.</li>
+<li><code>SiftDown</code>: we swap the problematic node with larger child until the heap property is satisfied.</li>
+<li><code>ChangePriority</code>: change the priority and let the changed element sift up or down depending on whether its priority decreased or increased.</li>
+<li><code>Remove</code>: change the priority of the element to ∞, let it sift up, and then extract maximum by calling <code>ExtractMax()</code> costs <code>O(tree height)</code>.</li>
+</ul>
+<h3 id="compelete-binary-tree">compelete binary tree</h3>
+<ul>
+<li>A binary tree is complete if all its levels are filled except possibly the last one which is filled from left to right.</li>
+<li>A complete binary tree with n nodes has height <code>at most O(log n)</code>.</li>
+<li>we cav store a copmplete binary tree in array as follows:</li>
+<li>parent index of node i = <code>Arr[round(i/2)]</code></li>
+<li>leftchild(i) = <code>Arr[2i]</code></li>
+<li>RightChild(i) = <code>Arr[2i+1]</code></li>
+<li>siftUp and down does not change the tree completeness.</li>
+<li>insert and extractMax and remove can violate tree completeness.</li>
+<li>we have to maintain our tree complete.</li>
+<li>Keeping the Tree Complete:</li>
+<li>to extract the maximum value, replace the root by the last leaf (by the right leaf of the most left child 2i+1 ) and let it sift down.</li>
+<li>to insert an element, insert it as a leaf in the leftmost vacant position in the last level and let it sift up.</li>
+</ul>
+<h3 id="binary-heap-psuedo-code">binary heap psuedo code</h3>
+<p><img alt="binary heap array example" src="https://i.imgur.com/XJAMIoe.png" /></p>
+<ul>
+<li>maxSize is the maximum number of elements in the heap</li>
+<li>size is the size of the heap</li>
+<li>H[1 . . . maxSize] is an array of length maxSize where the heap occupies the first size elements</li>
+<li><a href="https://d3c33hcgiwev3.cloudfront.net/_cf47f3a385305a0768c7686bdb0e1a7e_06_1_priority_queues_2_heaps.pdf?Expires=1588982400&amp;Signature=gyp5E23U6wuose52e72QZaK0TcR2hMOgZ0tIo4dl7DyxfYBqcYW0QOU3XuB6wd~~GNKOTHfbHKKm2BQ4ASTMY-YDu8tsoiPVvocoyquEx6u~575cHqREdalpMwZK4bw~xuj8C3AEDFVK-f-ONyfLS668gJds85WqEfXywNqc8oo_&amp;Key-Pair-Id=APKAJLTNE6QMUY6HBC5A">pdf docs</a></li>
+<li>sift Up:</li>
+</ul>
+<pre><code class="language-javascript">SiftUp(i):
+while i &gt; 1 and H[Parent(i)] &lt; H[i]:
+swap H[Parent(i)] and H[i]
+i ← Parent(i)
+</code></pre>
+<ul>
+<li>sift down:</li>
+</ul>
+<pre><code class="language-javascript">SiftDown(i)
+maxIndex ← i
+ℓ ← LeftChild(i)
+if ℓ ≤ size and H[ℓ] &gt; H[maxIndex]:
+maxIndex ← ℓ
+r ← RightChild(i)
+if r ≤ size and H[r] &gt; H[maxIndex]:
+maxIndex ← r
+if i ̸= maxIndex:
+swap H[i] and H[maxIndex]
+SiftDown(maxIndex)
+</code></pre>
+<ul>
+<li>insert:</li>
+</ul>
+<pre><code class="language-javascript">Insert(p)
+if size = maxSize:
+return ERROR
+size ← size + 1
+H[size] ← p
+SiftUp(size)
+</code></pre>
+<ul>
+<li>Extract max:</li>
+</ul>
+<pre><code class="language-javascript">ExtractMax()
+result ← H[1]
+H[1] ← H[size]
+size ← size − 1
+SiftDown(1)
+return result
+</code></pre>
+<ul>
+<li>remove:</li>
+</ul>
+<pre><code class="language-javascript">Remove(i)
+H[i] ← ∞
+SiftUp(i)
+ExtractMax()
+</code></pre>
+<ul>
+<li>change priority:</li>
+</ul>
+<pre><code class="language-javascript">ChangePriority(i, p)
+oldp ← H[i]
+H[i] ← p
+if p &gt; oldp:
+SiftUp(i)
+else:
+SiftDown(i)
+</code></pre>
+<h3 id="heap-sort">Heap sort</h3>
+<ul>
+<li>psudo code:</li>
+</ul>
+<pre><code class="language-javascript">HeapSort(A[1 . . . n])
+create an empty priority queue
+for i from 1 to n:
+Insert(A[i])
+for i from n downto 1:
+A[i] ← ExtractMax()
+</code></pre>
+<ul>
+<li>cost : <code>0(n log n)</code></li>
+</ul>
+<h3 id="intro-sort-algorithm">intro-sort algorithm</h3>
+<p>in practice: you start using <code>quick sort</code> algorithm, if you find it a bit slow: you stop and change to <code>heap sort</code>.</p>
+<h3 id="0-based-array-heap">0-based array heap</h3>
+<ul>
+<li>Parent(i): return <code>Arr[i−1/2]</code></li>
+<li>LeftChild(i) : return <code>Arr[2i + 1]</code></li>
+<li>RightChild(i): return <code>Arr[2i + 2]</code></li>
+</ul>
+<h3 id="binary-min-heap">Binary min-heap</h3>
+<p>Binary min-heap is a binary tree (each node has zero, one, or two children) where the value of each node is at most the values of its children.</p>
+<h3 id="d-ary-heap">d-ary Heap</h3>
+<ul>
+<li>In a d-ary heap nodes on all levels except for possibly the last one have exactly d children.</li>
+<li>The height of such a tree is about logd n.</li>
+<li>The running time of SiftUp is O(logd n).</li>
+<li>The running time of SiftDown is O(d logd n): on each level, we nd the largest value among d children.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

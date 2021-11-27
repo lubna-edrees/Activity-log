@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Algorithms on Graphs - My Docs</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Knowledge base <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Books</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../books/" class="dropdown-item">list of recommended books</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cs2203 database1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../cs2203-database1/" class="dropdown-item">Databases 1 CS-2203</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit1/" class="dropdown-item">Unit1: Databases and Relational Data Model</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit2/" class="dropdown-item">Unit 2: Conceptual Data Model</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit3/" class="dropdown-item">Unit 3: Relational Database Design</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">General</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Table of contents</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../advanced/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../advanced/design_patterns/" class="dropdown-item">Design Patterns</a>
+</li>
+            
+<li>
+    <a href="../../advanced/oop/" class="dropdown-item">Object Oriented Programming</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Data Structures and Algorithms Notes</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Algorithms on Graphs</a>
+</li>
+            
+<li>
+    <a href="../algorithms/" class="dropdown-item">Algorithms</a>
+</li>
+            
+<li>
+    <a href="../freecodecamp/" class="dropdown-item">Free Code Camp Algorithms section</a>
+</li>
+            
+<li>
+    <a href="../mit6006/" class="dropdown-item">Algorithms Notes</a>
+</li>
+            
+<li>
+    <a href="../quick_find/" class="dropdown-item">quick-find</a>
+</li>
+            
+<li>
+    <a href="../quick_union/" class="dropdown-item">quick-union</a>
+</li>
+            
+<li>
+    <a href="../union_find/" class="dropdown-item">union-find</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Examples</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithm toolbox</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../examples/algorithm-toolbox/" class="dropdown-item">algoritm toolbox</a>
+</li>
+            
+<li>
+    <a href="../examples/algorithm-toolbox/algorithms_notes/" class="dropdown-item">Algorithms Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Week2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../examples/algorithm-toolbox/week2/" class="dropdown-item">week2</a>
+</li>
+            
+<li>
+    <a href="../examples/algorithm-toolbox/week2/week2/" class="dropdown-item">week2</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../api/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../api/api-list/" class="dropdown-item">List of Greet APIs</a>
+</li>
+            
+<li>
+    <a href="../../api/packages/" class="dropdown-item">packages Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dataStructures</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../dataStructures/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/binary_trees/" class="dropdown-item">Binary search trees</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/data_structures/" class="dropdown-item">data structures</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/disjoint_setes/" class="dropdown-item">Disjoint Sets</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/hash_tables/" class="dropdown-item">Hash Tables</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/heap/" class="dropdown-item">Heap</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/linked_lists/" class="dropdown-item">Linked Lists</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/priority_queue/" class="dropdown-item">priority queue</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/queue/" class="dropdown-item">queue</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/stack/" class="dropdown-item">stack</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/trees/" class="dropdown-item">trees</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Databases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../databases/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../databases/mongo/" class="dropdown-item">MongoDB</a>
+</li>
+            
+<li>
+    <a href="../../databases/mongoose/" class="dropdown-item">Mongoose</a>
+</li>
+            
+<li>
+    <a href="../../databases/redis/" class="dropdown-item">Redis</a>
+</li>
+            
+<li>
+    <a href="../../databases/sequilize/" class="dropdown-item">Sequalize</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Design</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../design/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../design/css/" class="dropdown-item">Css</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frameworks/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/bootstrap/" class="dropdown-item">Bootstrap</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/react/" class="dropdown-item">React</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/redux/" class="dropdown-item">Redux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Interviews</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../interviews/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../interviews/js_general/" class="dropdown-item">Js general</a>
+</li>
+            
+<li>
+    <a href="../../interviews/js_oop/" class="dropdown-item">OOP in JS</a>
+</li>
+            
+<li>
+    <a href="../../interviews/references/" class="dropdown-item">Interview Preperation</a>
+</li>
+            
+<li>
+    <a href="../../interviews/self_introduction/" class="dropdown-item">Self Introduction</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Javascript</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../javascript/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../javascript/arrays/" class="dropdown-item">Arrays</a>
+</li>
+            
+<li>
+    <a href="../../javascript/cli/" class="dropdown-item">CLI</a>
+</li>
+            
+<li>
+    <a href="../../javascript/datetime/" class="dropdown-item">Date and Time</a>
+</li>
+            
+<li>
+    <a href="../../javascript/functions/" class="dropdown-item">Functions</a>
+</li>
+            
+<li>
+    <a href="../../javascript/generaljs/" class="dropdown-item">General JS</a>
+</li>
+            
+<li>
+    <a href="../../javascript/numbers/" class="dropdown-item">Numbers</a>
+</li>
+            
+<li>
+    <a href="../../javascript/objects/" class="dropdown-item">Objects</a>
+</li>
+            
+<li>
+    <a href="../../javascript/strings/" class="dropdown-item">Strings</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Node</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../node/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../node/argv/" class="dropdown-item">Argv</a>
+</li>
+            
+<li>
+    <a href="../../node/node/" class="dropdown-item">Node</a>
+</li>
+            
+<li>
+    <a href="../../node/stdout/" class="dropdown-item">process.stdout, process.stdin</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Programming languages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../programming-languages/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../programming-languages/go/" class="dropdown-item">GoLang Docs</a>
+</li>
+            
+<li>
+    <a href="../../programming-languages/python/" class="dropdown-item">python</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software development</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../software-development/" class="dropdown-item">software\_development</a>
+</li>
+            
+<li>
+    <a href="../../software-development/agile/" class="dropdown-item">Agile process</a>
+</li>
+            
+<li>
+    <a href="../../software-development/requirments/" class="dropdown-item">Requirments</a>
+</li>
+            
+<li>
+    <a href="../../software-development/terminology/" class="dropdown-item">programming terminoloy</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Think</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../think/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../think/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../think/thinking_logically_games/" class="dropdown-item">thinking\_logically\_games</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tools</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../tools/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../tools/bash/" class="dropdown-item">Bash</a>
+</li>
+            
+<li>
+    <a href="../../tools/docker/" class="dropdown-item">Docker</a>
+</li>
+            
+<li>
+    <a href="../../tools/git/" class="dropdown-item">Git</a>
+</li>
+            
+<li>
+    <a href="../../tools/grunt/" class="dropdown-item">Grunt</a>
+</li>
+            
+<li>
+    <a href="../../tools/linux/" class="dropdown-item">linux</a>
+</li>
+            
+<li>
+    <a href="../../tools/shel_scripting/" class="dropdown-item">Shel scripting</a>
+</li>
+            
+<li>
+    <a href="../../tools/vim/" class="dropdown-item">Vim</a>
+</li>
+            
+<li>
+    <a href="../../tools/windows/" class="dropdown-item">Windows</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Web</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../web/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../web/dom/" class="dropdown-item">DOM</a>
+</li>
+            
+<li>
+    <a href="../../web/fonts/" class="dropdown-item">Fonts I like</a>
+</li>
+            
+<li>
+    <a href="../../web/meta/" class="dropdown-item">Meta</a>
+</li>
+            
+<li>
+    <a href="../../web/pwa/" class="dropdown-item">Progressive Web Apps PWA</a>
+</li>
+            
+<li>
+    <a href="../../web/seo/" class="dropdown-item">SEO</a>
+</li>
+            
+<li>
+    <a href="../../web/urls/" class="dropdown-item">URLs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Todo</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../todo/to_learn/" class="dropdown-item">list of things to learn more about them</a>
+</li>
+            
+<li>
+    <a href="../../../todo/to_record/" class="dropdown-item">Things I need to make a videos about</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../projects/projects/" class="dropdown-item">list of live projects:</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../algorithms/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#algorithms-on-graphs" class="nav-link">Algorithms on Graphs</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#week1-exploring-undirected-graphs" class="nav-link">Week1: Exploring Undirected Graphs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#week2-directed-graphs" class="nav-link">week2: Directed Graphs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="algorithms-on-graphs">Algorithms on Graphs</h1>
+<ul>
+<li>graphs are used in: </li>
+<li>represent Internet pages and the connections between them.</li>
+<li>maps</li>
+<li>social networks.</li>
+<li>An (undirected) Graph is a collection V of vertices, and a collection E of edges each of which connects a pair of vertices.</li>
+<li>Drawing Graphs:</li>
+<li>Vertices: Points. Edges: Lines.</li>
+<li>Loops connect a vertex to itself.</li>
+<li>Multiple edges between same vertices.</li>
+<li>Represinting Graphs:</li>
+<li>List of all edges: <code>Edges: (A, B), (A, C), (A,D), (C,D)</code></li>
+<li>Adjacency Matrix: Matrix. Entries 1 if there is an edge, 0 if there is not.</li>
+<li>Adjacency List : For each vertex, a list of adjacent vertices.</li>
+<li>time cost for each of the previous Graph representaions:</li>
+</ul>
+<p><img alt=" time cost for each of the previous Graph representaions" src="https://i.imgur.com/QrZMK3A.png" /></p>
+<h2 id="week1-exploring-undirected-graphs">Week1: Exploring Undirected Graphs</h2>
+<ul>
+<li>A <code>path</code> in a graph G is a sequence of vertices v0, v1, . . . , vn so that for all i, (vi , vi+1) is an edge of G.</li>
+<li>operations on graphs:</li>
+<li>Reachability: outputs The collection of vertices v of G so that there is a path from s to v. </li>
+<li>connectivity: outputs The connected components of G.</li>
+</ul>
+<h3 id="reachability-all-components">Reachability (All components)</h3>
+<pre><code class="language-python">All Component(s: ):
+    DiscoveredNodes = []
+    while there is an edge e leaving DiscoveredNodes that has not been explored:
+        add vertex at other end of e to DiscoveredNodes
+    return DiscoveredNodes
+</code></pre>
+<ul>
+<li>Visit Markers : To keep track of vertices found we Give each vertex boolean visited(v).</li>
+<li>Unprocessed Vertices: Keep a list of vertices with edges left to check.</li>
+</ul>
+<h3 id="depth-first-ordering">Depth First Ordering</h3>
+<ul>
+<li>We will explore new edges in <code>Depth First</code> order. We will follow a long path forward, only backtracking when we hit a <code>dead end</code>.</li>
+</ul>
+<pre><code class="language-python">Explore(v: vertix):
+    visited(v) = true
+    for (v, w) ∈ E: # E contains all niebourghs w of v
+        if not visited(w):
+            Explore(w)
+</code></pre>
+<h3 id="connectivity">Connectivity</h3>
+<ul>
+<li>The vertices of a graph G can be partitioned into <code>Connected Components</code> so that v is reachable from w if and only if they are in the <code>same connected component</code>.</li>
+</ul>
+<pre><code class="language-python">Depth-First-Search(G: graph):
+  for all v ∈ V mark v unvisited: #initialize all vertices as un visted using counter cc
+  cc = 1
+  for v ∈ V : # V contains all vertices  v of the single connected component V
+    if not visited(v):`
+        Explore(v)
+  cc = cc + 1 # increase the counter so it's giving a different mark to every vertices 
+    # in a single component
+</code></pre>
+<p>Explore:</p>
+<pre><code class="language-python">Explore(v: vertix):
+  visited(v) = true # mark that this vertix has visted 
+  CCnum(v) = cc # mark all vertices in the same component with the same counter
+  for (v, w) ∈ E:  
+  # check if there are still unvisted vertices in v niebourghs
+    if not visited(w):
+        Explore(w)
+</code></pre>
+<ul>
+<li>Each new <code>explore()</code> finds new <code>single connected component</code>.</li>
+<li>Runtime  <code>O(|V: vertices | + |E: edges|)</code>.</li>
+</ul>
+<h3 id="previsit-and-postvisit-functions">Previsit and Postvisit Functions</h3>
+<ul>
+<li>you might want to track more data while you going over the vertices, these data can be tracked using <code>preVistit()</code> and <code>postVisit()</code> functions.</li>
+<li>adding pre and post visits functions to <code>DSF()</code> in the <code>Explore()</code>:</li>
+</ul>
+<p>```python
+      Explore(v: vertix):
+        visited(v) = true
+        previsit(v) # execute pre visit
+        for (v, w) ∈ E: # adjacents
+            if not visited(w):
+                explore(w)
+        postvisit(v)</p>
+<pre><code>    ####### def pre visit and posy vists ########
+    clock = 1
+    previsit(v):
+        pre(v) = clock
+        clock = clock + 1
+    postvisit(v):
+        post(v) = clock
+        clock = clock + 1
+</code></pre>
+<p>```</p>
+<h2 id="week2-directed-graphs">week2: Directed Graphs</h2>
+<ul>
+<li><code>Directed Graph</code>:  a graph where each edge has a start vertex and an end vertex.</li>
+<li>Directed graphs might be used to represent:</li>
+<li>Streets with one-way roads.</li>
+<li>Links between webpages.</li>
+<li>Followers on social network.</li>
+<li>Dependencies between tasks</li>
+<li><code>Directed DFS</code>:</li>
+<li>Only follow directed edges.</li>
+<li><code>explore(v)</code> finds all vertices reachable from v.</li>
+<li>Can still compute pre- and postorderings. </li>
+<li><code>cycle</code>: A cycle in a graph G is a sequence of vertices <code>v1, v2, . . . , vn</code> so that <code>(v1, v2),(v2, v3), . . . ,(vn−1, vn),(vn, v1)</code> are all edges.</li>
+<li>If G contains a cycle, it <code>cannot</code> be <code>linearly ordered</code>.</li>
+<li><code>DAGs</code> : A directed graph G is a <code>Directed Acyclic Graph</code> (or DAG) if it has no cycles.</li>
+<li>Example: only A is a DAG</li>
+</ul>
+<p><img alt="DAG" src="https://i.imgur.com/dW5OzeL.png" /></p>
+<ul>
+<li>Any DAG can be linearly ordered.</li>
+</ul>
+<h3 id="topological-sort">Topological Sort</h3>
+<ul>
+<li><code>Last Vertex</code>: a vertex that cannot have any edges pointing out of it.</li>
+<li><code>source</code>:  a vertex with no incoming edges.</li>
+<li><code>sink</code> :  a vertex with no outgoing edges, simply it's a <code>last vertix</code>.</li>
+<li>Example: red vertices are <code>sinks</code></li>
+</ul>
+<p><img alt="sinks" src="https://i.imgur.com/RUe1spr.png" /></p>
+<ul>
+<li>topological sort idea: 1. Find sink. 2. Put that sink at end of order. 3. Remove the sink from graph. 4. Repeat.</li>
+<li>finding a sink:</li>
+<li>to find a sink we need to follow the <code>path</code> pointing to this sink until we :<ul>
+<li>Cannot extend  =&gt; we found a sink.</li>
+<li>Repeat a previous vertex =&gt; we found a cycle.</li>
+</ul>
+</li>
+<li>Topological sort algorithm:</li>
+</ul>
+<p>```python
+        LinearOrder(G):
+          while G non-empty:
+            Follow a path until cannot extend
+                Find sink v
+                Put v at end of order
+                Remove v from G
+                LinearOrder(G) # G is now less by 1 vertix.</p>
+<pre><code>            ## Runtime O(|V|^2)
+</code></pre>
+<p>```</p>
+<ul>
+<li>weaknesses in the previous algorithm:</li>
+<li>Retrace same path every time. </li>
+<li>every time we start from the begining, sowe  can:  <code>Instead only back up as far as necessary</code>.</li>
+</ul>
+<h3 id="optimized-topological-sort">Optimized topological sort</h3>
+<pre><code class="language-python">TopologicalSort(G):
+    DFS(G) # run depth first search with pre and post order functions
+    sort vertices by reverse post-order # greater post-order value comes first in the output.
+</code></pre>
+<p>If G is a DAG, with an edge u -&gt; v, so: <code>post(u) &gt; post(v)</code>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

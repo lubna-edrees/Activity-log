@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Git - My Docs</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Knowledge base <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Books</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../books/" class="dropdown-item">list of recommended books</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cs2203 database1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../cs2203-database1/" class="dropdown-item">Databases 1 CS-2203</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit1/" class="dropdown-item">Unit1: Databases and Relational Data Model</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit2/" class="dropdown-item">Unit 2: Conceptual Data Model</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit3/" class="dropdown-item">Unit 3: Relational Database Design</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">General</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Table of contents</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../advanced/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../advanced/design_patterns/" class="dropdown-item">Design Patterns</a>
+</li>
+            
+<li>
+    <a href="../../advanced/oop/" class="dropdown-item">Object Oriented Programming</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../algorithms/" class="dropdown-item">Data Structures and Algorithms Notes</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/algorithms-on-graphs/" class="dropdown-item">Algorithms on Graphs</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/algorithms/" class="dropdown-item">Algorithms</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/freecodecamp/" class="dropdown-item">Free Code Camp Algorithms section</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/mit6006/" class="dropdown-item">Algorithms Notes</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/quick_find/" class="dropdown-item">quick-find</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/quick_union/" class="dropdown-item">quick-union</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/union_find/" class="dropdown-item">union-find</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Examples</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithm toolbox</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/" class="dropdown-item">algoritm toolbox</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/algorithms_notes/" class="dropdown-item">Algorithms Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Week2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/week2/" class="dropdown-item">week2</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/week2/week2/" class="dropdown-item">week2</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../api/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../api/api-list/" class="dropdown-item">List of Greet APIs</a>
+</li>
+            
+<li>
+    <a href="../../api/packages/" class="dropdown-item">packages Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dataStructures</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../dataStructures/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/binary_trees/" class="dropdown-item">Binary search trees</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/data_structures/" class="dropdown-item">data structures</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/disjoint_setes/" class="dropdown-item">Disjoint Sets</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/hash_tables/" class="dropdown-item">Hash Tables</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/heap/" class="dropdown-item">Heap</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/linked_lists/" class="dropdown-item">Linked Lists</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/priority_queue/" class="dropdown-item">priority queue</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/queue/" class="dropdown-item">queue</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/stack/" class="dropdown-item">stack</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/trees/" class="dropdown-item">trees</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Databases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../databases/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../databases/mongo/" class="dropdown-item">MongoDB</a>
+</li>
+            
+<li>
+    <a href="../../databases/mongoose/" class="dropdown-item">Mongoose</a>
+</li>
+            
+<li>
+    <a href="../../databases/redis/" class="dropdown-item">Redis</a>
+</li>
+            
+<li>
+    <a href="../../databases/sequilize/" class="dropdown-item">Sequalize</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Design</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../design/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../design/css/" class="dropdown-item">Css</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frameworks/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/bootstrap/" class="dropdown-item">Bootstrap</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/react/" class="dropdown-item">React</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/redux/" class="dropdown-item">Redux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Interviews</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../interviews/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../interviews/js_general/" class="dropdown-item">Js general</a>
+</li>
+            
+<li>
+    <a href="../../interviews/js_oop/" class="dropdown-item">OOP in JS</a>
+</li>
+            
+<li>
+    <a href="../../interviews/references/" class="dropdown-item">Interview Preperation</a>
+</li>
+            
+<li>
+    <a href="../../interviews/self_introduction/" class="dropdown-item">Self Introduction</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Javascript</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../javascript/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../javascript/arrays/" class="dropdown-item">Arrays</a>
+</li>
+            
+<li>
+    <a href="../../javascript/cli/" class="dropdown-item">CLI</a>
+</li>
+            
+<li>
+    <a href="../../javascript/datetime/" class="dropdown-item">Date and Time</a>
+</li>
+            
+<li>
+    <a href="../../javascript/functions/" class="dropdown-item">Functions</a>
+</li>
+            
+<li>
+    <a href="../../javascript/generaljs/" class="dropdown-item">General JS</a>
+</li>
+            
+<li>
+    <a href="../../javascript/numbers/" class="dropdown-item">Numbers</a>
+</li>
+            
+<li>
+    <a href="../../javascript/objects/" class="dropdown-item">Objects</a>
+</li>
+            
+<li>
+    <a href="../../javascript/strings/" class="dropdown-item">Strings</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Node</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../node/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../node/argv/" class="dropdown-item">Argv</a>
+</li>
+            
+<li>
+    <a href="../../node/node/" class="dropdown-item">Node</a>
+</li>
+            
+<li>
+    <a href="../../node/stdout/" class="dropdown-item">process.stdout, process.stdin</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Programming languages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../programming-languages/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../programming-languages/go/" class="dropdown-item">GoLang Docs</a>
+</li>
+            
+<li>
+    <a href="../../programming-languages/python/" class="dropdown-item">python</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software development</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../software-development/" class="dropdown-item">software\_development</a>
+</li>
+            
+<li>
+    <a href="../../software-development/agile/" class="dropdown-item">Agile process</a>
+</li>
+            
+<li>
+    <a href="../../software-development/requirments/" class="dropdown-item">Requirments</a>
+</li>
+            
+<li>
+    <a href="../../software-development/terminology/" class="dropdown-item">programming terminoloy</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Think</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../think/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../think/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../think/thinking_logically_games/" class="dropdown-item">thinking\_logically\_games</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tools</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../bash/" class="dropdown-item">Bash</a>
+</li>
+            
+<li>
+    <a href="../docker/" class="dropdown-item">Docker</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Git</a>
+</li>
+            
+<li>
+    <a href="../grunt/" class="dropdown-item">Grunt</a>
+</li>
+            
+<li>
+    <a href="../linux/" class="dropdown-item">linux</a>
+</li>
+            
+<li>
+    <a href="../shel_scripting/" class="dropdown-item">Shel scripting</a>
+</li>
+            
+<li>
+    <a href="../vim/" class="dropdown-item">Vim</a>
+</li>
+            
+<li>
+    <a href="../windows/" class="dropdown-item">Windows</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Web</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../web/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../web/dom/" class="dropdown-item">DOM</a>
+</li>
+            
+<li>
+    <a href="../../web/fonts/" class="dropdown-item">Fonts I like</a>
+</li>
+            
+<li>
+    <a href="../../web/meta/" class="dropdown-item">Meta</a>
+</li>
+            
+<li>
+    <a href="../../web/pwa/" class="dropdown-item">Progressive Web Apps PWA</a>
+</li>
+            
+<li>
+    <a href="../../web/seo/" class="dropdown-item">SEO</a>
+</li>
+            
+<li>
+    <a href="../../web/urls/" class="dropdown-item">URLs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Todo</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../todo/to_learn/" class="dropdown-item">list of things to learn more about them</a>
+</li>
+            
+<li>
+    <a href="../../../todo/to_record/" class="dropdown-item">Things I need to make a videos about</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../projects/projects/" class="dropdown-item">list of live projects:</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../docker/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../grunt/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#git" class="nav-link">Git</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#theory-1" class="nav-link">Theory [1]:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#logging" class="nav-link">logging</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#commits" class="nav-link">commits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#undo-changes" class="nav-link">Undo changes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#branches" class="nav-link">Branches</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#remote" class="nav-link">remote</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gitconfig" class="nav-link">gitconfig</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git-blame" class="nav-link">git blame</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git-stash" class="nav-link">git stash</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git-rebase-2" class="nav-link">git rebase [2]</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git-bisect" class="nav-link">git bisect</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#references" class="nav-link">references</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<!-- markdownlint-disable MD004 MD026 MD009 -->
+<h1 id="git">Git</h1>
+<h2 id="theory-1">Theory [1]:</h2>
+<ul>
+<li>data types in git system:</li>
+</ul>
+<p>```java
+    /<em> 1 </em>/ type blob = array<bytes> // file = blob, contain text as bytes</p>
+<pre><code>/* 2 */ type tree = map&lt;string&gt;&lt;tree | blog&gt; // tree = folder, the string (name of folder) points to the 
+      //contents ( can be files or folders) (blobs or another tree)
+
+/* 3 */ type commit =  struct {
+  parents : array &lt;commits&gt;  // the actual commit, snapchot of the whole contnet of the repo
+  author : string
+  message : string
+  snapshot: commit
+
+}
+
+/* 4 */ type object = blob | tree | commit // we refer to any type with object
+
+/* 5 */ type objects = map &lt;string&gt;&lt;object&gt; // the string (object name) points to the actual object
+
+/* 6 */ function store (object){
+    id = hash(object); // hash the object then store this hash in objects map, where it points to the actual object
+    objects[id] = object;
+}
+
+/* 7 */ function load (id){
+   return objects[id]; // it retrives the actual object by its id (or hash)
+}
+
+/* 8 */ type references = map &lt;string&gt; &lt;string&gt; // maps the names I give to the hashes that git gives,
+      // so I can access eather by hash or my name.
+</code></pre>
+<p>```</p>
+<p><img alt="theory of git" src="https://i.imgur.com/9Jmls3W.png" /></p>
+<h2 id="logging">logging</h2>
+<ul>
+<li>loging info about repo status:</li>
+</ul>
+<p><code>javascript
+    git log --oneline --graph // list all commits, line for every commit
+    git log --all --graph --decorate // more visual representation.</code></p>
+<ul>
+<li>
+<p>log more data on a specific commit [1]:</p>
+<p><code>git
+  git cat-file -p &lt;commit hash&gt;</code></p>
+</li>
+</ul>
+<h2 id="commits">commits</h2>
+<ul>
+<li>unstage last commit:</li>
+</ul>
+<p><code>javascript
+    git reset --soft HEAD~1 // unstage last commit and keep the changes
+    git reset --hard HEAD~1 // unstage last commit and discard the changes ** careful</code></p>
+<ul>
+<li>show diff:</li>
+</ul>
+<p>```javascript
+      git diff  // shows diff between HEAD commit, and your files now for entire repo
+      git diff <file name> // shows diff between HEAD commit, and your files now for specific file
+      git diff <commit1 | branch1> <commit2 | branch2> /<em> diff between commit1/branch1 and commit2/branch2 for all files </em>/
+      git diff <commit1 | branch1> <commit2 | branch2> <file name> /<em> diff between commit1/branch1 and commit2/branch2 for specifi file. </em>/
+      git diff --cached // show the staged chunks</p>
+<p>```</p>
+<ul>
+<li>delete un staged changes :</li>
+</ul>
+<p><code>javascript
+      git checkout &lt;file name&gt; // through away all un stagged changes
+      git commit --amend // edit a commit’s contents/message</code></p>
+<ul>
+<li>stage only part of the changes to one file (stage chunk of a file):</li>
+</ul>
+<p><code>js
+  git add -p &lt;file name&gt; // open interactive terminal to choose which parts u want to commit
+  git diff --cached // show the staged chunks</code></p>
+<ul>
+<li>show</li>
+</ul>
+<p><code>js
+  git show &lt;commit hash&gt; // show deatailed info for that commit</code></p>
+<h1 id="undo-changes">Undo changes</h1>
+<ul>
+<li>discard all changes before staging or commiting them</li>
+</ul>
+<p><code>git
+      git reset --hard</code>
+- discard changes in one file:</p>
+<p><code>git
+      git checkout -- &lt;file&gt;</code></p>
+<h2 id="branches">Branches</h2>
+<ul>
+<li>
+<p>list all branches:</p>
+<p><code>javascript
+    git branch // all branches
+    git branch -a  // list local and remote branches
+    git branch -r  // list remote branches only
+    git show-branch // list branches and their last commit
+    git branch -vv // list all branches that my env is aware of in details.</code></p>
+</li>
+<li>
+<p>create Branches</p>
+</li>
+</ul>
+<p><code>javascript
+    git branch &lt;branch name&gt;; git checkout &lt;branch name&gt;; // create new branch, checkout to its
+    git checkout -b &lt;branch name&gt; // create new branch, checkout to its</code></p>
+<ul>
+<li>delete branches</li>
+</ul>
+<p><code>javascript
+  git branch -d &lt;branch name&gt; //delete branch locally
+  git branch -D &lt;branch name&gt; // force delete branch locally, if the branch did not merged (force)
+  git push origin --delete &lt;branch name&gt;  // delete remote branch</code></p>
+<ul>
+<li>remove all deleted remote branches from  local environment (list of branches in VS code)s:</li>
+</ul>
+<p><code>javascript
+   git fetch --prune //rmove deleted branches from VS list</code></p>
+<ul>
+<li>merge branches:</li>
+</ul>
+<p>```javascript
+    git merge <branch name> // merges brannc_name with the current branch you are in.
+    git merge --abort // aborting merge command
+    git merge --continue // continuing merge process after we resolve conflicts.</p>
+<p>```</p>
+<ul>
+<li>reslove conflicts:</li>
+</ul>
+<p><code>javascript
+  git mergetool // opens interactive command line tool to resolve  conflicts, or open your editor</code></p>
+<h2 id="remote">remote</h2>
+<ul>
+<li>clone</li>
+</ul>
+<p>```javascript
+    git clone <url> <folder name> // clone remote repo to ur env with all version control history
+    git clone <url> <folder name> --shallow // clone only the latest snapshot of remote repo to ur env.</p>
+<p>```</p>
+<ul>
+<li>fetch and pull:</li>
+</ul>
+<p><code>js
+  git push // if u set upstream, u can push directly to the origin.
+  git fetch &lt;remote&gt; &lt;branch&gt; // fetch changes in the remote branch, but don't merge them. 
+  git fetch &lt;remote&gt; &lt;branch&gt;; git merge; // fetch remote branch, merge it with the current branches
+  git pull &lt;remote&gt; &lt;branch&gt;  // fetch remote branch and merge it.</code></p>
+<ul>
+<li>handle remote branches: </li>
+</ul>
+<p><code>javascript
+  git remote // list all remote repos
+  git remote add &lt;name&gt; &lt;url&gt; // add remote repo, u can access it by name.
+  git push &lt;remote name&gt; &lt;local branch&gt;:&lt;remote branch&gt; // push local branch content into remote branch.
+  "git branch --set-upstream-to=&lt;remote_name&gt;"  // setting the upstream as remote repo</code></p>
+<h2 id="gitconfig">gitconfig</h2>
+<h2 id="git-blame">git blame</h2>
+<ul>
+<li>show whose and which commits resposible for particular challenges</li>
+</ul>
+<p><code>js
+  git blame &lt;file name&gt; // show whose and which commits resposible for every line in the file</code></p>
+<h2 id="git-stash">git stash</h2>
+<ul>
+<li>save changes temporarly without staging them, then retrive those changes later</li>
+</ul>
+<p><code>js
+  git stash // save changes temprarly
+  git stash pop // retrive stashed changes</code></p>
+<h2 id="git-rebase-2">git rebase [2]</h2>
+<ul>
+<li>The second way of combining work between branches is rebasing (first is merging).</li>
+<li>Rebasing takes a set of commits, "copies" them, and plops them down somewhere else.</li>
+<li>
+<p>rebasing can be used to make a nice linear sequence of commits. The commit log / history of the repository will be a lot cleaner if only rebasing is allowed.</p>
+</li>
+<li>
+<p>we have this situation:</p>
+<p><img alt="start" src="https://i.imgur.com/gH3fv3m.png" /></p>
+</li>
+<li>
+<p><code>git rebase master</code></p>
+<p><img alt="git rebase master" src="https://i.imgur.com/GfbW4CF.png" /></p>
+<p>the commit C3 still exists somewhere (it has a faded appearance in the tree), and C3' is the "copy" that we rebased onto master.</p>
+</li>
+<li>
+<p><code>git rebase bugfix</code></p>
+</li>
+</ul>
+<p><img alt="git rebase bugfix" src="https://i.imgur.com/F9uTUgO.png" /></p>
+<p>Since master was an ancestor of bugFix, git simply moved the master branch reference forward in history.</p>
+<ul>
+<li>rebase commands:</li>
+</ul>
+<p><code>js
+  git rebase &lt;branch name&gt; // rebase the parrelel branch into the main backbone of changes
+  git rebase -i // interactive rebasing</code></p>
+<h2 id="git-bisect">git bisect</h2>
+<ul>
+<li>manually search history for something</li>
+<li>useful in find the first commit where something broke</li>
+<li>do binary search in the history</li>
+</ul>
+<h2 id="references">references</h2>
+<ul>
+<li>[1] <a href="https://www.youtube.com/watch?v=2sjqTHE0zok&amp;t=3020s">CAMBRIDGE: lecture 6 : version control</a></li>
+<li>[2] <a href="https://learngitbranching.js.org/">learnbranching.js.org</a></li>
+<li>[3] <a href="https://nvie.com/posts/a-successful-git-branching-model/">successful git branching model</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Unit1: Databases and Relational Data Model - My Docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Knowledge base <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Books</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../books/" class="dropdown-item">list of recommended books</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cs2203 database1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Databases 1 CS-2203</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">Unit1: Databases and Relational Data Model</a>
+</li>
+            
+<li>
+    <a href="../unit2/" class="dropdown-item">Unit 2: Conceptual Data Model</a>
+</li>
+            
+<li>
+    <a href="../unit3/" class="dropdown-item">Unit 3: Relational Database Design</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">General</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/" class="dropdown-item">Table of contents</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/advanced/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/advanced/design_patterns/" class="dropdown-item">Design Patterns</a>
+</li>
+            
+<li>
+    <a href="../../general/advanced/oop/" class="dropdown-item">Object Oriented Programming</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/algorithms/" class="dropdown-item">Data Structures and Algorithms Notes</a>
+</li>
+            
+<li>
+    <a href="../../general/algorithms/algorithms-on-graphs/" class="dropdown-item">Algorithms on Graphs</a>
+</li>
+            
+<li>
+    <a href="../../general/algorithms/algorithms/" class="dropdown-item">Algorithms</a>
+</li>
+            
+<li>
+    <a href="../../general/algorithms/freecodecamp/" class="dropdown-item">Free Code Camp Algorithms section</a>
+</li>
+            
+<li>
+    <a href="../../general/algorithms/mit6006/" class="dropdown-item">Algorithms Notes</a>
+</li>
+            
+<li>
+    <a href="../../general/algorithms/quick_find/" class="dropdown-item">quick-find</a>
+</li>
+            
+<li>
+    <a href="../../general/algorithms/quick_union/" class="dropdown-item">quick-union</a>
+</li>
+            
+<li>
+    <a href="../../general/algorithms/union_find/" class="dropdown-item">union-find</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Examples</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithm toolbox</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/algorithms/examples/algorithm-toolbox/" class="dropdown-item">algoritm toolbox</a>
+</li>
+            
+<li>
+    <a href="../../general/algorithms/examples/algorithm-toolbox/algorithms_notes/" class="dropdown-item">Algorithms Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Week2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/algorithms/examples/algorithm-toolbox/week2/" class="dropdown-item">week2</a>
+</li>
+            
+<li>
+    <a href="../../general/algorithms/examples/algorithm-toolbox/week2/week2/" class="dropdown-item">week2</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/api/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/api/api-list/" class="dropdown-item">List of Greet APIs</a>
+</li>
+            
+<li>
+    <a href="../../general/api/packages/" class="dropdown-item">packages Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dataStructures</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/dataStructures/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/dataStructures/binary_trees/" class="dropdown-item">Binary search trees</a>
+</li>
+            
+<li>
+    <a href="../../general/dataStructures/data_structures/" class="dropdown-item">data structures</a>
+</li>
+            
+<li>
+    <a href="../../general/dataStructures/disjoint_setes/" class="dropdown-item">Disjoint Sets</a>
+</li>
+            
+<li>
+    <a href="../../general/dataStructures/hash_tables/" class="dropdown-item">Hash Tables</a>
+</li>
+            
+<li>
+    <a href="../../general/dataStructures/heap/" class="dropdown-item">Heap</a>
+</li>
+            
+<li>
+    <a href="../../general/dataStructures/linked_lists/" class="dropdown-item">Linked Lists</a>
+</li>
+            
+<li>
+    <a href="../../general/dataStructures/priority_queue/" class="dropdown-item">priority queue</a>
+</li>
+            
+<li>
+    <a href="../../general/dataStructures/queue/" class="dropdown-item">queue</a>
+</li>
+            
+<li>
+    <a href="../../general/dataStructures/stack/" class="dropdown-item">stack</a>
+</li>
+            
+<li>
+    <a href="../../general/dataStructures/trees/" class="dropdown-item">trees</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Databases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/databases/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/databases/mongo/" class="dropdown-item">MongoDB</a>
+</li>
+            
+<li>
+    <a href="../../general/databases/mongoose/" class="dropdown-item">Mongoose</a>
+</li>
+            
+<li>
+    <a href="../../general/databases/redis/" class="dropdown-item">Redis</a>
+</li>
+            
+<li>
+    <a href="../../general/databases/sequilize/" class="dropdown-item">Sequalize</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Design</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/design/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/design/css/" class="dropdown-item">Css</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/frameworks/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/frameworks/bootstrap/" class="dropdown-item">Bootstrap</a>
+</li>
+            
+<li>
+    <a href="../../general/frameworks/react/" class="dropdown-item">React</a>
+</li>
+            
+<li>
+    <a href="../../general/frameworks/redux/" class="dropdown-item">Redux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Interviews</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/interviews/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/interviews/js_general/" class="dropdown-item">Js general</a>
+</li>
+            
+<li>
+    <a href="../../general/interviews/js_oop/" class="dropdown-item">OOP in JS</a>
+</li>
+            
+<li>
+    <a href="../../general/interviews/references/" class="dropdown-item">Interview Preperation</a>
+</li>
+            
+<li>
+    <a href="../../general/interviews/self_introduction/" class="dropdown-item">Self Introduction</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Javascript</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/javascript/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/javascript/arrays/" class="dropdown-item">Arrays</a>
+</li>
+            
+<li>
+    <a href="../../general/javascript/cli/" class="dropdown-item">CLI</a>
+</li>
+            
+<li>
+    <a href="../../general/javascript/datetime/" class="dropdown-item">Date and Time</a>
+</li>
+            
+<li>
+    <a href="../../general/javascript/functions/" class="dropdown-item">Functions</a>
+</li>
+            
+<li>
+    <a href="../../general/javascript/generaljs/" class="dropdown-item">General JS</a>
+</li>
+            
+<li>
+    <a href="../../general/javascript/numbers/" class="dropdown-item">Numbers</a>
+</li>
+            
+<li>
+    <a href="../../general/javascript/objects/" class="dropdown-item">Objects</a>
+</li>
+            
+<li>
+    <a href="../../general/javascript/strings/" class="dropdown-item">Strings</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Node</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/node/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/node/argv/" class="dropdown-item">Argv</a>
+</li>
+            
+<li>
+    <a href="../../general/node/node/" class="dropdown-item">Node</a>
+</li>
+            
+<li>
+    <a href="../../general/node/stdout/" class="dropdown-item">process.stdout, process.stdin</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Programming languages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/programming-languages/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/programming-languages/go/" class="dropdown-item">GoLang Docs</a>
+</li>
+            
+<li>
+    <a href="../../general/programming-languages/python/" class="dropdown-item">python</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software development</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/software-development/" class="dropdown-item">software\_development</a>
+</li>
+            
+<li>
+    <a href="../../general/software-development/agile/" class="dropdown-item">Agile process</a>
+</li>
+            
+<li>
+    <a href="../../general/software-development/requirments/" class="dropdown-item">Requirments</a>
+</li>
+            
+<li>
+    <a href="../../general/software-development/terminology/" class="dropdown-item">programming terminoloy</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Think</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/think/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/think/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../general/think/thinking_logically_games/" class="dropdown-item">thinking\_logically\_games</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tools</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/tools/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/tools/bash/" class="dropdown-item">Bash</a>
+</li>
+            
+<li>
+    <a href="../../general/tools/docker/" class="dropdown-item">Docker</a>
+</li>
+            
+<li>
+    <a href="../../general/tools/git/" class="dropdown-item">Git</a>
+</li>
+            
+<li>
+    <a href="../../general/tools/grunt/" class="dropdown-item">Grunt</a>
+</li>
+            
+<li>
+    <a href="../../general/tools/linux/" class="dropdown-item">linux</a>
+</li>
+            
+<li>
+    <a href="../../general/tools/shel_scripting/" class="dropdown-item">Shel scripting</a>
+</li>
+            
+<li>
+    <a href="../../general/tools/vim/" class="dropdown-item">Vim</a>
+</li>
+            
+<li>
+    <a href="../../general/tools/windows/" class="dropdown-item">Windows</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Web</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../general/web/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../general/web/dom/" class="dropdown-item">DOM</a>
+</li>
+            
+<li>
+    <a href="../../general/web/fonts/" class="dropdown-item">Fonts I like</a>
+</li>
+            
+<li>
+    <a href="../../general/web/meta/" class="dropdown-item">Meta</a>
+</li>
+            
+<li>
+    <a href="../../general/web/pwa/" class="dropdown-item">Progressive Web Apps PWA</a>
+</li>
+            
+<li>
+    <a href="../../general/web/seo/" class="dropdown-item">SEO</a>
+</li>
+            
+<li>
+    <a href="../../general/web/urls/" class="dropdown-item">URLs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Todo</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../todo/to_learn/" class="dropdown-item">list of things to learn more about them</a>
+</li>
+            
+<li>
+    <a href="../../todo/to_record/" class="dropdown-item">Things I need to make a videos about</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../projects/projects/" class="dropdown-item">list of live projects:</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../unit2/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#unit1-databases-and-relational-data-model" class="nav-link">Unit1: Databases and Relational Data Model</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#reading" class="nav-link">Reading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#types-of-information-models" class="nav-link">Types of information models</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#career-paths-with-databases" class="nav-link">Career paths with databases</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#chapter-2-relational-data-model" class="nav-link">Chapter 2: Relational data model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#relational-data-model-constrains" class="nav-link">Relational Data Model Constrains</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#relational-algebra" class="nav-link">Relational Algebra</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="unit1-databases-and-relational-data-model">Unit1: Databases and Relational Data Model</h1>
+<ul>
+<li><a href="#unit1-databases-and-relational-data-model">Unit1: Databases and Relational Data Model</a></li>
+<li><a href="#reading">Reading</a></li>
+<li><a href="#types-of-information-models">Types of information models</a></li>
+<li><a href="#career-paths-with-databases">Career paths with databases</a></li>
+<li><a href="#chapter-2-relational-data-model">Chapter 2: Relational data model</a><ul>
+<li><a href="#basic-concepts">Basic concepts</a></li>
+<li><a href="#1attributes">1.attributes</a></li>
+<li><a href="#2-domain">2. domain</a></li>
+<li><a href="#3-tuples">3. Tuples</a></li>
+<li><a href="#4-relations">4. relations</a></li>
+<li><a href="#5-schemas">5. Schemas</a></li>
+<li><a href="#6-keys">6. keys</a><ul>
+<li><a href="#6-1-candidate-keys">6-1 Candidate keys</a></li>
+<li><a href="#6-2-primary-keys">6-2 primary keys</a></li>
+<li><a href="#6-3-foreign-keys">6-3 Foreign keys</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#relational-data-model-constrains">Relational Data Model Constrains</a><ul>
+<li><a href="#entity-integrity-constrains">Entity integrity constrains</a></li>
+<li><a href="#referential-integrity-constrains">Referential integrity constrains</a></li>
+<li><a href="#in-case-of-deleting--updating-a-tuple-that-has-a-fk-there-are-3-possibilities"><strong>In Case of deleting / Updating a tuple that has a FK, there are 3 possibilities:</strong></a></li>
+<li><a href="#semantic-integrity-constrains">Semantic integrity constrains</a></li>
+<li><a href="#domain-constrains">domain constrains</a></li>
+<li><a href="#null-constrains">NULL constrains</a></li>
+<li><a href="#unique-constrains">UNIQUE constrains</a></li>
+<li><a href="#check-constrains">check constrains</a></li>
+</ul>
+</li>
+<li><a href="#relational-algebra">Relational Algebra</a></li>
+</ul>
+<h2 id="reading">Reading</h2>
+<ol>
+<li>Database Fundamentals, IBM. chapter 1 &amp; 2</li>
+<li>Database design, chapters 1 to 7.</li>
+</ol>
+<h2 id="types-of-information-models">Types of information models</h2>
+<ol>
+<li>Network Model (CODASYL).</li>
+<li>Hierarchial Model (IMS).</li>
+<li>Relational.</li>
+<li>Entity-Relationship (ER).</li>
+<li>Extended Relational.</li>
+<li>Semantic.</li>
+<li>Object-oriented.</li>
+<li>Object-relational.</li>
+<li>semi-structured (XML).</li>
+</ol>
+<h2 id="career-paths-with-databases">Career paths with databases</h2>
+<ol>
+<li>data architect.</li>
+<li>database architect.</li>
+<li>database administrator (DBA).</li>
+<li>applications developer.</li>
+</ol>
+<h2 id="chapter-2-relational-data-model">Chapter 2: Relational data model</h2>
+<h3 id="basic-concepts">Basic concepts</h3>
+<h4 id="1attributes">1.attributes</h4>
+<ul>
+<li>represent column in a table,field in the object.</li>
+<li>data characteristics of the object.</li>
+<li>all attributes hve values.</li>
+</ul>
+<h4 id="2-domain">2. domain</h4>
+<ul>
+<li>set of all possible values for an attribute.</li>
+<li>these values <code>MUST</code> be <code>atomic</code>: 1. non-decomposable. 2. smallest possible unit of dat that can not be
+  divided.</li>
+<li><strong>eg:</strong> domain of Boolean attribute is [true, false].</li>
+<li>the comparison between the values of 2 attributes is only possible if the 2 attributes have the same domain, otherwise, the comparison does not make sense.</li>
+<li>domains a re not explicitly stored in the DB, but they <code>MUST</code> be part of the DB definition.</li>
+<li>each attribute definition <code>MUST</code> include a reference to its domain definition in the DB definition part.</li>
+</ul>
+<h4 id="3-tuples">3. Tuples</h4>
+<ul>
+<li>ordered set of values that represent data in the relation.</li>
+<li>represents: row in a table, record in a file.</li>
+</ul>
+<h4 id="4-relations">4. relations</h4>
+<ul>
+<li>relations represent tables. each relation has a header and body.</li>
+<li>relation header: fixed set of attributes, represent the head of a table, and each of theses attributes corresponds to a domain.</li>
+<li>relation body: set of tuples represent the table rows, each tuple has value corresponds ot the attribute in the header.</li>
+<li><strong>relation Degree</strong>: number of attribute in the header, eg. unary, binary, nary...</li>
+<li><strong>relation cardinality</strong>: number of tuples in the relation = rows count, changes overtime (with adding/removing records).</li>
+<li><strong>relation instance</strong>: the state of a relation at a specific moment of time.</li>
+<li><strong>relation properties</strong>:</li>
+<li>there are no duplicate tuples.</li>
+<li>tuples are unordered.</li>
+<li>attributes are unordered.</li>
+<li>attribute values are atomic.</li>
+</ul>
+<h4 id="5-schemas">5. Schemas</h4>
+<ul>
+<li>formal description for all DB relations and relationships between them.</li>
+</ul>
+<h4 id="6-keys">6. keys</h4>
+<ul>
+<li>keys are identifiers for the tuple.</li>
+<li>used for:</li>
+<li>enforce rules and constrains on DB.</li>
+<li>constrains are important for maintaining consistency and correctness of DB.</li>
+<li>DBMS are responsible for maintaining keys.</li>
+<li><strong>keys types</strong>:</li>
+<li>candidate keys.</li>
+<li>primary keys (PK).</li>
+<li>foreign keys (FK).</li>
+</ul>
+<h5 id="6-1-candidate-keys">6-1 Candidate keys</h5>
+<ul>
+<li>unique identifier for the tuples of a relation, that consists of one or more attributes.</li>
+<li>if no candidate keys have been specified, the set of k = (all tuple values), might work as a candidate key if and only if:</li>
+<li>K is unique overtime (no other tuple with the same values).</li>
+<li>minimality: none of the tuple values can be discarded without destroying the uniqueness property.</li>
+<li>using <strong>Data Definition Language (DDL)</strong> you can specify candidate keys by adding <code>UNIQUE</code> keyword to the definition of the attribute.</li>
+<li>a relation can have multiple candidate keys:</li>
+<li>one key -&gt; primary key.</li>
+<li>other keys -&gt; alternate keys.</li>
+</ul>
+<h5 id="6-2-primary-keys">6-2 primary keys</h5>
+<ul>
+<li>candidate key that has been chosen to represent the relationship.</li>
+<li>must be: 1. unique. 2. not null.</li>
+<li>primary key is an attribute that has no meaning in the real life, but it always exist and unique, thus it can be named:</li>
+<li>surrogate key.</li>
+<li>artificial key.</li>
+</ul>
+<h5 id="6-3-foreign-keys">6-3 Foreign keys</h5>
+<ul>
+<li>an attribute that references a primary key from another relation.</li>
+<li>FK and its correspondents PK (from the other relation) <code>MUST</code> have the same domain.</li>
+</ul>
+<h2 id="relational-data-model-constrains">Relational Data Model Constrains</h2>
+<ol>
+<li>entity integrity constrains.</li>
+<li>referential integrity constrains.</li>
+<li>semantic integrity constrains.</li>
+</ol>
+<h3 id="entity-integrity-constrains">Entity integrity constrains</h3>
+<ul>
+<li>no attribute that participates in PK can have <code>NULL</code> value.</li>
+<li>in real life: an entity with NULL PK means that this entity does not exist.</li>
+<li>NULL value means on of the following:</li>
+<li>absence of value.</li>
+<li>undefined value.</li>
+<li>value that does not belong to the attribute domain.</li>
+</ul>
+<h3 id="referential-integrity-constrains">Referential integrity constrains</h3>
+<ul>
+<li>for every value of FK in a relation R1, there <code>MUST</code> be a tuple from the other relation R2 so that, PK (R2) = FK (R1).</li>
+<li>FK with NULL value, means that the <strong>relationship</strong> between the this tuple and the other relation does not exist.</li>
+</ul>
+<h4 id="in-case-of-deleting-updating-a-tuple-that-has-a-fk-there-are-3-possibilities"><strong>In Case of deleting / Updating a tuple that has a FK, there are 3 possibilities:</strong></h4>
+<ol>
+<li><strong>CASCADE</strong>: the operation cascades to the record of the second relations and affects the tuple that has been referenced with <strong>FK</strong>.</li>
+<li><strong>RESTRICTS</strong>: prevent the operation from happening on all tuples with FK that is not NULL, so the operation is rejected.</li>
+<li><strong>NULLIFIES</strong>: update the record from the second relation that has been referenced by the FK, set the value that points to the affected tuple to be <strong>NULL</strong>.</li>
+</ol>
+<h3 id="semantic-integrity-constrains">Semantic integrity constrains</h3>
+<ul>
+<li>includes:</li>
+<li>domain constrains.</li>
+<li>null constrains.</li>
+<li>unique constrains.</li>
+<li>check constrains.</li>
+</ul>
+<h4 id="domain-constrains">domain constrains</h4>
+<ul>
+<li>all values of an attribute <strong>MUST</strong> belong to its domain.</li>
+<li>domain constrains include:</li>
+<li><strong>Format constrains</strong>: all values must match a specific pattern, <strong>eg.</strong> regex, 6 digits...</li>
+<li><strong>Range Constrains</strong>: all values must be in a specific range, <strong>eg.</strong> number of employees in one department can not exceed the number of employees in the whole company.</li>
+</ul>
+<h4 id="null-constrains">NULL constrains</h4>
+<ul>
+<li>value can not be null.</li>
+<li><code>DEFAULT</code> keyword can be used to give the a attribute a default value in the case of NULL.</li>
+</ul>
+<h4 id="unique-constrains">UNIQUE constrains</h4>
+<ul>
+<li>no 2 tuples can have the same value for this attribute.</li>
+<li>NULL is a valid unique value.</li>
+</ul>
+<h4 id="check-constrains">check constrains</h4>
+<ul>
+<li>a condition in a relation data that always checked when the data is manipulated.</li>
+<li>when defining the check constrains you can add instructions that can be executed when the check fails, and if these instructions are not provided, the operation will be rejected.</li>
+</ul>
+<h2 id="relational-algebra">Relational Algebra</h2>
+<ul>
+<li>set of operators to manipulate relations.</li>
+<li>each operator takes one or more relations as <strong>INPUT</strong> and returns a new relation as <strong>OUTPUT</strong>.</li>
+<li>operators are divided into:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">traditional</th>
+<th>--------------</th>
+<th align="left">special</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1. union</td>
+<td></td>
+<td align="left">1. select</td>
+</tr>
+<tr>
+<td align="left">2. intersection</td>
+<td></td>
+<td align="left">2. project</td>
+</tr>
+<tr>
+<td align="left">3. difference</td>
+<td></td>
+<td align="left">3. join</td>
+</tr>
+<tr>
+<td align="left">4. cartesian product</td>
+<td></td>
+<td align="left">4. divide</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>operator</th>
+<th>definition of results</th>
+<th>characteristics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>UNION</strong></td>
+<td>- R1 UNION R2 = set of all tuples that belongs to R1, <strong>or</strong> R2,<strong>or</strong> both</td>
+<td>1. associative. 2. commutative</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>3. R1, R2 must be union-compatible</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>INTERSECTION</strong></td>
+<td>- R1 INTERSECT R2 = set of tuples that belong to <strong>Both</strong> relations.</td>
+<td>same as UNION</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>DIFFERENCE</strong></td>
+<td>- R1 DIFF R2 = all tuples that belongs to R1, <strong>AND NOT</strong> belong to R2.</td>
+<td>1. R1, R2 must be union-compatible</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>CARTESIAN PRODUCT</strong></td>
+<td>- R1 <strong>times</strong> R2 = set of all tuples where each tuple of the output results</td>
+<td>1. R1, R2 must be union-compatible</td>
+</tr>
+<tr>
+<td></td>
+<td>from a concatenation operation between one tuple from R1, and correspondents</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>tuple from R2.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>- if R1 si of degree n, R2 of degree m =&gt; result is of degree <code>n+m</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>SELECTION</strong></td>
+<td>- takes one relation <strong>AND</strong> one condition as input</td>
+<td>1. result degree is same as input relation</td>
+</tr>
+<tr>
+<td></td>
+<td>- selects all tuples from the relation that satisfies the input condition.</td>
+<td>2. result cardinality is less or equal to the input.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>PROJECTION</strong></td>
+<td>- takes one relation <strong>AND</strong> list of attributes as input.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>- returns subset of tuples of a relation with duplicate tuples are eliminated.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>JOIN</strong></td>
+<td>- concatenates 2 relations based on a joining condition or predicate.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>theta-join</strong>: join result <code>MUST</code> must includes 2 identical attributes</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>(one from each relation),</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>when one attribute is eliminated, it is <strong>natural join</strong>.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>when some tuples of 2 relations don't have matching tuple =&gt; <strong>outer join</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>left outer join</strong>: result includes all tuples of R but not all tuples of L</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>right outer join</strong>: result includes all tuples of L but not all tuples of R</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>full outer join</strong>: result includes all tuples of R <strong>AND ALL</strong> tuples of L</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>DIVISION</strong></td>
+<td>- divides a relation R1 (degree n+m), and relation R2 degree(m) result of degree n</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>- the attribute we divide on should be on the same domain.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>- we divide on the attribute (n+i) from R1, and i from R2.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>- results contains the tuples of R2 that belongs to R1.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>- result cardinality equals cardinality of R2.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>DOM - My Docs</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Knowledge base <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Books</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../books/" class="dropdown-item">list of recommended books</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Cs2203 database1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../cs2203-database1/" class="dropdown-item">Databases 1 CS-2203</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit1/" class="dropdown-item">Unit1: Databases and Relational Data Model</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit2/" class="dropdown-item">Unit 2: Conceptual Data Model</a>
+</li>
+            
+<li>
+    <a href="../../../cs2203-database1/unit3/" class="dropdown-item">Unit 3: Relational Database Design</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">General</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../" class="dropdown-item">Table of contents</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Advanced</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../advanced/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../advanced/design_patterns/" class="dropdown-item">Design Patterns</a>
+</li>
+            
+<li>
+    <a href="../../advanced/oop/" class="dropdown-item">Object Oriented Programming</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../algorithms/" class="dropdown-item">Data Structures and Algorithms Notes</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/algorithms-on-graphs/" class="dropdown-item">Algorithms on Graphs</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/algorithms/" class="dropdown-item">Algorithms</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/freecodecamp/" class="dropdown-item">Free Code Camp Algorithms section</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/mit6006/" class="dropdown-item">Algorithms Notes</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/quick_find/" class="dropdown-item">quick-find</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/quick_union/" class="dropdown-item">quick-union</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/union_find/" class="dropdown-item">union-find</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Examples</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Algorithm toolbox</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/" class="dropdown-item">algoritm toolbox</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/algorithms_notes/" class="dropdown-item">Algorithms Notes</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Week2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/week2/" class="dropdown-item">week2</a>
+</li>
+            
+<li>
+    <a href="../../algorithms/examples/algorithm-toolbox/week2/week2/" class="dropdown-item">week2</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Api</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../api/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../api/api-list/" class="dropdown-item">List of Greet APIs</a>
+</li>
+            
+<li>
+    <a href="../../api/packages/" class="dropdown-item">packages Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">dataStructures</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../dataStructures/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/binary_trees/" class="dropdown-item">Binary search trees</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/data_structures/" class="dropdown-item">data structures</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/disjoint_setes/" class="dropdown-item">Disjoint Sets</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/hash_tables/" class="dropdown-item">Hash Tables</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/heap/" class="dropdown-item">Heap</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/linked_lists/" class="dropdown-item">Linked Lists</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/priority_queue/" class="dropdown-item">priority queue</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/queue/" class="dropdown-item">queue</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/stack/" class="dropdown-item">stack</a>
+</li>
+            
+<li>
+    <a href="../../dataStructures/trees/" class="dropdown-item">trees</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Databases</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../databases/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../databases/mongo/" class="dropdown-item">MongoDB</a>
+</li>
+            
+<li>
+    <a href="../../databases/mongoose/" class="dropdown-item">Mongoose</a>
+</li>
+            
+<li>
+    <a href="../../databases/redis/" class="dropdown-item">Redis</a>
+</li>
+            
+<li>
+    <a href="../../databases/sequilize/" class="dropdown-item">Sequalize</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Design</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../design/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../design/css/" class="dropdown-item">Css</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Frameworks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../frameworks/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/bootstrap/" class="dropdown-item">Bootstrap</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/react/" class="dropdown-item">React</a>
+</li>
+            
+<li>
+    <a href="../../frameworks/redux/" class="dropdown-item">Redux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Interviews</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../interviews/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../interviews/js_general/" class="dropdown-item">Js general</a>
+</li>
+            
+<li>
+    <a href="../../interviews/js_oop/" class="dropdown-item">OOP in JS</a>
+</li>
+            
+<li>
+    <a href="../../interviews/references/" class="dropdown-item">Interview Preperation</a>
+</li>
+            
+<li>
+    <a href="../../interviews/self_introduction/" class="dropdown-item">Self Introduction</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Javascript</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../javascript/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../javascript/arrays/" class="dropdown-item">Arrays</a>
+</li>
+            
+<li>
+    <a href="../../javascript/cli/" class="dropdown-item">CLI</a>
+</li>
+            
+<li>
+    <a href="../../javascript/datetime/" class="dropdown-item">Date and Time</a>
+</li>
+            
+<li>
+    <a href="../../javascript/functions/" class="dropdown-item">Functions</a>
+</li>
+            
+<li>
+    <a href="../../javascript/generaljs/" class="dropdown-item">General JS</a>
+</li>
+            
+<li>
+    <a href="../../javascript/numbers/" class="dropdown-item">Numbers</a>
+</li>
+            
+<li>
+    <a href="../../javascript/objects/" class="dropdown-item">Objects</a>
+</li>
+            
+<li>
+    <a href="../../javascript/strings/" class="dropdown-item">Strings</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Node</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../node/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../node/argv/" class="dropdown-item">Argv</a>
+</li>
+            
+<li>
+    <a href="../../node/node/" class="dropdown-item">Node</a>
+</li>
+            
+<li>
+    <a href="../../node/stdout/" class="dropdown-item">process.stdout, process.stdin</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Programming languages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../programming-languages/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../programming-languages/go/" class="dropdown-item">GoLang Docs</a>
+</li>
+            
+<li>
+    <a href="../../programming-languages/python/" class="dropdown-item">python</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Software development</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../software-development/" class="dropdown-item">software\_development</a>
+</li>
+            
+<li>
+    <a href="../../software-development/agile/" class="dropdown-item">Agile process</a>
+</li>
+            
+<li>
+    <a href="../../software-development/requirments/" class="dropdown-item">Requirments</a>
+</li>
+            
+<li>
+    <a href="../../software-development/terminology/" class="dropdown-item">programming terminoloy</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Think</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../think/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../think/general/" class="dropdown-item">General</a>
+</li>
+            
+<li>
+    <a href="../../think/thinking_logically_games/" class="dropdown-item">thinking\_logically\_games</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tools</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../tools/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../tools/bash/" class="dropdown-item">Bash</a>
+</li>
+            
+<li>
+    <a href="../../tools/docker/" class="dropdown-item">Docker</a>
+</li>
+            
+<li>
+    <a href="../../tools/git/" class="dropdown-item">Git</a>
+</li>
+            
+<li>
+    <a href="../../tools/grunt/" class="dropdown-item">Grunt</a>
+</li>
+            
+<li>
+    <a href="../../tools/linux/" class="dropdown-item">linux</a>
+</li>
+            
+<li>
+    <a href="../../tools/shel_scripting/" class="dropdown-item">Shel scripting</a>
+</li>
+            
+<li>
+    <a href="../../tools/vim/" class="dropdown-item">Vim</a>
+</li>
+            
+<li>
+    <a href="../../tools/windows/" class="dropdown-item">Windows</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Web</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active">DOM</a>
+</li>
+            
+<li>
+    <a href="../fonts/" class="dropdown-item">Fonts I like</a>
+</li>
+            
+<li>
+    <a href="../meta/" class="dropdown-item">Meta</a>
+</li>
+            
+<li>
+    <a href="../pwa/" class="dropdown-item">Progressive Web Apps PWA</a>
+</li>
+            
+<li>
+    <a href="../seo/" class="dropdown-item">SEO</a>
+</li>
+            
+<li>
+    <a href="../urls/" class="dropdown-item">URLs</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Todo</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../todo/to_learn/" class="dropdown-item">list of things to learn more about them</a>
+</li>
+            
+<li>
+    <a href="../../../todo/to_record/" class="dropdown-item">Things I need to make a videos about</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../../projects/projects/" class="dropdown-item">list of live projects:</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../fonts/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#dom" class="nav-link">DOM</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#control-scrolling" class="nav-link">control scrolling:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#browser-hsitory" class="nav-link">browser hsitory:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#windowsessionstorage" class="nav-link">window.sessionStorage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#windowindexeddb" class="nav-link">window.IndexedDB</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fetcheventrespondwith" class="nav-link">FetchEvent.respondWith()</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#get-list-of-all-dom-elements" class="nav-link">Get list of all Dom elements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#make-post-request-from-the-browser-instead-of-postman" class="nav-link">Make post Request from the browser instead of postman</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#input-event-after-user-finish-typing-instead-of-onchange" class="nav-link">Input Event after user finish typing instead of onChange</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#resources" class="nav-link">Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="dom">DOM</h1>
+<ul>
+<li><code>input.value</code> is alaways string, event if its type was number.</li>
+<li>client side temporary storage:</li>
+</ul>
+<p><code>javascript
+    window.x = value;   =&gt; window.x;
+    window.localStorage.x = value; =&gt; window.loacalStorage.x;</code></p>
+<ul>
+<li>add event listener to the key and use the key name intead of key code.</li>
+</ul>
+<p><code>javascript
+    window.addEventListener("key-event", (event) =&gt; {
+      event.key == "arrowLeft"; //you can use key name instead of key code.
+    });</code></p>
+<ul>
+<li>make textarea with inly one line and disable multilines: <code>js &lt;textarea rows="1" value ={ value } &gt; { value } &lt;/textare&gt; textarea.onChange = (e) =&gt; { let x = e.target.value; // deleting every new line signs from textarea value x.replace(/(\r\n|\n|\r)/gm, ""); }</code></li>
+<li>sanitize third party code before inject it into your website using <code>innerHTML</code></li>
+</ul>
+<p><code>javascript
+    var sanitizeHTML = function (str) {
+      var temp = document.createElement("div");
+      temp.textContent = str;
+      return temp.innerHTML;
+    };</code></p>
+<ul>
+<li>quickly check existance of a file using vanilla js:</li>
+</ul>
+<p>```javascript
+    function doesFileExist(urlToFile) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("HEAD", urlToFile, false);
+      xhr.send();</p>
+<pre><code>  if (xhr.status == "404") {
+    return false;
+  } else {
+    return true;
+  }
+}
+</code></pre>
+<p>```</p>
+<h2 id="control-scrolling">control scrolling:</h2>
+<pre><code class="language-javascript">    window.scrollTo(x, y); // x,y are the window cordinates.
+
+    /* Using options: */
+
+    window.scrollTo({ top: x, left: y, behavior: 'smooth' });
+</code></pre>
+<h2 id="browser-hsitory">browser hsitory:</h2>
+<pre><code class="language-javascript">    let x = window.history // Array of the nubmer of pages in the window history
+    // you can go back and forth between pages
+    x.goBack()
+    x.foreward()
+
+    // you can never extract the path from window.history
+</code></pre>
+<ul>
+<li>extract the url that you are coming from:</li>
+</ul>
+<p>```javascript
+   let x = document.referrer // "https://www.google.com/"</p>
+<p>// you were in google page and they refer you to here
+  ```</p>
+<p><strong>window location:</strong></p>
+<p><code>javascript
+   // typical window.location object
+   Location =  { 
+       href: "https://www.w3schools.com/js/js_window_location.asp", 
+       ancestorOrigins: DOMStringList, 
+       origin: "https://www.w3schools.com", protocol: "https:",
+       host: "www.w3schools.com", 
+       pathname: "/js/js_window_location.asp"
+   }</code></p>
+<p><strong><code>respondWith()</code></strong></p>
+<p>The respondWith() method of FetchEvent prevents the browser's default fetch handling, and allows you to provide a promise for a Response yourself.</p>
+<p><code>javascript
+       addEventListener('fetch', event =&gt; {
+     // Prevent the default, and handle the request ourselves.
+     event.respondWith(async function() {
+       // Try to get the response from a cache.
+       const cachedResponse = await caches.match(event.request);
+       // Return it if we found one.
+       if (cachedResponse) return cachedResponse;
+       // If we didn't find a match in the cache, use the network.
+       return fetch(event.request);
+     }());
+   });</code></p>
+<p><strong>window.localStorage</strong></p>
+<ul>
+<li>save data into 'localStorage' object.</li>
+<li>saved data will be available on the client side, will stay if the tab closed or the session ended.</li>
+<li>no Expiary date.</li>
+<li>can be cleared only by javascript or clearing browser data for this website.</li>
+<li>data can be stored only as strings, so you need to use <code>JSON.stringify()</code> before saving. </li>
+<li>to retrieve the stringified saved data you need to use <code>JSON.Parse()</code></li>
+<li>more: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage</a></li>
+</ul>
+<h2 id="windowsessionstorage">window.sessionStorage</h2>
+<ul>
+<li>save data into <code>sessionStorage</code> objec.</li>
+<li>if the tab closed or session ended the data will be deleted .</li>
+<li>at most 5MB</li>
+<li>more: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage</a></li>
+</ul>
+<h2 id="windowindexeddb">window.IndexedDB</h2>
+<ul>
+<li>clinet side SQL-like temporary storage.</li>
+<li>allows you to save a significant amount of data, including files/blobs</li>
+<li>
+<ul>
+<li>more: <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="fetcheventrespondwith">FetchEvent.respondWith()</h2>
+<ul>
+<li>more: <a href="https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith">https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith</a></li>
+</ul>
+<p><code>javascript
+  fetchEvent.respondWith(
+  // Promise that resolves to a Response.
+  ​);</code></p>
+<h2 id="get-list-of-all-dom-elements">Get list of all Dom elements</h2>
+<pre><code class="language-javascript">var all = document.getElementsByTagName(&quot;*&quot;);
+</code></pre>
+<h2 id="make-post-request-from-the-browser-instead-of-postman">Make post Request from the browser instead of postman</h2>
+<p><code>js
+    // you don't need the full url, the end point is fine.
+      await fetch('/endpoint', {
+          method: 'POST',
+          Headers: { "Content-Type":"application/json" },
+          body: JSON.stringify({
+                Title: "post0",
+                Post: "first post req from browser"
+                })
+        });</code></p>
+<h2 id="input-event-after-user-finish-typing-instead-of-onchange">Input Event after user <code>finish typing</code> instead of <code>onChange</code></h2>
+<p>```js
+    //setup before functions
+    var typingTimer;                //timer identifier
+    var doneTypingInterval = 1000;  //time in ms, 5 second for example</p>
+<pre><code>//on keyup, start the countdown
+const waitAbitOnKeyUp = (e, i) =&gt; {
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(() =&gt; doneTyping(e, i), doneTypingInterval);
+};
+
+//on keydown, clear the countdown 
+const waitAbitOnKeyDown = () =&gt; {
+    clearTimeout(typingTimer);
+};
+
+//user is "finished typing," do something
+function doneTyping(e, i) {
+    //do something
+}
+</code></pre>
+<p>```</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen">Add to homescreen button form mobiles and new chrome desktop</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
