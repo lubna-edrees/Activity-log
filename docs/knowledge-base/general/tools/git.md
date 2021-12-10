@@ -200,6 +200,15 @@
   ```js
   git stash // save changes temprarly
   git stash pop // retrive stashed changes
+  git stash list // list all stashes as 
+  
+  /**
+   stash@{0}: WIP on feat-reminders: c3012fd chore: reminders final QA and testing adjustments
+   stash@{1}: On develop: stach1
+   stash@{2}: On improve-asana-sync: move to develop
+  */
+  
+  git apply stash@{0} // apply this stash
   ```
 
 ## git rebase [2]
