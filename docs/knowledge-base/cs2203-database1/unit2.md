@@ -271,6 +271,11 @@ when working with DBs, there are three modeling terms [[1]](#References):
   ![final result of the case study](https://i.imgur.com/6Fk0xb3.png)
 - more info here: <https://en.wikipedia.org/wiki/Database_normalization>
 
+## cardinality symbols
+
+![cardinality symobls](https://i.imgur.com/mY3PBoQ.png)
+
+more indo: <https://www.smartdraw.com/entity-relationship-diagram>
 ## References
 
 - [1] [Sharma, N., Perniu, L., Chong, R. F., Iyer, A., Nandan, C., Mitea, A. C., Nonvinkere, M., & Danubianu, M. (2010). Databases fundamentals. _Chapter 3_.](https://public.dhe.ibm.com/software/dw/db2/express-c/wiki/Database_fundamentals.pdf)
