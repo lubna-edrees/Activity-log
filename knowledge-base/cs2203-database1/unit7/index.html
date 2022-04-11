@@ -1,0 +1,3455 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Ahmad Ali">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Unit 7: Database Programming - CS-INDEX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-7-database-programming" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="CS-INDEX" class="md-header__button md-logo" aria-label="CS-INDEX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CS-INDEX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unit 7: Database Programming
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CS-INDEX" class="md-nav__button md-logo" aria-label="CS-INDEX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CS-INDEX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Knowledge base
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Knowledge base" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Knowledge base
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Books
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Books" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Books
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/" class="md-nav__link">
+        list of recommended books
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Cs2203 database1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cs2203 database1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cs2203 database1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Databases 1 CS-2203
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1/" class="md-nav__link">
+        Unit1: Databases and Relational Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit2/" class="md-nav__link">
+        Unit 2: Conceptual Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/" class="md-nav__link">
+        Unit 3: Relational Database Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit4/" class="md-nav__link">
+        Unit 4: Introduction to SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit5/" class="md-nav__link">
+        Unit 5: DDL and DML Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit6/" class="md-nav__link">
+        Unit 6: Querying the Database using SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Unit 7: Database Programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Unit 7: Database Programming
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-in-applications" class="md-nav__link">
+    SQL in applications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transactions" class="md-nav__link">
+    transactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embedded-sql" class="md-nav__link">
+    Embedded SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-sql" class="md-nav__link">
+    static SQL
+  </a>
+  
+    <nav class="md-nav" aria-label="static SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-communications-area-sqlcode-and-sqlstate" class="md-nav__link">
+    SQL communications area, SQLCODE and SQLSTATE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-compiling-of-embedded-sql" class="md-nav__link">
+    pre-compiling of embedded SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-sql" class="md-nav__link">
+    dynamic SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-vs-dynamic-sql" class="md-nav__link">
+    Static vs. dynamic SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-apis" class="md-nav__link">
+    Database APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odbc-and-the-ibm-data-server-cli-driver" class="md-nav__link">
+    ODBC and the IBM Data Server CLI driver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purequery-client-optimizer" class="md-nav__link">
+    pureQuery Client Optimizer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit8/" class="md-nav__link">
+        Unit 8: Database Development Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit9/" class="md-nav__link">
+        Unit 9: Data integrity, Views
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Cs2204 netwroks1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cs2204 netwroks1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Cs2204 netwroks1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_1">
+          Unit1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit1" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Unit1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit1/unit1/" class="md-nav__link">
+        unit 1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_2">
+          Unit6
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit6" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Unit6
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/da6/" class="md-nav__link">
+        Unit 6: Discussion assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/journal/" class="md-nav__link">
+        unit 6: Journal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/unit6/" class="md-nav__link">
+        Unit 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/wa6/" class="md-nav__link">
+        Unit 6: written assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_3">
+          Unit7
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit7" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Unit7
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/" class="md-nav__link">
+        CS2204: Unit7: The Transport Layer (TCP)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/da7/" class="md-nav__link">
+        cs2204: unit 7: Discussion Assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/ja7/" class="md-nav__link">
+        CS2204: unit 7: Journal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/wa7/" class="md-nav__link">
+        CS2204: unit 7: Written Assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_4">
+          Unit8
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit8" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Unit8
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit8/" class="md-nav__link">
+        CS2204: unit 8: Application Layer and Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit8/da8/" class="md-nav__link">
+        CS2204: unit 8: Discussion Assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit8/ja8/" class="md-nav__link">
+        CS2204: unit 8: Journal Assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_5">
+          Unit9
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit9" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Unit9
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit9/" class="md-nav__link">
+        CS2204: unit 9: Revision
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          General
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/" class="md-nav__link">
+        Table of contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/continous-integration-vs-branching/" class="md-nav__link">
+        Continuous Integration Vs Branching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_3">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced/design_patterns/" class="md-nav__link">
+        Design Patterns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced/oop/" class="md-nav__link">
+        Object Oriented Programming
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/" class="md-nav__link">
+        Data Structures and Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/algorithms-on-graphs/" class="md-nav__link">
+        Algorithms on Graphs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/algorithms/" class="md-nav__link">
+        Algorithms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/freecodecamp/" class="md-nav__link">
+        Free Code Camp Algorithms section
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/mit6006/" class="md-nav__link">
+        Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/quick_find/" class="md-nav__link">
+        quick-find
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/quick_union/" class="md-nav__link">
+        quick-union
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/union_find/" class="md-nav__link">
+        union-find
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_4_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4_9_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9_1">
+          Algorithm toolbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithm toolbox" data-md-level="5">
+        <label class="md-nav__title" for="__nav_2_4_4_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithm toolbox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/" class="md-nav__link">
+        algoritm toolbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/algorithms_notes/" class="md-nav__link">
+        Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9_1_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4_9_1_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9_1_3">
+          Week2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Week2" data-md-level="6">
+        <label class="md-nav__title" for="__nav_2_4_4_9_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Week2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/week2/" class="md-nav__link">
+        week2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/week2/week2/" class="md-nav__link">
+        week2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_5">
+          Api
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Api" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/api/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/api/api-list/" class="md-nav__link">
+        List of Greet APIs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/api/packages/" class="md-nav__link">
+        packages Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_6" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_6">
+          dataStructures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="dataStructures" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          dataStructures
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/binary_trees/" class="md-nav__link">
+        Binary search trees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/data_structures/" class="md-nav__link">
+        data structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/disjoint_setes/" class="md-nav__link">
+        Disjoint Sets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/hash_tables/" class="md-nav__link">
+        Hash Tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/heap/" class="md-nav__link">
+        Heap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/linked_lists/" class="md-nav__link">
+        Linked Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/priority_queue/" class="md-nav__link">
+        priority queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/queue/" class="md-nav__link">
+        queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/stack/" class="md-nav__link">
+        stack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/trees/" class="md-nav__link">
+        trees
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_7" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_7">
+          Databases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Databases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Databases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/mongo/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/mongoose/" class="md-nav__link">
+        Mongoose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/redis/" class="md-nav__link">
+        Redis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/sequilize/" class="md-nav__link">
+        Sequalize
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_8" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_8">
+          Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Design" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/design/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/design/css/" class="md-nav__link">
+        Css
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_9" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_9">
+          Frameworks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Frameworks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Frameworks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/bootstrap/" class="md-nav__link">
+        Bootstrap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/react/" class="md-nav__link">
+        React
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/redux/" class="md-nav__link">
+        Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_10" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_10">
+          Interviews
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Interviews" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Interviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/js_general/" class="md-nav__link">
+        Js general
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/js_oop/" class="md-nav__link">
+        OOP in JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/references/" class="md-nav__link">
+        Interview Preperation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/self_introduction/" class="md-nav__link">
+        Self Introduction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_11" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_11">
+          Javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Javascript" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_11">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/arrays/" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/datetime/" class="md-nav__link">
+        Date and Time
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/generaljs/" class="md-nav__link">
+        General JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/is/" class="md-nav__link">
+        IS?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/numbers/" class="md-nav__link">
+        Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/objects/" class="md-nav__link">
+        Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/strings/" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_12" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_12" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_12">
+          Node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_12">
+          <span class="md-nav__icon md-icon"></span>
+          Node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/argv/" class="md-nav__link">
+        Argv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/node/" class="md-nav__link">
+        Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/stdout/" class="md-nav__link">
+        process.stdout, process.stdin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_13" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_13">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programming languages" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_13">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/programming-languages/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/programming-languages/go/" class="md-nav__link">
+        GoLang Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/programming-languages/python/" class="md-nav__link">
+        python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_14" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_14">
+          Software development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software development" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_14">
+          <span class="md-nav__icon md-icon"></span>
+          Software development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/" class="md-nav__link">
+        software\_development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/agile/" class="md-nav__link">
+        Agile process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/requirments/" class="md-nav__link">
+        Requirments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/terminology/" class="md-nav__link">
+        programming terminoloy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_15" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_15">
+          Think
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Think" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_15">
+          <span class="md-nav__icon md-icon"></span>
+          Think
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/think/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/think/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/think/thinking_logically_games/" class="md-nav__link">
+        thinking\_logically\_games
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_16" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_16">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_16">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/grunt/" class="md-nav__link">
+        Grunt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/linux/" class="md-nav__link">
+        linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/shel_scripting/" class="md-nav__link">
+        Shel scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/windows/" class="md-nav__link">
+        Windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_17" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_17" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_17">
+          Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_17">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/dom/" class="md-nav__link">
+        DOM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/fonts/" class="md-nav__link">
+        Fonts I like
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/meta/" class="md-nav__link">
+        Meta
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/pwa/" class="md-nav__link">
+        Progressive Web Apps PWA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/seo/" class="md-nav__link">
+        SEO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/urls/" class="md-nav__link">
+        URLs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Math1280 statistics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math1280 statistics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Math1280 statistics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5_1">
+          Unit1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit1" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Unit1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math1280-statistics/unit1/" class="md-nav__link">
+        MATH 1280: unit 1: Introduction to statistics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" data-md-state="indeterminate" type="checkbox" id="__nav_2_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          Mysql
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mysql" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mysql
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mysql/" class="md-nav__link">
+        MYSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mysql/windows/" class="md-nav__link">
+        MYSQL on windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" data-md-state="indeterminate" type="checkbox" id="__nav_2_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          Todo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Todo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Todo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../todo/to_learn/" class="md-nav__link">
+        list of things to learn more about them
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../todo/to_record/" class="md-nav__link">
+        Things I need to make a videos about
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/projects/" class="md-nav__link">
+        list of live projects:
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-in-applications" class="md-nav__link">
+    SQL in applications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transactions" class="md-nav__link">
+    transactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embedded-sql" class="md-nav__link">
+    Embedded SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-sql" class="md-nav__link">
+    static SQL
+  </a>
+  
+    <nav class="md-nav" aria-label="static SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-communications-area-sqlcode-and-sqlstate" class="md-nav__link">
+    SQL communications area, SQLCODE and SQLSTATE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-compiling-of-embedded-sql" class="md-nav__link">
+    pre-compiling of embedded SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-sql" class="md-nav__link">
+    dynamic SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-vs-dynamic-sql" class="md-nav__link">
+    Static vs. dynamic SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-apis" class="md-nav__link">
+    Database APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odbc-and-the-ibm-data-server-cli-driver" class="md-nav__link">
+    ODBC and the IBM Data Server CLI driver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purequery-client-optimizer" class="md-nav__link">
+    pureQuery Client Optimizer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="unit-7-database-programming">Unit 7: Database Programming<a class="headerlink" href="#unit-7-database-programming" title="Permanent link">&para;</a></h1>
+<h2 id="table-of-contents">Table of contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#unit-7-database-programming">Unit 7: Database Programming</a></li>
+<li><a href="#table-of-contents">Table of contents</a></li>
+<li><a href="#objectives">objectives</a></li>
+<li><a href="#sql-in-applications">SQL in applications</a></li>
+<li><a href="#transactions">transactions</a></li>
+<li><a href="#embedded-sql">Embedded SQL</a></li>
+<li><a href="#static-sql">static SQL</a><ul>
+<li><a href="#sql-communications-area-sqlcode-and-sqlstate">SQL communications area, SQLCODE and SQLSTATE</a></li>
+<li><a href="#pre-compiling-of-embedded-sql">pre-compiling of embedded SQL</a></li>
+</ul>
+</li>
+<li><a href="#dynamic-sql">dynamic SQL</a></li>
+<li><a href="#static-vs-dynamic-sql">Static vs. dynamic SQL</a></li>
+<li><a href="#database-apis">Database APIs</a></li>
+<li><a href="#odbc-and-the-ibm-data-server-cli-driver">ODBC and the IBM Data Server CLI driver</a></li>
+<li><a href="#purequery-client-optimizer">pureQuery Client Optimizer</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<h2 id="objectives">objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The concept of transaction</li>
+<li>Working with embedded SQL</li>
+<li>The differences between static and dynamic SQL</li>
+<li>Database APIs like ODBC, CLI and JDBC</li>
+<li>An introduction to pureQuery</li>
+</ul>
+<hr />
+<h2 id="sql-in-applications">SQL in applications<a class="headerlink" href="#sql-in-applications" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>host language</strong>: a programming language that you embed SQL commands in, like c, c++, java..</li>
+<li>some techniques allow to use the API of the database itself to execute SQL, like: ODBC, CLI, JDBC.</li>
+</ul>
+<hr />
+<h2 id="transactions">transactions<a class="headerlink" href="#transactions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>transaction</strong> is a unit of work or a set of database operations which all they need to be executed successfully in order to call the transaction successful.</li>
+<li>at the end of a transaction you can <strong>commit or roll back</strong> to maintain data integrity.</li>
+</ul>
+<hr />
+<h2 id="embedded-sql">Embedded SQL<a class="headerlink" href="#embedded-sql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>embed SQL commands inside a high-level programming language.</li>
+<li>compiling these applications needs 2 steps:<ul>
+<li>pre-compilation: the DBMS will provide a pre-compiler compatible with the programming language that will compile embedded SQL into the DBMS run-time API calls.</li>
+<li>normal compilation of the host language where the pre-compiled code get linked to the host language development tools.</li>
+</ul>
+</li>
+<li>in c, c++, COBOL the statement initializer <code>EXEC SQL</code> is used to identify embedded SQL, as:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">EXEC</span><span class="w"> </span><span class="n">SQL</span><span class="w"> </span><span class="n">UPDATE</span><span class="w"> </span><span class="n">employee</span><span class="p">.</span><span class="n">details</span><span class="w"> </span><span class="n">SET</span><span class="w"> </span><span class="n">emp_desig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">&#39;</span><span class="n">Mgr</span><span class="err">&#39;</span><span class="w"> </span><span class="n">WHERE</span><span class="w"> </span><span class="n">emp_desig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">&#39;</span><span class="n">Asst</span><span class="w"> </span><span class="n">Mgr</span><span class="err">&#39;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>in java, applications with embedded SQL called <strong>SQLJ</strong> and the statement initializer is <code>#sql</code>, as:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="n">sql</span> <span class="p">{</span> <span class="n">UPDATE</span> <span class="n">employee</span><span class="p">.</span><span class="na">details</span> <span class="n">SET</span> <span class="n">emp_desig</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Mgr</span><span class="err">&#39;</span> <span class="n">WHERE</span> <span class="n">emp_desig</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Asst</span> <span class="n">Mgr</span><span class="err">&#39;</span><span class="p">};</span>
+</code></pre></div>
+<hr />
+<h2 id="static-sql">static SQL<a class="headerlink" href="#static-sql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Static SQL applications are designed for scenarios where the applications need to issue the same SQL statements every time it interacts with the database</li>
+<li>An embedded SQL application where the syntax of the SQL is fully known beforehand and where the SQL statements are hard-coded within the source code of the application is known as a <strong>static embedded SQL application</strong>.</li>
+<li>The only input(s) that can be fed to the SQL statements from the application are the actual data values that need to be inserted into the table or the predicate values of the SQL statements. These input values are provided to the SQL statements using <strong>host variables</strong>.</li>
+<li><strong>host variables</strong> are programming language variables that should only be used for static SQL processing. These host variables need to be declared in the application prior to using them.</li>
+<li>a good practice is to append the host variable names with ‘_hv’ to differentiate them from other variables as well as from column names</li>
+</ul>
+<h3 id="sql-communications-area-sqlcode-and-sqlstate">SQL communications area, SQLCODE and SQLSTATE<a class="headerlink" href="#sql-communications-area-sqlcode-and-sqlstate" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>The SQL Communications Area (SQLCA)</strong> is a data structure that is used as a communication medium between the database server and its clients. The SQLCA data structure comprises of a number of variables that are updated at the end of each SQL execution</li>
+<li><strong>SQLCODE</strong> is one such variable in SQLCA which is set to 0 (zero) after every successful SQL execution. If the SQL statement completes with a warning, it is set with a positive, non-zero value; and if the SQL statement returns an error, it is set with a negative value. it correspond to either hardware-specific or operating system-specific issues;</li>
+<li><strong>SQLSTATE</strong> is another variable in SQLCA which stores a return code as a string that also indicates the outcome of the most recently executed SQL statement. However, SQLSTATE provides a more generic message that is standardized across different database vendor products.</li>
+</ul>
+<h3 id="pre-compiling-of-embedded-sql">pre-compiling of embedded SQL<a class="headerlink" href="#pre-compiling-of-embedded-sql" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The pre-compiler checks for SQL statements within the source code, replaces them with equivalent runtime APIs supported by the host language and re-writes the entire output (with commented SQL statements) into a new file which can then be compiled and linked using the host language development tools.</li>
+<li>
+<p>pre-compiler performs the following tasks:</p>
+<ul>
+<li>It validates the SQL syntax for each coded SQL statement and ensures that appropriate data types are used for host variables by comparing them with their respective column types. It also determines the data conversion methods to be used while fetching or inserting the data into the database.</li>
+<li>It evaluates references to database objects, creates <strong>access plans</strong> for them and stores them in a <strong>package</strong> in the database. An access plan of an SQL statement is the most optimized path to data objects that the SQL statement will reference</li>
+<li>each application is <strong>bound</strong> to its respective package residing on the database. so that every time the application is run, the access plan for the corresponding SQL statement is fetched from the package and used. This makes SQL execution very fast in the database, since the most optimized way of accessing the required database objects is already known in advance.</li>
+</ul>
+</li>
+<li>
+<p>we could <strong>redefine static SQL statements</strong> to be the ones whose access plan can be determined and known in advance and stored in the database for faster execution. Thus for an SQL statement to be embedded statically in an application, <strong>its syntax must be known at pre-compile time</strong>.</p>
+</li>
+</ul>
+<p><center>
+    <img src="https://i.imgur.com/PCTXRvn.png" />
+    <p><a href="#references">source: [1] </a> </p>
+</center></p>
+<hr />
+<h2 id="dynamic-sql">dynamic SQL<a class="headerlink" href="#dynamic-sql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Dynamic SQL statements include parameters whose values are not known until runtime, when they are supplied as input to the application.</li>
+<li>the <strong>access plans</strong> for dynamic SQL queries can only be generated at <strong>runtime</strong>.</li>
+<li><strong>parameter marker</strong> is the question mark (?) used in a statement,used in place of predicate values.</li>
+<li>statements with parameter markers need <strong>access plan before they get executed</strong>, so we <strong>prepare</strong> the statement to get the access plan.</li>
+<li>the exact SQL that needs to be issued is generated only at <strong>execution time</strong> where we have to replace the marker with an <strong>actual value</strong> to the predicate.</li>
+<li>applications with dynamic SQL contains <strong>some static SQL statements</strong> needed for <strong>statement preparation, cursor declarations, and so on</strong>. This would mean that such applications would also <strong>require pre-compilation</strong>.</li>
+<li>If there is a way to replace all such static SQL statements by equivalent APIs, the pre-compilation/SQL translation of the application <strong>would not be required at all</strong>.</li>
+</ul>
+<hr />
+<h2 id="static-vs-dynamic-sql">Static vs. dynamic SQL<a class="headerlink" href="#static-vs-dynamic-sql" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Unlike static SQL statements, access plans for dynamic statements are generated only at runtime; hence, dynamic statements need to be prepared in the application.</li>
+<li>The time taken to generate an access plan at runtime makes dynamic SQL applications a little <strong>slower</strong> than static SQL. However, they offer much more flexibility to application developers and hence, are <strong>more robust</strong> than static SQL applications.</li>
+<li>Sometimes a dynamic SQL statement performs better than its static SQL counterpart, because it is able to exploit the latest statistics available in the database at the time of execution. The access plan generated for a static SQL statement is stored in advance and may become outdated in case certain database statistics change, which is not the case with dynamic SQL</li>
+<li>whenever the application is modified or upgraded, If the static SQL part of the application is modified, then regeneration of access plans would be needed. This means pre-compilation of the application and rebinding of packages would have to be done again. In the case of dynamic SQL execution, since the access plans are generated at runtime, pre-compilation and rebinding is not needed.</li>
+</ol>
+<hr />
+<h2 id="database-apis">Database APIs<a class="headerlink" href="#database-apis" title="Permanent link">&para;</a></h2>
+<ul>
+<li>a <strong>connection to the database is required</strong> while pre-compiling the embedded SQL application, since in order to generate access plans, statistics information from the database catalog is required.</li>
+<li><strong>Database APIs</strong> are a set of APIs exposed by database vendors pertaining to different programming languages like C, C++, Java and so on, which gives application developers a mechanism to interact with the database from within the application by just calling these SQL callable interfaces.</li>
+<li><strong>database connectivity driver</strong> is tThe intermediate layer between the application and the database server, which makes this interaction possible.</li>
+<li>The database vendors themselves provide these <strong>drivers</strong> and once the driver libraries are linked with the source code libraries, the application source code can be easily compiled and then executed.</li>
+<li>Applications can now be developed <strong>independently</strong> of target databases, without the need for database connection at the compilation phase.</li>
+</ul>
+<hr />
+<h2 id="odbc-and-the-ibm-data-server-cli-driver">ODBC and the IBM Data Server CLI driver<a class="headerlink" href="#odbc-and-the-ibm-data-server-cli-driver" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><em>CLI here means Call level Interface.</em></p>
+</blockquote>
+<ul>
+<li>the X/Open Company and the SQL Access Group jointly developed a specification for a <strong>callable SQL interface</strong> referred to as the <strong>X/Open</strong> Call Level Interface. which accepted as part of the ISO Call Level Interface International Standard in <strong>1995</strong>.</li>
+<li>Microsoft developed a callable SQL interface called <strong>Open Database Connectivity (ODBC)</strong>.</li>
+<li>The IBM Data Server CLI driver is the <strong>DB2 Call level Interface</strong> which is based on the Microsoft® ODBC specifications, and the International Standard for SQL/CLI.</li>
+<li>The <strong>DB2 CLI</strong> is a C and C++ is an API for relational database access that uses function calls to pass dynamic SQL statements as function arguments, means that there would be no need for any static EXEC SQL statements in the application.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">SQLCHAR</span> <span class="o">*</span><span class="n">stmt</span> <span class="o">=</span> <span class="p">(</span><span class="n">SQLCHAR</span> <span class="o">*</span><span class="p">)</span><span class="s">&quot;UPDATE employee.details SET emp_id = ? WHERE emp_name = ? &quot;</span><span class="p">;</span>
+<span class="cm">/* prepare the statement */</span>
+<span class="kt">int</span> <span class="n">rc</span> <span class="o">=</span> <span class="n">SQLPrepare</span><span class="p">(</span><span class="n">hstmt</span><span class="p">,</span> <span class="n">stmt</span><span class="p">,</span> <span class="n">SQL_NTS</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li>IBM CLI offers other callable interfaces like SQLConnect(), SQLFetch(), SQLExecute, and so on.</li>
+<li>The ODBC specifications also includes an operating environment, where database specific ODBC Drivers are <strong>dynamically loaded at runtime</strong> by a driver manager based on the data source (database name) provided on the <strong>connect request</strong>.</li>
+</ul>
+<p><center>
+    <img src="https://i.imgur.com/zGuJjXY.png" />
+    <p><a href="#references">source: [1] </a> </p>
+</center></p>
+<ul>
+<li><strong>Java Database Connectivity (JDBC)</strong>: it is an SQL application programming interface similar to ODBC and CLI, but for Java applications.</li>
+<li><strong>pureQuery</strong>: is a platform offered to Java developers that exploits the advantages of dynamic SQL without having to bother about preparation and object mapping overheads.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">//The name, country, street and province are variables which would be populated at runtime using user inputs.</span>
+<span class="n">String</span> <span class="n">sqlSel</span> <span class="o">=</span> <span class="s">&quot;select “+name+”, ” +country+”, “+street+”, “+province+”, “+zip+” from CUSTOMER where Customer = ?&quot;</span><span class="p">;</span>
+<span class="n">Data</span> <span class="n">data</span> <span class="o">=</span> <span class="n">DataFactory</span><span class="p">.</span><span class="na">getData</span> <span class="p">(</span><span class="n">con</span><span class="p">);</span>
+<span class="c1">//execute the Select and get the list of customer</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Customer</span><span class="o">&gt;</span> <span class="n">customerList</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="na">queryList</span> <span class="p">(</span><span class="n">sqlSel</span><span class="p">,</span> <span class="n">Customer</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="s">&quot;custCountry&quot;</span><span class="p">);</span>
+<span class="c1">// pureQuery API queryList will execute the sqlSel statement with the predicate value “custCountry”</span>
+<span class="c1">// and return the query results into cutomerList.</span>
+</code></pre></div>
+<hr />
+<h2 id="purequery-client-optimizer">pureQuery Client Optimizer<a class="headerlink" href="#purequery-client-optimizer" title="Permanent link">&para;</a></h2>
+<p>Using the pureQuery Client Optimizer, the following steps need to be undertaken:</p>
+<ul>
+<li>When the dynamic application is first run, the pureQuery Client Optimizer captures the different SQL statements issued from an application into a <strong>pureQueryXml</strong> capture .</li>
+<li>The captured SQL statements in the XML file are then <strong>divided into packages</strong>, by running the command line tool <strong>Configure</strong>.</li>
+<li>Using the <strong>staticBinder</strong>, these <strong>packages are then created on the database server</strong> and the application is bound to these packages.</li>
+<li>Finally, the execution mode of the application needs to be set to <strong>static</strong>, which allows some of the SQL statements to run in static mode.</li>
+</ul>
+<p>each SQL issued from the application is <strong>matched</strong> with the SQL statements captured in the capture file. As soon as a match is found, the corresponding package details are fetched from the capture file and since the SQL is already bound to the corresponding package at the database server, the statement can be run statically.</p>
+<p>Each new SQL, which does not find a match, stills runs in dynamic execution mode.</p>
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[1] Sharma, N., Perniu, L., Chong, R. F., Iyer, A., Nandan, C., Mitea, A. C., Nonvinkere, M., &amp; Danubianu, M. (2010). Databases fundamentals. chapter 7.</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../unit6/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unit 6: Querying the Database using SQL" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Unit 6: Querying the Database using SQL
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../unit8/" class="md-footer__link md-footer__link--next" aria-label="Next: Unit 8: Database Development Process" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Unit 8: Database Development Process
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.expand"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+    
+  </body>
+</html>

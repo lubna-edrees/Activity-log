@@ -1,0 +1,3820 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Ahmad Ali">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Unit 2: Conceptual Data Model - CS-INDEX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-2-conceptual-data-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="CS-INDEX" class="md-header__button md-logo" aria-label="CS-INDEX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CS-INDEX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unit 2: Conceptual Data Model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CS-INDEX" class="md-nav__button md-logo" aria-label="CS-INDEX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CS-INDEX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Knowledge base
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Knowledge base" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Knowledge base
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Books
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Books" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Books
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/" class="md-nav__link">
+        list of recommended books
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Cs2203 database1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cs2203 database1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cs2203 database1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Databases 1 CS-2203
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1/" class="md-nav__link">
+        Unit1: Databases and Relational Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Unit 2: Conceptual Data Model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Unit 2: Conceptual Data Model
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    terminology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-model" class="md-nav__link">
+    database model
+  </a>
+  
+    <nav class="md-nav" aria-label="database model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-database-model" class="md-nav__link">
+    types of database model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-of-database-model" class="md-nav__link">
+    concepts of database model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptional-data-model-concepts" class="md-nav__link">
+    conceptional data model concepts
+  </a>
+  
+    <nav class="md-nav" aria-label="conceptional data model concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity-relationship-model" class="md-nav__link">
+    Entity-Relationship model
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity-Relationship model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entities-and-entities-setts" class="md-nav__link">
+    Entities and entities setts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute" class="md-nav__link">
+    attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-sets" class="md-nav__link">
+    relationship sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension" class="md-nav__link">
+    Extension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intension" class="md-nav__link">
+    Intension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entity-relationship-modeling-principles" class="md-nav__link">
+    Entity-Relationship Modeling Principles
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity-Relationship Modeling Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    relationships
+  </a>
+  
+    <nav class="md-nav" aria-label="relationships">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-to-one-relationships" class="md-nav__link">
+    one-to-one relationships
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-many-relationships" class="md-nav__link">
+    one-to-many relationships
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#many-to-many-relationships" class="md-nav__link">
+    many-to-many relationships
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#involuted-recursive-relationships" class="md-nav__link">
+    Involuted (recursive) relationships
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arc" class="md-nav__link">
+    arc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistakes-in-data-modeling" class="md-nav__link">
+    mistakes in data modeling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-normalization" class="md-nav__link">
+    database normalization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cardinality-symbols" class="md-nav__link">
+    cardinality symbols
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/" class="md-nav__link">
+        Unit 3: Relational Database Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit4/" class="md-nav__link">
+        Unit 4: Introduction to SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit5/" class="md-nav__link">
+        Unit 5: DDL and DML Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit6/" class="md-nav__link">
+        Unit 6: Querying the Database using SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit7/" class="md-nav__link">
+        Unit 7: Database Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit8/" class="md-nav__link">
+        Unit 8: Database Development Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit9/" class="md-nav__link">
+        Unit 9: Data integrity, Views
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Cs2204 netwroks1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cs2204 netwroks1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Cs2204 netwroks1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_1">
+          Unit1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit1" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Unit1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit1/unit1/" class="md-nav__link">
+        unit 1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_2">
+          Unit6
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit6" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Unit6
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/da6/" class="md-nav__link">
+        Unit 6: Discussion assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/journal/" class="md-nav__link">
+        unit 6: Journal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/unit6/" class="md-nav__link">
+        Unit 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/wa6/" class="md-nav__link">
+        Unit 6: written assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_3">
+          Unit7
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit7" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Unit7
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/" class="md-nav__link">
+        CS2204: Unit7: The Transport Layer (TCP)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/da7/" class="md-nav__link">
+        cs2204: unit 7: Discussion Assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/ja7/" class="md-nav__link">
+        CS2204: unit 7: Journal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/wa7/" class="md-nav__link">
+        CS2204: unit 7: Written Assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_4">
+          Unit8
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit8" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Unit8
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit8/" class="md-nav__link">
+        CS2204: unit 8: Application Layer and Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit8/da8/" class="md-nav__link">
+        CS2204: unit 8: Discussion Assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit8/ja8/" class="md-nav__link">
+        CS2204: unit 8: Journal Assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_5">
+          Unit9
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit9" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Unit9
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit9/" class="md-nav__link">
+        CS2204: unit 9: Revision
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          General
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/" class="md-nav__link">
+        Table of contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/continous-integration-vs-branching/" class="md-nav__link">
+        Continuous Integration Vs Branching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_3">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced/design_patterns/" class="md-nav__link">
+        Design Patterns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced/oop/" class="md-nav__link">
+        Object Oriented Programming
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/" class="md-nav__link">
+        Data Structures and Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/algorithms-on-graphs/" class="md-nav__link">
+        Algorithms on Graphs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/algorithms/" class="md-nav__link">
+        Algorithms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/freecodecamp/" class="md-nav__link">
+        Free Code Camp Algorithms section
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/mit6006/" class="md-nav__link">
+        Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/quick_find/" class="md-nav__link">
+        quick-find
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/quick_union/" class="md-nav__link">
+        quick-union
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/union_find/" class="md-nav__link">
+        union-find
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_4_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4_9_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9_1">
+          Algorithm toolbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithm toolbox" data-md-level="5">
+        <label class="md-nav__title" for="__nav_2_4_4_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithm toolbox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/" class="md-nav__link">
+        algoritm toolbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/algorithms_notes/" class="md-nav__link">
+        Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9_1_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4_9_1_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9_1_3">
+          Week2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Week2" data-md-level="6">
+        <label class="md-nav__title" for="__nav_2_4_4_9_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Week2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/week2/" class="md-nav__link">
+        week2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/week2/week2/" class="md-nav__link">
+        week2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_5">
+          Api
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Api" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/api/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/api/api-list/" class="md-nav__link">
+        List of Greet APIs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/api/packages/" class="md-nav__link">
+        packages Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_6" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_6">
+          dataStructures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="dataStructures" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          dataStructures
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/binary_trees/" class="md-nav__link">
+        Binary search trees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/data_structures/" class="md-nav__link">
+        data structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/disjoint_setes/" class="md-nav__link">
+        Disjoint Sets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/hash_tables/" class="md-nav__link">
+        Hash Tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/heap/" class="md-nav__link">
+        Heap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/linked_lists/" class="md-nav__link">
+        Linked Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/priority_queue/" class="md-nav__link">
+        priority queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/queue/" class="md-nav__link">
+        queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/stack/" class="md-nav__link">
+        stack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/trees/" class="md-nav__link">
+        trees
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_7" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_7">
+          Databases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Databases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Databases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/mongo/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/mongoose/" class="md-nav__link">
+        Mongoose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/redis/" class="md-nav__link">
+        Redis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/sequilize/" class="md-nav__link">
+        Sequalize
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_8" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_8">
+          Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Design" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/design/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/design/css/" class="md-nav__link">
+        Css
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_9" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_9">
+          Frameworks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Frameworks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Frameworks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/bootstrap/" class="md-nav__link">
+        Bootstrap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/react/" class="md-nav__link">
+        React
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/redux/" class="md-nav__link">
+        Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_10" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_10">
+          Interviews
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Interviews" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Interviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/js_general/" class="md-nav__link">
+        Js general
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/js_oop/" class="md-nav__link">
+        OOP in JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/references/" class="md-nav__link">
+        Interview Preperation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/self_introduction/" class="md-nav__link">
+        Self Introduction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_11" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_11">
+          Javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Javascript" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_11">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/arrays/" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/datetime/" class="md-nav__link">
+        Date and Time
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/generaljs/" class="md-nav__link">
+        General JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/is/" class="md-nav__link">
+        IS?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/numbers/" class="md-nav__link">
+        Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/objects/" class="md-nav__link">
+        Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/strings/" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_12" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_12" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_12">
+          Node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_12">
+          <span class="md-nav__icon md-icon"></span>
+          Node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/argv/" class="md-nav__link">
+        Argv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/node/" class="md-nav__link">
+        Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/stdout/" class="md-nav__link">
+        process.stdout, process.stdin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_13" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_13">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programming languages" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_13">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/programming-languages/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/programming-languages/go/" class="md-nav__link">
+        GoLang Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/programming-languages/python/" class="md-nav__link">
+        python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_14" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_14">
+          Software development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software development" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_14">
+          <span class="md-nav__icon md-icon"></span>
+          Software development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/" class="md-nav__link">
+        software\_development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/agile/" class="md-nav__link">
+        Agile process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/requirments/" class="md-nav__link">
+        Requirments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/terminology/" class="md-nav__link">
+        programming terminoloy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_15" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_15">
+          Think
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Think" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_15">
+          <span class="md-nav__icon md-icon"></span>
+          Think
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/think/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/think/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/think/thinking_logically_games/" class="md-nav__link">
+        thinking\_logically\_games
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_16" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_16">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_16">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/grunt/" class="md-nav__link">
+        Grunt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/linux/" class="md-nav__link">
+        linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/shel_scripting/" class="md-nav__link">
+        Shel scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/windows/" class="md-nav__link">
+        Windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_17" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_17" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_17">
+          Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_17">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/dom/" class="md-nav__link">
+        DOM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/fonts/" class="md-nav__link">
+        Fonts I like
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/meta/" class="md-nav__link">
+        Meta
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/pwa/" class="md-nav__link">
+        Progressive Web Apps PWA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/seo/" class="md-nav__link">
+        SEO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/urls/" class="md-nav__link">
+        URLs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Math1280 statistics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math1280 statistics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Math1280 statistics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5_1">
+          Unit1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit1" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Unit1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math1280-statistics/unit1/" class="md-nav__link">
+        MATH 1280: unit 1: Introduction to statistics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" data-md-state="indeterminate" type="checkbox" id="__nav_2_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          Mysql
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mysql" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mysql
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mysql/" class="md-nav__link">
+        MYSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mysql/windows/" class="md-nav__link">
+        MYSQL on windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" data-md-state="indeterminate" type="checkbox" id="__nav_2_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          Todo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Todo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Todo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../todo/to_learn/" class="md-nav__link">
+        list of things to learn more about them
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../todo/to_record/" class="md-nav__link">
+        Things I need to make a videos about
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/projects/" class="md-nav__link">
+        list of live projects:
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    terminology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-model" class="md-nav__link">
+    database model
+  </a>
+  
+    <nav class="md-nav" aria-label="database model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-database-model" class="md-nav__link">
+    types of database model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-of-database-model" class="md-nav__link">
+    concepts of database model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptional-data-model-concepts" class="md-nav__link">
+    conceptional data model concepts
+  </a>
+  
+    <nav class="md-nav" aria-label="conceptional data model concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity-relationship-model" class="md-nav__link">
+    Entity-Relationship model
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity-Relationship model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entities-and-entities-setts" class="md-nav__link">
+    Entities and entities setts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute" class="md-nav__link">
+    attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-sets" class="md-nav__link">
+    relationship sets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension" class="md-nav__link">
+    Extension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intension" class="md-nav__link">
+    Intension
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entity-relationship-modeling-principles" class="md-nav__link">
+    Entity-Relationship Modeling Principles
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity-Relationship Modeling Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationships" class="md-nav__link">
+    relationships
+  </a>
+  
+    <nav class="md-nav" aria-label="relationships">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-to-one-relationships" class="md-nav__link">
+    one-to-one relationships
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-to-many-relationships" class="md-nav__link">
+    one-to-many relationships
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#many-to-many-relationships" class="md-nav__link">
+    many-to-many relationships
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#involuted-recursive-relationships" class="md-nav__link">
+    Involuted (recursive) relationships
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arc" class="md-nav__link">
+    arc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mistakes-in-data-modeling" class="md-nav__link">
+    mistakes in data modeling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-normalization" class="md-nav__link">
+    database normalization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cardinality-symbols" class="md-nav__link">
+    cardinality symbols
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="unit-2-conceptual-data-model">Unit 2: Conceptual Data Model<a class="headerlink" href="#unit-2-conceptual-data-model" title="Permanent link">&para;</a></h1>
+<h2 id="table-of-contents">Table of contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#unit-2-conceptual-data-model">Unit 2: Conceptual Data Model</a></li>
+<li><a href="#table-of-contents">Table of contents</a></li>
+<li><a href="#terminology">terminology</a></li>
+<li><a href="#database-model">database model</a><ul>
+<li><a href="#types-of-database-model">types of database model</a></li>
+<li><a href="#concepts-of-database-model">concepts of database model</a></li>
+</ul>
+</li>
+<li><a href="#conceptional-data-model-concepts">conceptional data model concepts</a><ul>
+<li><a href="#entity-relationship-model">Entity-Relationship model</a></li>
+<li><a href="#entities-and-entities-setts">Entities and entities setts</a></li>
+<li><a href="#attribute">attribute</a></li>
+<li><a href="#relationship-sets">relationship sets</a></li>
+<li><a href="#constraints">constraints</a></li>
+<li><a href="#extension">Extension</a></li>
+<li><a href="#intension">Intension</a></li>
+<li><a href="#notes">Notes</a></li>
+</ul>
+</li>
+<li><a href="#entity-relationship-modeling-principles">Entity-Relationship Modeling Principles</a><ul>
+<li><a href="#relationships">relationships</a></li>
+<li><a href="#one-to-one-relationships">one-to-one relationships</a></li>
+<li><a href="#one-to-many-relationships">one-to-many relationships</a></li>
+<li><a href="#many-to-many-relationships">many-to-many relationships</a></li>
+<li><a href="#involuted-recursive-relationships">Involuted (recursive) relationships</a></li>
+<li><a href="#arc">arc</a></li>
+<li><a href="#mistakes-in-data-modeling">mistakes in data modeling</a></li>
+<li><a href="#database-normalization">database normalization</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+<p>when working with DBs, there are three modeling terms <a href="#References">[1]</a>:</p>
+<ol>
+<li>conceptional modeling: cares about information seen by the business world.</li>
+<li>logical modeling: based on a mathematical model, presents information in a fully normalized matter where there is no duplication of data.</li>
+<li>physical modeling: implements a given logical model specifically to a particular DB product or version.</li>
+</ol>
+<p><img alt="data modeling lifecycle" src="https://i.imgur.com/RCsL2X7.png" /></p>
+<h2 id="terminology">terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>model</strong>: an abstraction or representation of a real world object/problem that reveals all details of interest to the user.</li>
+<li><strong>ERD</strong>: Entity Relationship Diagram</li>
+</ul>
+<h2 id="database-model">database model<a class="headerlink" href="#database-model" title="Permanent link">&para;</a></h2>
+<ul>
+<li>integrated collection of concepts for a data description, data relationships, data semantics and constraints. used to represent metadata about the DB and to describe its schema <a href="#References">[1]</a>.</li>
+</ul>
+<h3 id="types-of-database-model">types of database model<a class="headerlink" href="#types-of-database-model" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>External data model</strong>: used for viewing representation of every user. also called <strong>Universe of Discourse</strong>. represents <strong>Record-based Logical Model</strong>.</li>
+<li><strong>Conceptional Data Model</strong>: used for a general view of the data and it is <strong>independent of the DBMS</strong>. represents <strong>Object-based Logical Model</strong>.</li>
+<li><strong>Internal Data Model</strong>: used for a translation of the conceptional model to a specific DBMS. represents <strong>Physical Data Model</strong>.</li>
+<li><strong>Relational Database Model</strong>: the <strong>most used</strong> model today. it is <strong>simple</strong> and theoretically sound. used for building <strong>business rules system</strong>. represents <strong>Entity-Relationship Model based on the conceptional model</strong>.</li>
+</ol>
+<h3 id="concepts-of-database-model">concepts of database model<a class="headerlink" href="#concepts-of-database-model" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>structural component</strong>: rules for the structure of database itself.</li>
+<li><strong>manipulation component</strong>: defines the operations that can be applied on this database..</li>
+<li><strong>data integrity component</strong>: rules that guarantee the correctness of data.</li>
+</ol>
+<h2 id="conceptional-data-model-concepts">conceptional data model concepts<a class="headerlink" href="#conceptional-data-model-concepts" title="Permanent link">&para;</a></h2>
+<ul>
+<li>first step of data modeling, represents a mental image of real-life object/problem.</li>
+<li>it is <strong>not</strong> specific to a database, describe things that organization wants to collect and the relationships between them.</li>
+<li>steps of conceptional data model:</li>
+<li>draw Entity-Relationship diagram.</li>
+<li>define integrity constraints.</li>
+<li>review the final model:<ol>
+<li>remove M:N relationships.</li>
+<li>remove recursive relationships.</li>
+<li>remove relationships with attributes.</li>
+<li>remove 1:1 relationships which are normally not necessary.</li>
+</ol>
+</li>
+</ul>
+<h3 id="entity-relationship-model">Entity-Relationship model<a class="headerlink" href="#entity-relationship-model" title="Permanent link">&para;</a></h3>
+<ul>
+<li>concepts of Entity-Relationship model:</li>
+<li>Entity set</li>
+<li>attribute</li>
+<li>relationship set</li>
+<li>constraints</li>
+<li>attribute domain</li>
+<li>extension</li>
+<li>intension</li>
+</ul>
+<h4 id="entities-and-entities-setts">Entities and entities setts<a class="headerlink" href="#entities-and-entities-setts" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>entity set</strong>: is a set of entities of thew same <strong>type</strong> that share the same properties.</li>
+<li>
+<p><strong>entity</strong>: is an instance of entity set, it is a self-determining and distinguishable item that can be:</p>
+</li>
+<li>
+<p>concrete.</p>
+</li>
+<li>insubstantial.</li>
+<li>
+<p>an occurrence.</p>
+</li>
+<li>
+<p><strong>Note: In the Logical Model, entities are called tuples, and entity sets are called relations.</strong>.</p>
+</li>
+<li>Depending on the context, a given noun like TEACHER could be used as an entity, or an entity set. For example, if you need different types of people, such as TEACHER or STUDENT, you will create an entity set called PERSON with the entities TEACHER and STUDENT <a href="#References">[1]</a>.</li>
+</ul>
+<h4 id="attribute">attribute<a class="headerlink" href="#attribute" title="Permanent link">&para;</a></h4>
+<ul>
+<li>item that describes a property of an entity set, each attribute can have one value for each instance of the entity set.</li>
+<li>in <strong>physical model</strong> an attribute is a named column with a domain.</li>
+<li><strong>Types of attributes:</strong></li>
+<li><strong>Simple (atomic)</strong>: has single component. <strong>eg.</strong> Boolean has true/false.</li>
+<li><strong>Composite</strong>: consists of multiple components. <strong>eg.</strong> Name has 2 components, lastname + firstname.</li>
+<li><strong>Single-Valued</strong>: an attribute that has one value for one entity, <strong>eg.</strong> Title.</li>
+<li><strong>Multi-Valued</strong>: an attribute that has multiple values for one entity, <strong>eg.</strong> phoneNumber, a person might have multiple phone numbers. since <strong>an attribute can have only one value for each instance of the entity set</strong>, when encountering multi-valued attribute we need to transfer it to <strong>another entity set</strong>.</li>
+<li><strong>Derived</strong>: derived attribute has its value derived or computed form another attribute. <strong>eg.</strong> NumberOfPersons. the derived attribute is <strong>not part of a table</strong>, but it is included fro clarity or design purposes.</li>
+<li><strong>Unstable</strong>: have values that always change, <strong>eg.</strong> NumberOfFollowers for a user.</li>
+<li><strong>Stable</strong>: values that rarely change. <strong>eg.</strong> Name. stable attributes are favourited over unstable ones.</li>
+<li><strong>Mandatory</strong>: must have a value.</li>
+<li><strong>Optional</strong>: might be null.</li>
+<li><strong>Unique Identifier</strong>: ID. <strong>key</strong> within <strong>Logical Model</strong>. there are several types of keys:<ol>
+<li><strong>candidate keys</strong>.</li>
+<li><strong>primary keys</strong>: they should be:<ol>
+<li>stable. primary key value should never change.</li>
+<li>minimal. primary key should be composed of the minimal number of fields.</li>
+</ol>
+</li>
+<li><strong>alternate keys</strong>: all candidate keys that don't participate in the primary key.</li>
+<li><strong>surrogate key</strong>: a primary key that does not exist on real-world attribute, this kind of keys should be avoided since it:<ol>
+<li>increases the data size.</li>
+<li>does not hold data is important to the entity.</li>
+</ol>
+</li>
+<li><strong>simple keys</strong>: have a single attribute.</li>
+<li><strong>Composite keys</strong>: keys that has multiple attributes.</li>
+<li><strong>Foreign keys</strong>.</li>
+</ol>
+</li>
+</ul>
+<h4 id="relationship-sets">relationship sets<a class="headerlink" href="#relationship-sets" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Relationship set</strong>: set of relationships between set of entities. usually a <strong>verb</strong>.</li>
+<li><strong>relationship</strong>: is an instance of relationship set and establishes an association between entities that are related.</li>
+</ul>
+<h4 id="constraints">constraints<a class="headerlink" href="#constraints" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>types of constraints:</p>
+</li>
+<li>
+<p><strong>cardinalities</strong>: based on the number of possible relationship sets for every entity set. can be:</p>
+<ol>
+<li><strong>one-to-one (1:1)</strong>.</li>
+<li><strong>one-to-many(1:M)</strong>.</li>
+<li><strong>many-to-many(M:M)</strong>. these relationships are not supported by the relational model and <strong>must be resolved by splitting into two 1:M relationships</strong>.</li>
+</ol>
+</li>
+<li>
+<p><strong>participation cardinalities (optionality)</strong>: specifies wether the <strong>existence of an entity</strong> depends on the <strong>being related to another entity set</strong> via the relationship set. can be:</p>
+<ol>
+<li><strong>Total or Mandatory</strong>: each entity set <strong>must participate in a relationship</strong> and can not exist without that participation.</li>
+<li><strong>Partial or Optional</strong>: each entity set might participate in a relationship or not.
+    <img alt="cardinalities and optionality" src="https://i.imgur.com/rADmQhj.png" /></li>
+<li><strong>subsets and supersets</strong>:When a group of instances has special properties such as attributes or relationship sets that exist only for that group, it makes sense to subdivide an entity set into subsets. The entity set is a superset called a parent. Each group is a subset called a child. <strong>eg.</strong> An entity set PERSON can be divided in subsets STUDENT and TEACHER (photo below).
+    <img alt="subsets and supersets" src="https://i.imgur.com/0O8fLCv.png" /></li>
+<li><strong>Hierarchy</strong>: represents an ordered set of items.</li>
+<li><strong>Unary Relationship sets</strong>: the same entity set participates multiple times in the same relationship set, also known as <strong>recursive relationship set</strong>.
+    <img alt="unary relationship" src="https://i.imgur.com/stDBNNH.png" /></li>
+<li><strong>History</strong>: the constraint can specify the end date to always be later than the start date for a given attribute. In the physical model you can use a <strong>CHECK constraint</strong> for this purpose.</li>
+</ol>
+</li>
+</ul>
+<h4 id="extension">Extension<a class="headerlink" href="#extension" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Data in a database at a <strong>particular point in time</strong> is called an extension of the database. Extension refers to the <strong>current set of tuples</strong> in a relation, it is an instance of the record sets and the relationship sets between them.</li>
+</ul>
+<h4 id="intension">Intension<a class="headerlink" href="#intension" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Intension or <strong>schema</strong> is the <strong>logical model</strong> of a database and is represented by entity sets which holds:</li>
+<li><strong>structure and constraints</strong>: An instance describes and constrains the structure of tuples it is allowed to contain.</li>
+<li>An instance is represented by entity sets, and is the model of a database.</li>
+<li><strong>manipulation</strong>: Data manipulation operations on tuples are allowed only if they observe the expressed intensions of the affected relations.</li>
+</ul>
+<h4 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>You need also to specify if the relationship set is <strong>strong (identifying)</strong> or weak <strong>(non-identifying)</strong>. Weak relationships are connections between a strong entity set and weak entity set. Strong relationships are connections between two strong entities.</li>
+<li>identifying and non-identifying respectively. An identifying relationship set is selected to specify that the relationship set is one in which one of the child entities is also a dependent entity. Non-Identifying relationship set is selected to specify that the relationship set is one in which both entities are independent.</li>
+</ul>
+<h2 id="entity-relationship-modeling-principles">Entity-Relationship Modeling Principles<a class="headerlink" href="#entity-relationship-modeling-principles" title="Permanent link">&para;</a></h2>
+<ul>
+<li>terminology <a href="#References">[2]</a>:</li>
+<li><strong># ATTRIBUTE_NAME</strong>: attribute is part of the primary key.</li>
+<li><strong>* ATTRIBUTE_NAME</strong>: attribute is required.</li>
+<li><strong>o ATTRIBUTE_NAME</strong>: attribute is optional.</li>
+<li><strong>___</strong>: has. <strong>MAY</strong> have zero or more of the other relation.</li>
+<li><img alt="valid for" src="https://i.imgur.com/eEjsFV2.png" />: valid for. <strong>MUST</strong> belong to <strong>one valid tuple</strong> of the other relation.</li>
+</ul>
+<h3 id="relationships">relationships<a class="headerlink" href="#relationships" title="Permanent link">&para;</a></h3>
+<h4 id="one-to-one-relationships">one-to-one relationships<a class="headerlink" href="#one-to-one-relationships" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>mandatory-mandatory
+   <img alt="mandatory-mandatory" src="https://i.imgur.com/mFJdRyf.png" /></p>
+</li>
+<li>
+<p>mandatory-mandatory.</p>
+</li>
+<li>the diagram tells that a given PRODUCT <strong>MUST come form one and only one</strong> SUPPLIER PRODUCT. a given SUPPLIER PRODUCT <strong>MUST be the origin for one and only one</strong> PRODUCT.</li>
+<li>
+<p>this is a deadlock, since we will not able to create a PRODUCT until we have a a PRODUCT SUPPLIER. <strong>AND</strong> we can <strong>not</strong> create a PRODUCT SUPPLIER until we have a PRODUCT.</p>
+</li>
+<li>
+<p>mandatory-optional.
+   <img alt="mandatory-optional" src="https://i.imgur.com/LnCu3an.png" /></p>
+</li>
+<li>
+<p>PRODUCT <strong>MAY</strong> come form one and only one PRODUCT SUPPLIER, however, a given PRODUCT SUPPLIER <strong>MUST</strong> be the origin of one and only one PRODUCT.</p>
+</li>
+<li>
+<p>optional-optional.
+   <img alt="optional-optional" src="https://i.imgur.com/F6ZEhxm.png" /></p>
+</li>
+<li>
+<p>a PRODUCT <strong>MAY</strong> come one and only one PRODUCT SUPPLIER, a PRODUCT SUPPLIER <strong>MAY</strong> be the origin of one and only one PRODUCT.</p>
+</li>
+<li>
+<p><strong>one-to-one relationships are a signal that you have different entities that are probably the same entity.</strong></p>
+</li>
+</ol>
+<h4 id="one-to-many-relationships">one-to-many relationships<a class="headerlink" href="#one-to-many-relationships" title="Permanent link">&para;</a></h4>
+<ol>
+<li>mandatory-mandatory
+   <img alt="mandatory-mandatory" src="https://i.imgur.com/zoqvdtV.png" /></li>
+<li>ORDER <strong>MUST</strong> belong to one and only one CUSTOMER, CUSTOMER <strong>MUST</strong> place one or more orders.</li>
+<li>this also a deadlock, since you can't create CUSTOMER without ORDER or vise versa.</li>
+<li>
+<p>mandatory-optional
+   <img alt="mandatory-optional" src="https://i.imgur.com/4azDlzg.png" /></p>
+</li>
+<li>
+<p>CUSTOMER <strong>MUST</strong> place one or more ORDERs, while an ORDER <strong>MAY</strong> belong to a CUSTOMER.</p>
+</li>
+<li>
+<p>this is a hard and rare business rule, and should be avoided.</p>
+</li>
+<li>
+<p>optional-optional
+   <img alt="optional-optional" src="https://i.imgur.com/rnuJttK.png" /></p>
+</li>
+<li>
+<p>this a weak relationship.</p>
+</li>
+<li>CUSTOMER <strong>MAY</strong> place one or more ORDERs, while an ORDER <strong>MAY</strong> belong to one and only one CUSTOMER.</li>
+<li>
+<p>this is called <strong>indecisive mode</strong>.</p>
+</li>
+<li>
+<p>optional-mandatory
+   <img alt="optional-mandatory" src="https://i.imgur.com/jUSRDJ5.png" /></p>
+</li>
+<li>
+<p>most useful relationship.</p>
+</li>
+<li>CUSTOMER <strong>MAY</strong> have zero or more ORDERs, while an ORDER <strong>MUST</strong> belong to one and only one CUSTOMER.</li>
+</ol>
+<h4 id="many-to-many-relationships">many-to-many relationships<a class="headerlink" href="#many-to-many-relationships" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>mandatory-mandatory
+   <img alt="mandatory-mandatory" src="https://i.imgur.com/DxOj98h.png" /></p>
+</li>
+<li>
+<p>this relationship is <strong>impossible</strong>. or called <strong>catch-22</strong>.</p>
+</li>
+<li>
+<p>mandatory-optional
+   <img alt="mandatory-optional" src="https://i.imgur.com/iRcKKWd.png" /></p>
+</li>
+<li>
+<p>needs to be resolved; analysis is unclear.</p>
+</li>
+<li>
+<p>optional-optional
+   <img alt="optional-optional" src="https://i.imgur.com/7pyZAHI.png" /></p>
+</li>
+<li>
+<p>this is very useful. it is called <strong>intersection entity</strong>.</p>
+</li>
+<li>
+<p>NOTE: to resolve the optional-optional many-to-many relationship between CUSTOMER and ORDER, we need to represent a third table that joins the 2 relation. an example of such a relationship between BUSINESS CONTACT and CONTACT TYPE listed below.</p>
+</li>
+</ol>
+<p><img alt="optional-optional many-to-many relationship" src="https://i.imgur.com/vEMGZUF.png" /></p>
+<ul>
+<li><strong>NOTE</strong>: <img alt="symbol" src="https://i.imgur.com/UnVjWTP.png" /> means that the primary keys of both relations contributes to the primary key. so it is a <strong>composite primary key</strong>.</li>
+</ul>
+<h4 id="involuted-recursive-relationships">Involuted (recursive) relationships<a class="headerlink" href="#involuted-recursive-relationships" title="Permanent link">&para;</a></h4>
+<ol>
+<li>one-to-one, optional-optional = allows for holding historical data.
+   <img alt="one-to-one, optional-optional" src="https://i.imgur.com/rA24sHZ.png" /></li>
+<li>one-to-many, optional-optional = classical hierarchy.
+   <img alt="one-to-many, optional-optional" src="https://i.imgur.com/6HvZlbo.png" /></li>
+<li>many-to-many, optional-optional = network structure, <strong>needs a join table</strong>.
+   <img alt="many-to-many, optional-optional" src="https://i.imgur.com/seCCcFZ.png" /></li>
+</ol>
+<h3 id="arc">arc<a class="headerlink" href="#arc" title="Permanent link">&para;</a></h3>
+<ul>
+<li>arc is a constraint that crosses to one or more relationships going into an entity, and indicates that the relationships in the arc are mutually exclusive.</li>
+<li>in the photo below, for any TRANSACTION, it MUST be valid for SHAREHOLDER <strong>OR</strong> a BUSINESS CONTACT, <strong>but not both at the same time</strong>.</li>
+<li>try to <strong>avoid</strong> arcs.
+  <img alt="arc" src="https://i.imgur.com/QvaJxI8.png" /></li>
+</ul>
+<h3 id="mistakes-in-data-modeling">mistakes in data modeling<a class="headerlink" href="#mistakes-in-data-modeling" title="Permanent link">&para;</a></h3>
+<ol>
+<li>modeling with incompleteness.</li>
+<li>modeling with incomplete understanding of the business.</li>
+</ol>
+<h3 id="database-normalization">database normalization<a class="headerlink" href="#database-normalization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Database normalization is the process of structuring a database, usually a relational database, in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity. It was first proposed by Edgar F. Codd as part of his relational model.</li>
+<li><strong>FN1 (First Normal Form)</strong>: do not repeat attributes/groups of attribute, instead take them out to their own entity.</li>
+<li>final result of the case study:
+  <img alt="final result of the case study" src="https://i.imgur.com/6Fk0xb3.png" /></li>
+<li>more info here: <a href="https://en.wikipedia.org/wiki/Database_normalization">https://en.wikipedia.org/wiki/Database_normalization</a></li>
+</ul>
+<h2 id="cardinality-symbols">cardinality symbols<a class="headerlink" href="#cardinality-symbols" title="Permanent link">&para;</a></h2>
+<p><img alt="cardinality symobls" src="https://i.imgur.com/mY3PBoQ.png" /></p>
+<p>more indo: <a href="https://www.smartdraw.com/entity-relationship-diagram">https://www.smartdraw.com/entity-relationship-diagram</a></p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[1] <a href="https://public.dhe.ibm.com/software/dw/db2/express-c/wiki/Database_fundamentals.pdf">Sharma, N., Perniu, L., Chong, R. F., Iyer, A., Nandan, C., Mitea, A. C., Nonvinkere, M., &amp; Danubianu, M. (2010). Databases fundamentals. <em>Chapter 3</em>.</a></li>
+<li>[2] <a href="https://my.uopeople.edu/pluginfile.php/57436/mod_book/chapter/37615/CS2203.Textbook.ER.Modeling.pdf">Pedersen, A. A. (n.d.). Entity relationship modeling - Principles.</a></li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../unit1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unit1: Databases and Relational Data Model" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Unit1: Databases and Relational Data Model
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../unit3/" class="md-footer__link md-footer__link--next" aria-label="Next: Unit 3: Relational Database Design" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Unit 3: Relational Database Design
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.expand"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+    
+  </body>
+</html>

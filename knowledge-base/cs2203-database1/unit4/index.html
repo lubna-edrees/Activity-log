@@ -1,0 +1,3945 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Ahmad Ali">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>Unit 4: Introduction to SQL - CS-INDEX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9647289d.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-4-introduction-to-sql" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="CS-INDEX" class="md-header__button md-logo" aria-label="CS-INDEX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CS-INDEX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unit 4: Introduction to SQL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CS-INDEX" class="md-nav__button md-logo" aria-label="CS-INDEX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CS-INDEX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Knowledge base
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Knowledge base" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Knowledge base
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Books
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Books" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Books
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../books/" class="md-nav__link">
+        list of recommended books
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Cs2203 database1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cs2203 database1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cs2203 database1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Databases 1 CS-2203
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit1/" class="md-nav__link">
+        Unit1: Databases and Relational Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit2/" class="md-nav__link">
+        Unit 2: Conceptual Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit3/" class="md-nav__link">
+        Unit 3: Relational Database Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Unit 4: Introduction to SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Unit 4: Introduction to SQL
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    table of contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-1" class="md-nav__link">
+    Introduction [1]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-definitions" class="md-nav__link">
+    useful definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history-of-sql" class="md-nav__link">
+    History of SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-a-relational-database-schema-in-sql" class="md-nav__link">
+    Defining a relational database schema in SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-manipulation-with-sql" class="md-nav__link">
+    Data manipulation with SQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Data manipulation with SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-joins" class="md-nav__link">
+    SQL joins
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#union-intersection-and-difference-operations" class="md-nav__link">
+    Union, intersection, and difference operations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relational-operators" class="md-nav__link">
+    Relational operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Relational operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grouping-operators" class="md-nav__link">
+    grouping operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregation-operators" class="md-nav__link">
+    Aggregation operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#having-clause" class="md-nav__link">
+    HAVING Clause
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sub-queries" class="md-nav__link">
+    Sub-queries
+  </a>
+  
+    <nav class="md-nav" aria-label="Sub-queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sub-queries-returning-a-scalar-value" class="md-nav__link">
+    Sub-queries returning a scalar value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-queries-returning-vector-values" class="md-nav__link">
+    Sub-queries returning vector values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlated-sub-query" class="md-nav__link">
+    Correlated sub-query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-query-in-from-clauses" class="md-nav__link">
+    Sub-query in FROM Clauses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-oop-concepts-to-relational-database-concepts" class="md-nav__link">
+    map OOP concepts to relational database concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-rough-guide-to-sql-2" class="md-nav__link">
+    A rough guide to SQL [2]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-standards-support-3" class="md-nav__link">
+    SQL Standards Support [3]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#short-guide-to-data-types" class="md-nav__link">
+    Short Guide to Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit5/" class="md-nav__link">
+        Unit 5: DDL and DML Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit6/" class="md-nav__link">
+        Unit 6: Querying the Database using SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit7/" class="md-nav__link">
+        Unit 7: Database Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit8/" class="md-nav__link">
+        Unit 8: Database Development Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unit9/" class="md-nav__link">
+        Unit 9: Data integrity, Views
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Cs2204 netwroks1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cs2204 netwroks1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Cs2204 netwroks1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_1">
+          Unit1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit1" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Unit1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit1/unit1/" class="md-nav__link">
+        unit 1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_2">
+          Unit6
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit6" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Unit6
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/da6/" class="md-nav__link">
+        Unit 6: Discussion assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/journal/" class="md-nav__link">
+        unit 6: Journal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/unit6/" class="md-nav__link">
+        Unit 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit6/wa6/" class="md-nav__link">
+        Unit 6: written assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_3">
+          Unit7
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit7" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Unit7
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/" class="md-nav__link">
+        CS2204: Unit7: The Transport Layer (TCP)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/da7/" class="md-nav__link">
+        cs2204: unit 7: Discussion Assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/ja7/" class="md-nav__link">
+        CS2204: unit 7: Journal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit7/wa7/" class="md-nav__link">
+        CS2204: unit 7: Written Assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_4">
+          Unit8
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit8" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Unit8
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit8/" class="md-nav__link">
+        CS2204: unit 8: Application Layer and Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit8/da8/" class="md-nav__link">
+        CS2204: unit 8: Discussion Assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit8/ja8/" class="md-nav__link">
+        CS2204: unit 8: Journal Assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_5">
+          Unit9
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit9" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Unit9
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs2204-netwroks1/unit9/" class="md-nav__link">
+        CS2204: unit 9: Revision
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          General
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/" class="md-nav__link">
+        Table of contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/continous-integration-vs-branching/" class="md-nav__link">
+        Continuous Integration Vs Branching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_3">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced/design_patterns/" class="md-nav__link">
+        Design Patterns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/advanced/oop/" class="md-nav__link">
+        Object Oriented Programming
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/" class="md-nav__link">
+        Data Structures and Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/algorithms-on-graphs/" class="md-nav__link">
+        Algorithms on Graphs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/algorithms/" class="md-nav__link">
+        Algorithms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/freecodecamp/" class="md-nav__link">
+        Free Code Camp Algorithms section
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/mit6006/" class="md-nav__link">
+        Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/quick_find/" class="md-nav__link">
+        quick-find
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/quick_union/" class="md-nav__link">
+        quick-union
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/union_find/" class="md-nav__link">
+        union-find
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_4_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4_9_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9_1">
+          Algorithm toolbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithm toolbox" data-md-level="5">
+        <label class="md-nav__title" for="__nav_2_4_4_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithm toolbox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/" class="md-nav__link">
+        algoritm toolbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/algorithms_notes/" class="md-nav__link">
+        Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9_1_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4_9_1_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9_1_3">
+          Week2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Week2" data-md-level="6">
+        <label class="md-nav__title" for="__nav_2_4_4_9_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Week2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/week2/" class="md-nav__link">
+        week2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/algorithms/examples/algorithm-toolbox/week2/week2/" class="md-nav__link">
+        week2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_5">
+          Api
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Api" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/api/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/api/api-list/" class="md-nav__link">
+        List of Greet APIs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/api/packages/" class="md-nav__link">
+        packages Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_6" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_6">
+          dataStructures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="dataStructures" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          dataStructures
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/binary_trees/" class="md-nav__link">
+        Binary search trees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/data_structures/" class="md-nav__link">
+        data structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/disjoint_setes/" class="md-nav__link">
+        Disjoint Sets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/hash_tables/" class="md-nav__link">
+        Hash Tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/heap/" class="md-nav__link">
+        Heap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/linked_lists/" class="md-nav__link">
+        Linked Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/priority_queue/" class="md-nav__link">
+        priority queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/queue/" class="md-nav__link">
+        queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/stack/" class="md-nav__link">
+        stack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/dataStructures/trees/" class="md-nav__link">
+        trees
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_7" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_7">
+          Databases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Databases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Databases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/mongo/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/mongoose/" class="md-nav__link">
+        Mongoose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/redis/" class="md-nav__link">
+        Redis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/databases/sequilize/" class="md-nav__link">
+        Sequalize
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_8" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_8">
+          Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Design" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/design/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/design/css/" class="md-nav__link">
+        Css
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_9" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_9">
+          Frameworks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Frameworks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Frameworks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/bootstrap/" class="md-nav__link">
+        Bootstrap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/react/" class="md-nav__link">
+        React
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/frameworks/redux/" class="md-nav__link">
+        Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_10" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_10">
+          Interviews
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Interviews" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Interviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/js_general/" class="md-nav__link">
+        Js general
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/js_oop/" class="md-nav__link">
+        OOP in JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/references/" class="md-nav__link">
+        Interview Preperation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/interviews/self_introduction/" class="md-nav__link">
+        Self Introduction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_11" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_11">
+          Javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Javascript" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_11">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/arrays/" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/datetime/" class="md-nav__link">
+        Date and Time
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/generaljs/" class="md-nav__link">
+        General JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/is/" class="md-nav__link">
+        IS?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/numbers/" class="md-nav__link">
+        Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/objects/" class="md-nav__link">
+        Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/javascript/strings/" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_12" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_12" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_12">
+          Node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_12">
+          <span class="md-nav__icon md-icon"></span>
+          Node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/argv/" class="md-nav__link">
+        Argv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/node/" class="md-nav__link">
+        Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/node/stdout/" class="md-nav__link">
+        process.stdout, process.stdin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_13" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_13">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programming languages" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_13">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/programming-languages/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/programming-languages/go/" class="md-nav__link">
+        GoLang Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/programming-languages/python/" class="md-nav__link">
+        python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_14" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_14">
+          Software development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software development" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_14">
+          <span class="md-nav__icon md-icon"></span>
+          Software development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/" class="md-nav__link">
+        software\_development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/agile/" class="md-nav__link">
+        Agile process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/requirments/" class="md-nav__link">
+        Requirments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/software-development/terminology/" class="md-nav__link">
+        programming terminoloy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_15" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_15">
+          Think
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Think" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_15">
+          <span class="md-nav__icon md-icon"></span>
+          Think
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/think/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/think/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/think/thinking_logically_games/" class="md-nav__link">
+        thinking\_logically\_games
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_16" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_16">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_16">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/grunt/" class="md-nav__link">
+        Grunt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/linux/" class="md-nav__link">
+        linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/shel_scripting/" class="md-nav__link">
+        Shel scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/tools/windows/" class="md-nav__link">
+        Windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_17" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_17" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_17">
+          Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_17">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/dom/" class="md-nav__link">
+        DOM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/fonts/" class="md-nav__link">
+        Fonts I like
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/meta/" class="md-nav__link">
+        Meta
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/pwa/" class="md-nav__link">
+        Progressive Web Apps PWA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/seo/" class="md-nav__link">
+        SEO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/web/urls/" class="md-nav__link">
+        URLs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Math1280 statistics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math1280 statistics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Math1280 statistics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5_1">
+          Unit1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit1" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Unit1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math1280-statistics/unit1/" class="md-nav__link">
+        MATH 1280: unit 1: Introduction to statistics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" data-md-state="indeterminate" type="checkbox" id="__nav_2_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          Mysql
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mysql" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mysql
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mysql/" class="md-nav__link">
+        MYSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mysql/windows/" class="md-nav__link">
+        MYSQL on windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" data-md-state="indeterminate" type="checkbox" id="__nav_2_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          Todo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Todo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Todo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../todo/to_learn/" class="md-nav__link">
+        list of things to learn more about them
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../todo/to_record/" class="md-nav__link">
+        Things I need to make a videos about
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/projects/" class="md-nav__link">
+        list of live projects:
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    table of contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-1" class="md-nav__link">
+    Introduction [1]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-definitions" class="md-nav__link">
+    useful definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history-of-sql" class="md-nav__link">
+    History of SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-a-relational-database-schema-in-sql" class="md-nav__link">
+    Defining a relational database schema in SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-manipulation-with-sql" class="md-nav__link">
+    Data manipulation with SQL
+  </a>
+  
+    <nav class="md-nav" aria-label="Data manipulation with SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-joins" class="md-nav__link">
+    SQL joins
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#union-intersection-and-difference-operations" class="md-nav__link">
+    Union, intersection, and difference operations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relational-operators" class="md-nav__link">
+    Relational operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Relational operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grouping-operators" class="md-nav__link">
+    grouping operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregation-operators" class="md-nav__link">
+    Aggregation operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#having-clause" class="md-nav__link">
+    HAVING Clause
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sub-queries" class="md-nav__link">
+    Sub-queries
+  </a>
+  
+    <nav class="md-nav" aria-label="Sub-queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sub-queries-returning-a-scalar-value" class="md-nav__link">
+    Sub-queries returning a scalar value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-queries-returning-vector-values" class="md-nav__link">
+    Sub-queries returning vector values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlated-sub-query" class="md-nav__link">
+    Correlated sub-query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub-query-in-from-clauses" class="md-nav__link">
+    Sub-query in FROM Clauses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-oop-concepts-to-relational-database-concepts" class="md-nav__link">
+    map OOP concepts to relational database concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-rough-guide-to-sql-2" class="md-nav__link">
+    A rough guide to SQL [2]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-standards-support-3" class="md-nav__link">
+    SQL Standards Support [3]
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#short-guide-to-data-types" class="md-nav__link">
+    Short Guide to Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="unit-4-introduction-to-sql">Unit 4: Introduction to SQL<a class="headerlink" href="#unit-4-introduction-to-sql" title="Permanent link">&para;</a></h1>
+<h2 id="table-of-contents">table of contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#unit-4-introduction-to-sql">Unit 4: Introduction to SQL</a></li>
+<li><a href="#table-of-contents">table of contents</a></li>
+<li><a href="#introduction-1">Introduction [[1]](#references)</a></li>
+<li><a href="#useful-definitions">useful definitions</a></li>
+<li><a href="#history-of-sql">History of SQL</a></li>
+<li><a href="#defining-a-relational-database-schema-in-sql">Defining a relational database schema in SQL</a></li>
+<li><a href="#data-manipulation-with-sql">Data manipulation with SQL</a><ul>
+<li><a href="#sql-joins">SQL joins</a></li>
+</ul>
+</li>
+<li><a href="#union-intersection-and-difference-operations">Union, intersection, and difference operations</a></li>
+<li><a href="#relational-operators">Relational operators</a><ul>
+<li><a href="#grouping-operators">grouping operators</a></li>
+<li><a href="#aggregation-operators">Aggregation operators</a></li>
+<li><a href="#having-clause">HAVING Clause</a></li>
+</ul>
+</li>
+<li><a href="#sub-queries">Sub-queries</a><ul>
+<li><a href="#sub-queries-returning-a-scalar-value">Sub-queries returning a scalar value</a></li>
+<li><a href="#sub-queries-returning-vector-values">Sub-queries returning vector values</a></li>
+<li><a href="#correlated-sub-query">Correlated sub-query</a></li>
+<li><a href="#sub-query-in-from-clauses">Sub-query in FROM Clauses</a></li>
+</ul>
+</li>
+<li><a href="#map-oop-concepts-to-relational-database-concepts">map OOP concepts to relational database concepts</a></li>
+<li><a href="#a-rough-guide-to-sql-2">A rough guide to SQL [[2]](#references)</a></li>
+<li><a href="#sql-standards-support-3">SQL Standards Support [[3]](#references)</a></li>
+<li><a href="#short-guide-to-data-types">Short Guide to Data Types</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<h2 id="introduction-1">Introduction <a href="#references">[1]</a><a class="headerlink" href="#introduction-1" title="Permanent link">&para;</a></h2>
+<p>there 3 categories of statements in the SQL language:</p>
+<ol>
+<li><strong>Data Definition Language (DDL)</strong>: used to create,alter, manipulate the objects within the DB.</li>
+<li><strong>Data Manipulation Language (DML)</strong>: used to read and manipulate data within the DB. most used in applications.</li>
+<li><strong>Data Control Language (DCL)</strong>: used to control access to the data within the DB. concerns about the security of the database.</li>
+</ol>
+<h2 id="useful-definitions">useful definitions<a class="headerlink" href="#useful-definitions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Authentication</strong>: a user is who they say they are because they have the appropriate password.</li>
+<li><strong>Authorization</strong>: restricts what a valid user <strong>(authenticated user)</strong> has access to and what kind of access they have.</li>
+</ul>
+<h2 id="history-of-sql">History of SQL<a class="headerlink" href="#history-of-sql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>created by Don Chamberlin and Ray Boyce from IBM in the 1970's as part of the System R project which meant to provide a practical implementation to Codd's relational model.</li>
+<li>SQL was adopted as a standard language in 1986 by the American National Standards Institute (ANSI) and by the International Standards Organization (ISO) in 1987.</li>
+</ul>
+<h2 id="defining-a-relational-database-schema-in-sql">Defining a relational database schema in SQL<a class="headerlink" href="#defining-a-relational-database-schema-in-sql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>SQL represents the <strong>physical data model</strong> of the schema <strong>(conceptual data model)</strong></li>
+<li>A table whose column values depend on the values of other tables is called <strong>dependant</strong>, or child table</li>
+<li>and a table that is being referenced is called the <strong>base</strong> or parent table</li>
+<li>Referential integrity can be defined during table definition or after the table has been created</li>
+<li>define foregin key syntax</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="n">Syntax</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">DEPENDANT_TABLE</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="n">ID</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">BASE_TABLE</span><span class="p">(</span><span class="n">UNIQUE_OR_PRIMARY_KEY</span><span class="p">),</span><span class="w"> </span><span class="n">NAME</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">9</span><span class="p">));</span><span class="w"></span>
+
+
+<span class="w">  </span><span class="n">Syntax</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">DEPENDANT_TABLE</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="n">ID</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span><span class="w"> </span><span class="n">NAME</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="k">constraint_name</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">BASE_TABLE</span><span class="p">(</span><span class="n">UNIQUE_OR_PRIMARY_KEY</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">);</span><span class="w"></span>
+
+
+
+<span class="w">  </span><span class="n">Syntax</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">DEPENDANT_TABLE</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="n">ID</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span><span class="w"> </span><span class="n">NAME</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">DEPENDANT_TABLE</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="k">constraint_name</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">BASE_TABLE</span><span class="p">(</span><span class="n">UNIQUE_OR_PRIMARY_KEY</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">delete_action_type</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">   </span><span class="k">ON</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">update_action_type</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>A delete action type can be a <code>CASCADE</code>, <code>SET NULL</code>, <code>NO ACTION</code>, or <code>RESTRICT</code>. An update action type can be a <code>NO ACTION</code>, or <code>RESTRICT</code></li>
+<li>create a table with schema</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">create</span><span class="w"> </span><span class="k">schema</span><span class="w"> </span><span class="n">mySchema</span><span class="w"></span>
+<span class="w">  </span><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">mySchema</span><span class="p">.</span><span class="n">myTable</span><span class="w"> </span><span class="p">(</span><span class="n">col1</span><span class="w"> </span><span class="nb">integer</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li><strong>view</strong>: is a virtual table derived from one or more tables or other views. It is virtual because it does not contain any data, but a definition of a table based on the result of a SELECT statement.</li>
+<li>Views allow you to hide data or limit access to a select number of columns; therefore, they can also be used for security purposes.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">MYVIEW</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">LASTNAME</span><span class="p">,</span><span class="w"> </span><span class="n">HIREDATE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">EMPLOYEE</span><span class="w"></span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">MYVIEW</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>other database objects: 1. indexes 2. functions 3. procedures 4. triggers 5. ..etc</li>
+<li>rename DB object:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">RENAME</span><span class="w"> </span><span class="o">&lt;</span><span class="k">object</span><span class="w"> </span><span class="k">type</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="k">object</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="o">&lt;</span><span class="k">new</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="k">column</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="o">&lt;</span><span class="k">new</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h2 id="data-manipulation-with-sql">Data manipulation with SQL<a class="headerlink" href="#data-manipulation-with-sql" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A SELECT statement returns its result set in no particular order</li>
+<li>executing the same SELECT statement multiple times will generate same rows but in different order, adding <strong>ORDER BY clause</strong> will return the same order every times</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">myTable</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">col1</span><span class="w"> </span><span class="k">DESC</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li><strong>cursor</strong>: is a result set holding the result of a SELECT statement. The syntax to declare, open, fetch, and close</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="o">&lt;</span><span class="k">cursor</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"> </span><span class="p">[</span><span class="k">WITH</span><span class="w"> </span><span class="k">RETURN</span><span class="w"> </span><span class="o">&lt;</span><span class="k">return</span><span class="w"> </span><span class="n">target</span><span class="o">&gt;</span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="o">&lt;</span><span class="k">SELECT</span><span class="w"> </span><span class="k">statement</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">OPEN</span><span class="w"> </span><span class="o">&lt;</span><span class="k">cursor</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">FETCH</span><span class="w"> </span><span class="o">&lt;</span><span class="k">cursor</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">variables</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="o">&lt;</span><span class="k">cursor</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>Rather than returning all the rows of an SQL statement to an application at once, a cursor allows the application to process rows one at a time. Using FETCH statements within a loop in the application, developers can navigate through each row pointed by the cursor and apply some logic to the row or based on the row contents.</li>
+<li>For example, the following code snippet sums all the salaries of employees using a cursor</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">p_sum</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="n">p_sal</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">CURSOR</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">SALARY</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">EMPLOYEE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">DECLARE</span><span class="w"> </span><span class="k">SQLSTATE</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;00000&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">p_sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">OPEN</span><span class="w"> </span><span class="k">c</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">FETCH</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">p_sal</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">WHILE</span><span class="p">(</span><span class="k">SQLSTATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;00000&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">DO</span><span class="w"></span>
+<span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="n">p_sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_sum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p_sal</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">FETCH</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">c</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">p_sal</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">WHILE</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">CLOSE</span><span class="w"> </span><span class="k">c</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>copy the results of a table into another table, you need to be careful for the attributes order though:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">myTable</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">myTable2</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>delete statement:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">myTable</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">col1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1000</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>update statement:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">myTable</span><span class="w"></span>
+<span class="w">        </span><span class="k">SET</span><span class="w"> </span><span class="n">col1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="n">a</span><span class="err">’</span><span class="p">,</span><span class="w"> </span><span class="n">col3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="mi">2010</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="err">’</span><span class="w"></span>
+<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">col4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="mi">0</span><span class="err">’</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="sql-joins">SQL joins<a class="headerlink" href="#sql-joins" title="Permanent link">&para;</a></h3>
+<ol>
+<li>inner joins: Equi-join, Natural join, Cross join</li>
+<li>outer joins: Left outer join, Right outer join, Full outer join</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>definitions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equal join (equi)</td>
+<td>two tables are joined based on the equality of specified columns</td>
+</tr>
+<tr>
+<td>natural join</td>
+<td>improved version of an equi-join where the joining column does not require specification. The system automatically selects the column with same name in the tables and applies the equality operation on it and remove all duplicate attributes. ambiguous, not liked by most DBs.</td>
+</tr>
+<tr>
+<td>cross join</td>
+<td>Cartesian product of the tables to be joined</td>
+</tr>
+<tr>
+<td>left outer join</td>
+<td>the result set is a union of the results of an equi-join, including any non-matching rows from the LEFT table</td>
+</tr>
+<tr>
+<td>right outer join</td>
+<td>the union of results of an equi-join, including any non-matching rows from the RIGHT table.</td>
+</tr>
+<tr>
+<td>full outer join</td>
+<td>the result set is the union of results of an equi- join, including any non-matching rows of the LEFT and the RIGHT table.</td>
+</tr>
+</tbody>
+</table>
+<p>examples:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">-- Example 1 (equi join):</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="p">,</span><span class="w"> </span><span class="n">enrollment</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">enrollment_no</span><span class="o">=</span><span class="n">enrollment</span><span class="p">.</span><span class="n">enrollment_no</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">-- Example 2 (equi join):</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">enrollment</span><span class="w"></span>
+<span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">enrollment_no</span><span class="o">=</span><span class="n">enrollment</span><span class="p">.</span><span class="n">enrollment_no</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">-- example 3 (natural join):</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="k">NATURAL</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">ENROLLMENT</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">-- Example 4 (cross join):</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">STUDENT</span><span class="p">,</span><span class="w"> </span><span class="n">ENROLLMENT</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">-- Example 5 (left outer join):</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"></span>
+<span class="w">        </span><span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">ENROLLMENT</span><span class="w"></span>
+<span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">STUDENT</span><span class="p">.</span><span class="n">ENROLLMENT_NO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ENROLLMENT_NO</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">-- Example 6 (right outer join):</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"></span>
+<span class="w">        </span><span class="k">RIGHT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">ENROLLMENT</span><span class="w"></span>
+<span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">STUDENT</span><span class="p">.</span><span class="n">ENROLLMENT_NO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ENROLLMENT_NO</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">-- Example 7 (full outer join ):</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"></span>
+<span class="w">        </span><span class="k">FULL</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">ENROLLMENT</span><span class="w"></span>
+<span class="w">        </span><span class="k">ON</span><span class="w"> </span><span class="n">STUDENT</span><span class="p">.</span><span class="n">ENROLLMENT_NO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ENROLLMENT_NO</span><span class="w"></span>
+</code></pre></div>
+<p><img alt="types of outer join" src="https://i.imgur.com/CwfNL73.png" /></p>
+<hr />
+<h2 id="union-intersection-and-difference-operations">Union, intersection, and difference operations<a class="headerlink" href="#union-intersection-and-difference-operations" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>operation</th>
+<th>definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>union</td>
+<td>join two data sets having the same column definitions and in the same order. removes any duplicate rows.</td>
+</tr>
+<tr>
+<td>intersection</td>
+<td>returns a result set common to both data sets</td>
+</tr>
+<tr>
+<td>difference (EXCEPT)</td>
+<td>returns the result set that exists only in the <code>RIGHT or First</code> table as <code>A EXCEPT B = A MINUS [A INTERSECT B]</code></td>
+</tr>
+</tbody>
+</table>
+<p>examples</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">-- Example 1 (union):</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">student_table_a</span><span class="w"></span>
+<span class="w">        </span><span class="k">UNION</span><span class="w"></span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">student_table_b</span><span class="w"></span>
+
+<span class="w">     </span><span class="c1">-- Example 2 (union with duplicates):</span>
+<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">student_table_a</span><span class="w"></span>
+<span class="w">        </span><span class="k">UNION</span><span class="w"> </span><span class="k">ALL</span><span class="w">     </span><span class="c1">-- duplicate rows will stay in the result</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">student_table_b</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">-- Example 3 (intersection):</span>
+<span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">student_table_a</span><span class="w"></span>
+<span class="w">        </span><span class="k">INTERSECT</span><span class="w"></span>
+<span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">student_table_b</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">-- Example 4 (intersection with duplicates):</span>
+<span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">student_table_a</span><span class="w"></span>
+<span class="w">        </span><span class="k">INTERSECT</span><span class="w"> </span><span class="k">ALL</span><span class="w">  </span><span class="c1">-- duplicate rows will stay in the result</span>
+<span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">student_table_b</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h2 id="relational-operators">Relational operators<a class="headerlink" href="#relational-operators" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Basic mathematical operations like ‘+’, ‘-‘, ‘*’ and ‘/’</li>
+<li>Logical operators like ‘AND’, ‘OR’ and ‘NOT’</li>
+<li>String manipulation operators like ‘CONCATENATE’, ‘LENGTH’, ‘SUBSTRING’</li>
+<li>Comparative operators like ‘=’, ‘&lt;’, ‘&gt;’, ‘&gt;=’, ‘&lt;=’ and ‘!=’</li>
+<li>Grouping and aggregate operators</li>
+<li>Other miscellaneous operations like DISTINCT</li>
+</ul>
+<h3 id="grouping-operators">grouping operators<a class="headerlink" href="#grouping-operators" title="Permanent link">&para;</a></h3>
+<ul>
+<li>perform operations on two or more rows of data, and provide a summarized output result set</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="n">course_enrolled</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">students_enrollment</span><span class="w"></span>
+<span class="w">    </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">course_enrolled</span><span class="w"></span>
+</code></pre></div>
+<p>and the result from the above statement:</p>
+<table>
+<thead>
+<tr>
+<th>COURSE_ENROLLED</th>
+<th>STUDENT_COUNT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Maths</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Physics</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aggregation-operators">Aggregation operators<a class="headerlink" href="#aggregation-operators" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Operators, which perform on two or more tuples or rows, and return a scalar result set, are called aggregate operators.</li>
+<li>Examples include: <code>COUNT, SUM, AVERAGE, MINIMUM, MAXIMUM</code>, and so on.</li>
+</ul>
+<h3 id="having-clause">HAVING Clause<a class="headerlink" href="#having-clause" title="Permanent link">&para;</a></h3>
+<ul>
+<li>can be used only with a GROUP BY clause to filter the desired rows in grouped data.</li>
+<li>basically, it is a <code>WHERE</code> clause but for <code>Grouped data</code>, since the <code>WHERE</code> clause can not work on grouped sets.</li>
+</ul>
+<hr />
+<h2 id="sub-queries">Sub-queries<a class="headerlink" href="#sub-queries" title="Permanent link">&para;</a></h2>
+<ul>
+<li>When a query is applied within a query, the outer query is referred to as the main query or parent query and the internal query is referred as the sub-query or inner query</li>
+<li>sub query may return a scalar value, single or multiple tuples, or a NULL data set</li>
+<li>Sub-queries are executed first, and then the parent query is executed utilizing data returned by the sub-queries.</li>
+</ul>
+<h3 id="sub-queries-returning-a-scalar-value">Sub-queries returning a scalar value<a class="headerlink" href="#sub-queries-returning-a-scalar-value" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Scalar values represent a single value of any attribute or entity, for example Name, Age.</li>
+<li>The example below returns a list of students who are the youngest among all students.</li>
+<li>The sub-query “SELECT min(age) FROM students” returns a scalar value that indicates the minimum age among all students.</li>
+<li>The parent query returns a list of all students whose age is equal to the value returned by the sub-query.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students_enrollment</span><span class="w"></span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">min</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h3 id="sub-queries-returning-vector-values">Sub-queries returning vector values<a class="headerlink" href="#sub-queries-returning-vector-values" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When a sub-query returns a data set that represents multiple values for a column (like a list of names) or array of values for multiple columns (like Name, age and date of birth for all students), then the sub-query is said to be returning vector values.</li>
+<li>the example will get a list of students who are enrolled in courses offered by the computer science department:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"></span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">course_enrolled</span><span class="w"> </span><span class="k">IN</span><span class="w"></span>
+<span class="w">      </span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">course_name</span><span class="w"></span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">courses</span><span class="w"></span>
+<span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">department_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="n">Computer</span><span class="w"> </span><span class="n">Science</span><span class="err">’</span><span class="w"></span>
+<span class="w">      </span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>sub-query returns a list of all courses that are offered in the “Computer Science” department and the outer query lists all students enrolled in the courses of the sub-query result set.</li>
+</ul>
+<h3 id="correlated-sub-query">Correlated sub-query<a class="headerlink" href="#correlated-sub-query" title="Permanent link">&para;</a></h3>
+<ul>
+<li>When a sub-query is executed for each row of the parent table, instead of once then the sub-query is referred to as a correlated sub-query.</li>
+<li>the example below searches for a list of students with who have been awarded maximum marks in each department.</li>
+<li>For each row on the LEFT table, the sub-query finds max(marks) for the department of the current row and if the values of marks in the current row is equal to the sub-query result set, then it is added to the outer query result set.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">dept</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">marks</span><span class="w"></span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">final_result</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">marks</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="k">max</span><span class="p">(</span><span class="n">marks</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">final_result</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">dept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">dept</span><span class="w"></span>
+<span class="w">      </span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="sub-query-in-from-clauses">Sub-query in FROM Clauses<a class="headerlink" href="#sub-query-in-from-clauses" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A sub-query can be used in a FROM clause as well.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">dept</span><span class="p">,</span><span class="w"> </span><span class="n">max_marks</span><span class="p">,</span><span class="w"> </span><span class="n">min_marks</span><span class="p">,</span><span class="w"> </span><span class="n">avg_marks</span><span class="w"></span>
+<span class="w">    </span><span class="k">FROM</span><span class="w"></span>
+<span class="w">      </span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">dept</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="k">max</span><span class="p">(</span><span class="n">marks</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">max_marks</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="k">min</span><span class="p">(</span><span class="n">marks</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">min_marks</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="k">avg</span><span class="p">(</span><span class="n">marks</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">avg_marks</span><span class="w"></span>
+<span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">final_result</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dept</span><span class="w"></span>
+<span class="w">      </span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">max_marks</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="n">min_marks</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">avg_marks</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>The above query uses a sub-query in the FROM clause. The sub-query returns maximum, minimum and average marks for each department. The outer query uses this data and filters the data further by adding filter conditions in the WHERE clause of the outer query</li>
+</ul>
+<h2 id="map-oop-concepts-to-relational-database-concepts">map OOP concepts to relational database concepts<a class="headerlink" href="#map-oop-concepts-to-relational-database-concepts" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Object-relational mapping (ORM)</strong> libraries such as <code>Hibernate</code>, <code>pureQuery</code> are popular to provide a framework for this mapping between the object-oriented world and the relational world.</li>
+</ul>
+<p><img alt="MAP OOP concepts to relational database concepts" src="https://i.imgur.com/M0CMmOO.png" /></p>
+<ul>
+<li>The table below shows the correspondence between conceptual, logical and physical model concepts</li>
+</ul>
+<p><img alt="The table below shows the correspondence between conceptual, logical and physical model concepts" src="https://i.imgur.com/sahsaW2.png" /></p>
+<hr />
+<hr />
+<h2 id="a-rough-guide-to-sql-2">A rough guide to SQL <a href="#references">[2]</a><a class="headerlink" href="#a-rough-guide-to-sql-2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>data stored in the DB in a way that can not be read by humans that's why we need DBMS.</li>
+<li>in early days of DBs the <strong>network and hierarchy</strong> data models were the most popular.</li>
+<li>SQL is a relational database language, but <strong>it is not a DBMS</strong>, instead it is a <strong>way to communicate</strong> with the DBMS.</li>
+<li>SQL is <strong>non procedural</strong> database language, which means that when executing a a SQL command you don't need to run,compile a program for each query or define the location of data, DBMS will take care of that.</li>
+<li><strong>interactive SQL</strong> can be run in the command line and output results to the console.</li>
+<li><strong>programmatic SQL</strong> where SQL commands are embedded in a host language (COBOL, C.SQL).</li>
+<li>SQL needs a host language cause it is <strong>not a complete programming language</strong>, it has no branching or looping functionalities, so it relays on the host language to allow this.</li>
+<li><strong>VIEWS</strong> are virtual tables, creating a view will create a new table in the database based on <code>select</code> statement provided when creating the view.</li>
+<li>the view then gets updated when any updates happen on the original table(s).</li>
+<li>when a new DB is created it is owned by the user who created it and have all privileges over it.</li>
+</ul>
+<h2 id="sql-standards-support-3">SQL Standards Support <a href="#references">[3]</a><a class="headerlink" href="#sql-standards-support-3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>SQL SECTION</th>
+<th>COMMANDS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Definition Language (DDL)</td>
+<td>CREATE, ALTER, DROP, GRANT, REVOKE, COMMENT ON, EXPLAIN REFERENCES, DECLARE</td>
+</tr>
+<tr>
+<td>Data Manipulation Language (DML)</td>
+<td>INSERT, UPDATE, DELETE, TRUNCATE, MERGE</td>
+</tr>
+<tr>
+<td>Data Query Language (DQL)</td>
+<td>SELECT, VALUES, WITH, EXPLAIN PLAN</td>
+</tr>
+<tr>
+<td>General operations on DB</td>
+<td>BACKUP, PERFORM, SCRIPS, CHECKPOINT, SHUTDOWN</td>
+</tr>
+<tr>
+<td>transaction statements</td>
+<td>START TRANSACTION, SET TRANSACTION, COMMIT, ROLLBACK, SAVEPOINT, RELEASE SAVEPOINT, LOCK, CONNECT, DISCONNECT</td>
+</tr>
+</tbody>
+</table>
+<h2 id="short-guide-to-data-types">Short Guide to Data Types<a class="headerlink" href="#short-guide-to-data-types" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Numeric</strong> types <strong>TINYINT, SMALLINT, INTEGER and BIGINT</strong> with fixed binary precision, <strong>NUMERIC and DECIMAL</strong> are types with user-defined decimal precision. <strong>DOUBLE</strong> type is a 64-bit.</li>
+<li><strong>BOOLEAN</strong> type is for logical values and can hold <strong>TRUE, FALSE or UNKNOWN</strong>.</li>
+<li><strong>Character string</strong> types are <strong>CHAR(L), VARCHAR(L) and CLOB</strong>,</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TINYINT, SMALLINT, INTEGER and BIGINT</td>
+<td>fixed binary precision</td>
+</tr>
+<tr>
+<td>NUMERIC and DECIMAL</td>
+<td>user-defined decimal precision</td>
+</tr>
+<tr>
+<td>DOUBLE</td>
+<td>64-bit</td>
+</tr>
+<tr>
+<td>CHAR(L)</td>
+<td>fixed length strings, if you provide shorter strings, spaces will be added. if no L provided its a single char</td>
+</tr>
+<tr>
+<td>VARCHAR(L)</td>
+<td>general strings, performance issues appear for long strings with this type, avoid in large strings (&gt; 10* KB).</td>
+</tr>
+<tr>
+<td>CLOB</td>
+<td>for large strings, avoid for short strings</td>
+</tr>
+<tr>
+<td>LONGCHAR</td>
+<td>a synonym for a long VARCHAR and can be used without specifying the size</td>
+</tr>
+<tr>
+<td>BINARY(L)</td>
+<td>fixed length strings such as UUID, e pads short binary strings with zero bytes, if no L it is a single byte</td>
+</tr>
+<tr>
+<td>VARBINARY(L)</td>
+<td>general binary strings</td>
+</tr>
+<tr>
+<td>BLOB(L)</td>
+<td>for large binary objects</td>
+</tr>
+<tr>
+<td>LONGVARBINARY</td>
+<td>used as VARBINARY without specifying the size, can be mapped to BLOB instead.</td>
+</tr>
+<tr>
+<td>BIT(L) and BITVARYING(L)</td>
+<td>avoid use without specifying L, use BOOLEAN for single bit.</td>
+</tr>
+<tr>
+<td>UUID</td>
+<td>stored as BINARY. UUID and BINARY strings, can be used to insert or to compare.</td>
+</tr>
+<tr>
+<td>DATE, TIME, and TIMESTAMP, TIME ZONE</td>
+<td></td>
+</tr>
+<tr>
+<td>INTERVAL</td>
+<td>used with datetime, not widely supported</td>
+</tr>
+<tr>
+<td>OTHER</td>
+<td>storage of json objects, if object is large, serialize and save as BLOB.</td>
+</tr>
+<tr>
+<td>ARRAY</td>
+<td>support all types <strong>except OTHER, BLOB</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[1] Sharma, N., Perniu, L., Chong, R. F., Iyer, A., Nandan, C., Mitea, A. C., Nonvinkere, M., &amp; Danubianu, M. (2010). Databases fundamentals. chapter 5.</li>
+<li>[2] Din, A. I. (2006). Structured Query Language (SQL): A practical introduction. NCC Blackwell. chapters 1 &amp; 2. Retrieved from <a href="http://www.managedtime.com/freesqlbook.php">http://www.managedtime.com/freesqlbook.php</a>.</li>
+<li>[3] Simpson, B., Toussi, F, &amp; The HSQL Development Group. (2019, June 2). HyperSQL user guide. Chapter 2. Retrieved from <a href="http://hsqldb.org/doc/2.0/guide/sqlgeneral-chapt.html">http://hsqldb.org/doc/2.0/guide/sqlgeneral-chapt.html</a></li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../unit3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unit 3: Relational Database Design" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Unit 3: Relational Database Design
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../unit5/" class="md-footer__link md-footer__link--next" aria-label="Next: Unit 5: DDL and DML Commands" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Unit 5: DDL and DML Commands
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.expand"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,4060 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Ahmad Ali">
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>algoritm toolbox - CS-INDEX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.9647289d.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../css/style.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#algoritm-toolbox" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="CS-INDEX" class="md-header__button md-logo" aria-label="CS-INDEX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CS-INDEX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              algoritm toolbox
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="CS-INDEX" class="md-nav__button md-logo" aria-label="CS-INDEX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CS-INDEX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Knowledge base
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Knowledge base" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Knowledge base
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Books
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Books" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Books
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../books/" class="md-nav__link">
+        list of recommended books
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Cs2203 database1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cs2203 database1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cs2203 database1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2203-database1/" class="md-nav__link">
+        Databases 1 CS-2203
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2203-database1/unit1/" class="md-nav__link">
+        Unit1: Databases and Relational Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2203-database1/unit2/" class="md-nav__link">
+        Unit 2: Conceptual Data Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2203-database1/unit3/" class="md-nav__link">
+        Unit 3: Relational Database Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2203-database1/unit4/" class="md-nav__link">
+        Unit 4: Introduction to SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2203-database1/unit5/" class="md-nav__link">
+        Unit 5: DDL and DML Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2203-database1/unit6/" class="md-nav__link">
+        Unit 6: Querying the Database using SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2203-database1/unit7/" class="md-nav__link">
+        Unit 7: Database Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2203-database1/unit8/" class="md-nav__link">
+        Unit 8: Database Development Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2203-database1/unit9/" class="md-nav__link">
+        Unit 9: Data integrity, Views
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Cs2204 netwroks1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cs2204 netwroks1" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Cs2204 netwroks1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_1">
+          Unit1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit1" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Unit1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit1/unit1/" class="md-nav__link">
+        unit 1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_2">
+          Unit6
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit6" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Unit6
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit6/da6/" class="md-nav__link">
+        Unit 6: Discussion assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit6/journal/" class="md-nav__link">
+        unit 6: Journal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit6/unit6/" class="md-nav__link">
+        Unit 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit6/wa6/" class="md-nav__link">
+        Unit 6: written assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_3">
+          Unit7
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit7" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Unit7
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit7/" class="md-nav__link">
+        CS2204: Unit7: The Transport Layer (TCP)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit7/da7/" class="md-nav__link">
+        cs2204: unit 7: Discussion Assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit7/ja7/" class="md-nav__link">
+        CS2204: unit 7: Journal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit7/wa7/" class="md-nav__link">
+        CS2204: unit 7: Written Assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_4">
+          Unit8
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit8" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Unit8
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit8/" class="md-nav__link">
+        CS2204: unit 8: Application Layer and Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit8/da8/" class="md-nav__link">
+        CS2204: unit 8: Discussion Assignment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit8/ja8/" class="md-nav__link">
+        CS2204: unit 8: Journal Assignment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_3_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_5">
+          Unit9
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit9" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Unit9
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../cs2204-netwroks1/unit9/" class="md-nav__link">
+        CS2204: unit 9: Revision
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          General
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        Table of contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../continous-integration-vs-branching/" class="md-nav__link">
+        Continuous Integration Vs Branching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_3">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Advanced" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/design_patterns/" class="md-nav__link">
+        Design Patterns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/oop/" class="md-nav__link">
+        Object Oriented Programming
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4" type="checkbox" id="__nav_2_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithms" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Data Structures and Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms-on-graphs/" class="md-nav__link">
+        Algorithms on Graphs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/" class="md-nav__link">
+        Algorithms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../freecodecamp/" class="md-nav__link">
+        Free Code Camp Algorithms section
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mit6006/" class="md-nav__link">
+        Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_find/" class="md-nav__link">
+        quick-find
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_union/" class="md-nav__link">
+        quick-union
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../union_find/" class="md-nav__link">
+        union-find
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9" type="checkbox" id="__nav_2_4_4_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_4_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9_1" type="checkbox" id="__nav_2_4_4_9_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9_1">
+          Algorithm toolbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithm toolbox" data-md-level="5">
+        <label class="md-nav__title" for="__nav_2_4_4_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithm toolbox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          algoritm toolbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        algoritm toolbox
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#week1-programming-challenges" class="md-nav__link">
+    week1: Programming Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week2-algorithmic-warm-up" class="md-nav__link">
+    week2: Algorithmic Warm-up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week3-greedy-algorithms" class="md-nav__link">
+    week3: Greedy Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week4-divide-and-conquer" class="md-nav__link">
+    week4: Divide-and-Conquer
+  </a>
+  
+    <nav class="md-nav" aria-label="week4: Divide-and-Conquer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-search" class="md-nav__link">
+    linear search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    Binary search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#augmented-array" class="md-nav__link">
+    Augmented Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polynomial-multiplication" class="md-nav__link">
+    polynomial multiplication
+  </a>
+  
+    <nav class="md-nav" aria-label="polynomial multiplication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naiive-algorithm-for-solving-polynomial-multiplication-problem" class="md-nav__link">
+    Naiive algorithm for solving polynomial multiplication problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naiive-divide-and-conquer-algorithm-for-solving-polynomial-multiplication" class="md-nav__link">
+    Naiive divide-and-conquer algorithm for solving polynomial multiplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faster-divide-and-conquer-algorithm-for-solving-polynomial-multiplication" class="md-nav__link">
+    Faster divide-and-conquer algorithm for solving polynomial multiplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master-theorem" class="md-nav__link">
+    Master Theorem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-sort" class="md-nav__link">
+    selection sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-sort" class="md-nav__link">
+    Merge sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counting-sort" class="md-nav__link">
+    counting sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-sort" class="md-nav__link">
+    quick sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick3" class="md-nav__link">
+    quick3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-about-quick-sort" class="md-nav__link">
+    notes about quick sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intro-quicksort" class="md-nav__link">
+    Intro quickSort
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-sorting-algorithms-cost-summary" class="md-nav__link">
+    Array sorting algorithms cost summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week5-dynamic-programming-1" class="md-nav__link">
+    week5: Dynamic programming 1
+  </a>
+  
+    <nav class="md-nav" aria-label="week5: Dynamic programming 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#greedy-change" class="md-nav__link">
+    Greedy change
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-change" class="md-nav__link">
+    recursive change
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-prgramming-change-dp-change" class="md-nav__link">
+    dynamic prgramming change \(dp change\):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-distance" class="md-nav__link">
+    Edit distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    resource
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-6-dynamic-programming-2" class="md-nav__link">
+    week 6: dynamic programming 2
+  </a>
+  
+    <nav class="md-nav" aria-label="week 6: dynamic programming 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#knapsack-with-repetions" class="md-nav__link">
+    knapsack with repetions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knapsack-with-repetition" class="md-nav__link">
+    knapsack with repetition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memoization" class="md-nav__link">
+    memoization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placing-parentheses" class="md-nav__link">
+    placing parentheses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="algorithms_notes/" class="md-nav__link">
+        Algorithms Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_4_9_1_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_4_9_1_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4_9_1_3">
+          Week2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Week2" data-md-level="6">
+        <label class="md-nav__title" for="__nav_2_4_4_9_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Week2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week2/" class="md-nav__link">
+        week2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="week2/week2/" class="md-nav__link">
+        week2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_5">
+          Api
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Api" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/api-list/" class="md-nav__link">
+        List of Greet APIs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/packages/" class="md-nav__link">
+        packages Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_6" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_6">
+          dataStructures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="dataStructures" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          dataStructures
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/binary_trees/" class="md-nav__link">
+        Binary search trees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/data_structures/" class="md-nav__link">
+        data structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/disjoint_setes/" class="md-nav__link">
+        Disjoint Sets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/hash_tables/" class="md-nav__link">
+        Hash Tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/heap/" class="md-nav__link">
+        Heap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/linked_lists/" class="md-nav__link">
+        Linked Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/priority_queue/" class="md-nav__link">
+        priority queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/queue/" class="md-nav__link">
+        queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/stack/" class="md-nav__link">
+        stack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataStructures/trees/" class="md-nav__link">
+        trees
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_7" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_7">
+          Databases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Databases" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Databases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../databases/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../databases/mongo/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../databases/mongoose/" class="md-nav__link">
+        Mongoose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../databases/redis/" class="md-nav__link">
+        Redis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../databases/sequilize/" class="md-nav__link">
+        Sequalize
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_8" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_8">
+          Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Design" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../design/css/" class="md-nav__link">
+        Css
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_9" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_9">
+          Frameworks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Frameworks" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Frameworks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frameworks/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frameworks/bootstrap/" class="md-nav__link">
+        Bootstrap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frameworks/react/" class="md-nav__link">
+        React
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../frameworks/redux/" class="md-nav__link">
+        Redux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_10" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_10">
+          Interviews
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Interviews" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Interviews
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../interviews/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../interviews/js_general/" class="md-nav__link">
+        Js general
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../interviews/js_oop/" class="md-nav__link">
+        OOP in JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../interviews/references/" class="md-nav__link">
+        Interview Preperation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../interviews/self_introduction/" class="md-nav__link">
+        Self Introduction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_11" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_11" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_11">
+          Javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Javascript" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_11">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/arrays/" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/datetime/" class="md-nav__link">
+        Date and Time
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/functions/" class="md-nav__link">
+        Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/generaljs/" class="md-nav__link">
+        General JS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/is/" class="md-nav__link">
+        IS?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/numbers/" class="md-nav__link">
+        Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/objects/" class="md-nav__link">
+        Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../javascript/strings/" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_12" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_12" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_12">
+          Node
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Node" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_12">
+          <span class="md-nav__icon md-icon"></span>
+          Node
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/argv/" class="md-nav__link">
+        Argv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/node/" class="md-nav__link">
+        Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../node/stdout/" class="md-nav__link">
+        process.stdout, process.stdin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_13" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_13" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_13">
+          Programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programming languages" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_13">
+          <span class="md-nav__icon md-icon"></span>
+          Programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programming-languages/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programming-languages/go/" class="md-nav__link">
+        GoLang Docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programming-languages/python/" class="md-nav__link">
+        python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_14" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_14" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_14">
+          Software development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software development" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_14">
+          <span class="md-nav__icon md-icon"></span>
+          Software development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software-development/" class="md-nav__link">
+        software\_development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software-development/agile/" class="md-nav__link">
+        Agile process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software-development/requirments/" class="md-nav__link">
+        Requirments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software-development/terminology/" class="md-nav__link">
+        programming terminoloy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_15" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_15" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_15">
+          Think
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Think" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_15">
+          <span class="md-nav__icon md-icon"></span>
+          Think
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../think/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../think/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../think/thinking_logically_games/" class="md-nav__link">
+        thinking\_logically\_games
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_16" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_16">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_16">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/bash/" class="md-nav__link">
+        Bash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/grunt/" class="md-nav__link">
+        Grunt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/linux/" class="md-nav__link">
+        linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/shel_scripting/" class="md-nav__link">
+        Shel scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/windows/" class="md-nav__link">
+        Windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4_17" data-md-state="indeterminate" type="checkbox" id="__nav_2_4_17" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_17">
+          Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_17">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web/dom/" class="md-nav__link">
+        DOM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web/fonts/" class="md-nav__link">
+        Fonts I like
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web/meta/" class="md-nav__link">
+        Meta
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web/pwa/" class="md-nav__link">
+        Progressive Web Apps PWA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web/seo/" class="md-nav__link">
+        SEO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../web/urls/" class="md-nav__link">
+        URLs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Math1280 statistics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math1280 statistics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Math1280 statistics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5_1" data-md-state="indeterminate" type="checkbox" id="__nav_2_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5_1">
+          Unit1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unit1" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Unit1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../math1280-statistics/unit1/" class="md-nav__link">
+        MATH 1280: unit 1: Introduction to statistics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" data-md-state="indeterminate" type="checkbox" id="__nav_2_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          Mysql
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mysql" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mysql
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../mysql/" class="md-nav__link">
+        MYSQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../mysql/windows/" class="md-nav__link">
+        MYSQL on windows
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" data-md-state="indeterminate" type="checkbox" id="__nav_2_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          Todo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Todo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Todo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../todo/to_learn/" class="md-nav__link">
+        list of things to learn more about them
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../todo/to_record/" class="md-nav__link">
+        Things I need to make a videos about
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../projects/projects/" class="md-nav__link">
+        list of live projects:
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#week1-programming-challenges" class="md-nav__link">
+    week1: Programming Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week2-algorithmic-warm-up" class="md-nav__link">
+    week2: Algorithmic Warm-up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week3-greedy-algorithms" class="md-nav__link">
+    week3: Greedy Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week4-divide-and-conquer" class="md-nav__link">
+    week4: Divide-and-Conquer
+  </a>
+  
+    <nav class="md-nav" aria-label="week4: Divide-and-Conquer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-search" class="md-nav__link">
+    linear search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    Binary search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#augmented-array" class="md-nav__link">
+    Augmented Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polynomial-multiplication" class="md-nav__link">
+    polynomial multiplication
+  </a>
+  
+    <nav class="md-nav" aria-label="polynomial multiplication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naiive-algorithm-for-solving-polynomial-multiplication-problem" class="md-nav__link">
+    Naiive algorithm for solving polynomial multiplication problem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naiive-divide-and-conquer-algorithm-for-solving-polynomial-multiplication" class="md-nav__link">
+    Naiive divide-and-conquer algorithm for solving polynomial multiplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faster-divide-and-conquer-algorithm-for-solving-polynomial-multiplication" class="md-nav__link">
+    Faster divide-and-conquer algorithm for solving polynomial multiplication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master-theorem" class="md-nav__link">
+    Master Theorem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-sort" class="md-nav__link">
+    selection sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-sort" class="md-nav__link">
+    Merge sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counting-sort" class="md-nav__link">
+    counting sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-sort" class="md-nav__link">
+    quick sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick3" class="md-nav__link">
+    quick3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-about-quick-sort" class="md-nav__link">
+    notes about quick sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intro-quicksort" class="md-nav__link">
+    Intro quickSort
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-sorting-algorithms-cost-summary" class="md-nav__link">
+    Array sorting algorithms cost summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week5-dynamic-programming-1" class="md-nav__link">
+    week5: Dynamic programming 1
+  </a>
+  
+    <nav class="md-nav" aria-label="week5: Dynamic programming 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#greedy-change" class="md-nav__link">
+    Greedy change
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursive-change" class="md-nav__link">
+    recursive change
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-prgramming-change-dp-change" class="md-nav__link">
+    dynamic prgramming change \(dp change\):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-distance" class="md-nav__link">
+    Edit distance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    resource
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-6-dynamic-programming-2" class="md-nav__link">
+    week 6: dynamic programming 2
+  </a>
+  
+    <nav class="md-nav" aria-label="week 6: dynamic programming 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#knapsack-with-repetions" class="md-nav__link">
+    knapsack with repetions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knapsack-with-repetition" class="md-nav__link">
+    knapsack with repetition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memoization" class="md-nav__link">
+    memoization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placing-parentheses" class="md-nav__link">
+    placing parentheses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="algoritm-toolbox">algoritm toolbox<a class="headerlink" href="#algoritm-toolbox" title="Permanent link">&para;</a></h1>
+<ul>
+<li>the course link is <a href="https://www.coursera.org/learn/algorithmic-toolbox/home/welcome">here</a></li>
+</ul>
+<h2 id="week1-programming-challenges">week1: Programming Challenges<a class="headerlink" href="#week1-programming-challenges" title="Permanent link">&para;</a></h2>
+<h2 id="week2-algorithmic-warm-up">week2: Algorithmic Warm-up<a class="headerlink" href="#week2-algorithmic-warm-up" title="Permanent link">&para;</a></h2>
+<h2 id="week3-greedy-algorithms">week3: Greedy Algorithms<a class="headerlink" href="#week3-greedy-algorithms" title="Permanent link">&para;</a></h2>
+<h2 id="week4-divide-and-conquer">week4: Divide-and-Conquer<a class="headerlink" href="#week4-divide-and-conquer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>braek the problem down into a set of non-overlaping sub-problems.</li>
+<li>sub-problems have the same type as the original</li>
+<li>we start solving sub problems in order.</li>
+<li>after solving all sub-problems we combine the results.</li>
+<li>since all sub-problems are of the same type, when we solve a sub-problem and iterate the solution <code>recurresively</code> to the rest of the problems.</li>
+</ul>
+<h3 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>key, K: the elemet we are looking for.</li>
+<li>Array, A: the array we searching in</li>
+</ul>
+<h3 id="linear-search">linear search<a class="headerlink" href="#linear-search" title="Permanent link">&para;</a></h3>
+<ul>
+<li>loop through each elemnt of the array, determine if we find the element that we are looking for or not.</li>
+<li>after each search we face a <code>sub-array</code> <span class="arithmatex">\(the main array execluded the previous element\)</span> with the same type of problem.</li>
+<li>we define the time that alogrithm takes as <code>recurrence relation</code> witch is an equation <code>T</code>.</li>
+<li>worst case : element not found, defined by: <code>T(n) = T(n-1) + c</code> =&gt; <code>cost = o(n)</code>.</li>
+<li>best <span class="arithmatex">\(base\)</span> case: empty array, <code>T(0) = c</code>=&gt; <code>cost = o(1)</code>.</li>
+<li>used in serch for the <code>free elemnts</code> stored in a <code>linked-list</code>.</li>
+</ul>
+<h3 id="binary-search">Binary search<a class="headerlink" href="#binary-search" title="Permanent link">&para;</a></h3>
+<ul>
+<li>dividing problems into halves, also uses recurresion.</li>
+<li>starts by <code>sorting</code> the array.</li>
+<li>we calculate the middle index <code>mid</code> of the sorted array, search for key at that index.</li>
+<li>if <code>A[mid] == key</code> were done. else if: <code>key &gt; A[mid]</code> we do another binary search on the top half of the sorted array.</li>
+<li>else if <code>key &lt; A[mid]</code> we do binary search on the first half.</li>
+<li>if the key is not found. we will return the best index to put our key in this <code>sorted-array</code>.</li>
+<li>worst case: element not found, <code>T(n) = T(n/2) + c</code> =&gt; <code>cost = Log2 (n)</code></li>
+<li>base case: empty array, <code>T(0) = c</code> =&gt; <code>cost = o(1)</code>.</li>
+</ul>
+<h3 id="augmented-array">Augmented Array<a class="headerlink" href="#augmented-array" title="Permanent link">&para;</a></h3>
+<ul>
+<li>a sorted array that keep tracks element indexes in the original array before sorting.</li>
+</ul>
+<h3 id="polynomial-multiplication">polynomial multiplication<a class="headerlink" href="#polynomial-multiplication" title="Permanent link">&para;</a></h3>
+<ul>
+<li>usage:</li>
+<li>error-correcting code.</li>
+<li>large integer multiplication.</li>
+<li>generating functions.</li>
+<li>convolution in signal processing.</li>
+<li>input: <code>n=3, A=(3,2,5), B=(5,1,2)</code> =&gt; output: <code>C=(15,13,33,9,10)</code>.</li>
+<li>input: <code>n = 2, A = (3, 4) B = (1, 2)</code> =&gt; output: <code>C=(3, 10, 8)</code> corrseponding to: <code>(3x+4) * (1x + 2) = 3x^2 + 10x + 8</code>.</li>
+</ul>
+<h4 id="naiive-algorithm-for-solving-polynomial-multiplication-problem">Naiive algorithm for solving polynomial multiplication problem<a class="headerlink" href="#naiive-algorithm-for-solving-polynomial-multiplication-problem" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">MultPoly</span><span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="cm">/**</span>
+<span class="cm">   * A is polynomial as [3, 2, 5];</span>
+<span class="cm">   * B is another polynomial</span>
+<span class="cm">   * n is the hiegher degree of both polynomial (hieghest power of X)</span>
+<span class="cm">   *</span>
+<span class="cm">   */</span>
+  <span class="kd">let</span> <span class="nx">product</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mf">2</span> <span class="o">*</span> <span class="nx">n</span> <span class="o">-</span> <span class="mf">1</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">2</span> <span class="o">*</span> <span class="nx">n</span> <span class="o">-</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">product</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">product</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">A</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="nx">B</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">+</span> <span class="nx">product</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="nx">j</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">product</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>cost <span class="arithmatex">\(runtime\)</span> <code>o(n^2)</code>;</li>
+</ul>
+<h3 id="naiive-divide-and-conquer-algorithm-for-solving-polynomial-multiplication">Naiive divide-and-conquer algorithm for solving polynomial multiplication<a class="headerlink" href="#naiive-divide-and-conquer-algorithm-for-solving-polynomial-multiplication" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">MultPoly2Wrapper</span><span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">n</span><span class="p">){</span>
+    <span class="c1">// n needs to be divided by 2, if not add another degree to the polynomial,</span>
+    <span class="c1">// were its values is 0.</span>
+      <span class="kd">function</span> <span class="nx">MultPoly2</span><span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">a1</span><span class="p">,</span> <span class="nx">b1</span><span class="p">){</span>
+           <span class="cm">/**</span>
+<span class="cm">           * A is polynomial as [3, 2, 5];</span>
+<span class="cm">           * B is another polynomial</span>
+<span class="cm">           * n is the hiegher degree of both polynomial (hieghest power of X)</span>
+<span class="cm">           * a1 specify the lower bound of the beginning of the sub-polynomials that are being multiplied</span>
+<span class="cm">           * b1 specify the lower bound of the beginning of the sub-polynomials that are being multiplied</span>
+<span class="cm">           * Mathematics Info in this photo: https://i.imgur.com/QZLIBQK.png</span>
+<span class="cm">           * programming info in this photo: https://i.imgur.com/UWKFjWB.png</span>
+<span class="cm">          */</span>
+           <span class="kd">let</span> <span class="nx">R</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mf">2</span><span class="o">*</span><span class="nx">n</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
+          <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mf">2</span><span class="o">*</span><span class="nx">n</span><span class="o">-</span><span class="mf">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+              <span class="nx">R</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+          <span class="p">}</span>
+
+          <span class="k">if</span><span class="p">(</span><span class="nx">n</span> <span class="o">==</span> <span class="mf">1</span><span class="p">){</span>
+              <span class="nx">R</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">=</span> <span class="nx">A</span><span class="p">[</span><span class="nx">a1</span><span class="p">]</span> <span class="o">*</span> <span class="nx">B</span><span class="p">[</span><span class="nx">b1</span><span class="p">];</span>
+              <span class="k">return</span> <span class="nx">R</span><span class="p">;</span>
+          <span class="p">}</span>
+
+          <span class="c1">//doing first half</span>
+          <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">n</span><span class="o">-</span><span class="mf">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">){</span>
+              <span class="nx">R</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">MultPoly2</span> <span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">a1</span><span class="p">,</span> <span class="nx">b1</span><span class="p">);</span>
+          <span class="p">}</span>
+
+          <span class="c1">//we kept R[n-1] empty</span>
+
+          <span class="c1">//doing second half</span>
+          <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span><span class="o">=</span><span class="nx">n</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="mf">2</span><span class="o">*</span><span class="nx">n</span><span class="o">-</span><span class="mf">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">){</span>
+              <span class="nx">R</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">MultPoly2</span> <span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">a1</span> <span class="o">+</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">b1</span> <span class="o">+</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">);</span>
+          <span class="p">}</span>
+
+          <span class="kd">let</span> <span class="nx">D0E1</span><span class="o">=</span> <span class="nx">MultPoly2</span> <span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">a1</span><span class="p">,</span> <span class="nx">b1</span> <span class="o">+</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">);</span>
+          <span class="kd">let</span> <span class="nx">D1E0</span><span class="o">=</span> <span class="nx">MultPoly2</span> <span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">a1</span> <span class="o">+</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">b1</span><span class="p">);</span>
+          <span class="c1">// ???????</span>
+          <span class="kd">let</span> <span class="nx">D1E1</span><span class="o">=</span> <span class="nx">MultPoly2</span> <span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">a1</span> <span class="o">+</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">b1</span> <span class="o">+</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">);</span>
+          <span class="kd">let</span> <span class="nx">D0E0</span><span class="o">=</span> <span class="nx">MultPoly2</span> <span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">n</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">a1</span><span class="p">,</span> <span class="nx">b1</span><span class="p">);</span>
+
+          <span class="c1">//filling the empty elemnt R[n-1]</span>
+          <span class="kd">let</span> <span class="nx">R</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">D1E0</span> <span class="o">+</span> <span class="nx">D0E1</span><span class="p">;</span>
+
+          <span class="k">return</span> <span class="nx">R</span><span class="p">;</span>
+
+      <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>cost <code>T(n) = 4 * T(n/2) + n*c</code> =&gt; <code>4 * n * log(n) + n</code> =&gt; n2.</li>
+</ul>
+<h3 id="faster-divide-and-conquer-algorithm-for-solving-polynomial-multiplication">Faster divide-and-conquer algorithm for solving polynomial multiplication<a class="headerlink" href="#faster-divide-and-conquer-algorithm-for-solving-polynomial-multiplication" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Maths Explanation here: https://i.imgur.com/qa0to77.png</span>
+<span class="cm">*/</span>
+<span class="kd">function</span> <span class="nx">MultPoly3wrapper</span><span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">n</span><span class="p">){</span>
+    <span class="c1">// n needs to be divided by 2, if not add another degree to the polynomial,</span>
+    <span class="c1">// were its values is 0.</span>
+        <span class="kd">let</span> <span class="nx">D1E1</span><span class="o">=</span> <span class="c1">//calcualted in the previous function;</span>
+        <span class="kd">let</span> <span class="nx">D0E0</span><span class="o">=</span> <span class="c1">//calculated before</span>
+        <span class="kd">let</span> <span class="p">(</span><span class="nx">D1</span><span class="o">+</span><span class="nx">D0</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nx">E1</span><span class="o">+</span><span class="nx">E0</span><span class="p">)</span> <span class="o">=</span> <span class="c1">//calculated as the previous function.</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>karatsuba approach</code>, do 3 multiplications instead of 4.</li>
+<li>cost <code>T(n) = 3 * T(n/2) + n*c</code> =&gt; <code>3 * n * log(n) + c * n</code> =&gt; nlog3 =&gt; n1.58.</li>
+</ul>
+<h3 id="master-theorem">Master Theorem<a class="headerlink" href="#master-theorem" title="Permanent link">&para;</a></h3>
+<ul>
+<li>for calculating cost in divide-and-concouer cost,</li>
+<li>binary search, problem divided into 2, each cost constant time <code>c</code>:<code>T(n) = T(n/2) +c</code> =&gt; <code>log n</code></li>
+<li>divide-and-conquer 1, problem divided into 4, each cost linear time <code>n</code>: <code>T(n) = 4 * T(n/2) + n * c</code> =&gt; nlog 4 =&gt; n2</li>
+<li>divide-and-conquer 2, problem divided into 3, each cost linear time <code>n</code>: <code>T(n) = 3 * T(n/2) + n * c</code> =&gt; nlog 3 =&gt; n1.58</li>
+<li>divide-and-conquer 3, problem divided into 2, each cost linear time <code>n</code>: <code>T(n) = 2 * T(n/2) + n * c</code> =&gt; nlog 2 =&gt; nlog<span class="arithmatex">\(n\)</span> =&gt; <code>o(n log n)</code></li>
+<li>more info [here]<span class="arithmatex">\([https://en.wikipedia.org/wiki/Master\_theorem\_\(analysis\_of\_algorithms\)</span>](https://en.wikipedia.org/wiki/Master_theorem_%28analysis_of_algorithms%29))</li>
+</ul>
+<p>then Theorom:</p>
+<div class="highlight"><pre><span></span><code>let T(n) = a * T(n/b) + o(n^d)
+    if d &gt; logb ^a   =&gt; T(n) = o(n^d)
+     if d = logb ^a   =&gt; T(n) = o(n^d log n)
+     if d &lt; logb ^a   =&gt; T(n) = o(n^logb ^a)
+</code></pre></div>
+<h3 id="selection-sort">selection sort<a class="headerlink" href="#selection-sort" title="Permanent link">&para;</a></h3>
+<ul>
+<li>find the minimum element =&gt; swap with first =&gt; reprat this process.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * psudeo code here: https://i.imgur.com/IPq72GD.png</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">selectionSort</span><span class="p">(</span><span class="nx">A</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">A</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">A</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">minIndex</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">A</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">A</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">A</span><span class="p">[</span><span class="nx">minIndex</span><span class="p">])</span> <span class="p">{</span>
+        <span class="nx">minIndex</span> <span class="o">=</span> <span class="nx">j</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">minIndex</span> <span class="o">!==</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">A</span><span class="p">[</span><span class="nx">minIndex</span><span class="p">];</span>
+        <span class="nx">swap</span><span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">A</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">c</span><span class="p">);</span>
+        <span class="c1">// A[0,i] is now sorted.</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">A</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">swap</span><span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">B</span><span class="p">,</span> <span class="nx">C</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">A</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">C</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">A</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">B</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">B</span><span class="p">;</span>
+  <span class="nx">A</span><span class="p">[</span><span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="nx">C</span><span class="p">;</span>
+  <span class="nx">A</span><span class="p">[</span><span class="nx">c</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>cost <code>o(n^2)</code></li>
+</ul>
+<h3 id="merge-sort">Merge sort<a class="headerlink" href="#merge-sort" title="Permanent link">&para;</a></h3>
+<ul>
+<li>split =&gt; sort splits =&gt; merge splits.</li>
+<li>merging has its own rules, evaluate the first elemnt from each arrays to be merged, we choose their minimum and put it in the result =&gt; repeat.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * psudo code: https://i.imgur.com/rGmTGr4.png</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">mergeSort</span><span class="p">(</span><span class="nx">A</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">A</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">A</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">m</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">A</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mf">2</span><span class="p">);</span>
+
+  <span class="kd">let</span> <span class="nx">BB</span> <span class="o">=</span> <span class="nx">mergeSort</span><span class="p">(</span><span class="nx">A</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="nx">m</span><span class="p">));</span>
+  <span class="kd">let</span> <span class="nx">CC</span> <span class="o">=</span> <span class="nx">mergeSort</span><span class="p">(</span><span class="nx">A</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">m</span><span class="p">,</span> <span class="nx">A</span><span class="p">.</span><span class="nx">length</span><span class="p">));</span>
+
+  <span class="kd">let</span> <span class="nx">AA</span> <span class="o">=</span> <span class="nx">merge</span><span class="p">(</span><span class="nx">BB</span><span class="p">,</span> <span class="nx">CC</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">AA</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * psuedo code: https://i.imgur.com/xlKWjXX.png</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">merge</span><span class="p">(</span><span class="nx">B</span><span class="p">,</span> <span class="nx">C</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">D</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">B</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">C</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">B</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="nx">C</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">D</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">B</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+      <span class="nx">B</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">D</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">C</span><span class="p">.</span><span class="nx">shift</span><span class="p">());</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="nx">B</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">D</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">B</span><span class="p">.</span><span class="nx">shift</span><span class="p">());</span>
+  <span class="p">}</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">C</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">D</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">C</span><span class="p">.</span><span class="nx">shift</span><span class="p">());</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">D</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>cost <code>n * log n</code></li>
+</ul>
+<h3 id="counting-sort">counting sort<a class="headerlink" href="#counting-sort" title="Permanent link">&para;</a></h3>
+<ul>
+<li>the <code>selection sort</code> and <code>merge sort</code> use <code>object comparision</code> to complete the sort.</li>
+<li>if the array is consesting from <code>repitive small ints</code> we can apply <code>counting sort</code></li>
+<li>count occurences of each element =&gt; store counts to each elemnt <span class="arithmatex">\(n\)</span> =&gt; fill up the result array by each elemnt reptitve with its corresponding count.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * psuedo code: https://i.imgur.com/Nqb0cCg.png</span>
+<span class="cm"> * Now, works only for postivie ints.</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">countSort</span><span class="p">(</span><span class="nx">A</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">counts</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="c1">//let s = Math.min(...A);</span>
+  <span class="kd">let</span> <span class="nx">m</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">A</span><span class="p">);</span>
+  <span class="c1">// console.log(&#39;m&#39;, m);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">m</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">counts</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//console.log(counts)</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">A</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//   if(Object.keys(counts).includes(A[i].toString())){</span>
+    <span class="c1">// if(A.includes(Number(counts[i.toString()]))){</span>
+    <span class="nx">counts</span><span class="p">[</span><span class="nx">A</span><span class="p">[</span><span class="nx">i</span><span class="p">]]</span><span class="o">++</span><span class="p">;</span>
+    <span class="c1">//  console.log(&#39;obj inside&#39;, counts);</span>
+    <span class="c1">//}</span>
+  <span class="p">}</span>
+
+  <span class="kd">let</span> <span class="nx">countsArray</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">counts</span><span class="p">);</span> <span class="c1">//.every(e =&gt; e.toString());</span>
+  <span class="c1">// console.log(&#39;counts Array&#39;, countsArray);</span>
+  <span class="c1">// console.log(&#39;count obj&#39;, counts)</span>
+
+  <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">countsArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">counts</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">counts</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+      <span class="c1">//console.log(&#39;n&#39;, n)</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">Number</span><span class="p">(</span><span class="nx">countsArray</span><span class="p">[</span><span class="nx">i</span><span class="p">]));</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>costs <code>o( Array.length + counts.length )</code> =&gt; <code>o(n)</code></li>
+</ul>
+<h3 id="quick-sort">quick sort<a class="headerlink" href="#quick-sort" title="Permanent link">&para;</a></h3>
+<ul>
+<li>take first elemnt A[0] =&gt; rearrange the array so A[0] will be in the middle, all elements less or equal to A[0] will be on the left, all ements greater than A[0] will be on the right.</li>
+<li>A[0] is in its final positon =&gt; we need to sort <code>[left Array]</code> and <code>[right Array]</code> =&gt; repeat.</li>
+<li><code>partion</code> or <code>pivot</code> we choose it, either first or last element or in the middle or any element, however, it's important to skip this element in the <code>for loop</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * psuedo code: https://i.imgur.com/eczLG6T.png</span>
+<span class="cm"> */</span>
+<span class="kd">const</span> <span class="nx">quickSort</span> <span class="o">=</span> <span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mf">2</span><span class="p">)</span> <span class="k">return</span> <span class="nx">array</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">pivot</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">];</span>
+  <span class="kd">const</span> <span class="nx">left</span> <span class="o">=</span> <span class="p">[],</span>
+    <span class="nx">right</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">pivot</span><span class="p">)</span> <span class="nx">left</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="k">else</span> <span class="nx">right</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">[...</span><span class="nx">quickSort</span><span class="p">(</span><span class="nx">left</span><span class="p">),</span> <span class="nx">pivot</span><span class="p">,</span> <span class="p">...</span><span class="nx">quickSort</span><span class="p">(</span><span class="nx">right</span><span class="p">)];</span>
+<span class="p">};</span>
+</code></pre></div>
+<ul>
+<li>best animation: <a href="https://www.youtube.com/watch?v=cnzIChso3cc">https://www.youtube.com/watch?v=cnzIChso3cc</a></li>
+<li>costs <code>o(n^2)</code> at worst: right or lift is empty, <code>o(n log n)</code> at average: right and left are nearly equal.</li>
+<li>select our <code>pivot</code> randomly will give us more balanced left, right arrays =&gt; costs less, we should skipt it from the loop.</li>
+<li>quick sort is not so fast on Arrays with <code>few uniqe elements</code>: when you have few elemnets that are repeated. costs <code>o(n^2)</code></li>
+</ul>
+<h3 id="quick3">quick3<a class="headerlink" href="#quick3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>quick sort on array with few unique elements.</li>
+<li>we partion to get 3 sub-arrays insted of 2: left, middle, right.</li>
+<li>left: All elements less than <code>pivot</code></li>
+<li>middle: all elemnts equal to <code>pivot</code></li>
+<li>lift: all elements greateer than <code>pivot</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * psuedo code: https://i.imgur.com/PaMqD6E.png</span>
+<span class="cm"> */</span>
+<span class="kd">const</span> <span class="nx">quickSort3</span> <span class="o">=</span> <span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mf">2</span><span class="p">)</span> <span class="k">return</span> <span class="nx">array</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">pivot</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">];</span>
+  <span class="kd">const</span> <span class="nx">left</span> <span class="o">=</span> <span class="p">[],</span>
+    <span class="nx">right</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="nx">middle</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="nx">pivot</span><span class="p">)</span> <span class="nx">middle</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">pivot</span><span class="p">)</span> <span class="nx">left</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="k">else</span> <span class="nx">right</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">[...</span><span class="nx">quickSort3</span><span class="p">(</span><span class="nx">left</span><span class="p">),</span> <span class="p">...</span><span class="nx">middle</span><span class="p">,</span> <span class="p">...</span><span class="nx">quickSort3</span><span class="p">(</span><span class="nx">right</span><span class="p">)];</span>
+<span class="p">};</span>
+</code></pre></div>
+<h3 id="notes-about-quick-sort">notes about quick sort<a class="headerlink" href="#notes-about-quick-sort" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>In-place algorithm</code> : does not use extra auxilary space on the memory.</li>
+<li><code>elemeiate tail recursion</code> or <code>Tail recursion call optimization</code>: <a href="https://www.geeksforgeeks.org/quicksort-tail-call-optimization-reducing-worst-case-space-log-n/">GeekForGeek article</a> <a href="https://i.imgur.com/rkJQoOa.png">psuedo code</a></li>
+<li>even if <code>random pivot</code> is faster, it makes our program behaves differently on the same dataset, so it's not welcomed.</li>
+<li><code>intro sort</code>: when choosing the pivot, we select first, last and middle elemnts of the Array, then we compare these <code>pivots</code> =&gt; choose the <code>median pivot</code> as owr pivot.</li>
+</ul>
+<h3 id="intro-quicksort">Intro quickSort<a class="headerlink" href="#intro-quicksort" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">IntroquickSort</span> <span class="o">=</span> <span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mf">2</span><span class="p">)</span> <span class="k">return</span> <span class="nx">array</span><span class="p">;</span>
+
+  <span class="c1">//comparing pivots</span>
+  <span class="kd">const</span> <span class="nx">pivot1</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+  <span class="kd">const</span> <span class="nx">pivot2</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2</span><span class="p">)];</span>
+  <span class="kd">const</span> <span class="nx">pivot3</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">array</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">];</span>
+
+  <span class="c1">//chosen pivot</span>
+  <span class="kd">let</span> <span class="nx">pivot</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">pivot1</span><span class="p">,</span> <span class="nx">pivot2</span><span class="p">,</span> <span class="nx">pivot3</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">pivotIndex</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">pivot</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">left</span> <span class="o">=</span> <span class="p">[],</span>
+    <span class="nx">right</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="nx">pivotIndex</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nx">pivot</span><span class="p">)</span> <span class="nx">left</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="k">else</span> <span class="nx">right</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">[...</span><span class="nx">IntroquickSort</span><span class="p">(</span><span class="nx">left</span><span class="p">),</span> <span class="nx">pivot</span><span class="p">,</span> <span class="p">...</span><span class="nx">IntroquickSort</span><span class="p">(</span><span class="nx">right</span><span class="p">)];</span>
+<span class="p">};</span>
+</code></pre></div>
+<ul>
+<li>costs <code>o(n log n)</code> at worst.</li>
+</ul>
+<h2 id="array-sorting-algorithms-cost-summary">Array sorting algorithms cost summary<a class="headerlink" href="#array-sorting-algorithms-cost-summary" title="Permanent link">&para;</a></h2>
+<p><img alt=" Array sorting algorithms cost summary" src="https://miro.medium.com/max/1400/1*7ErHjLrOGhdkmMm_nQfo-g.png" /></p>
+<h2 id="week5-dynamic-programming-1">week5: Dynamic programming 1<a class="headerlink" href="#week5-dynamic-programming-1" title="Permanent link">&para;</a></h2>
+<h3 id="greedy-change">Greedy change<a class="headerlink" href="#greedy-change" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>psuedo code: <a href="https://i.imgur.com/3KGLxLJ.png">https://i.imgur.com/3KGLxLJ.png</a></p>
+</blockquote>
+<h3 id="recursive-change">recursive change<a class="headerlink" href="#recursive-change" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>psuedo code: <a href="https://i.imgur.com/DW0MLfG.png">https://i.imgur.com/DW0MLfG.png</a></p>
+</blockquote>
+<h3 id="dynamic-prgramming-change-dp-change">dynamic prgramming change <span class="arithmatex">\(dp change\)</span>:<a class="headerlink" href="#dynamic-prgramming-change-dp-change" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>psuedo code: <a href="https://i.imgur.com/DL7Cpeo.png">https://i.imgur.com/DL7Cpeo.png</a></p>
+</blockquote>
+<h3 id="edit-distance">Edit distance<a class="headerlink" href="#edit-distance" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>psuedo code: <a href="https://i.imgur.com/iyCgqR1.png">https://i.imgur.com/iyCgqR1.png</a></p>
+</blockquote>
+<h3 id="resource">resource<a class="headerlink" href="#resource" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.dropbox.com/s/qxzh146jd72188d/dynprog.pdf?dl=0">https://www.dropbox.com/s/qxzh146jd72188d/dynprog.pdf?dl=0</a></p>
+<h2 id="week-6-dynamic-programming-2">week 6: dynamic programming 2<a class="headerlink" href="#week-6-dynamic-programming-2" title="Permanent link">&para;</a></h2>
+<h3 id="knapsack-with-repetions">knapsack with repetions<a class="headerlink" href="#knapsack-with-repetions" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>psudeo code: <a href="https://i.imgur.com/4hQNath.png">https://i.imgur.com/4hQNath.png</a></p>
+<p>pdf: <a href="https://www.cc.gatech.edu/~rpeng/CS3510_F17/Notes/Oct2MoreDP.pdf">https://www.cc.gatech.edu/~rpeng/CS3510_F17/Notes/Oct2MoreDP.pdf</a></p>
+<p>video: <a href="https://www.youtube.com/watch?v=wFP5VHGHFdk&amp;t=866s">https://www.youtube.com/watch?v=wFP5VHGHFdk&amp;t=866s</a></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">unboundedKnapsack</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">wt</span><span class="p">):</span>
+
+    <span class="c1"># dp[i] is going to store maximum</span>
+    <span class="c1"># value with knapsack capacity i.</span>
+    <span class="n">dp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">W</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+
+    <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Fill dp[] using above recursive formula</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">W</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">wt</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">):</span>
+                <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">wt</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">+</span> <span class="n">val</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">W</span><span class="p">]</span>
+
+<span class="c1"># Driver program</span>
+<span class="n">W</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">val</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">wt</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">unboundedKnapsack</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">wt</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="knapsack-with-repetition">knapsack with repetition<a class="headerlink" href="#knapsack-with-repetition" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>psuedo code: <a href="https://i.imgur.com/RDVqYi6.png">https://i.imgur.com/RDVqYi6.png</a></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">knapSack</span><span class="p">(</span><span class="n">W</span> <span class="p">,</span> <span class="n">wt</span> <span class="p">,</span> <span class="n">val</span> <span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+
+    <span class="c1"># Base Case</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">W</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="c1"># If weight of the nth item is more than Knapsack of capacity</span>
+    <span class="c1"># W, then this item cannot be included in the optimal solution</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">wt</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">W</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">knapSack</span><span class="p">(</span><span class="n">W</span> <span class="p">,</span> <span class="n">wt</span> <span class="p">,</span> <span class="n">val</span> <span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># return the maximum of two cases:</span>
+    <span class="c1"># (1) nth item included</span>
+    <span class="c1"># (2) not included</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">knapSack</span><span class="p">(</span><span class="n">W</span><span class="o">-</span><span class="n">wt</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span> <span class="n">wt</span> <span class="p">,</span> <span class="n">val</span> <span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+                   <span class="n">knapSack</span><span class="p">(</span><span class="n">W</span> <span class="p">,</span> <span class="n">wt</span> <span class="p">,</span> <span class="n">val</span> <span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+
+<span class="c1"># To test above function</span>
+<span class="n">val</span> <span class="o">=</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">120</span><span class="p">]</span>
+<span class="n">wt</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="n">W</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">knapSack</span><span class="p">(</span><span class="n">W</span> <span class="p">,</span> <span class="n">wt</span> <span class="p">,</span> <span class="n">val</span> <span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="memoization">memoization<a class="headerlink" href="#memoization" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>psuedo code: <a href="https://i.imgur.com/k2tkdnd.png">https://i.imgur.com/k2tkdnd.png</a></p>
+</blockquote>
+<ul>
+<li><code>iterative algorithm</code>: starts from the smaller problem into the larger ones</li>
+<li><code>recursive algirithm</code>: starts from the largest problem into the smaller ones.</li>
+<li>resursive is slower.</li>
+</ul>
+<h3 id="placing-parentheses">placing parentheses<a class="headerlink" href="#placing-parentheses" title="Permanent link">&para;</a></h3>
+<ul>
+<li>you take an arithmetic operation and choose where to put parentheses so it will maximize its output</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../union_find/" class="md-footer__link md-footer__link--prev" aria-label="Previous: union-find" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              union-find
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="algorithms_notes/" class="md-footer__link md-footer__link--next" aria-label="Next: Algorithms Notes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Algorithms Notes
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.expand"], "search": "../../../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+    
+  </body>
+</html>
