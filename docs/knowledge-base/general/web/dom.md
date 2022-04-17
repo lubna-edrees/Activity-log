@@ -27,7 +27,7 @@
     };
   ```
 
-* quickly check existance of a file using vanilla js:
+* quickly checking the existance of a file using vanilla js:
 
   ```javascript
     function doesFileExist(urlToFile) {
